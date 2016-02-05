@@ -579,9 +579,10 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: #212121;
+  background-color: rgba(33, 33, 33, 0.6);
   font-weight: bold;
-  height: 1.86em; }
+  height: 1.86em;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.5); }
   #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
     background-color: transparent; }
   #panel .panel-button .popup-menu-arrow {
