@@ -1074,7 +1074,7 @@ GtkComboBox {
   }
 
   &.default-decoration {
-    padding: 4px;
+    padding: 2px; // Four pixels by default. Two pixels makes it save more vertical space and is better imo.
     .button { padding: 5px; }
   }
 }
