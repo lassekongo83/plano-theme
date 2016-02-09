@@ -485,10 +485,10 @@ StScrollBar {
     -arrow-border-radius: 3px;
     -arrow-background-color: $bg_color;
     -arrow-border-width: 1px;
-    -arrow-border-color: $borders_color;
-    -arrow-base: 24px;
-    -arrow-rise: 11px;
-    -arrow-box-shadow: 0 1px 3px black; //dreaming. bug #689995
+    -arrow-border-color: transparentize($borders_color, .6);
+    -arrow-base: 11px;
+    -arrow-rise: 4px;
+    -arrow-box-shadow: 0 0px 0px black; //dreaming. bug #689995
   }
 
   .popup-separator-menu-item {
@@ -959,10 +959,11 @@ StScrollBar {
     color: $fg_color;
     border-radius: 32px; /* wish we could do 50% */
     padding: 13px;
-    border: 1px solid lighten($borders_color,5%);
+    border: 1px solid transparentize($borders_color, .2);
+    background-color: transparentize(white, .8);
 
     &:hover, &:focus {
-      background-color: transparentize($fg_color,0.9);
+      background-color: transparentize(white, .7);
       color: $fg_color;
       border: none;
       padding: 14px;

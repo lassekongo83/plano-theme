@@ -451,10 +451,10 @@ StScrollBar {
   -arrow-border-radius: 3px;
   -arrow-background-color: #000;
   -arrow-border-width: 1px;
-  -arrow-border-color: black;
-  -arrow-base: 24px;
-  -arrow-rise: 11px;
-  -arrow-box-shadow: 0 1px 3px black; }
+  -arrow-border-color: rgba(0, 0, 0, 0.4);
+  -arrow-base: 11px;
+  -arrow-rise: 4px;
+  -arrow-box-shadow: 0 0px 0px black; }
 
 .popup-separator-menu-item {
   height: 1px;
@@ -838,9 +838,10 @@ StScrollBar {
   border-radius: 32px;
   /* wish we could do 50% */
   padding: 13px;
-  border: 1px solid #0d0d0d; }
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.2); }
   .system-menu-action:hover, .system-menu-action:focus {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
     color: #fff;
     border: none;
     padding: 14px; }
