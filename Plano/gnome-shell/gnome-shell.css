@@ -32,7 +32,7 @@ stage {
   color: #eeeeee;
   background-color: #303030;
   border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px #4a4a4a;
+  box-shadow: inset 0 1px #3d3d3d;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black; }
   .button:focus {
@@ -60,7 +60,7 @@ stage {
   color: #eeeeee;
   background-color: #303030;
   border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px #4a4a4a;
+  box-shadow: inset 0 1px #3d3d3d;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   padding: 12px; }
@@ -84,13 +84,13 @@ stage {
     icon-shadow: 0 1px black;
     box-shadow: inset 0px 0px 0px 1px #0960a5; }
   .modal-dialog-linked-button:first-child {
-    border-radius: 0px 0px 0px 6px; }
+    border-radius: 0px 0px 0px 2px; }
   .modal-dialog-linked-button:last-child {
     border-right-width: 0px;
-    border-radius: 0px 0px 6px 0px; }
+    border-radius: 0px 0px 2px 0px; }
   .modal-dialog-linked-button:first-child:last-child {
     border-right-width: 0px;
-    border-radius: 0px 0px 6px 6px; }
+    border-radius: 0px 0px 2px 2px; }
 
 /* Entries */
 StEntry {
@@ -196,9 +196,9 @@ StScrollBar {
   background-color: white; }
 
 .modal-dialog {
-  border-radius: 3px;
+  border-radius: 2px;
   color: #eeeeee;
-  background-color: rgba(23, 23, 23, 0.95);
+  background-color: #212121;
   border: 0px solid rgba(238, 238, 238, 0.5); }
   .modal-dialog .modal-dialog-content-box {
     padding: 24px; }
@@ -439,7 +439,7 @@ StScrollBar {
     .popup-menu .popup-inactive-menu-item:insensitive {
       color: rgba(238, 238, 238, 0.5); }
   .popup-menu.panel-menu {
-    -boxpointer-gap: 4px;
+    -boxpointer-gap: 1px;
     margin-bottom: 1.75em; }
 
 .popup-menu-ornament {
@@ -448,12 +448,12 @@ StScrollBar {
 
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-  -arrow-border-radius: 3px;
+  -arrow-border-radius: 2px;
   -arrow-background-color: #212121;
   -arrow-border-width: 1px;
-  -arrow-border-color: rgba(2, 2, 2, 0.4);
-  -arrow-base: 11px;
-  -arrow-rise: 4px;
+  -arrow-border-color: rgba(238, 238, 238, 0.1);
+  -arrow-base: 0px;
+  -arrow-rise: 0px;
   -arrow-box-shadow: 0 0px 0px black; }
 
 .popup-separator-menu-item {
@@ -1381,7 +1381,7 @@ StScrollBar {
   color: #eeeeee;
   background-color: #303030;
   border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px #4a4a4a;
+  box-shadow: inset 0 1px #3d3d3d;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   min-height: 2em;
@@ -1486,13 +1486,13 @@ StScrollBar {
       color: #eeeeee;
       background-color: rgba(9, 96, 165, 0.5);
       border-color: rgba(0, 0, 0, 0.7);
-      box-shadow: inset 0 1px #4a4a4a;
+      box-shadow: inset 0 1px #3d3d3d;
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black; }
       .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
         color: white;
         border-color: rgba(0, 0, 0, 0.7);
-        background-color: rgba(9, 96, 165, 0.7);
+        background-color: rgba(9, 96, 165, 0.9);
         box-shadow: inset 0 1px #636363;
         text-shadow: 0 1px black;
         icon-shadow: 0 1px black; }
