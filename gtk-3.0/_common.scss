@@ -1658,20 +1658,20 @@ column-header.button.dnd { // for treeview-like derive widgets
   &.vertical {
 
     .slider {
-      margin-left: 1px + $_slider_margin;
+      margin-left: 0px + $_slider_margin;
 
       &:dir(rtl) {
         margin-left: $_slider_margin;
-        margin-right: 1px + $_slider_margin;
+        margin-right: 0px + $_slider_margin;
       }
     }
 
     &.fine-tune .slider {
-      margin-left: 1px + $_slider_fine_tune_margin;
+      margin-left: 0px + $_slider_fine_tune_margin;
 
       &:dir(rtl) {
         margin-left: $_slider_fine_tune_margin;
-        margin-right: 1px + $_slider_fine_tune_margin;
+        margin-right: 0px + $_slider_fine_tune_margin;
       }
     }
 
@@ -2806,7 +2806,7 @@ GtkVolumeButton.button {
     border-radius: 3px 3px 0 0;
     box-shadow: 0 0 0 1px $_wm_border; //just doing borders, wm draws actual shadows
     &.maximized { border-radius: 0; }
-    border: none; 
+    border: none;
   }
   &.csd {
     &.popup {
@@ -2836,7 +2836,7 @@ GtkVolumeButton.button {
 /* No line below the title bar */
 .ssd .titlebar {
     border-width: 0;
-    box-shadow: none;
+    @include headerbar_fill;
 }
 
 // Window Close button
@@ -2845,13 +2845,11 @@ GtkVolumeButton.button {
   @extend .button;
   @extend .button.flat;
   @extend .image-button;
-  //@include _button_text_shadow;
   &:backdrop { icon-shadow: none; }
 }
 
 .header-bar.selection-mode .button.titlebutton,
 .titlebar.selection-mode .button.titlebutton {
-  //@include _button_text_shadow(white, $selected_bg_color);
   &:backdrop { icon-shadow: none; }
 }
 
