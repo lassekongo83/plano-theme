@@ -137,11 +137,12 @@
 // osd, osd-hover, osd-active, osd-insensitive, osd-backdrop, undecorated
 //
 
-  // button borders & shadows.
-  $button-border: $borders_color;
   // Pressed button shadows.
-  $pressed-button-shadow: inset 0 1px transparentize(black, 0.93),
-                          inset 0 2px 1px -2px transparentize(black,0.4);
+  $inset-shade: inset 0 1px transparentize(black, 0.93),
+                inset 0 2px 1px -2px transparentize(black,0.4);
+  // Border colors
+  $btn-border: if($c!=$bg_color, _border_color($c), $borders_color);
+  $btn-border-i: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
 
   $_hilight_color: _button_hilight_color($c);
   $_button_edge: if($edge == none, none, _widget_edge($edge));
@@ -151,23 +152,23 @@
   // normal button
     color: $tc;
     outline-color: transparentize($tc, 0.7);
-    border-color: $button-border;
+    border-color: $btn-border;
     background-color: lighten($c,8%);
   }
 
   @else if $t==hover {
   // hovered button
     color: $tc;
-    background-color: lighten($c,10%);
+    background-color: lighten($c,11%);
   }
 
   @else if $t==active {
   // pushed button
     color: $tc;
     outline-color: transparentize($tc, 0.7);
-    border-color: $button-border;
+    border-color: $btn-border;
     background-color: darken($c,5%);
-    box-shadow: $pressed-button-shadow;
+    box-shadow: $inset-shade;
     //@include _shadows(inset 0 1px transparentize(black, 0.93),
     //                  inset 0 2px 1px -2px transparentize(black,0.4));
   }
@@ -176,7 +177,7 @@
     $_bg: if($c!=$bg_color, mix($c,$base_color,85%), $insensitive_bg_color);
 
     color: if($tc!=$fg_color, mix($tc,$_bg,50%), $insensitive_fg_color);
-    border-color: $button-border;
+    border-color: $btn-border-i;
     background-color: $_bg;
     text-shadow: none;
     icon-shadow: none;
@@ -188,9 +189,10 @@
   // insensitive pushed button
     $_bg: if($c!=$bg_color, darken(mix($c,$base_color,85%),5%),
                             $insensitive_bg_color);
+    $_bc: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
     color: if($c!=$bg_color, mix($tc,$_bg,60%), $insensitive_fg_color);
-    border-color: $button-border;
-    box-shadow: $pressed-button-shadow;
+    border-color: $_bc;
+    box-shadow: $inset-shade;
     background-color: darken($c,5%);
     // white with 0 alpha to avoid an ugly transition, since no color means
     // black with 0 alpha

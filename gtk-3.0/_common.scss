@@ -62,7 +62,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
 
 .background {
   color: $fg_color;
-  background-color: if($variant == 'light', darken($bg_color, 1.5%), $bg_color);
+  background-color: if($variant == 'light', $bg_color, $bg_color);
 }
 
 /*
@@ -1011,7 +1011,6 @@ GtkComboBox {
     $_hc: mix($top_hilight,$selected_bg_color, 50%); // hilight color
 
     color: $selected_fg_color;
-    text-shadow: 0 -1px transparentize(black, 0.5);
     border-color: $selected_borders_color;
     background-color: $selected_bg_color;
     box-shadow: inset 0 -1px mix($selected_borders_color, $selected_bg_color, 35%), //bottom shade
