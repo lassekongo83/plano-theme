@@ -51,12 +51,12 @@ stage {
   &:focus { @include button(focus); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
-
 }
 
 .modal-dialog-linked-button {
   border-right-width: 1px;
   @include button(normal);
+  &:hover { @include button(hover); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
   &:focus { @include button(focus); }
@@ -475,8 +475,6 @@ StScrollBar {
   }
 }
 
-
-
   .popup-menu-ornament {
     text-align: right;
     width: 1.2em;
@@ -687,11 +685,18 @@ StScrollBar {
     font-weight: bold;
     color: white;
 
-    .app-menu-icon {
-      -st-icon-style: symbolic;
-      margin-left: 4px;
-      margin-right: 4px;
+    //.app-menu-icon {
+    //  -st-icon-style: symbolic;
+    //  margin-left: 4px;
+    //  margin-right: 4px;
       //dimensions of the icon are hardcoded
+    //}
+
+    .app-menu-icon {
+      width: 0;
+      height: 0;
+      margin-left: 0px;
+      margin-right: 0px;
     }
 
     &:hover {
@@ -932,6 +937,32 @@ StScrollBar {
             font-size: .9em;
           }
 
+// Activities button
+#panel #panelActivities.panel-button {
+
+  > * {
+    background-image: url("activities.svg");
+    background-position: center top;
+    width: 24px;
+    height: 24px;
+    background-color: transparent !important;
+    background-gradient-direction: none !important;
+    border: 0 solid transparent !important;
+    text-shadow: 0 0 transparent !important;
+    transition-duration: 0ms !important;
+    box-shadow: none !important;
+    color: transparent;
+  }
+
+  &:active, &:overview, &:focus, &:checked {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom-width: 1px;
+    border-color: transparent;
+
+    > * { background-image: url("activities-active.svg"); }
+  }
+}
 
   // a little unstructured mess:
 
@@ -997,6 +1028,7 @@ StScrollBar {
   background-size: 32px;
   height: 32px;
   width: 32px;
+  &:hover { background-image: url("close-window-hover.svg"); }
 }
   .window-close {
     -shell-close-overlap: 16px;

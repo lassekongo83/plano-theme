@@ -163,8 +163,8 @@
   //
   // active osd button
   //
-    $_bg: if($c!=$osd_bg_color, transparentize($c, 0.3),
-                            lighten($osd_bg_color,10%));
+    $_bg: if($c!=$osd_bg_color, transparentize($c, 0.5),
+                            lighten($osd_bg_color,4%));
 
     color: white;
     border-color: $osd_borders_color;
