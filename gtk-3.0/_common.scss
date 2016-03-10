@@ -1709,67 +1709,39 @@ column-header.button.dnd { // for treeview-like derive widgets
  **********/
 
 GtkSwitch {
-  -GtkSwitch-slider-width: 45px; // 55px is the right value to make it as tall
-                                 // as buttons, not doing that for now
-  -GtkSwitch-slider-height: 27px;
+  font: 1;
+  -GtkSwitch-slider-width: 52;
+  -GtkSwitch-slider-height: 24;
+  outline-color: transparent;
 
-  font-weight: bold;
-  font-size: smaller;
-  outline-offset: -4px;
-  box-shadow: inset 0 1px transparentize(black, 0.9), // needs to be set here
-              _widget_edge();                         // otherwise it gets
-                                                      // clipped
-  &.trough {
-    // similar to the .scale
-    border: 1px solid $borders_color;
-    border-radius: 2px;
-    color: $fg_color;
-    background-image: linear-gradient(to bottom, mix($bg_color, $borders_color, 60%));
-    text-shadow: 0 1px transparentize(black, 0.9);
-    &:active {
-      @include progressbar_fill;
-      color: white;
-      border-color: $selected_borders_color;
-      box-shadow: _widget_edge();
-      text-shadow: 0 1px transparentize($selected_borders_color, 0.5),
-                   0 0 2px transparentize(white, 0.4);
-    }
-    &:insensitive {
-      color: $insensitive_fg_color;
-      border-color: $borders_color;
-      background-image: none;
-      background-color: $insensitive_bg_color;
-      box-shadow: _widget_edge();
-      text-shadow: none;
-    }
+  &.trough, &.slider {
+    background-size: 52px 24px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    color: transparent;
+    border-color: transparent;
+    border-image: none;
+    border-style: none;
+    box-shadow: none;
+
+    &:dir(rtl) { background-position: left center; }
   }
-  &.slider {
-    border: 1px solid;
-    border-radius: 2px;
-    @include button(normal);
-    box-shadow: inset 0 1px if($variant=='light', white,
-                               transparentize(white, 0.85)),
-                inset 0 -2px transparentize($bg_color, 0.4),
-                inset 0 -1px mix($bg_color, $borders_color, 50%);
-    &:hover {
-      @include button(hover);
-      box-shadow: inset 0 1px if($variant=='light', white,
-                                 transparentize(white, 0.85)),
-                  inset 0 -2px transparentize($bg_color, 0.4),
-                  inset 0 -1px mix($bg_color, $borders_color, 50%);
-    }
-    &:active { border: 1px solid $selected_borders_color; }
-    &:insensitive { @include button(insensitive, $edge:none); }
+}
+
+@each $k,$l in ('',''),
+               (':active','-active'),
+               (':insensitive','-insensitive'),
+               (':active:insensitive','-active-insensitive') {
+
+  // load switch troughs from .png files in assets directory
+
+  GtkSwitch.trough#{$k} {
+    background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
   }
-  .list-row:selected & {
-    @if $variant == 'light' {
-      box-shadow: none;
-      border-color: $selected_borders_color;
-      &.slider:dir(rtl) { border-left-color: $borders_color; }
-      &.slider:dir(ltr) { border-right-color: $borders_color; }
-      &.slider,
-      &.slider:active { border-color: $selected_borders_color; }
-    }
+
+  .list-row:selected GtkSwitch.trough#{$k},
+  GtkInfoBar GtkSwitch.trough#{$k} {
+    background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
   }
 }
 
@@ -1785,23 +1757,11 @@ GtkSwitch {
 
   //standard checks and radios
   @each $s,$as in ('','-unchecked'),
-                  (':hover', '-unchecked-hover'),
-                  (':active', '-unchecked-active'),
                   (':insensitive','-unchecked-insensitive'),
-                  (':backdrop', '-unchecked-backdrop'),
-                  (':backdrop:insensitive', '-unchecked-backdrop-insensitive'),
                   (':inconsistent', '-mixed'),
-                  (':inconsistent:hover', '-mixed-hover'),
-                  (':inconsistent:selected', '-mixed-active'),
-                  (':inconsistent:backdrop', '-mixed-backdrop'),
                   (':inconsistent:insensitive', '-mixed-insensitive'),
-                  (':inconsistent:insensitive:backdrop', '-mixed-backdrop-insensitive'),
                   (':checked', '-checked'),
-                  (':checked:insensitive','-checked-insensitive'),
-                  (':checked:hover', '-checked-hover'),
-                  (':checked:active', '-checked-active'),
-                  (':backdrop:checked', '-checked-backdrop'),
-                  (':backdrop:checked:insensitive', '-checked-backdrop-insensitive') {
+                  (':checked:insensitive','-checked-insensitive') {
     .#{$w}#{$s} {
       -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}#{$asset_suffix}.png"),
                                     url("assets/#{$a}#{$as}#{$asset_suffix}@2.png"));
@@ -1845,13 +1805,7 @@ GtkSwitch {
 
 //selection-mode
 @each $s,$as in ('','-selectionmode'),
-                  (':hover', '-hover-selectionmode'),
-                  (':active', '-active-selectionmode'),
-                  (':backdrop', '-backdrop-selectionmode'),
-                  (':checked', '-checked-selectionmode'),
-                  (':checked:hover', '-checked-hover-selectionmode'),
-                  (':checked:active', '-checked-active-selectionmode'),
-                  (':backdrop:checked', '-checked-backdrop-selectionmode') {
+                  (':checked', '-checked-selectionmode') {
   .view.content-view.check#{$s}:not(.list) {
     icon-shadow: none;
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}.png"),
@@ -1994,9 +1948,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
       @each $s,$as in ('',''),
                       (':hover','-hover'),
                       (':active','-active'),
-                      (':insensitive','-insensitive'),
-                      (':backdrop','-backdrop'),
-                      (':backdrop:insensitive','-backdrop-insensitive') {
+                      (':insensitive','-insensitive') {
         &.slider#{$s} {
           $_url: 'assets/slider-#{$dn}-#{$w}#{$as}#{$asset_suffix}';
           border-style: none;
@@ -2839,17 +2791,64 @@ GtkVolumeButton.button {
 }
 
 // Window Close button
-.header-bar .button.titlebutton,
-.titlebar .button.titlebutton {
-  @extend .button;
-  @extend .button.flat;
-  @extend .image-button;
-  &:backdrop { icon-shadow: none; }
-}
+//.header-bar .button.titlebutton,
+//.titlebar .button.titlebutton {
+//  @extend .button;
+//  @extend .button.flat;
+//  @extend .image-button;
+//  &:backdrop { icon-shadow: none; }
+//}
 
-.header-bar.selection-mode .button.titlebutton,
-.titlebar.selection-mode .button.titlebutton {
-  &:backdrop { icon-shadow: none; }
+//.header-bar.selection-mode .button.titlebutton,
+//.titlebar.selection-mode .button.titlebutton {
+//  &:backdrop { icon-shadow: none; }
+//}
+
+.header-bar,
+.titlebar {
+
+  &.default-decoration .button.titlebutton { // no vertical padding for ssd buttons
+    padding-top: 0px;                        // already handled by the titlebar-padding
+    padding-bottom: 0px;
+  }
+
+  .button.titlebutton {
+    @extend .image-button;
+
+    &:not(GtkMenuButton) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    padding-left: 4px;
+    padding-right: 4px;
+
+    @include button(undecorated);
+    background-color: transparentize($bg_color, 1);
+
+    &:hover {
+      @include button(header-hover);
+    }
+    &:active, &:checked {
+      @include button(header-active);
+    }
+    &.close, &.maximize, &.minimize {
+      color: transparent;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-width: 0;
+
+      &:backdrop { opacity: 1; }
+    }
+    // Load png assets for each button
+    @each $k in ('close','maximize', 'minimize') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover:backdrop','-backdrop-hover'), (':hover','-hover') {
+
+        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}.png'),
+                                                     url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}@2.png')); }
+      }
+    }
+  }
 }
 
 // catch all extend :)
@@ -2932,18 +2931,11 @@ GtkVolumeButton.button {
   @each $w,$a in ('check', 'checkbox'),
                  ('radio','radio') {
     @each $s,$as in ('','-unchecked'),
-                  (':hover', '-unchecked-hover'),
-                  (':active', '-unchecked-active'),
                   (':insensitive','-unchecked-insensitive'),
                   (':inconsistent', '-mixed'),
-                  (':inconsistent:hover', '-mixed-hover'),
-                  (':inconsistent:selected', '-mixed-active'),
                   (':inconsistent:insensitive', '-mixed-insensitive'),
                   (':checked', '-checked'),
-                  (':checked:insensitive','-checked-insensitive'),
-                  (':checked:hover', '-checked-hover'),
-                  (':checked:active', '-checked-active'),
-                  (':backdrop:checked', '-checked-backdrop') {
+                  (':checked:insensitive','-checked-insensitive') {
     .#{$w}#{$s} {
       icon-shadow: none;
       -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}-dark.png"),
