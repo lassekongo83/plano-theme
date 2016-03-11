@@ -2801,8 +2801,8 @@ GtkColorSwatch {
 
 .header-bar.default-decoration .button.titlebutton,
 .titlebar.default-decoration .button.titlebutton {
-  padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-top: 4px;
+  padding-bottom: 4px; }
 .header-bar .button.titlebutton,
 .titlebar .button.titlebutton {
   padding-left: 4px;
