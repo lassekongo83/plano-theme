@@ -3,13 +3,13 @@
 
 $base_color: if($variant == 'light', #ffffff, #607D8B);
 $text_color: if($variant == 'light', black, white);
-$bg_color: if($variant == 'light', #e0e0e0, #37474f);
+$bg_color: if($variant == 'light', #ebebeb, #404040);
 $fg_color: if($variant == 'light', #212121, #eeeeee);
 
 $selected_fg_color: #ffffff;
-$selected_bg_color: #039be5;
-$selected_borders_color: if($variant== 'light', #0277bd, #29b6f6);
-$borders_color: if($variant == 'light', #9e9e9e, #263238);
+$selected_bg_color: #3399ff;
+$selected_borders_color: if($variant== 'light', #007eff, #79bbff);
+$borders_color: if($variant == 'light', #b4b4b4, #232323);
 $borders_edge: if($variant == 'light', white, transparentize($fg_color, 0.9));
 $link_color: if($variant == 'light', darken($selected_bg_color,10%), lighten($selected_bg_color,20%));
 $link_visited_color: if($variant == 'light', darken($selected_bg_color,20%), lighten($selected_bg_color,10%));
