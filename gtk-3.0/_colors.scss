@@ -3,7 +3,7 @@
 
 $base_color: if($variant == 'light', #ffffff, #607D8B);
 $text_color: if($variant == 'light', black, white);
-$bg_color: if($variant == 'light', #ebebeb, #404040);
+$bg_color: if($variant == 'light', #e0e0e0, #404040);
 $fg_color: if($variant == 'light', #212121, #eeeeee);
 
 $selected_fg_color: #ffffff;

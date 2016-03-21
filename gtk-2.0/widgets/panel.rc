@@ -105,3 +105,12 @@ widget "*gimmie*" style "bold-panel-item"
 
 # widget_class "*Mail*" style "murrine-panel" # Disabled to fix Evolution bug
 # class "*Panel*" style "murrine-panel" # Disabled to fix bug
+
+style "xfce-panel-image-style"
+{
+  # Fix the panel images to a default gtk icon size, is only works for
+  # images below 32 pixels. You can for example use this when you have
+  # fuzzy launcher icons.
+  XfcePanelImage::force-gtk-icon-sizes = true
+}
+class "XfcePanelImage" style "xfce-panel-image-style"
