@@ -3087,6 +3087,24 @@ GtkColorSwatch {
   background-origin: content-box;
   background-position: right center; }
 
+#pulseaudio-button {
+  background-color: #404040;
+  color: #ffffff;
+  border-radius: 0;
+  border-style: none;
+  box-shadow: none; }
+
+.xfce4-panel .button:hover,
+.xfce4-panel .button:active:hover,
+.xfce4-panel .button:checked:hover {
+  border-color: transparent;
+  background-image: none;
+  border-radius: 0;
+  border-color: transparent;
+  box-shadow: none;
+  color: white;
+  transition: none; }
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
