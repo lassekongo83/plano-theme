@@ -611,26 +611,44 @@ $_dot_color: if($variant=='light', $selected_bg_color,
 }
 
 // Linked shadows variables.
+$shadow-color: transparentize(black,0.92);
+$inset-color: transparentize(white,0.5);
 $btn-shadow-middle: 
-    0px 0 transparentize(black,0.92),
-    0 1px transparentize(black,0.92),
-    0px 0 transparentize(black,0.92),
-    0 -1px transparentize(black,0.92);
+    0px 0 $shadow-color,
+    0 1px $shadow-color,
+    0px 0 $shadow-color,
+    0 -1px $shadow-color,
+    inset 0px 0 $inset-color, 
+    inset 0 1px $inset-color, 
+    inset 0px 0 $inset-color, 
+    inset 0 -1px $inset-color;
 $btn-shadow-middle-vert: 
-    1px 0 transparentize(black,0.92),
-    0 0px transparentize(black,0.92),
-    1px 0 transparentize(black,0.92),
-    0 0px transparentize(black,0.92);
+    1px 0 $shadow-color,
+    0 0px $shadow-color,
+    1px 0 $shadow-color,
+    0 0px $shadow-color,
+    inset 1px 0 $inset-color, 
+    inset 0 0px $inset-color, 
+    inset -1px 0 $inset-color, 
+    inset 0 0px $inset-color;
 $btn-shadow-left: 
-    0px 0 transparentize(black,0.92), 
-    0 1px transparentize(black,0.92), 
-    -1px 0 transparentize(black,0.92), 
-    0 -1px transparentize(black,0.92);
+    0px 0 $shadow-color,
+    0 1px $shadow-color,
+    -1px 0 $shadow-color,
+    0 -1px $shadow-color,
+    inset 1px 0 $inset-color, 
+    inset 0 1px $inset-color, 
+    inset 0px 0 $inset-color, 
+    inset 0 -1px $inset-color;
 $btn-shadow-right: 
-    1px 0 transparentize(black,0.92), 
-    0 1px transparentize(black,0.92), 
-    0px 0 transparentize(black,0.92), 
-    0 -1px transparentize(black,0.92);
+    1px 0 $shadow-color,
+    0 1px $shadow-color,
+    0px 0 $shadow-color,
+    0 -1px $shadow-color,
+    inset 0px 0 $inset-color, 
+    inset 0 1px $inset-color, 
+    inset -1px 0 $inset-color, 
+    inset 0 -1px $inset-color;
 
 %linked_middle {
   border-radius: 0;
@@ -967,7 +985,8 @@ GtkComboBox {
 .toolbar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: $bg_color;
+  background-color: darken($bg_color,5%); // Same as tab header
+  box-shadow: inset 0 2px transparentize(black,0.95);
   .osd &, &.osd {
     padding: 13px;
     border: none;
@@ -1007,14 +1026,14 @@ GtkComboBox {
   padding: 4px;
   border-width: 0 0 1px;
   border-style: solid;
-  border-color: mix($bg_color, $borders_color, 70%);
+  border-color: $borders_color;
   border-radius: 3px 3px 0 0;
   background-color: transparent;
 
   @include headerbar_fill;
 
   &:backdrop {
-    border-color: mix($bg_color, $borders_color, 70%);
+    border-color: $borders_color;
     background-color: $bg_color;
     background-image: none;
     color: $backdrop_fg_color;
@@ -1296,7 +1315,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   -GtkWidget-window-dragging: true;
   background-color: $bg_color;
   padding: 0px;
-  box-shadow: inset 0 -1px mix($bg_color, $borders_color, 70%);
+  box-shadow: inset 0 -1px $borders_color;
   & > .menuitem {
     padding: 4px 8px;
     &:hover { //Seems like it :hover even with keyboard focus
@@ -1407,7 +1426,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   }
   &.header {
     background-color: darken($bg_color,5%);
-    &.top { box-shadow: inset 0 -1px $borders_color; }
+    &.top { box-shadow: inset 0 -1px $borders_color, inset 0 2px transparentize(black,0.95); }
     &.bottom { box-shadow: inset 0 1px $borders_color; }
     &.right { box-shadow: inset  1px 0  $borders_color; }
     &.left { box-shadow: inset -1px 0 $borders_color; }
@@ -1792,6 +1811,7 @@ GtkSwitch {
 
   //standard checks and radios
   @each $s,$as in ('','-unchecked'),
+                  (':hover','-unchecked-hover'),
                   (':insensitive','-unchecked-insensitive'),
                   (':inconsistent', '-mixed'),
                   (':inconsistent:insensitive', '-mixed-insensitive'),
@@ -1800,7 +1820,7 @@ GtkSwitch {
     .#{$w}#{$s} {
       -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}#{$asset_suffix}.png"),
                                     url("assets/#{$a}#{$as}#{$asset_suffix}@2.png"));
-      icon-shadow: if(str-index($s,"backdrop"), none, 0 1px 0 $borders_edge); //no edge highlight for :backdrop
+      //icon-shadow: if(str-index($s,"backdrop"), none, 0 1px 0 $borders_edge); //no edge highlight for :backdrop
       &.button.flat { icon-shadow: none; }
     }
     @if $variant == 'light' {
@@ -1884,7 +1904,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
 
   &.slider {
-    @include button(normal);
+    background-color: lighten($bg_color,8%);
     border: 1px solid;
     border-radius: 50%;
     border-color: darken($borders_color,3%);
@@ -1897,7 +1917,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     &:insensitive {
       border-style: solid; // needed for double marks scales or they'll get
       border-radius: 50%;  // overridden
-      background-image: linear-gradient(to bottom, $insensitive_bg_color);
+      background-color: $insensitive_bg_color;
       box-shadow: none;
     }
     &:active {
@@ -1917,19 +1937,15 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     border: 1px solid $borders_color;
     border-radius: 2px;
     background-color: mix($bg_color, $borders_color, 60%);
-    box-shadow: inset 1px 1px transparentize(black, 0.9),
-                _widget_edge();
     &.highlight {
       @include progressbar_fill;
       border-color: $selected_borders_color;
-      box-shadow: _widget_edge();
       &.vertical { @include progressbar_fill(vertical); }
     }
     &:insensitive, &.vertical:insensitive {
       border-color: $insensitive_borders_color;
       background-image: none;
       background-color: $insensitive_bg_color;
-      box-shadow: _widget_edge();
     }
 
     //OSD troughs
@@ -2025,8 +2041,8 @@ GtkProgressBar {
   padding: 0;
   font-size: smaller;
   color: transparentize($fg_color, 0.6);
-  box-shadow: inset 1px 1px transparentize(black, 0.9), // needs to be set
-              _widget_edge();                           // here ot it gets
+  //box-shadow: inset 1px 1px transparentize(black, 0.9), // needs to be set
+  //            _widget_edge();                           // here ot it gets
                                                         // clipped
   &.osd {
     -GtkProgressBar-xspacing: 0;
@@ -2035,7 +2051,7 @@ GtkProgressBar {
   }
   &.trough {  // background
     border: 1px solid $borders_color;
-    border-radius: 2px;
+    border-radius: 0px;
     background-color: mix($borders_color, $bg_color, 35%);
     &.osd {
       border-style: none;
@@ -2052,12 +2068,12 @@ GtkProgressBar {
   border-radius: 1.5px;
   box-shadow: none; //needed for clipping
   &.left {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
   &.right {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   &.left.right {
     box-shadow: none;
@@ -2065,13 +2081,13 @@ GtkProgressBar {
   &.vertical {
     @include progressbar_fill(vertical);
     &.bottom {
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
       box-shadow: none;
     }
     &.top {
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
     }
   }
   &.osd {
@@ -2088,7 +2104,7 @@ GtkProgressBar {
  *************/
 
 .level-bar {
-  box-shadow: _widget_edge(); // needs to be set here to avoid clipping
+  //box-shadow: _widget_edge(); // needs to be set here to avoid clipping
   -GtkLevelBar-min-block-width: 34;
   -GtkLevelBar-min-block-height: 3;
   &.vertical {
@@ -2098,7 +2114,7 @@ GtkProgressBar {
   &.trough {
     border: 1px solid;
     padding: 2px;
-    border-radius: 2px;
+    border-radius: 0px;
     @include entry(normal);
   }
   &.fill-block {
@@ -2107,7 +2123,7 @@ GtkProgressBar {
     border: 1px solid if($variant=='light', darken($selected_bg_color,10%),
                                             darken($selected_bg_color,5%));
     background-color: $selected_bg_color;
-    box-shadow: 0 1px transparentize(black, 0.9);
+    //box-shadow: 0 1px transparentize(black, 0.9);
     border-radius: 1px;
     &.indicator-discrete {
       &.horizontal { margin: 0 1px; }
