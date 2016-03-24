@@ -610,11 +610,37 @@ $_dot_color: if($variant=='light', $selected_bg_color,
   &:only-child > .button.flat { @extend %linked:only-child; }
 }
 
+// Linked shadows variables.
+$btn-shadow-middle: 
+    0px 0 transparentize(black,0.92),
+    0 1px transparentize(black,0.92),
+    0px 0 transparentize(black,0.92),
+    0 -1px transparentize(black,0.92);
+$btn-shadow-middle-vert: 
+    1px 0 transparentize(black,0.92),
+    0 0px transparentize(black,0.92),
+    1px 0 transparentize(black,0.92),
+    0 0px transparentize(black,0.92);
+$btn-shadow-left: 
+    0px 0 transparentize(black,0.92), 
+    0 1px transparentize(black,0.92), 
+    -1px 0 transparentize(black,0.92), 
+    0 -1px transparentize(black,0.92);
+$btn-shadow-right: 
+    1px 0 transparentize(black,0.92), 
+    0 1px transparentize(black,0.92), 
+    0px 0 transparentize(black,0.92), 
+    0 -1px transparentize(black,0.92);
+
 %linked_middle {
   border-radius: 0;
   border-right-style: none;
   border-right-width: 0;
   border-left-width: 0;
+  box-shadow: $btn-shadow-middle;
+  // FIXME: Figure out how this looks on colored titlebars.
+  &:active { @include button(active); }
+  &:checked { @include button(active); }
 }
 
 %linked {
@@ -624,6 +650,9 @@ $_dot_color: if($variant=='light', $selected_bg_color,
     border-bottom-left-radius: 2px;
     border-left-width: 1px;
     border-right-width: 0;
+    box-shadow: $btn-shadow-left;
+    &:active { @include button(active); }
+    &:checked { @include button(active); }
   }
   &:last-child {
     border-top-right-radius: 2px;
@@ -631,17 +660,23 @@ $_dot_color: if($variant=='light', $selected_bg_color,
     border-right-style: solid;
     border-left-width: 0;
     border-right-width: 1px;
+    box-shadow: $btn-shadow-right;
+    &:active { @include button(active); }
+    &:checked { @include button(active); }
   }
   &:only-child {
     border-radius: 2px;
     border-style: solid;
     border-width: 1px;
+    &:active { @include button(active); }
+    &:checked { @include button(active); }
   }
 }
 
 %linked_vertical_middle {
   border-style: solid solid none solid;
   border-radius: 0;
+  box-shadow: $btn-shadow-middle-vert;
 }
 
 %linked_vertical{

@@ -143,6 +143,7 @@
   // Border colors
   $btn-border: if($c!=$bg_color, _border_color($c), $borders_color);
   $btn-border-i: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
+  $btn-shadow: 1px 0 transparentize(black,0.92), 0 1px transparentize(black,0.92), -1px 0 transparentize(black,0.92), 0 -1px transparentize(black,0.92);
 
   $_hilight_color: _button_hilight_color($c);
   $_button_edge: if($edge == none, none, _widget_edge($edge));
@@ -154,6 +155,7 @@
     outline-color: transparentize($tc, 0.7);
     border-color: $btn-border;
     background-color: lighten($c,8%);
+    box-shadow: $btn-shadow;
   }
 
   @else if $t==hover {
@@ -181,6 +183,7 @@
     background-color: $_bg;
     text-shadow: none;
     icon-shadow: none;
+    box-shadow: none;
     // white with 0 alpha to avoid an ugly transition, since no color means
     // black with 0 alpha
     > .label { color: inherit; }
