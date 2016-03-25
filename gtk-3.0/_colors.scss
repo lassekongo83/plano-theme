@@ -9,7 +9,7 @@ $fg_color: if($variant == 'light', #212121, #eeeeee);
 $selected_fg_color: #ffffff;
 $selected_bg_color: #3399ff;
 $selected_borders_color: if($variant== 'light', #007eff, #79bbff);
-$borders_color: if($variant == 'light', #b4b4b4, #232323);
+$borders_color: if($variant == 'light', darken($bg_color,15%), darken($bg_color,15%));
 $borders_edge: if($variant == 'light', white, transparentize($fg_color, 0.9));
 $link_color: if($variant == 'light', darken($selected_bg_color,10%), lighten($selected_bg_color,20%));
 $link_visited_color: if($variant == 'light', darken($selected_bg_color,20%), lighten($selected_bg_color,10%));

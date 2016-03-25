@@ -1070,7 +1070,7 @@ StScrollBar {
   color: #eeeeec;
   background-color: transparent;
   padding: 4px 0;
-  border: 0px solid rgba(128, 128, 128, 0.4);
+  border: 0px solid rgba(128, 128, 128, 0);
   border-left: 0px;
   border-radius: 0px; }
   #dash:rtl {

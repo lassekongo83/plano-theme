@@ -148,10 +148,10 @@
     0 1px transparentize(black,0.92), 
     -1px 0 transparentize(black,0.92), 
     0 -1px transparentize(black,0.92),
-    inset 1px 0 transparentize(white,0.5), 
-    inset 0 1px transparentize(white,0.5), 
-    inset -1px 0 transparentize(white,0.5), 
-    inset 0 -1px transparentize(white,0.5);
+    inset 1px 0 if($variant == 'light', transparentize(white,0.5), transparentize(white,0.9)),
+    inset 0 1px if($variant == 'light', transparentize(white,0.5), transparentize(white,0.9)),
+    inset -1px 0 if($variant == 'light', transparentize(white,0.5), transparentize(white,0.9)),
+    inset 0 -1px if($variant == 'light', transparentize(white,0.5), transparentize(white,0.9));
 
   $_hilight_color: _button_hilight_color($c);
   $_button_edge: if($edge == none, none, _widget_edge($edge));

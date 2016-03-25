@@ -612,7 +612,7 @@ $_dot_color: if($variant=='light', $selected_bg_color,
 
 // Linked shadows variables.
 $shadow-color: transparentize(black,0.92);
-$inset-color: transparentize(white,0.5);
+$inset-color: if($variant == 'light', transparentize(white,0.5), transparentize(white,0.9));
 $btn-shadow-middle: 
     0px 0 $shadow-color,
     0 1px $shadow-color,
