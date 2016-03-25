@@ -2349,8 +2349,8 @@ GtkCalendar {
   &.csd { // rounded bottom border styling for csd version
     &.background {
       // bigger radius for better antialiasing
-      border-bottom-left-radius: 9px;
-      border-bottom-right-radius: 9px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
     }
     .dialog-action-area .button {
       padding: 12px;
