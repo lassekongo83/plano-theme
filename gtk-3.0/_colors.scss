@@ -35,6 +35,10 @@ $sidebar_bg_color: mix($bg_color, $base_color, 50%);
 
 $tooltip_borders_color: transparentize(white, 0.9);
 
+// Unity and other GTK3 panels
+$panel_bg: #404040;
+$panel_fg: white;
+
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);

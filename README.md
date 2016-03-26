@@ -23,7 +23,7 @@ It is currently in beta state. Things may change a lot before the final release.
   * `gtk2-engines-pixbuf` (Debian, Ubuntu)
   * `gtk2-engines` (Fedora)
 
-#### Optional recommended requirements.
+#### Optional recommended requirements
 * Roboto fonts (For the gnome-shell theme.)
   * `fonts-roboto` (Debian, Ubuntu)
   * `google-roboto-fonts` (Fedora)
