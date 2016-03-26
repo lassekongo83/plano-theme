@@ -4,13 +4,13 @@
 # Description: As is the original theme, this theme is 100% free and open source.
 
 gtk-color-scheme	= "bg_color:#e0e0e0\nselected_bg_color:#3399ff\nbase_color:#ffffff" # Background, base.
-gtk-color-scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#212121" # Foreground, text.
-gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
+gtk-color-scheme	= "fg_color:#212121\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text.
+gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#FFFFFF" # Tooltips.
 gtk-color-scheme	= "link_color:#2d71b8" # Hyperlinks
 gtk-color-scheme	= "panel_bg_color:#404040" # Panel bg color
 gtk-color-scheme	= "panel_fg_color:#FFFFFF" # Panel fg color
 gtk-color-scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
-gtk-color-scheme	= "bg_color_dark:#414141\ntext_color_dark:#FFF"
+gtk-color-scheme	= "bg_color_dark:#404040\ntext_color_dark:#FFF"
 
 gtk-icon-sizes          = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
 gtk-button-images	= 1 # Disables icons for buttons with text
@@ -241,14 +241,15 @@ style "button" = "wider"
 
 	engine "murrine"
 	{
-		contrast            = 0.9
 		highlight_shade     = 1.0
-		lightborder_shade   = 1.0
+		lightborder_shade   = 1.5
 		gradient_shades     = {1.0,1.0,1.0,1.0}
-		border_shades       = { 1.0, 1.0 }
-		shadow_shades       = {1.0,1.0}
-		reliefstyle         = 0
-		roundness	    = 1
+		reliefstyle         = 2
+		roundness	    	= 2
+		contrast			= 1.0
+		roundness			= 1
+		border_shades		= {0.85, 0.85}
+		shadow_shades		= {0.5, 0.5}
 	}
 }
 
@@ -312,7 +313,7 @@ style "menu"
 	{
 		roundness = 0 # Roundness of menu items.
 		gradient_shades = {1.0,1.0,1.0,1.0}
-		contrast = 0.9
+		contrast = 1.0
 		lightborder_shade = 1.0
 	}
 }
@@ -421,15 +422,15 @@ style "progressbar"
 
 	engine "murrine"
 	{
-		gradient_shades = {1.0,1.0,1.0,1.0}
-		trough_shades	= {1.0, 1.0}
+		gradient_shades 		= {1.0,1.0,1.0,1.0}
+		trough_shades			= {1.0, 1.0}
 		trough_border_shades	= { 1.0, 1.0 }
-		roundness 	= 4
-		contrast	= 0.8
-		border_shades	= { 1.0, 1.0 }
-		lightborder_shade   = 1.0
-		glowstyle	= 0
-		glow_shade	= 1.0
+		roundness 				= 0
+		contrast				= 1.0
+		border_shades			= { 1.0, 1.0 }
+		lightborder_shade   	= 1.0
+		glowstyle				= 0
+		glow_shade				= 1.0
 	}
 }
 
@@ -555,12 +556,15 @@ style "radiocheck"
 
 style "toolbar" = "default"
 {
-	GtkToolbar	:: shadow-type		= GTK_SHADOW_NONE
+	bg[NORMAL]	= shade (0.96, @bg_color)
+
+	#GtkToolbar	:: shadow-type		= GTK_SHADOW_NONE
 	engine "murrine"
 	{
-		contrast = 1.0
+		contrast = 0.0
 		lightborder_shade = 0.0
-		gradient_shades = {1.0,1.0,1.0,1.0}
+		gradient_shades = {0.96,0.96,0.96,0.96}
+		toolbarstyle = 1 
 	}
 }
 
