@@ -3285,7 +3285,7 @@ UnityDecoration {
 
 UnityPanelWidget,
 .unity-panel {
-  background-image: #404040;
+  background-color: #404040;
   color: white;
   box-shadow: none; }
 
