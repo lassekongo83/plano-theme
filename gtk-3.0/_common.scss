@@ -1784,8 +1784,10 @@ GtkSwitch {
                   (':hover','-unchecked-hover'),
                   (':insensitive','-unchecked-insensitive'),
                   (':inconsistent', '-mixed'),
+                  (':inconsistent:hover', '-mixed-hover'),
                   (':inconsistent:insensitive', '-mixed-insensitive'),
                   (':checked', '-checked'),
+                  (':checked:hover', '-checked-hover'),
                   (':checked:insensitive','-checked-insensitive') {
     .#{$w}#{$s} {
       -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}#{$asset_suffix}.png"),
@@ -2863,7 +2865,7 @@ GtkVolumeButton.button {
     }
     // Load png assets for each button
     @each $k in ('close','maximize', 'minimize') {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover:backdrop','-backdrop-hover'), (':hover','-hover') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover') {
 
         &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}.png'),
                                                      url('assets/titlebutton-#{$k}#{$m}#{$asset_suffix}@2.png')); }

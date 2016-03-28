@@ -1705,6 +1705,11 @@ GtkInfoBar GtkSwitch.trough:active:insensitive {
   .check:inconsistent.button.flat, .check.sidebar-button.button:inconsistent {
     icon-shadow: none; }
 
+.check:inconsistent:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover-dark.png"), url("assets/checkbox-mixed-hover-dark@2.png")); }
+  .check:inconsistent:hover.button.flat, .check.sidebar-button.button:inconsistent:hover {
+    icon-shadow: none; }
+
 .check:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png")); }
   .check:inconsistent:insensitive.button.flat, .check.sidebar-button.button:inconsistent:insensitive {
@@ -1713,6 +1718,11 @@ GtkInfoBar GtkSwitch.trough:active:insensitive {
 .check:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png")); }
   .check:checked.button.flat, .check.sidebar-button.button:checked {
+    icon-shadow: none; }
+
+.check:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover-dark.png"), url("assets/checkbox-checked-hover-dark@2.png")); }
+  .check:checked:hover.button.flat, .check.sidebar-button.button:checked:hover {
     icon-shadow: none; }
 
 .check:checked:insensitive {
@@ -1753,6 +1763,11 @@ GtkInfoBar GtkSwitch.trough:active:insensitive {
   .radio:inconsistent.button.flat, .radio.sidebar-button.button:inconsistent {
     icon-shadow: none; }
 
+.radio:inconsistent:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover-dark.png"), url("assets/radio-mixed-hover-dark@2.png")); }
+  .radio:inconsistent:hover.button.flat, .radio.sidebar-button.button:inconsistent:hover {
+    icon-shadow: none; }
+
 .radio:inconsistent:insensitive {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png")); }
   .radio:inconsistent:insensitive.button.flat, .radio.sidebar-button.button:inconsistent:insensitive {
@@ -1761,6 +1776,11 @@ GtkInfoBar GtkSwitch.trough:active:insensitive {
 .radio:checked {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png")); }
   .radio:checked.button.flat, .radio.sidebar-button.button:checked {
+    icon-shadow: none; }
+
+.radio:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover-dark.png"), url("assets/radio-checked-hover-dark@2.png")); }
+  .radio:checked:hover.button.flat, .radio.sidebar-button.button:checked:hover {
     icon-shadow: none; }
 
 .radio:checked:insensitive {
@@ -2833,9 +2853,6 @@ GtkColorSwatch {
   .header-bar .button.titlebutton.close:backdrop,
   .titlebar .button.titlebutton.close:backdrop {
     background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png")); }
-  .header-bar .button.titlebutton.close:hover:backdrop,
-  .titlebar .button.titlebutton.close:hover:backdrop {
-    background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-hover-dark.png"), url("assets/titlebutton-close-backdrop-hover-dark@2.png")); }
   .header-bar .button.titlebutton.close:hover,
   .titlebar .button.titlebutton.close:hover {
     background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png")); }
@@ -2845,9 +2862,6 @@ GtkColorSwatch {
   .header-bar .button.titlebutton.maximize:backdrop,
   .titlebar .button.titlebutton.maximize:backdrop {
     background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png")); }
-  .header-bar .button.titlebutton.maximize:hover:backdrop,
-  .titlebar .button.titlebutton.maximize:hover:backdrop {
-    background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-hover-dark.png"), url("assets/titlebutton-maximize-backdrop-hover-dark@2.png")); }
   .header-bar .button.titlebutton.maximize:hover,
   .titlebar .button.titlebutton.maximize:hover {
     background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png")); }
@@ -2857,9 +2871,6 @@ GtkColorSwatch {
   .header-bar .button.titlebutton.minimize:backdrop,
   .titlebar .button.titlebutton.minimize:backdrop {
     background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark.png"), url("assets/titlebutton-minimize-backdrop-dark@2.png")); }
-  .header-bar .button.titlebutton.minimize:hover:backdrop,
-  .titlebar .button.titlebutton.minimize:hover:backdrop {
-    background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-hover-dark.png"), url("assets/titlebutton-minimize-backdrop-hover-dark@2.png")); }
   .header-bar .button.titlebutton.minimize:hover,
   .titlebar .button.titlebutton.minimize:hover {
     background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark.png"), url("assets/titlebutton-minimize-hover-dark@2.png")); }
