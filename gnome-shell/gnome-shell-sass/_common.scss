@@ -1217,6 +1217,29 @@ StScrollBar {
     -x-offset: 8px;
   }
 
+  // /* DASH TO DOCK EXTENSION */
+
+  // FIXME: Disabled because the position class isn't working.
+
+  // $dtd-bg: rgba(0, 0, 0, 0.6);
+
+  // #dashtodockContainer #dash {
+  // .left &,
+  // &:ltr {
+  //   box-shadow: inset 3px 0px 0px 0px $dtd-bg;
+  // }
+  // .right &,
+  // &:rtl {
+  //   box-shadow: inset -3px 0px 0px 0px $dtd-bg;
+  // }
+  // .bottom & {
+  //   box-shadow: inset 0px -3px 0px 0px $dtd-bg;
+  // }
+  // .top & {
+  //   box-shadow: inset 0px 3px 0px 0px $dtd-bg;
+  // }
+  // }
+
   /* App Vault/Grid */
   .icon-grid {
     spacing: 30px;
@@ -1235,10 +1258,10 @@ StScrollBar {
     &:checked { @include button(active); }
     &:first-child {
       border-right-width: 0;
-      border-radius: 3px 0 0 3px;
+      border-radius: 2px 0 0 2px;
     }
     &:last-child {
-     border-radius: 0 3px 3px 0;
+     border-radius: 0 2px 2px 0;
     }
   }
 

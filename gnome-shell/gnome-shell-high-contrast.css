@@ -1116,9 +1116,9 @@ StScrollBar {
     icon-shadow: none; }
   .app-view-control:first-child {
     border-right-width: 0;
-    border-radius: 3px 0 0 3px; }
+    border-radius: 2px 0 0 2px; }
   .app-view-control:last-child {
-    border-radius: 0 3px 3px 0; }
+    border-radius: 0 2px 2px 0; }
 
 .search-provider-icon:active, .search-provider-icon:checked,
 .list-search-result:active,
