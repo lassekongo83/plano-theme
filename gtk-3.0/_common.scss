@@ -986,7 +986,7 @@ GtkComboBox {
   -GtkWidget-window-dragging: true;
   padding: 4px;
   background-color: darken($bg_color,5%); // Same as tab header
-  box-shadow: inset 0 2px transparentize(black,0.95);
+  box-shadow: inset 0 2px transparentize($borders_color,0.65);
   .osd &, &.osd {
     padding: 13px;
     border: none;
@@ -1419,14 +1419,14 @@ column-header.button.dnd { // for treeview-like derive widgets
   &.frame {
     border: 1px solid $borders_color;
     // FIXME doesn't work
-    &.top { border-top-width: 0; }
-    &.bottom { border-bottom-width: 0; }
-    &.right { border-right-width: 0; }
-    &.left { border-left-width: 0; }
+    &.top { border-top-width: 0px; }
+    &.bottom { border-bottom-width: 0px; }
+    &.right { border-right-width: 0px; }
+    &.left { border-left-width: 0px; }
   }
   &.header {
     background-color: darken($bg_color,5%);
-    &.top { box-shadow: inset 0 -1px $borders_color, inset 0 2px transparentize(black,0.95); }
+    &.top { box-shadow: inset 0 -1px $borders_color, inset 0 2px transparentize($borders_color,0.65); }
     &.bottom { box-shadow: inset 0 1px $borders_color; }
     &.right { box-shadow: inset  1px 0  $borders_color; }
     &.left { box-shadow: inset -1px 0 $borders_color; }
@@ -1434,10 +1434,10 @@ column-header.button.dnd { // for treeview-like derive widgets
     // this is the shading of the header behind the tabs
     &.frame {
       border: 0px solid $borders_color;
-      &.top { border-bottom-width: 0px; }
-      &.bottom { border-top-width: 0px; }
-      &.right { border-left-width: 0px; }
-      &.left { border-right-width: 0px; }
+      &.top { border-bottom-width: 0; }
+      &.bottom { border-top-width: 0; }
+      &.right { border-left-width: 0; }
+      &.left { border-right-width: 0; }
     }
   }
   tab {
