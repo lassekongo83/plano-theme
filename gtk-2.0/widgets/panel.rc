@@ -18,22 +18,49 @@ style "theme-panel" = "dark"
 	text[SELECTED]	= @panel_fg_color
 
 	engine "murrine" {
-		roundness	= 0
-		glowstyle	= 0
-		glazestyle	= 0
-		contrast	= 0.0
+		reliefstyle = 0
+		glazestyle = 0
+		glow_shade = 1.0
+		highlight_shade = 1.0
+		roundness = 0
+		gradient_shades = {1.0,1.0,1.0,1.0}
+		textstyle = 0
+		contrast = 0.0
+		textstyle = 0
+	}
+}
+
+style "panelbar" {
+
+	fg[NORMAL] = @panel_fg_color
+	fg[ACTIVE] = @panel_fg_color
+	fg[PRELIGHT] = @panel_fg_color
+	fg[SELECTED] = @selected_fg_color
+
+	bg[SELECTED] = @selected_bg_color
+
+	engine "murrine" {}
+}
+
+style "panelbuttons" {
+
+	xthickness = 4
+	ythickness = 0
+
+	engine "murrine" {
+		textstyle = 0
 	}
 }
 
 style "theme-panel-text"
 {
-	fg[NORMAL]	= @base_color
-	fg[PRELIGHT]	= "#ffffff"
-	fg[ACTIVE]	= @base_color
+	fg[NORMAL]	= @panel_fg_color
+	fg[PRELIGHT]	= @panel_fg_color
+	fg[ACTIVE]	= @panel_fg_color
 
-	text[NORMAL]	= @base_color
-	text[PRELIGHT]	= "#ffffff"
-	text[ACTIVE]	= @base_color
+	text[NORMAL]	= @panel_fg_color
+	text[PRELIGHT]	= @panel_fg_color
+	text[ACTIVE]	= @panel_fg_color
 
 	engine "murrine" {
 	}
@@ -91,6 +118,23 @@ style "indicator" = "theme-panel"
 	xthickness	= 0
 	ythickness	= 0
 }
+
+widget "*tasklist*"                                   style "panelbuttons"
+widget_class "*Xfce*Panel*.GtkToggleButton"           style "panelbuttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
+widget_class "*PanelToplevel*Button"                  style "panelbuttons"
+widget_class "*Panel*GtkToggleButton"                 style "panelbuttons"
+widget_class "*Xfce*Panel*Button*"                    style "panelbuttons"
+widget_class "*<XfceArrowButton>"                     style "panelbuttons"
+widget_class "*<XfceActionsPlugin>*"                  style "panelbuttons"
+widget_class "*XfcePanelPlugin.GtkButton"             style "panelbuttons"
+widget "*dict*Applet*"                                style "panelbuttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panelbuttons"
+widget_class "*Tasklist*"                             style:highest "panelbuttons"
+
+class "*Panel*MenuBar*"                               style "panelbar"
+widget_class "*Panel*MenuBar*"                        style "panelbar"
+widget_class "*Panel*MenuBar*Item*"                   style:highest "panelbar"
 
 widget "*PanelWidget*"			style "theme-panel"
 widget "*PanelApplet*"			style "theme-panel"

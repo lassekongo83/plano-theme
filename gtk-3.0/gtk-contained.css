@@ -3285,7 +3285,7 @@ UnityDecoration {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: #404040;
+  background-color: #2b3137;
   color: white;
   box-shadow: none; }
 
@@ -3315,7 +3315,7 @@ XfceHeading,
   text-shadow: none; }
 
 .xfce4-panel {
-  background-color: #404040;
+  background-color: #2b3137;
   color: white;
   font: normal; }
 
@@ -3345,7 +3345,7 @@ XfceHeading,
   text-shadow: none; }
 
 #pulseaudio-button {
-  background-color: #404040;
+  background-color: #2b3137;
   color: #ffffff;
   border-radius: 0;
   border-style: none;

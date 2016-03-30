@@ -7,10 +7,10 @@ gtk-color-scheme	= "bg_color:#e0e0e0\nselected_bg_color:#3399ff\nbase_color:#fff
 gtk-color-scheme	= "fg_color:#212121\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text.
 gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#FFFFFF" # Tooltips.
 gtk-color-scheme	= "link_color:#2d71b8" # Hyperlinks
-gtk-color-scheme	= "panel_bg_color:#404040" # Panel bg color
+gtk-color-scheme	= "panel_bg_color:#2b3137" # Panel bg color
 gtk-color-scheme	= "panel_fg_color:#FFFFFF" # Panel fg color
 gtk-color-scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
-gtk-color-scheme	= "bg_color_dark:#404040\ntext_color_dark:#FFF"
+gtk-color-scheme	= "bg_color_dark:#2b3137\ntext_color_dark:#FFF"
 
 gtk-icon-sizes          = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
 gtk-button-images	= 1 # Disables icons for buttons with text

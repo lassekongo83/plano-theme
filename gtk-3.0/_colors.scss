@@ -1,9 +1,9 @@
 // When color definition differs for dark and light variant,
 // it gets @if ed depending on $variant
 
-$base_color: if($variant == 'light', #ffffff, #757575);
+$base_color: if($variant == 'light', #ffffff, #434f5a);
 $text_color: if($variant == 'light', black, white);
-$bg_color: if($variant == 'light', #e0e0e0, #404040);
+$bg_color: if($variant == 'light', #e0e0e0, #2b3137);
 $fg_color: if($variant == 'light', #212121, #eeeeee);
 
 $selected_fg_color: #ffffff;
@@ -36,7 +36,7 @@ $sidebar_bg_color: mix($bg_color, $base_color, 50%);
 $tooltip_borders_color: transparentize(white, 0.9);
 
 // Unity and other GTK3 panels
-$panel_bg: #404040;
+$panel_bg: #2b3137;
 $panel_fg: white;
 
 //insensitive state derived colors
