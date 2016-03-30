@@ -186,3 +186,11 @@ style "xfce-panel-image-style"
   XfcePanelImage::force-gtk-icon-sizes = true
 }
 class "XfcePanelImage" style "xfce-panel-image-style"
+
+# Whiskermenu fix.
+style "whiskerfix"
+{
+	engine "murrine" {
+	}
+}
+widget "whiskermenu-window*" style "whiskerfix"

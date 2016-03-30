@@ -1,21 +1,14 @@
 # Plano Theme
 
-Plano is a flat theme for Gnome-shell and XFCE.
+Plano is a "flattish" theme for Gnome-shell and XFCE.
 It is currently in beta state. Things may change a lot before the final release.
 
-#### Todo list
-* Create a XFWM theme.
-* Polishing around the rough edges.
-* Unity support.
-* Whatever else I've forgotten.
-
-![A full screenshot of the Plano theme](http://i.imgur.com/b1bZQVk.png)
-<sub>Screenshot Details: [Wallpaper](http://puscifer91.deviantart.com/art/OnePlus-2-Wallpaper-4K-554361312) | Gnome-shell extensions: Dash to dock, Hide top bar. | Clock: tint2</sub>
+![A full screenshot of the Plano theme](http://i.imgur.com/Qwnuc0U.png)
+<sub>Screenshot Details: [Wallpaper](https://lh6.googleusercontent.com/J9tuFMXaOBx_Zzbmrs6t1YvLijLOc7X-I2Mlrkxsd_FMcJKAnSI9WTbXYBfTEajHk4CClg=w2560-h2560) | Gnome-shell extensions: Dash to dock, Hide top bar. | Clock: tint2</sub>
 
 ### Requirements
 
 * Gnome/GTK 3.18
-* The `gnome-themes-standard` package
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
