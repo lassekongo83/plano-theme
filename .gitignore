@@ -1,2 +1,7 @@
-Plano/gtk-3.0/.sass-cache/
-Plano/gnome-shell/.sass-cache/
+# Ignore Backup Copies from Text Editor
+*~
+
+# Ignore SASS files
+.sass-cache
+gtk.gresource
+dist
