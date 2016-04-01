@@ -43,10 +43,10 @@ If your distribution isn't listed, please check the requirements yourself.
 ###### A simpler and faster manual way is to just run this command 
 
   * Gnome Shell
-    `wget -O plano-theme-master.zip https://github.com/lassekongo83/plano-theme/archive/master.zip && unzip plano-theme-master.zip && mv plano-theme-master ~/.themes/Plano && gsettings set org.gnome.desktop.interface gtk-theme "Plano" && gsettings set org.gnome.shell.extensions.user-theme name "Plano"`
+    wget -O plano-theme-master.zip https://github.com/lassekongo83/plano-theme/archive/master.zip && unzip plano-theme-master.zip && mv plano-theme-master ~/.themes/Plano && gsettings set org.gnome.desktop.interface gtk-theme "Plano" && gsettings set org.gnome.shell.extensions.user-theme name "Plano"
 
   * XFCE
-    `wget -O plano-theme-master.zip https://github.com/lassekongo83/plano-theme/archive/master.zip && unzip plano-theme-master.zip && mv plano-theme-master ~/.themes/Plano && xfconf-query -c xsettings -p /Net/ThemeName -s "Plano" && xfconf-query -c xfwm4 -p /general/theme -s "Plano"`
+    wget -O plano-theme-master.zip https://github.com/lassekongo83/plano-theme/archive/master.zip && unzip plano-theme-master.zip && mv plano-theme-master ~/.themes/Plano && xfconf-query -c xsettings -p /Net/ThemeName -s "Plano" && xfconf-query -c xfwm4 -p /general/theme -s "Plano"
 
 It will download, rename, move and activate the theme in one go. No unnecessary clicks needed. Just wget and unzip needs to be installed. (Installed by default in most desktop distros). Gnome Shell users may also have to activate the `User themes` extension in `gnome-tweak-tool`.
 
