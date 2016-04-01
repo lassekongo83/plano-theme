@@ -38,7 +38,7 @@ If your distribution isn't listed, please check the requirements yourself.
 1. Download the theme: https://github.com/lassekongo83/plano-theme/archive/master.zip
 2. Open the zip in your archive manager and extract the the plano-theme-master folder to ~/.themes (if you’re the only user) or /usr/share/themes (if there are more users).
 3. If you use `Gnome Shell` you need `gnome-tweak-tool` installed. Open `gnome-tweak-tool` and go to `Appearance` and select `Plano` or `plano-theme-master` under GTK+ and Shell theme. (You may also need to activate the `User themes` extension under `Extensions`.)
-  * XFCE users can change the themes in Settings > Appearance and Settings > Window Manager
+  * XFCE users can change the themes in `Settings > Appearance` and `Settings > Window Manager`
 
 ###### A simpler and faster manual way is to just run this command 
 
