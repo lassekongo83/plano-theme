@@ -142,7 +142,7 @@ style "default"
 		progressbarstyle    = 0                 # 0 = nothing, 1 = stripes, 2 = lines
 		reliefstyle         = 0                 # 0 = flat, 1 = inset, 2 = shadow
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
-		roundness           = 2                 # 0 = squared, 1 = old default, more will increase roundness
+		roundness           = 0                 # 0 = squared, 1 = old default, more will increase roundness
 		scrollbarstyle      = 0                 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		separatorstyle      = 0                 # 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle         = 0                 # 0 = nothing added, 1 = handles
@@ -245,7 +245,7 @@ style "button" = "wider"
 		lightborder_shade   	= 1.5
 		gradient_shades     	= {1.0,1.0,1.0,1.0}
 		reliefstyle         	= 2
-		roundness	    	= 2
+		roundness	    	= 0
 		contrast		= 1.0
 		border_shades		= {0.85, 0.85}
 		shadow_shades		= {0.5, 0.5}

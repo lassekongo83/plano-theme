@@ -1406,6 +1406,12 @@ column-header.button.dnd { // for treeview-like derive widgets
   .button.flat:hover {
     text-shadow: none;
     transition: none;
+    border-radius: 0;
+  }
+
+  .button.flat:hover {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
   }
 
   &.osd { @extend %osd; }
@@ -2337,8 +2343,8 @@ GtkCalendar {
   &.csd { // rounded bottom border styling for csd version
     &.background {
       // bigger radius for better antialiasing
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
     .dialog-action-area .button {
       padding: 12px;
@@ -2385,13 +2391,13 @@ GtkCalendar {
       border-bottom-style: none;
     }
     %last_button {
-      border-bottom-right-radius: 3px;
-      outline-bottom-right-radius: 2px;
+      border-bottom-right-radius: 0;
+      outline-bottom-right-radius: 0;
     }
     %first_button {
       border-left-style: none;
-      border-bottom-left-radius: 3px;
-      outline-bottom-left-radius: 2px;
+      border-bottom-left-radius: 0;
+      outline-bottom-left-radius: 0;
     }
   }
 }
@@ -2414,6 +2420,7 @@ GtkFileChooserDialog {
 .sidebar {
   border: none;
   background-color: mix($bg_color, $base_color, 50%);
+  box-shadow: 1px 0 2px 1px transparentize(black, 0.5);
 
   &:selected {
     @extend %selected_items;
@@ -2585,7 +2592,7 @@ GtkInfoBar {
 
   color: white;
   padding: 4px; /* not working */
-  border-radius: 2px;
+  border-radius: 0;
   box-shadow: none; // otherwise it gets inherited by windowframe.csd
   text-shadow: 0 1px black;
   // FIXME: we need a border or tooltips vanish on black background.
