@@ -32,6 +32,8 @@ $font-family: Roboto, Sans-Serif;
 $_bubble_bg_color: opacify($osd_bg_color,0.25);
 $_bubble_fg_color: $osd_fg_color;
 $_bubble_borders_color: transparentize($osd_fg_color,0.8);
+$_glass_bg_color: transparentize(white,0.8);
+$_glass_borders_color: transparentize(white,0.6);
 
 stage {
   font-family: $font-family;
@@ -43,44 +45,46 @@ stage {
 
 /* Buttons */
 .button {
-  border-radius: 2px;
+  border-radius: 0px;
   border-width: 1px;
   padding: 4px 32px;
   @include button(normal);
   &:hover { @include button(hover); }
   &:focus { @include button(focus); }
+  &:focus:hover { @include button(focushover); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
 }
 
 .modal-dialog-linked-button {
-  border-right-width: 1px;
+  border-right-width: 0px;
   @include button(normal);
   &:hover { @include button(hover); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
   &:focus { @include button(focus); }
+  &:focus:hover { @include button(focushover); }
   padding: 12px;
 
   &:first-child {
-    border-radius: 0px 0px 0px 2px;
+    border-radius: 0px 0px 0px 0px;
   }
   &:last-child {
     border-right-width: 0px;
-    border-radius: 0px 0px 2px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
   &:first-child:last-child {
     border-right-width: 0px;
-    border-radius: 0px 0px 2px 2px;
+    border-radius: 0px 0px 0px 2px;
   }
 }
 
 /* Entries */
 StEntry {
-  border-radius: 2px;
+  border-radius: 0px;
   padding: 4px;
   border-width: 0px;
-  color: black;
+  color: $_bubble_fg_color;
   @include entry(normal);
   &:hover { @include entry(hover);}
   &:focus { @include entry(focus,$fc:transparentize($fg_color,0.5));}
@@ -116,7 +120,7 @@ StScrollBar {
   }
 
   StButton#vhandle, StButton#hhandle {
-    border-radius: 8px;
+    border-radius: 2px;
     background-color: mix($fg_color, $bg_color, 60%);
     //border: 3px solid transparent; //would be nice to margin or at least to transparent
     margin: 3px;
@@ -177,10 +181,11 @@ StScrollBar {
 .flashspot { background-color: white; }
 
 .modal-dialog {
-  border-radius: 2px;
+  border-radius: 0px;
   color: $osd_fg_color;
   background-color: $bg_color;
-  border: 0px solid transparentize($osd_fg_color,0.5);
+  border: 1px solid transparentize(white,0.7);
+  box-shadow: 0 0 0 2px transparentize(black,0.8);
   .modal-dialog-content-box {
     padding: 24px;
   }
@@ -208,7 +213,7 @@ StScrollBar {
 /* End Session Dialog */
 .end-session-dialog {
   spacing: 42px;
-  border: 0px solid $_bubble_borders_color;
+  border: 1px solid transparentize(white,0.7);
 }
 
   .end-session-dialog-list {
@@ -239,7 +244,7 @@ StScrollBar {
 
   .end-session-dialog-logout-icon {
     //border: 2px solid #8b8b8b;
-    border-radius: 5px;
+    border-radius: 2px;
     width: 48px;
     height: 48px;
     background-size: contain;
@@ -416,7 +421,7 @@ StScrollBar {
   }
 
   .polkit-dialog-user-icon {
-    border-radius: 5px;
+    border-radius: 2px;
     background-size: contain;
     width: 48px;
     height: 48px;
@@ -468,7 +473,7 @@ StScrollBar {
   }
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
-    -boxpointer-gap: 1px;
+    -boxpointer-gap: 0px;
     margin-bottom: 1.75em;
   }
 }
@@ -479,7 +484,7 @@ StScrollBar {
   }
   .popup-menu-boxpointer,
   .candidate-popup-boxpointer {
-    -arrow-border-radius: 2px;
+    -arrow-border-radius: 0;
     -arrow-background-color: $bg_color;
     -arrow-border-width: 1px;
     -arrow-border-color: transparentize($fg_color, .9);
@@ -520,7 +525,7 @@ StScrollBar {
   .osd-monitor-label { font-size: 3em; }
   .level {
     height: 0.6em;
-    border-radius: 0.3em;
+    border-radius: 2px;
     background-color: transparentize(darken($osd_bg_color,15%),0.5);
     color: $osd_fg_color;
   }
@@ -542,7 +547,7 @@ StScrollBar {
 
   .switcher-list .item-box {
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 2px;
   }
 
   .switcher-list .item-box:outlined {
@@ -604,21 +609,21 @@ StScrollBar {
     color: $selected_fg_color;
     //background-image: url("ws-switch-arrow-up.png");
     background-size: 32px;
-    border-radius: 8px;
+    border-radius: 2px;
   }
 
   .ws-switcher-box {
     height: 50px;
     border: 1px solid transparentize($osd_fg_color,0.9);
     background: transparent;
-    border-radius: 8px;
+    border-radius: 2px;
   }
 
 %osd-panel {
   color: $_bubble_fg_color;
   background-color: $_bubble_bg_color;
   border: 1px solid $_bubble_borders_color;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 12px;
 }
 
@@ -643,10 +648,11 @@ StScrollBar {
 /* TOP BAR */
 
 #panel {
-  background-color: transparentize($bg_color,0.4);
+  background-color: transparentize(black,1.0);
   font-weight: bold;
   height: 1.86em;
-  box-shadow: 0 1px 1px 0px transparentize(black,0.5);
+  box-shadow: none;
+  border-width: 0px;
 
   &.unlock-screen,
   &.login-screen,
@@ -698,8 +704,8 @@ StScrollBar {
     }
 
     &:hover {
-      color: lighten($fg_color, 10%);
-      background-color: rgba(255,255,255,0.1);
+      color: white;
+      background-color: rgba(255,255,255,0.2);
     }
 
     &:active, &:overview, &:focus, &:checked {
@@ -707,7 +713,7 @@ StScrollBar {
       // a box-shadow
       background-color: $selected_bg_color;
       box-shadow: none;
-      color: lighten($fg_color,10%);
+      color: white;
 
       & > .system-status-icon { icon-shadow: black 0 2px 2px; }
     }
@@ -756,7 +762,7 @@ StScrollBar {
     .datemenu-today-button,
     .world-clocks-button,
     .message-list-section-title {
-      border-radius: 4px;
+      border-radius: 2px;
       padding: .4em;
     }
 
@@ -806,7 +812,7 @@ StScrollBar {
       color: white;
       background-color: transparent;
       width: 32px;
-      border-radius: 4px;
+      border-radius: 2px;
       &:hover, &:focus { background-color: transparentize($fg_color,0.95); }
       &:active { background-color: transparentize($bg_color,0.95); }
     }
@@ -826,7 +832,7 @@ StScrollBar {
       width: 2.4em; height: 2.4em;
       padding: 0.1em;
       margin: 2px;
-      border-radius: 1.4em;
+      border-radius: 2px;
       &:hover,&:focus { background-color: lighten($bg_color,5%); }
       &:active {
         color: lighten($selected_fg_color,5%);
@@ -886,7 +892,7 @@ StScrollBar {
 
         .message-list-section-close > StIcon {
           icon-size: 16px;
-          border-radius: 8px;
+          border-radius: 2px;
           color: $bg_color;
           background-color: darken($fg_color,60%);
         }
@@ -900,7 +906,7 @@ StScrollBar {
         .message {
           background-color: lighten($bg_color,5%);
           &:hover,&:focus { background-color: lighten($bg_color,15%); }
-          border-radius: 3px;
+          border-radius: 2px;
         }
 
           .message-icon-bin {
@@ -1078,7 +1084,7 @@ StScrollBar {
 /* OVERVIEW */
 
 #overview {
-  spacing: 24px; //
+  spacing: 24px;
 }
 
 .overview-controls {
@@ -1107,9 +1113,9 @@ StScrollBar {
     spacing: 25px;
     color: $osd_fg_color;
     background-color: transparentize($osd_bg_color,0.2);
-    border-radius: 0px;
+    border-radius: 2px;
     padding: 4px 12px;
-    -shell-caption-spacing: 0px;
+    -shell-caption-spacing: 2px;
     &:hover { background-color: $selected_bg_color; color: $selected_fg_color; }
   }
 
@@ -1117,22 +1123,24 @@ StScrollBar {
   .search-entry {
     width: 320px;
     padding: 7px 9px;
-    border-radius: 3px;
+    border-radius: 0px;
     border-color: transparent;
-    color: black;
+    color: $_bubble_fg_color;
     background-color: white;
     box-shadow: none;
+    @include entry(normal);
+    &:hover { 
+      @include entry(hover);    
+    }
     &:focus {
-      padding: 6px 8px;
-      border-width: 1px;
-      border-color: $selected_bg_color;
-      box-shadow: none;
+      //padding: 6px 8px; // ???
+      @include entry(focus);
     }
 
-    .search-entry-icon { icon-size: 1em; padding: 0 4px; color: black; }
+    .search-entry-icon { icon-size: 1em; padding: 0 4px; color: $_bubble_fg_color; }
 
     &:hover, &:focus {
-      .search-entry-icon { color: $fg_color; }
+      .search-entry-icon { color: $_bubble_fg_color; }
     }
   }
 
@@ -1199,7 +1207,6 @@ StScrollBar {
       width: 24px;
       height: 24px;
     }
-
   }
 
   .dash-item-container > StWidget {
@@ -1214,29 +1221,6 @@ StScrollBar {
     text-align: center;
     -x-offset: 8px;
   }
-
-  // /* DASH TO DOCK EXTENSION */
-
-  // FIXME: Disabled because the position class isn't working.
-
-  // $dtd-bg: rgba(0, 0, 0, 0.6);
-
-  // #dashtodockContainer #dash {
-  // .left &,
-  // &:ltr {
-  //   box-shadow: inset 3px 0px 0px 0px $dtd-bg;
-  // }
-  // .right &,
-  // &:rtl {
-  //   box-shadow: inset -3px 0px 0px 0px $dtd-bg;
-  // }
-  // .bottom & {
-  //   box-shadow: inset 0px -3px 0px 0px $dtd-bg;
-  // }
-  // .top & {
-  //   box-shadow: inset 0px 3px 0px 0px $dtd-bg;
-  // }
-  // }
 
   /* App Vault/Grid */
   .icon-grid {
@@ -1253,13 +1237,15 @@ StScrollBar {
   }
   .app-view-control { //favorties | all toggle button
     padding: 4px 32px;
+    background-color: $_glass_bg_color;
     box-shadow: inset 0 0 0 1px transparentize(white, 0.9);
      &:hover {    
-      box-shadow: inset 0 0 0 1px transparentize(white, 0.8);
+      box-shadow: inset 0 0 0 1px transparentize(white, 0.7);
+      background-color: $_glass_bg_color;
     }
     //&:checked { @include button(active); }
     &:checked { 
-      background-color: transparentize(black, 0.5); 
+      background-color: transparentize(black, 0.6); 
       box-shadow: inset 0 0 2px 1px transparentize(black, 0.7);
     }
     &:first-child {
@@ -1305,14 +1291,14 @@ StScrollBar {
   }
 
   .app-well-app-running-dot { //running apps indicator
-    width: 10px; height: 3px;
-    background-color: $selected_bg_color;
-    margin-bottom: 2px;
+    width: 44px; height: 3px;
+    background-color: transparentize($selected_fg_color, 0.4);
+    margin-bottom: 0;
   }
 
   %icon_tile {
     color: $osd_fg_color;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 6px;
     border: 1px solid transparent;
     transition-duration: 100ms;
@@ -1373,12 +1359,12 @@ StScrollBar {
     visible-width: 32px; //amount visible before hover
     spacing: 11px;
     padding: 8px;
-    border-radius: 9px 0 0 9px;
+    border-radius: 2px 0 0 2px;
     //border-width: 1px 0 1px 1px; //fixme: can't have non unoform borders :(
-    &:rtl { border-radius: 0 9px 9px 0;}
+    &:rtl { border-radius: 0 2px 2px 0;}
   }
   .workspace-thumbnail-indicator {
-    border: 4px solid $selected_bg_color;
+    border: 2px solid $selected_bg_color;
     padding: 1px;
   }
 
@@ -1392,8 +1378,8 @@ StScrollBar {
 
 %overview-panel {
   color: $_bubble_fg_color;
-  background-color: $_bubble_bg_color;
-  border: 1px solid $_bubble_borders_color;
+  background-color: $_glass_bg_color;
+  border: 1px solid $_glass_borders_color;
 }
 
 %status_text {
@@ -1411,7 +1397,7 @@ StScrollBar {
     font-size: 11pt;
     width: 34em;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: 2px;
     color: $_bubble_fg_color;
     background-color: $_bubble_bg_color;
     border: 1px solid $borders_color;
@@ -1430,8 +1416,8 @@ StScrollBar {
     .notification-button {
       padding: 4px 4px 5px;
       background-color: darken($_bubble_bg_color,5%);
-      &:first-child { border-radius: 0 0 0 6px; }
-      &:last-child { border-radius: 0 0 6px 0; }
+      &:first-child { border-radius: 0 0 0 2px; }
+      &:last-child { border-radius: 0 0 2px 0; }
       &:hover, &focus { background-color: darken($_bubble_bg_color,2%); }
     }
   }
@@ -1491,7 +1477,7 @@ StScrollBar {
 
     .hotplug-resident-mount {
       spacing: 8px;
-      border-radius: 4px;
+      border-radius: 2px;
       &:hover { background-color: transparentize($bg_color,0.7); }
     }
 
@@ -1511,7 +1497,7 @@ StScrollBar {
 
     .hotplug-resident-eject-button {
       padding: 7px;
-      border-radius: 5px;
+      border-radius: 2px;
       color: pink;
     }
 
@@ -1523,8 +1509,8 @@ $legacy_icon_size: 24px;
   background-color: $bg_color;
   border: 1px solid $borders_color;
   border-bottom-width: 0;
-  &:ltr { border-radius: 0 6px 0 0; border-left-width: 0; }
-  &:rtl { border-radius: 6px 0 0 0; border-right-width: 0; }
+  &:ltr { border-radius: 0 2px 0 0; border-left-width: 0; }
+  &:rtl { border-radius: 2px 0 0 0; border-right-width: 0; }
 }
 
 .legacy-tray-handle,
@@ -1584,13 +1570,13 @@ $legacy_icon_size: 24px;
   .keyboard-subkeys { //long press on a key popup
     color: white;
     padding: 5px;
-    -arrow-border-radius: 10px;
+    -arrow-border-radius: 2px;
     -arrow-background-color: transparentize($osd_bg_color, 0.3);
     -arrow-border-width: 2px;
     -arrow-border-color: $_bubble_borders_color;
-    -arrow-base: 20px;
-    -arrow-rise: 10px;
-    -boxpointer-gap: 5px;
+    -arrow-base: 0px;
+    -arrow-rise: 0px;
+    -boxpointer-gap: 1px;
   }
 
 // IBus Candidate Popup
@@ -1631,7 +1617,7 @@ $legacy_icon_size: 24px;
   background-size: contain;
   border: 2px solid $osd_fg_color;
   color: $osd_fg_color;
-  border-radius: 3px;
+  border-radius: 2px;
   &:hover {
     border-color: lighten($osd_fg_color,30%);
     color: lighten($osd_fg_color,30%);
@@ -1914,3 +1900,51 @@ $legacy_icon_size: 24px;
     padding: 6px;
   }
 
+/* Dash to dock extension styling */
+
+#dashtodockContainer.extended {
+  $_border_shade: transparentize(black,0.6);
+  border: 0;
+  border-radius: 0;
+  &.bottom #dash { box-shadow: inset 0 -3px $_border_shade; }
+  &.left #dash { box-shadow: inset 3px 0 $_border_shade; }
+  &.right #dash { box-shadow: inset -3px 0 $_border_shade; }
+}
+
+#dashtodockContainer {
+  &.bottom #dash .app-well-app-running-dot {
+    width: 44px; height: 2px;
+    background-color: transparentize($selected_fg_color, 0.4);
+    margin-bottom: 0;
+  }
+}
+
+// hover effect
+#dashtodockContainer {
+  $_hover_color: transparentize(white,0.6);
+  border-radius: 0;
+  &.bottom #dash .app-well-app {
+    &:hover .overview-icon,
+    &:focus .overview-icon,
+    &:selected .overview-icon {
+      box-shadow: inset 0 -3px $_hover_color;
+      background-color: transparent;
+    }
+  }
+  &.left #dash .app-well-app {
+    &:hover .overview-icon,
+    &:focus .overview-icon,
+    &:selected .overview-icon {
+      box-shadow: inset 3px 0 $_hover_color;
+      background-color: transparent;
+    }
+  }
+  &.right #dash .app-well-app {
+    &:hover .overview-icon,
+    &:focus .overview-icon,
+    &:selected .overview-icon {
+      box-shadow: inset -3px 0 $_hover_color;
+      background-color: transparent;
+    }
+  }
+}

@@ -212,7 +212,7 @@ $vert_padding: 5px;
     &.right { padding-right: 0; }
   }
 
-  border-radius: 2px;
+  border-radius: 0;
   @include entry(normal);
 
   &.flat, &.flat:focus {
@@ -337,7 +337,7 @@ $_dot_color: if($variant=='light', $selected_bg_color,
 
 .button {
   border: 1px solid;
-  border-radius: 2px;
+  border-radius: 0;
   padding: $vert_padding 8px;
   @include button(normal);
   &.flat {
@@ -355,6 +355,9 @@ $_dot_color: if($variant=='light', $selected_bg_color,
   &:active, &:checked {
     @include button(active);
   }
+  &:active:hover, &:checked:hover {
+    @include button(hoveractive);
+  }
   &.flat:insensitive {
     @include button(undecorated);
   }
@@ -368,7 +371,7 @@ $_dot_color: if($variant=='light', $selected_bg_color,
   &.osd {
     &.image-button { padding: 13px; }
     color: $osd_fg_color;
-    border-radius: 2px;
+    border-radius: 0;
     outline-color: transparentize($osd_fg_color, 0.7);  //FIXME: define a color var?
     @include button(osd);
     border: none;
@@ -404,15 +407,15 @@ $_dot_color: if($variant=='light', $selected_bg_color,
       border-left-style: solid
     }
     &:first-child {
-      border-radius: 2px 0 0 2px;
+      border-radius: 0;
       border-left-style: solid;
     }
     &:last-child {
-      border-radius: 0 2px 2px 0;
+      border-radius: 0;
       &:dir(rtl) { border-right-style: solid; }
     }
     &:only-child {
-      border-radius: 2px;
+      border-radius: 0;
       border-style: solid;
     }
     // Workaround END
@@ -546,7 +549,7 @@ $_dot_color: if($variant=='light', $selected_bg_color,
 
   //inline-toolbar buttons
   .inline-toolbar & {
-    border-radius: 2px;
+    border-radius: 0;
     border-width: 1px;
     @extend %linked;
   }
@@ -612,7 +615,7 @@ $_dot_color: if($variant=='light', $selected_bg_color,
 
 // Linked shadows variables.
 $shadow-color: transparentize(black,0.92);
-$inset-color: if($variant == 'light', transparentize(white,0.5), transparentize(white,0.9));
+$inset-color: if($variant == 'light', transparentize(white,0.6), transparentize(white,0.94));
 $btn-shadow-middle: 
     0px 0 $shadow-color,
     0 1px $shadow-color,
@@ -659,35 +662,41 @@ $btn-shadow-right:
   // FIXME: Figure out how this looks on colored titlebars.
   &:active { @include button(active); }
   &:checked { @include button(active); }
+  &:active:hover { @include button(hoveractive); }
+  &:checked:hover { @include button(hoveractive); }
 }
 
 %linked {
   @extend %linked_middle;
   &:first-child {
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-radius: 0;
     border-left-width: 1px;
     border-right-width: 0;
     box-shadow: $btn-shadow-left;
     &:active { @include button(active); }
     &:checked { @include button(active); }
+    &:active:hover { @include button(hoveractive); }
+    &:checked:hover { @include button(hoveractive); }
   }
   &:last-child {
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-radius: 0;
     border-right-style: solid;
     border-left-width: 0;
     border-right-width: 1px;
     box-shadow: $btn-shadow-right;
     &:active { @include button(active); }
     &:checked { @include button(active); }
+    &:active:hover { @include button(hoveractive); }
+    &:checked:hover { @include button(hoveractive); }
   }
   &:only-child {
-    border-radius: 2px;
+    border-radius: 0;
     border-style: solid;
     border-width: 1px;
     &:active { @include button(active); }
     &:checked { @include button(active); }
+    &:active:hover { @include button(hoveractive); }
+    &:checked:hover { @include button(hoveractive); }
   }
 }
 
@@ -700,16 +709,14 @@ $btn-shadow-right:
 %linked_vertical{
   @extend %linked_vertical_middle;
   &:first-child {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-radius: 0;
   }
   &:last-child {
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-radius: 0;
     border-style: solid;
   }
   &:only-child {
-    border-radius: 2px;
+    border-radius: 0;
     border-style: solid;
   }
 }
@@ -1024,10 +1031,10 @@ GtkComboBox {
 .titlebar,
 .header-bar {
   padding: 4px;
-  border-width: 0 0 1px;
+  border-width: 0 0 0px;
   border-style: solid;
   border-color: $borders_color;
-  border-radius: 3px 3px 0 0;
+  border-radius: 0;
   background-color: transparent;
 
   @include headerbar_fill;
@@ -1055,7 +1062,7 @@ GtkComboBox {
   .header-bar-separator,
   & > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: true;
-    -GtkWidget-separator-width: 1px;
+    -GtkWidget-separator-width: 0px;
     border-width: 0 1px;
     border-style: dashed;
     border-image: none;
@@ -1315,12 +1322,20 @@ column-header.button.dnd { // for treeview-like derive widgets
   -GtkWidget-window-dragging: true;
   background-color: $bg_color;
   padding: 0px;
-  box-shadow: inset 0 -1px $borders_color;
+  box-shadow: none;
   & > .menuitem {
     padding: 4px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: 0;
+    border-color: transparentize($borders_color,1.0);
     &:hover { //Seems like it :hover even with keyboard focus
-      box-shadow: inset 0 -3px $selected_bg_color;
-      color: $link_color;
+      border-color: $borders_color;
+      background-color: $base_color;
+      color: $fg_color;
+      border-radius: 2px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
     &:insensitive {
       color: $insensitive_fg_color;
@@ -1426,14 +1441,14 @@ column-header.button.dnd { // for treeview-like derive widgets
   }
   &.header {
     background-color: darken($bg_color,5%);
-    &.top { box-shadow: inset 0 -1px $borders_color, inset 0 2px transparentize($borders_color,0.65); }
+    &.top { box-shadow: inset 0 -1px $borders_color, inset 0 1px transparentize($borders_color,0.65); }
     &.bottom { box-shadow: inset 0 1px $borders_color; }
     &.right { box-shadow: inset  1px 0  $borders_color; }
     &.left { box-shadow: inset -1px 0 $borders_color; }
 
     // this is the shading of the header behind the tabs
     &.frame {
-      border: 0px solid $borders_color;
+      border: 1px solid $borders_color;
       &.top { border-bottom-width: 0; }
       &.bottom { border-top-width: 0; }
       &.right { border-left-width: 0; }
@@ -1475,7 +1490,7 @@ column-header.button.dnd { // for treeview-like derive widgets
     }
     &.reorderable-page { 
       &.top:active, &.bottom:active, &.left:active, &.right:active {
-        border-width: $tab_indicator_size; // No border on reorderable tabs
+        border-width: $tab_indicator_size;
       }
     }
     &.top, &.top:active {
@@ -1514,7 +1529,7 @@ column-header.button.dnd { // for treeview-like derive widgets
         &:hover, &.prelight-page {
           border-color: transparentize($borders_color,0.7);
           border-#{$_border}-color: $borders_color;
-          background-color: transparentize($bg_color,0.8);
+          background-color: transparentize($base_color,0.8);
         }
         &:active, &.active-page {
           background-color: $base_color;
@@ -1598,10 +1613,10 @@ column-header.button.dnd { // for treeview-like derive widgets
  **************/
 
 .scrollbar {
-  -GtkRange-slider-width: 13;
+  -GtkRange-slider-width: 14;
   -GtkRange-trough-border: 0;
-  -GtkScrollbar-has-backward-stepper: false;
-  -GtkScrollbar-has-forward-stepper: false;
+  -GtkScrollbar-has-backward-stepper: true;
+  -GtkScrollbar-has-forward-stepper: true;
   -GtkScrollbar-min-slider-length: 42; // minimum size for the slider.
                                        // sadly can't be in '.slider'
                                        // where it belongs
@@ -1613,13 +1628,15 @@ column-header.button.dnd { // for treeview-like derive widgets
 
   .button {
     border: none;
+    box-shadow: none;
+    background-color: $scrollbar_bg_color;
   }
 
   &.overlay-indicator {
     &:not(.dragging):not(.hovering) { // Overlay scrolling indicator
       opacity: 0.4;
 
-      -GtkRange-slider-width: 13px;
+      -GtkRange-slider-width: 14px;
 
       .slider {
         margin: 0;
@@ -1662,7 +1679,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 
     &:hover { background-color: mix($fg_color, $bg_color, 80%); }
 
-    &:prelight:active { background-color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));}
+    &:prelight:active { background-color: if($variant=='light', mix($fg_color, $bg_color, 80%), mix($fg_color, $bg_color, 80%));}
 
     &:insensitive {
       background-color: transparent;
@@ -1876,7 +1893,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
 
   &.slider {
-    background-color: lighten($bg_color,8%);
+    background-color: lighten($bg_color,10%);
     border: 1px solid;
     border-radius: 50%;
     border-color: darken($borders_color,3%);
@@ -1906,9 +1923,9 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   }
   &.trough {
     margin: 10px;
-    border: 1px solid $borders_color;
+    border: 0px solid $borders_color;
     border-radius: 2px;
-    background-color: mix($bg_color, $borders_color, 60%);
+    background-color: darken($bg_color, 10%);
     &.highlight {
       @include progressbar_fill;
       border-color: $selected_borders_color;
@@ -2227,10 +2244,9 @@ GtkScrolledWindow {
   @extend %osd;
   padding: 10px;
   border: none;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 2px 2px;
   background-color: $osd_bg_color;
-  background-image: linear-gradient(to bottom, transparentize(black, 0.8),
-                                               transparent 2px);
+  background-image: none;
   background-clip: padding-box;
   .button {
     @include button(osd);
@@ -2748,7 +2764,7 @@ GtkVolumeButton.button {
  *********************/
 
 .window-frame {
-  border-radius: 3px 3px 0 0;
+  border-radius: 0;
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
@@ -2757,7 +2773,7 @@ GtkVolumeButton.button {
   $_wm_border: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
   $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.82), transparentize($borders_color, 0.1));
 
-  box-shadow: 0 1px 4px 1px transparentize(black, 0.5),
+  box-shadow: 0 0 2px 1px transparentize(black, 0.5),
               0 0 0 1px $_wm_border; //doing borders with box-shadow
 
   // FIXME rationalize window-frame shadows
@@ -2766,7 +2782,7 @@ GtkVolumeButton.button {
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 1px 2px 1px transparentize(black, 0.8),
+    box-shadow: 0 0 1px 1px transparentize(black, 0.8),
                 0 0 0 1px $_wm_border_backdrop;
   }
   &.tiled {
@@ -2777,7 +2793,7 @@ GtkVolumeButton.button {
   }
   // server-side decorations as used by mutter
   &.ssd {
-    border-radius: 3px 3px 0 0;
+    border-radius: 0;
     box-shadow: 0 0 0 1px $_wm_border; //just doing borders, wm draws actual shadows
     &.maximized { border-radius: 0; }
     border: none;
@@ -2789,11 +2805,11 @@ GtkVolumeButton.button {
                   0 0 0 1px transparentize($_wm_border,0.1);
     }
     &.tooltip {
-      border-radius: 3px;
+      border-radius: 0px;
       box-shadow: none;
     }
     &.message-dialog {
-      border-radius: 3px;
+      border-radius: 0px;
       box-shadow: 0 1px 2px transparentize(black, 0.8),
                   0 0 0 1px transparentize($_wm_border,0.1);
     }
@@ -2810,7 +2826,7 @@ GtkVolumeButton.button {
 /* No line below the title bar */
 .ssd .titlebar {
     border-width: 0;
-    @include headerbar_fill;
+    @include ssd_fill;
 }
 
 // Window Close button
@@ -2879,6 +2895,7 @@ GtkVolumeButton.button {
 %selected_items {
   background-color: $selected_bg_color;
   color: $selected_fg_color;
+  &:backdrop { background-color: transparentize($selected_bg_color, 0.4); }
   @if $variant == 'light' {
     outline-color: transparentize($selected_fg_color, 0.7);
   }
@@ -3002,4 +3019,17 @@ GtkVolumeButton.button {
   &.right {
     @include undershoot(right);
   }
+}
+
+/* Various fixes */
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+  color: white;
+  text-shadow: 1px 1px 2px transparentize(black, 0.2);
+}
+
+.floating-bar { /* Makes the floating-bar less annoying */
+  background-color: $base_color;
+  &.bottom.left { border-top-right-radius: 0px; }
+  &.bottom.right { border-top-left-radius: 0px; }
+  font-size: smaller;
 }
