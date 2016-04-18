@@ -1446,8 +1446,8 @@ column-header.button.dnd { // for treeview-like derive widgets
     &.left { border-left-width: 0px; }
   }
   &.header {
-    background-color: darken($bg_color,5%);
-    &.top { box-shadow: inset 0 -1px $borders_color, inset 0 1px transparentize($borders_color,0.65); }
+    background-color: darken($bg_color,0%);
+    &.top { box-shadow: inset 0 -1px $borders_color, inset 0 0px transparentize($borders_color,0.65); }
     &.bottom { box-shadow: inset 0 1px $borders_color; }
     &.right { box-shadow: inset  1px 0  $borders_color; }
     &.left { box-shadow: inset -1px 0 $borders_color; }
@@ -1535,7 +1535,8 @@ column-header.button.dnd { // for treeview-like derive widgets
         &:hover, &.prelight-page {
           border-color: transparentize($borders_color,0.7);
           border-#{$_border}-color: $borders_color;
-          background-color: transparentize($base_color,0.8);
+          //background-color: transparentize($base_color,0.8);
+          box-shadow: inset 0 -2px $selected_bg_color;
         }
         &:active, &.active-page {
           background-color: $base_color;
@@ -1647,7 +1648,7 @@ column-header.button.dnd { // for treeview-like derive widgets
       .slider {
         margin: 0;
         background-color: $fg_color;
-        border: 0px solid if($variant==light, white, black);
+        border: none;
         background-clip: padding-box;
       }
 
@@ -1676,7 +1677,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   // trough coloring
   .trough {
     background-color: $scrollbar_bg_color;
-    border: 0px none $borders_color;
+    border: none;
   }
 
   // slider coloring
@@ -1695,7 +1696,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 
   // sizing
   .slider {
-    border-radius: 0px;
+    border-radius: 0;
     margin: $_slider_margin;
   }
 
@@ -1756,40 +1757,62 @@ column-header.button.dnd { // for treeview-like derive widgets
  **********/
 
 GtkSwitch {
-  font: 1;
-  -GtkSwitch-slider-width: 52;
-  -GtkSwitch-slider-height: 24;
-  outline-color: transparent;
+  -GtkSwitch-slider-width: 24px; // 55px is the right value to make it as tall
+                                 // as buttons, not doing that for now
+  -GtkSwitch-slider-height: 24px;
 
-  &.trough, &.slider {
-    background-size: 52px 24px;
-    background-repeat: no-repeat;
-    background-position: right center;
+  font-weight: bold;
+  font-size: smaller;
+  outline-offset: -4px;
+  box-shadow: none;
+  
+  &.trough {
+    // similar to the .scale
+    border: 0px solid $borders_color;
+    border-radius: 24px;
     color: transparent;
-    border-color: transparent;
-    border-image: none;
-    border-style: none;
+    background-color: mix($bg_color, $borders_color, 60%);
+    text-shadow: none;
+    &:active {
+      @include progressbar_fill;
+      color: transparent;
+      border-color: $selected_borders_color;
+      box-shadow: none;
+      text-shadow: none;
+    }
+    &:insensitive {
+      color: transparent;
+      border-color: $borders_color;
+      background-image: none;
+      background-color: $insensitive_bg_color;
+      box-shadow: none;
+      text-shadow: none;
+    }
+  }
+  &.slider {
+    border: 1px solid;
+    border-radius: 24px;
+    @include button(normal);
     box-shadow: none;
-
-    &:dir(rtl) { background-position: left center; }
+    &:hover {
+      @include button(hover);
+      box-shadow: inset 0 0 0 6px transparentize(black, 0.9);
+    }
+    &:active { border: 1px solid $selected_borders_color; }
+    &:insensitive { @include button(insensitive, $edge:none); }
   }
-}
-
-@each $k,$l in ('',''),
-               (':active','-active'),
-               (':insensitive','-insensitive'),
-               (':active:insensitive','-active-insensitive') {
-
-  // load switch troughs from .png files in assets directory
-
-  GtkSwitch.trough#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
+  .list-row:selected & {
+    @if $variant == 'light' {
+      box-shadow: none;
+      border-color: $selected_borders_color;
+      &:backdrop { border-color: $selected_borders_color; }
+      &.slider:dir(rtl) { border-left-color: $borders_color; }
+      &.slider:dir(ltr) { border-right-color: $borders_color; }
+      &.slider,
+      &.slider:active { border-color: $selected_borders_color; }
+    }
   }
 
-  .list-row:selected GtkSwitch.trough#{$k},
-  GtkInfoBar GtkSwitch.trough#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
-  }
 }
 
 /*************************
@@ -2060,7 +2083,7 @@ GtkProgressBar {
 .progressbar {
   @include progressbar_fill;
   border: 1px solid $selected_borders_color;
-  border-radius: 1.5px;
+  border-radius: 0;
   box-shadow: none; //needed for clipping
   &.left {
     border-top-left-radius: 0px;

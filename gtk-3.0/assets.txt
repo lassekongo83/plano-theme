@@ -86,14 +86,6 @@ slider-horz-scale-has-marks-below-insensitive-dark
 slider-horz-scale-has-marks-above-insensitive-dark
 slider-vert-scale-has-marks-above-insensitive-dark
 slider-vert-scale-has-marks-below-insensitive-dark
-switch
-switch-insensitive
-switch-active
-switch-active-insensitive
-switch-dark
-switch-insensitive-dark
-switch-active-dark
-switch-active-insensitive-dark
 titlebutton-minimize
 titlebutton-maximize
 titlebutton-close

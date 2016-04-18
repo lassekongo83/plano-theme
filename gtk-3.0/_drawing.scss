@@ -305,8 +305,7 @@
 
 @mixin progressbar_fill($d:horizontal) {
   $dir: if($d==vertical,right,bottom);
-  background-image: linear-gradient(to $dir, $selected_bg_color 2px,
-                                             lighten($selected_bg_color,6%));
+  background-color: $selected_bg_color;
 }
 
 @mixin headerbar_fill($c:$bg_color, $tc:lighten($c,4%), $hc:transparentize($top_hilight, 0.7)) {

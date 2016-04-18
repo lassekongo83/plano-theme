@@ -1453,9 +1453,9 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook.frame.left {
       border-left-width: 0px; }
   .notebook.header {
-    background-color: #34434b; }
+    background-color: #3e515a; }
     .notebook.header.top {
-      box-shadow: inset 0 -1px #1f282d, inset 0 1px rgba(31, 40, 45, 0.35); }
+      box-shadow: inset 0 -1px #1f282d, inset 0 0px rgba(31, 40, 45, 0.35); }
     .notebook.header.bottom {
       box-shadow: inset 0 1px #1f282d; }
     .notebook.header.right {
@@ -1516,7 +1516,7 @@ column-header .button, column-header .button:hover, column-header .button:active
       .notebook tab.reorderable-page.top:hover, .notebook tab.reorderable-page.top.prelight-page {
         border-color: rgba(31, 40, 45, 0.3);
         border-bottom-color: #1f282d;
-        background-color: rgba(69, 90, 100, 0.2); }
+        box-shadow: inset 0 -2px #3399ff; }
       .notebook tab.reorderable-page.top:active, .notebook tab.reorderable-page.top.active-page {
         background-color: #455A64;
         border-color: rgba(31, 40, 45, 0.5);
@@ -1529,7 +1529,7 @@ column-header .button, column-header .button:hover, column-header .button:active
       .notebook tab.reorderable-page.bottom:hover, .notebook tab.reorderable-page.bottom.prelight-page {
         border-color: rgba(31, 40, 45, 0.3);
         border-top-color: #1f282d;
-        background-color: rgba(69, 90, 100, 0.2); }
+        box-shadow: inset 0 -2px #3399ff; }
       .notebook tab.reorderable-page.bottom:active, .notebook tab.reorderable-page.bottom.active-page {
         background-color: #455A64;
         border-color: rgba(31, 40, 45, 0.5);
@@ -1542,7 +1542,7 @@ column-header .button, column-header .button:hover, column-header .button:active
       .notebook tab.reorderable-page.left:hover, .notebook tab.reorderable-page.left.prelight-page {
         border-color: rgba(31, 40, 45, 0.3);
         border-right-color: #1f282d;
-        background-color: rgba(69, 90, 100, 0.2); }
+        box-shadow: inset 0 -2px #3399ff; }
       .notebook tab.reorderable-page.left:active, .notebook tab.reorderable-page.left.active-page {
         background-color: #455A64;
         border-color: rgba(31, 40, 45, 0.5);
@@ -1555,7 +1555,7 @@ column-header .button, column-header .button:hover, column-header .button:active
       .notebook tab.reorderable-page.right:hover, .notebook tab.reorderable-page.right.prelight-page {
         border-color: rgba(31, 40, 45, 0.3);
         border-left-color: #1f282d;
-        background-color: rgba(69, 90, 100, 0.2); }
+        box-shadow: inset 0 -2px #3399ff; }
       .notebook tab.reorderable-page.right:active, .notebook tab.reorderable-page.right.active-page {
         background-color: #455A64;
         border-color: rgba(31, 40, 45, 0.5);
@@ -1621,7 +1621,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .slider {
       margin: 0;
       background-color: #dee2e5;
-      border: 0px solid black;
+      border: none;
       background-clip: padding-box; }
     .scrollbar.overlay-indicator:not(.dragging):not(.hovering) .trough {
       border-style: none;
@@ -1636,7 +1636,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     opacity: 1.0; }
   .scrollbar .trough {
     background-color: #3d4f58;
-    border: 0px none #1f282d; }
+    border: none; }
   .scrollbar .slider {
     background-color: #141b1e; }
     .scrollbar .slider:hover {
@@ -1646,7 +1646,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     .scrollbar .slider:insensitive {
       background-color: transparent; }
   .scrollbar .slider {
-    border-radius: 0px;
+    border-radius: 0;
     margin: 0px; }
   .scrollbar.fine-tune .slider {
     margin: 0px; }
@@ -1685,49 +1685,55 @@ column-header .button, column-header .button:hover, column-header .button:active
  * Switch *
  **********/
 GtkSwitch {
-  font: 1;
-  -GtkSwitch-slider-width: 52;
-  -GtkSwitch-slider-height: 24;
-  outline-color: transparent; }
-  GtkSwitch.trough, GtkSwitch.slider {
-    background-size: 52px 24px;
-    background-repeat: no-repeat;
-    background-position: right center;
+  -GtkSwitch-slider-width: 24px;
+  -GtkSwitch-slider-height: 24px;
+  font-weight: bold;
+  font-size: smaller;
+  outline-offset: -4px;
+  box-shadow: none; }
+  GtkSwitch.trough {
+    border: 0px solid #1f282d;
+    border-radius: 24px;
     color: transparent;
-    border-color: transparent;
-    border-image: none;
-    border-style: none;
+    background-color: #324148;
+    text-shadow: none; }
+    GtkSwitch.trough:active {
+      background-color: #3399ff;
+      color: transparent;
+      border-color: #79bbff;
+      box-shadow: none;
+      text-shadow: none; }
+    GtkSwitch.trough:insensitive {
+      color: transparent;
+      border-color: #1f282d;
+      background-image: none;
+      background-color: #41555e;
+      box-shadow: none;
+      text-shadow: none; }
+  GtkSwitch.slider {
+    border: 1px solid;
+    border-radius: 24px;
+    color: #dee2e5;
+    outline-color: rgba(222, 226, 229, 0.3);
+    border-color: #060808;
+    background-color: #536c78;
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.08), 0 1px rgba(0, 0, 0, 0.08), -1px 0 rgba(0, 0, 0, 0.08), 0 -1px rgba(0, 0, 0, 0.08), inset 1px 0 rgba(255, 255, 255, 0.06), inset 0 1px rgba(255, 255, 255, 0.06), inset -1px 0 rgba(255, 255, 255, 0.06), inset 0 -1px rgba(255, 255, 255, 0.06);
     box-shadow: none; }
-    GtkSwitch.trough:dir(rtl), GtkSwitch.slider:dir(rtl) {
-      background-position: left center; }
-
-GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-dark.png"), url("assets/switch-dark@2.png")); }
-
-.list-row:selected GtkSwitch.trough,
-GtkInfoBar GtkSwitch.trough {
-  background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
-
-GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-dark.png"), url("assets/switch-active-dark@2.png")); }
-
-.list-row:selected GtkSwitch.trough:active,
-GtkInfoBar GtkSwitch.trough:active {
-  background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
-
-GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-dark.png"), url("assets/switch-insensitive-dark@2.png")); }
-
-.list-row:selected GtkSwitch.trough:insensitive,
-GtkInfoBar GtkSwitch.trough:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
-
-GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-dark.png"), url("assets/switch-active-insensitive-dark@2.png")); }
-
-.list-row:selected GtkSwitch.trough:active:insensitive,
-GtkInfoBar GtkSwitch.trough:active:insensitive {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }
+    GtkSwitch.slider:hover {
+      color: #dee2e5;
+      background-color: #597481;
+      box-shadow: inset 0 0 0 6px rgba(0, 0, 0, 0.1); }
+    GtkSwitch.slider:active {
+      border: 1px solid #79bbff; }
+    GtkSwitch.slider:insensitive {
+      color: #8e9aa0;
+      border-color: #1f282d;
+      background-color: #41555e;
+      text-shadow: none;
+      icon-shadow: none;
+      box-shadow: none; }
+      GtkSwitch.slider:insensitive > .label {
+        color: inherit; }
 
 /*************************
  * Check and Radio items *
@@ -1962,12 +1968,12 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     .scale.trough.highlight,
     .scale.scale-has-marks-above.scale-has-marks-below.trough.highlight,
     .scale.vertical.scale-has-marks-above.scale-has-marks-below.trough.highlight {
-      background-image: linear-gradient(to bottom, #3399ff 2px, #52a8ff);
+      background-color: #3399ff;
       border-color: #79bbff; }
       .scale.trough.highlight.vertical,
       .scale.scale-has-marks-above.scale-has-marks-below.trough.highlight.vertical,
       .scale.vertical.scale-has-marks-above.scale-has-marks-below.trough.highlight.vertical {
-        background-image: linear-gradient(to right, #3399ff 2px, #52a8ff); }
+        background-color: #3399ff; }
     .scale.trough:insensitive, .scale.trough.vertical:insensitive,
     .scale.scale-has-marks-above.scale-has-marks-below.trough:insensitive,
     .scale.scale-has-marks-above.scale-has-marks-below.trough.vertical:insensitive,
@@ -2210,9 +2216,9 @@ GtkProgressBar {
       box-shadow: none; }
 
 .progressbar {
-  background-image: linear-gradient(to bottom, #3399ff 2px, #52a8ff);
+  background-color: #3399ff;
   border: 1px solid #79bbff;
-  border-radius: 1.5px;
+  border-radius: 0;
   box-shadow: none; }
   .progressbar.left {
     border-top-left-radius: 0px;
@@ -2223,7 +2229,7 @@ GtkProgressBar {
   .progressbar.left.right {
     box-shadow: none; }
   .progressbar.vertical {
-    background-image: linear-gradient(to right, #3399ff 2px, #52a8ff); }
+    background-color: #3399ff; }
     .progressbar.vertical.bottom {
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
