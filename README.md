@@ -32,8 +32,8 @@ If your distribution isn't listed, please check the requirements yourself.
 
 #### Manual installation
 
-1. Download the theme: https://github.com/lassekongo83/plano-theme/archive/master.zip
-2. Make a folder in `~/.themes` called `Plano` and extract the content so it looks like this:
+Download the theme: https://github.com/lassekongo83/plano-theme/archive/master.zip
+Make a folder in `~/.themes` called `Plano` and extract the content so it looks like this:
 
   `Plano`
     * `gnome-shell`
@@ -42,7 +42,7 @@ If your distribution isn't listed, please check the requirements yourself.
 
 etc.
 
-3. Apply the theme in gnome-tweak-tool or dconf-editor. XFCE users can apply it in appearance and window manager settings. If you wish to use the gnome-shell theme make sure the `User themes` extension is activated in gnome-tweak-tool.
+Apply the theme in gnome-tweak-tool or dconf-editor. XFCE users can apply it in appearance and window manager settings. If you wish to use the gnome-shell theme make sure the `User themes` extension is activated in gnome-tweak-tool.
 
 #### Other installation options
 
