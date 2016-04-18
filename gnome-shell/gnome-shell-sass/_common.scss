@@ -181,7 +181,7 @@ StScrollBar {
 .flashspot { background-color: white; }
 
 .modal-dialog {
-  border-radius: 0px;
+  border-radius: 0;
   color: $osd_fg_color;
   background-color: $bg_color;
   border: 1px solid transparentize(white,0.7);
@@ -488,8 +488,8 @@ StScrollBar {
     -arrow-background-color: $bg_color;
     -arrow-border-width: 1px;
     -arrow-border-color: transparentize($fg_color, .9);
-    -arrow-base: 0px;
-    -arrow-rise: 0px;
+    -arrow-base: 16px;
+    -arrow-rise: 8px;
     -arrow-box-shadow: 0 0px 0px black; //dreaming. bug #689995
   }
 

@@ -33,19 +33,15 @@ If your distribution isn't listed, please check the requirements yourself.
 #### Manual installation
 
 1. Download the theme: https://github.com/lassekongo83/plano-theme/archive/master.zip
-2. Open the zip in your archive manager and extract the the plano-theme-master folder to ~/.themes (if you’re the only user) or /usr/share/themes (if there are more users). Or run `unzip plano-theme-master.zip && mv plano-theme-master ~/.themes/Plano` in a terminal.
-3. If you use `Gnome Shell` you need `gnome-tweak-tool` installed. Open `gnome-tweak-tool` and go to `Appearance` and select `Plano` or `plano-theme-master` under GTK+ and Shell theme. (You may also need to activate the `User themes` extension under `Extensions`.)
-  * XFCE users can change the themes in `Settings > Appearance` and `Settings > Window Manager`
+2. Make a folder in `~/.themes` called `Plano` and extract the content so it looks like this:
+  `Plano`
+    `gnome-shell`
+    `gtk-3.0`
+    `gtk-2.0`
 
-###### A simpler and faster manual way is to just run this command 
+etc.
 
-  * Gnome Shell
-    `wget -O plano-theme-master.zip https://github.com/lassekongo83/plano-theme/archive/master.zip && unzip plano-theme-master.zip && mv plano-theme-master ~/.themes/Plano && gsettings set org.gnome.desktop.interface gtk-theme "Plano" && gsettings set org.gnome.shell.extensions.user-theme name "Plano"`
-
-  * XFCE
-    `wget -O plano-theme-master.zip https://github.com/lassekongo83/plano-theme/archive/master.zip && unzip plano-theme-master.zip && mv plano-theme-master ~/.themes/Plano && xfconf-query -c xsettings -p /Net/ThemeName -s "Plano" && xfconf-query -c xfwm4 -p /general/theme -s "Plano"`
-
-It will download, rename, move and activate the theme in one go. No unnecessary clicks needed. Just wget and unzip needs to be installed. (Installed by default in most desktop distros). Gnome Shell users may also have to activate the `User themes` extension in `gnome-tweak-tool`.
+3. Apply the theme in gnome-tweak-tool or dconf-editor. XFCE users can apply it in appearance and window manager settings. If you wish to use the gnome-shell theme make sure the `User themes` extension is activated in gnome-tweak-tool.
 
 #### Other installation options
 
