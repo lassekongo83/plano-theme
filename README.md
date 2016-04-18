@@ -35,10 +35,10 @@ If your distribution isn't listed, please check the requirements yourself.
 Download the theme: https://github.com/lassekongo83/plano-theme/archive/master.zip
 Make a folder in `~/.themes` called `Plano` and extract the content so it looks like this:
 
-  `Plano`
-    * `gnome-shell`
-    * `gtk-3.0`
-    * `gtk-2.0`
+`Plano`
+  * `gnome-shell`
+  * `gtk-3.0`
+  * `gtk-2.0`
 
 etc.
 
