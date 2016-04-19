@@ -45,7 +45,6 @@
     background-color: $_glass_bg_color;
     border-color: $_glass_borders_color;
     @include _shadows($_inner_hilight);
-
   }
   @if $t==focus {
     @include _shadows($_inner_hilight_hover);
