@@ -308,7 +308,7 @@
   background-color: $selected_bg_color;
 }
 
-@mixin headerbar_fill($c:$header_bg_color, $tc:lighten($c,4%), $hc:transparentize($top_hilight, 0.7)) {
+@mixin headerbar_fill($c:$bg_color, $tc:lighten($c,4%), $hc:transparentize($top_hilight, 0.7)) {
 //
 // headerbar fill
 //
@@ -318,10 +318,10 @@
 // $bc: bottom highlight color
 //
   background-color: $c;
-  box-shadow: inset 0 1px $hc; // top highlight
+  // box-shadow: inset 0 1px $hc; // top highlight
 }
 
-@mixin ssd_fill($c:$header_bg_color, $tc:lighten($c,4%), $hc:transparentize($top_hilight, 0.7)) {
+@mixin ssd_fill($c:$bg_color, $tc:lighten($c,4%), $hc:transparentize($top_hilight, 0.7)) {
 //
 // server side decoration fill
 //
@@ -330,7 +330,7 @@
 // $hc: top highlight color
 //
   background-color: $c;
-  box-shadow: inset 0 1px $hc; // top highlight
+  // box-shadow: inset 0 1px $hc; // top highlight
 }
 
 // FIXME: Do I need this annoying shit in this theme? I don't think so, but I'll leave it for now in case removal causes any trouble.

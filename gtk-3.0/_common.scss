@@ -1530,7 +1530,6 @@ column-header.button.dnd { // for treeview-like derive widgets
         &:hover, &.prelight-page {
           border-color: transparentize($borders_color,0.7);
           border-#{$_border}-color: $borders_color;
-          //background-color: transparentize($base_color,0.8);
           box-shadow: inset 0 -2px $selected_bg_color;
         }
         &:active, &.active-page {

@@ -1,6 +1,6 @@
 # Plano Theme
 
-Plano is a "flattish" theme for Gnome-shell and XFCE.
+Plano is a flat theme for Gnome and XFCE.
 It is currently in beta state. Things may change a lot before the final release.
 
 ## Requirements
@@ -21,7 +21,6 @@ It is currently in beta state. Things may change a lot before the final release.
 Main distributions that meet these requirements are
 
 * X/Ubuntu 16.04 LTS (**Older versions are not supported**)
-* Debian Testing (Stretch)
 * Fedora 23
 
 Derivatives of these distributions should work, as well.
