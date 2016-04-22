@@ -144,7 +144,6 @@
                 inset 0 -1px transparentize(black,0.92);
   // Border colors
   $btn-border: if($c!=$bg_color, _border_color($c), darken($borders_color, 12%));
-  $btn-border-i: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
   $btn-shadow:
     1px 0 transparentize(black,0.95), 
     0 1px transparentize(black,0.95), 
@@ -192,7 +191,7 @@
     $_bg: if($c!=$bg_color, mix($c,$base_color,85%), $insensitive_bg_color);
 
     color: if($tc!=$fg_color, mix($tc,$_bg,50%), $insensitive_fg_color);
-    border-color: $btn-border-i;
+    border-color: $btn-border;
     background-color: $_bg;
     text-shadow: none;
     icon-shadow: none;

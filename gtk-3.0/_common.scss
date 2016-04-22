@@ -1651,6 +1651,11 @@ column-header.button.dnd { // for treeview-like derive widgets
         background-color: transparent;
       }
 
+      .button {
+        border-style: none;
+        background-color: transparent;
+      }
+
       // w/o the following margin tweaks the slider shrinks when hovering/dragging
       &.vertical .slider {
         margin-top: $_slider_margin - 1px;
