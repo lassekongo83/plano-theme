@@ -70,4 +70,5 @@ XfceHeading,
   box-shadow: none;
   &:hover { background-color: lighten($panel_bg, 4%); }
   &:active { background-color: darken($panel_bg, 8%); }
+  &:checked { background-color: darken($panel_bg, 8%); }
 }

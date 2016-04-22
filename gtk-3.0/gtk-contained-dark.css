@@ -3335,3 +3335,5 @@ XfceHeading,
     background-color: #465c66; }
   #pulseaudio-button:active, #indicator-button:active {
     background-color: #2d3b42; }
+  #pulseaudio-button:checked, #indicator-button:checked {
+    background-color: #2d3b42; }
