@@ -62,8 +62,13 @@
 .view {
   color: white;
   background-color: #455A64; }
+  .view:hover {
+    background-color: #41555e; }
   .view:selected, GtkCalendar:selected {
-    border-radius: 0px; }
+    border-radius: 0; }
+  .view:backdrop {
+    color: #dadfe1;
+    background-color: #475d67; }
 
 .rubberband, GtkTreeView.view.rubberband, .content-view.rubberband {
   border: 1px solid #0080ff;
@@ -1300,10 +1305,10 @@ GtkTreeView.view {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), 0 1px rgba(0, 0, 0, 0.1); }
     GtkTreeView.view.progressbar:selected {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-      background-image: linear-gradient(to bottom, #455A64, #303f46); }
+      background-color: #303f46; }
   GtkTreeView.view.trough {
     background-color: rgba(222, 226, 229, 0.1);
-    border-radius: 2px; }
+    border-radius: 0; }
     GtkTreeView.view.trough:selected {
       background-color: #0080ff; }
 
@@ -1401,7 +1406,7 @@ column-header .button, column-header .button:hover, column-header .button:active
 .popover {
   padding: 2px;
   border: 1px solid #324148;
-  border-radius: 3px;
+  border-radius: 0;
   background-color: #42565f;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
   .popover > .list,
@@ -1902,13 +1907,13 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     background-color: #536c78;
     border: 1px solid;
     border-radius: 50%;
-    border-color: #2b393f; }
+    border-color: #12181b; }
     .scale.slider:hover,
     .scale.scale-has-marks-above.scale-has-marks-below.slider:hover,
     .scale.vertical.scale-has-marks-above.scale-has-marks-below.slider:hover {
       color: #dee2e5;
       background-color: #597481;
-      border-color: #2b393f;
+      box-shadow: inset 0 0 0 6px rgba(0, 0, 0, 0.1);
       border-radius: 50%; }
     .scale.slider:insensitive,
     .scale.scale-has-marks-above.scale-has-marks-below.slider:insensitive,
@@ -1961,7 +1966,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     margin: 10px;
     border: 0px solid #324148;
     border-radius: 2px;
-    background-color: #29363c; }
+    background-color: #1f282d; }
     .scale.trough.highlight,
     .scale.scale-has-marks-above.scale-has-marks-below.trough.highlight,
     .scale.vertical.scale-has-marks-above.scale-has-marks-below.trough.highlight {
@@ -2737,41 +2742,13 @@ GtkColorSwatch {
       border-color: #ffffff; }
   GtkColorSwatch:selected {
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(222, 226, 229, 0.1); }
-  GtkColorSwatch.top {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px; }
-  GtkColorSwatch.bottom {
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px; }
-  GtkColorSwatch.left, GtkColorSwatch:first-child:not(.overlay):not(.top) {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px; }
-  GtkColorSwatch.right, GtkColorSwatch:last-child:not(.overlay):not(.bottom) {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px; }
-  GtkColorSwatch:only-child:not(.overlay) {
-    border-radius: 6px; }
-  GtkColorSwatch.top > .overlay {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
-  GtkColorSwatch.bottom > .overlay {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; }
-  GtkColorSwatch:first-child:not(.top) > .overlay {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; }
-  GtkColorSwatch:last-child:not(.bottom) > .overlay {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px; }
-  GtkColorSwatch:only-child > .overlay {
-    border-radius: 5px; }
   GtkColorSwatch:hover, GtkColorSwatch:hover:selected {
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 50%);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), inset 0 -1px rgba(0, 0, 0, 0.4); }
     GtkColorSwatch:hover.color-dark, GtkColorSwatch:hover:selected.color-dark {
       background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 50%); }
   GtkColorEditor GtkColorSwatch {
-    border-radius: 3px; }
+    border-radius: 0; }
     GtkColorEditor GtkColorSwatch:hover {
       background-image: none;
       box-shadow: inset 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(222, 226, 229, 0.1); }
@@ -3079,72 +3056,50 @@ GtkColorSwatch {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png")); }
 
 .overshoot.top {
-  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(#1d262a), to(rgba(29, 38, 42, 0))), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(222, 226, 229, 0.07)), to(rgba(222, 226, 229, 0)));
-  background-size: 100% 5%, 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-image: none;
   background-color: transparent;
   border: none;
   box-shadow: none; }
 .overshoot.bottom {
-  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#1d262a), to(rgba(29, 38, 42, 0))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(222, 226, 229, 0.07)), to(rgba(222, 226, 229, 0)));
-  background-size: 100% 5%, 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  background-image: none;
   background-color: transparent;
   border: none;
   box-shadow: none; }
 .overshoot.left {
-  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(#1d262a), to(rgba(29, 38, 42, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(222, 226, 229, 0.07)), to(rgba(222, 226, 229, 0)));
-  background-size: 5% 100%, 100% 100%;
-  background-repeat: no-repeat;
-  background-position: left center;
+  background-image: none;
   background-color: transparent;
   border: none;
   box-shadow: none; }
 .overshoot.right {
-  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(#1d262a), to(rgba(29, 38, 42, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(222, 226, 229, 0.07)), to(rgba(222, 226, 229, 0)));
-  background-size: 5% 100%, 100% 100%;
-  background-repeat: no-repeat;
-  background-position: right center;
+  background-image: none;
   background-color: transparent;
   border: none;
   box-shadow: none; }
 
 .undershoot.top {
+  background-image: none;
   background-color: transparent;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
-  padding-top: 1px;
-  background-size: 10px 0px;
-  background-repeat: repeat-x;
-  background-origin: content-box;
-  background-position: center top; }
+  border: none;
+  box-shadow: none; }
 .undershoot.bottom {
+  background-image: none;
   background-color: transparent;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
-  padding-bottom: 1px;
-  background-size: 10px 0px;
-  background-repeat: repeat-x;
-  background-origin: content-box;
-  background-position: center bottom; }
+  border: none;
+  box-shadow: none; }
 .undershoot.left {
+  background-image: none;
   background-color: transparent;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
-  padding-left: 1px;
-  background-size: 0px 10px;
-  background-repeat: repeat-y;
-  background-origin: content-box;
-  background-position: left center; }
+  border: none;
+  box-shadow: none; }
 .undershoot.right {
+  background-image: none;
   background-color: transparent;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
-  padding-right: 1px;
-  background-size: 0px 10px;
-  background-repeat: repeat-y;
-  background-origin: content-box;
-  background-position: right center; }
+  border: none;
+  box-shadow: none; }
 
-/* Various fixes */
+/*****************
+ * Various Fixes *
+ *****************/
 .nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }
@@ -3153,10 +3108,6 @@ GtkColorSwatch {
   /* Makes the floating-bar less annoying */
   background-color: #455A64;
   font-size: smaller; }
-  .floating-bar.bottom.left {
-    border-top-right-radius: 0px; }
-  .floating-bar.bottom.right {
-    border-top-left-radius: 0px; }
 
 /* GTK NAMED COLORS
    ----------------

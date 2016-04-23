@@ -100,9 +100,14 @@ $asset_suffix: if($variant=='dark', '-dark', '');
 .view {
   color: $text_color;
   background-color: $base_color;
+  &:hover { background-color: darken($base_color, 2%); }
   &:selected {
-    border-radius: 0px;
+    border-radius: 0;
     @extend %selected_items;
+  }
+  &:backdrop { // Keep for now or selected backdrop color will behave bad when hovering.
+    color: $backdrop_text_color;
+    background-color: $backdrop_base_color;
   }
 }
 
@@ -1235,15 +1240,13 @@ GtkTreeView.view {
 
       @else { box-shadow: inset 0 1px transparentize(white, 0.95); }
 
-      background-image: linear-gradient(to bottom,
-                                        $base_color,
-                                        darken($base_color,10%));
+      background-color: darken($base_color,10%);
     }
   }
 
   &.trough { // progress bar trough in treeviews
     background-color: transparentize($fg_color,0.9);
-    border-radius: 2px;
+    border-radius: 0;
 
     &:selected {
       background-color: if($variant == 'light',
@@ -1384,7 +1387,7 @@ column-header.button.dnd { // for treeview-like derive widgets
 .popover {
   padding: 2px;
   border: 1px solid $borders_color;
-  border-radius: 3px;
+  border-radius: 0;
   background-color: mix($bg_color, $base_color, 50%);
 
   box-shadow: 0 1px 2px transparentize(black, 0.7);
@@ -1921,11 +1924,11 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     background-color: lighten($bg_color,10%);
     border: 1px solid;
     border-radius: 50%;
-    border-color: darken($borders_color,3%);
+    border-color: darken($borders_color,15%);
 
     &:hover {
       @include button(hover);
-      border-color: darken($borders_color,3%);
+      box-shadow: inset 0 0 0 6px transparentize(black, 0.9);
       border-radius: 50%; // needed for double marks scales
     }
     &:insensitive {
@@ -1950,7 +1953,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     margin: 10px;
     border: 0px solid $borders_color;
     border-radius: 2px;
-    background-color: darken($bg_color, 10%);
+    background-color: darken($bg_color, 15%);
     &.highlight {
       @include progressbar_fill;
       border-color: $selected_borders_color;
@@ -2637,7 +2640,7 @@ GtkColorSwatch {
 
   $_colorswatch_shadow: inset 0 1px transparentize(black, 0.9), _widget_edge();
 
-  $_colorswatch_radius: 5px;
+  $_colorswatch_radius: 0px;
 
   box-shadow: $_colorswatch_shadow;
 
@@ -2651,49 +2654,6 @@ GtkColorSwatch {
 
   // we need to re-set the shadow here since it get axed by the previous bit
   &:selected { box-shadow: $_colorswatch_shadow; }
-
-  // base color corners rounding
-  // to avoid the artifacts caused by rounded corner anti-aliasing the base color
-  // sports a bigger radius.
-  // nth-child is needed by the custom color strip.
-  // The :not() madness is needed since actually the overlay is selectable by GtkColorSwatch > .overlay
-  // and GtkColorSwatch.overlay, I know it's weird, but this is gtk+, not a browser.
-  &.top {
-    border-top-left-radius: $_colorswatch-radius + 1px;
-    border-top-right-radius: $_colorswatch-radius + 1px;
-  }
-  &.bottom {
-    border-bottom-left-radius: $_colorswatch-radius + 1px;
-    border-bottom-right-radius: $_colorswatch-radius + 1px;
-  }
-  &.left, &:first-child:not(.overlay):not(.top) {
-    border-top-left-radius: $_colorswatch-radius + 1px;
-    border-bottom-left-radius: $_colorswatch-radius + 1px;
-  }
-  &.right, &:last-child:not(.overlay):not(.bottom) {
-    border-top-right-radius: $_colorswatch-radius + 1px;
-    border-bottom-right-radius: $_colorswatch-radius + 1px;
-  }
-  &:only-child:not(.overlay) { border-radius: $_colorswatch-radius + 1px; }
-
-  // overlay corner rounding
-  &.top > .overlay {
-    border-top-left-radius: $_colorswatch-radius;
-    border-top-right-radius: $_colorswatch-radius;
-  }
-  &.bottom > .overlay {
-    border-bottom-left-radius: $_colorswatch-radius;
-    border-bottom-right-radius: $_colorswatch-radius;
-  }
-  &:first-child:not(.top) > .overlay {
-    border-top-left-radius: $_colorswatch-radius;
-    border-bottom-left-radius: $_colorswatch-radius;
-  }
-  &:last-child:not(.bottom) > .overlay {
-    border-top-right-radius: $_colorswatch-radius;
-    border-bottom-right-radius: $_colorswatch-radius;
-  }
-  &:only-child > .overlay { border-radius: $_colorswatch-radius; }
 
   // hover effect
   &:hover,
@@ -2710,7 +2670,7 @@ GtkColorSwatch {
 
   // no hover effect for the colorswatch in the color editor
   GtkColorEditor & {
-    border-radius: 3px; // same radius as the entry
+    border-radius: 0;
     &:hover {
       background-image: none;
       box-shadow: inset 0 1px transparentize(black, 0.9), _widget_edge();
@@ -2743,7 +2703,6 @@ GtkColorSwatch {
     .overlay { @include button(undecorated); } // reset the overlay to not cover the button style underneat
   }
 }
-
 
 /********
  * Misc *
@@ -2794,15 +2753,11 @@ GtkVolumeButton.button {
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
-  // this needs to be transparent
-  // see bug #722563
   $_wm_border: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
   $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.82), transparentize($borders_color, 0.1));
 
   box-shadow: 0 0 2px 1px transparentize(black, 0.5),
               0 0 0 1px $_wm_border; //doing borders with box-shadow
-
-  // FIXME rationalize window-frame shadows
 
   /* this is used for the resize cursor area */
   margin: 10px;
@@ -2855,19 +2810,7 @@ GtkVolumeButton.button {
     @include ssd_fill;
 }
 
-// Window Close button
-//.header-bar .button.titlebutton,
-//.titlebar .button.titlebutton {
-//  @extend .button;
-//  @extend .button.flat;
-//  @extend .image-button;
-//  &:backdrop { icon-shadow: none; }
-//}
-
-//.header-bar.selection-mode .button.titlebutton,
-//.titlebar.selection-mode .button.titlebutton {
-//  &:backdrop { icon-shadow: none; }
-//}
+// Min Max Close Buttons
 
 .header-bar,
 .titlebar {
@@ -3047,7 +2990,9 @@ GtkVolumeButton.button {
   }
 }
 
-/* Various fixes */
+/*****************
+ * Various Fixes *
+ *****************/
 .nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
   color: white;
   text-shadow: 1px 1px 2px transparentize(black, 0.2);
@@ -3055,7 +3000,5 @@ GtkVolumeButton.button {
 
 .floating-bar { /* Makes the floating-bar less annoying */
   background-color: $base_color;
-  &.bottom.left { border-top-right-radius: 0px; }
-  &.bottom.right { border-top-left-radius: 0px; }
   font-size: smaller;
 }
