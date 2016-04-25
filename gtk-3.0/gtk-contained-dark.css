@@ -96,7 +96,8 @@ GtkAssistant.csd .sidebar {
 GtkAssistant .sidebar .label {
   padding: 6px 12px; }
 GtkAssistant .sidebar .label.highlight {
-  background-color: #4e595f; }
+  background-color: #3399ff;
+  color: #ffffff; }
 
 GtkTextView {
   background-color: #323e45; }
