@@ -32,14 +32,14 @@ stage {
   color: #dee2e5;
   background-color: #34444d;
   border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 0px #34444d;
+  box-shadow: inset 0 1px #3a4d56;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black; }
   .button:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
     background-color: #3a4d56;
-    box-shadow: inset 0 0px #536d7b;
+    box-shadow: inset 0 1px #41555f;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
   .button:focus {
@@ -47,13 +47,13 @@ stage {
     color: #dee2e5;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: inset 0px 0px 0px 1px #3399ff; }
+    box-shadow: inset 0 1px #5cadff; }
   .button:focus:hover {
     background-color: #4da6ff;
     color: #dee2e5;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: inset 0px 0px 0px 1px #4da6ff; }
+    box-shadow: inset 0 1px #6bb5ff; }
   .button:insensitive {
     color: #848d92;
     border-color: rgba(0, 0, 0, 0.7);
@@ -74,7 +74,7 @@ stage {
   color: #dee2e5;
   background-color: #34444d;
   border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 0px #34444d;
+  box-shadow: inset 0 1px #3a4d56;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   padding: 12px; }
@@ -82,7 +82,7 @@ stage {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
     background-color: #3a4d56;
-    box-shadow: inset 0 0px #536d7b;
+    box-shadow: inset 0 1px #41555f;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
   .modal-dialog-linked-button:insensitive {
@@ -104,21 +104,21 @@ stage {
     color: #dee2e5;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: inset 0px 0px 0px 1px #3399ff; }
+    box-shadow: inset 0 1px #5cadff; }
   .modal-dialog-linked-button:focus:hover {
     background-color: #4da6ff;
     color: #dee2e5;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: inset 0px 0px 0px 1px #4da6ff; }
+    box-shadow: inset 0 1px #6bb5ff; }
   .modal-dialog-linked-button:first-child {
-    border-radius: 0px 0px 0px 0px; }
+    border-radius: 0; }
   .modal-dialog-linked-button:last-child {
-    border-right-width: 0px;
-    border-radius: 0px 0px 0px 0px; }
+    border-right-width: 0;
+    border-radius: 0; }
   .modal-dialog-linked-button:first-child:last-child {
-    border-right-width: 0px;
-    border-radius: 0px 0px 0px 2px; }
+    border-right-width: 0;
+    border-radius: 0; }
 
 /* Entries */
 StEntry {
@@ -1429,7 +1429,7 @@ StScrollBar {
   color: #dee2e5;
   background-color: #34444d;
   border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 0px #34444d;
+  box-shadow: inset 0 1px #3a4d56;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   min-height: 2em;
@@ -1444,12 +1444,12 @@ StScrollBar {
     color: #dee2e5;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: inset 0px 0px 0px 1px #3399ff; }
+    box-shadow: inset 0 1px #5cadff; }
   .keyboard-key:hover, .keyboard-key:checked {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
     background-color: #3a4d56;
-    box-shadow: inset 0 0px #536d7b;
+    box-shadow: inset 0 1px #41555f;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
   .keyboard-key:active {
@@ -1535,14 +1535,14 @@ StScrollBar {
       color: #dee2e5;
       background-color: rgba(51, 153, 255, 0.5);
       border-color: rgba(0, 0, 0, 0.7);
-      box-shadow: inset 0 0px #34444d;
+      box-shadow: inset 0 1px #3a4d56;
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black; }
       .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
         color: white;
         border-color: rgba(0, 0, 0, 0.7);
         background-color: rgba(51, 153, 255, 0.5);
-        box-shadow: inset 0 0px #536d7b;
+        box-shadow: inset 0 1px #41555f;
         text-shadow: 0 1px black;
         icon-shadow: 0 1px black; }
       .login-dialog .modal-dialog-button:default:active {
