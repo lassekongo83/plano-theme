@@ -1,9 +1,9 @@
 // When color definition differs for dark and light variant,
 // it gets @if ed depending on $variant
 
-$base_color: if($variant == 'light', #F7F7F7, #455A64);
+$base_color: if($variant == 'light', #F7F7F7, #39454c);
 $text_color: if($variant == 'light', black, white);
-$bg_color: if($variant == 'light', #E0E0E0, mix(#455A64, #37474F, 50%));
+$bg_color: if($variant == 'light', #d6d6d6, #2a373e);
 $fg_color: if($variant == 'light', #2c2c2c, #dee2e5);
 
 $selected_fg_color: #ffffff;
@@ -26,7 +26,7 @@ $destructive_color: if($variant == 'light', #ef5350, darken(#ef5350,10%));
 
 $osd_fg_color: #dee2e5;
 $osd_text_color: white;
-$osd_bg_color: transparentize(mix(#455A64, #37474F, 50%), 0.3);
+$osd_bg_color: transparentize(#2a373e, 0.3);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
 $osd_borders_color: transparentize(black, 0.3);
@@ -38,7 +38,7 @@ $tooltip_borders_color: transparentize(white, 0.9);
 $header_bg_color: if($variant == 'light', darken($bg_color, 4%), darken($bg_color, 4%));
 
 // Unity and other GTK3 panels
-$panel_bg: mix(#455A64, #37474F, 50%);
+$panel_bg: #2a373e;
 $panel_fg: white;
 
 //insensitive state derived colors

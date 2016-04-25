@@ -70,7 +70,7 @@ stage {
     icon-shadow: none; }
 
 .modal-dialog-linked-button {
-  border-right-width: 0px;
+  border-right-width: 0;
   color: #eeeeec;
   background-color: #3a4144;
   border-color: rgba(0, 0, 0, 0.7);

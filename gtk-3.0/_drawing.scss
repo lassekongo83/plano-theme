@@ -143,7 +143,7 @@
                 inset -1px 0 transparentize(black,0.92), 
                 inset 0 -1px transparentize(black,0.92);
   // Border colors
-  $btn-border: if($c!=$bg_color, _border_color($c), darken($borders_color, 12%));
+  $btn-border: if($c!=$bg_color, _border_color($c), darken($borders_color, 15%));
   $btn-shadow:
     1px 0 transparentize(black,0.95), 
     0 1px transparentize(black,0.95), 
@@ -163,14 +163,14 @@
     color: $tc;
     outline-color: transparentize($tc, 0.7);
     border-color: $btn-border;
-    background-color: lighten($c,10%);
+    background-color: if($variant == 'light', lighten($c,10%), $base_color);
     box-shadow: $btn-shadow;
   }
 
   @else if $t==hover {
   // hovered button
     color: $tc;
-    background-color: lighten($c,13%);
+    background-color: if($variant == 'light', lighten($c,12%), lighten($base_color,4%));
   }
 
   @else if $t==active {
@@ -178,13 +178,13 @@
     color: $tc;
     outline-color: transparentize($tc, 0.7);
     border-color: $btn-border;
-    background-color: darken($c,6%);
+    background-color: darken($c,8%);
     box-shadow: $inset-shade;
   }
   @else if $t==hoveractive {
   // pushed button
     color: $tc;
-    background-color: darken($c,10%);
+    background-color: darken($c,12%);
   }
   @else if $t==insensitive {
   // insensitive button
