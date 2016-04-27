@@ -1622,9 +1622,7 @@ column-header.button.dnd { // for treeview-like derive widgets
   -GtkRange-trough-border: 0;
   -GtkScrollbar-has-backward-stepper: true;
   -GtkScrollbar-has-forward-stepper: true;
-  -GtkScrollbar-min-slider-length: 42; // minimum size for the slider.
-                                       // sadly can't be in '.slider'
-                                       // where it belongs
+  -GtkScrollbar-min-slider-length: 42;
   -GtkRange-stepper-spacing: 0;
   -GtkRange-trough-under-steppers: 1;
 

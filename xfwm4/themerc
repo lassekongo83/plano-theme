@@ -9,8 +9,8 @@ title_vertical_offset_inactive=0
 
 #button_layout=O|HMC
 
-active_text_color=#212121
-inactive_text_color=#757575
+active_text_color=#2c2c2c
+inactive_text_color=#818181
 inactive_text_shadow_color=#ffffff
 
 placement_ratio=20
