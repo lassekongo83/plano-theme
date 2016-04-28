@@ -1321,7 +1321,7 @@ column-header .button {
   box-shadow: none; }
   column-header .button:hover {
     color: #b5bbbf;
-    box-shadow: none;
+    box-shadow: inset 0 -2px #3399ff;
     transition: none; }
   column-header .button:active {
     color: #dee2e5;
@@ -1453,9 +1453,9 @@ column-header .button, column-header .button:hover, column-header .button:active
     .notebook.frame.left {
       border-left-width: 0px; }
   .notebook.header {
-    background-color: #2a373e; }
+    background-color: #222c32; }
     .notebook.header.top {
-      box-shadow: inset 0 -1px #1e272c, inset 0 0px rgba(30, 39, 44, 0.35); }
+      box-shadow: inset 0 -1px #1e272c, inset 0 1px #1e272c; }
     .notebook.header.bottom {
       box-shadow: inset 0 1px #1e272c; }
     .notebook.header.right {
@@ -1506,11 +1506,21 @@ column-header .button, column-header .button:hover, column-header .button:active
       border-left-width: 0px; }
     .notebook tab:hover, .notebook tab.prelight-page {
       border-color: #1e272c; }
+      .notebook tab:hover.top, .notebook tab.prelight-page.top {
+        box-shadow: inset 0 -2px #3399ff; }
+      .notebook tab:hover.bottom, .notebook tab.prelight-page.bottom {
+        box-shadow: inset 0 2px #3399ff; }
+      .notebook tab:hover.left, .notebook tab.prelight-page.left {
+        box-shadow: inset -2px 0 #3399ff; }
+      .notebook tab:hover.right, .notebook tab.prelight-page.right {
+        box-shadow: inset 2px 0 #3399ff; }
     .notebook tab:active, .notebook tab.active-page {
       background-color: #39454c;
       border: 1px;
       border-style: solid;
       border-color: #1e272c; }
+      .notebook tab:active:hover, .notebook tab:active.prelight-page, .notebook tab.active-page:hover, .notebook tab.active-page.prelight-page {
+        box-shadow: none; }
     .notebook tab.reorderable-page.top {
       border-color: transparent; }
       .notebook tab.reorderable-page.top:hover, .notebook tab.reorderable-page.top.prelight-page {
@@ -1524,6 +1534,10 @@ column-header .button, column-header .button:hover, column-header .button:active
         box-shadow: inset 0 1px #1e272c, inset 0 -1px #39454c, inset 1px 0 #1e272c, inset -1px 0 #1e272c; }
         .notebook tab.reorderable-page.top:active:hover, .notebook tab.reorderable-page.top.active-page:hover {
           background-color: #39454c; }
+        .notebook tab.reorderable-page.top:active:first-child, .notebook tab.reorderable-page.top.active-page:first-child {
+          box-shadow: inset 0 1px #1e272c, inset 0 -1px #39454c, inset 0px 0 #1e272c, inset -1px 0 #1e272c; }
+        .notebook tab.reorderable-page.top:active:last-child, .notebook tab.reorderable-page.top.active-page:last-child {
+          box-shadow: inset 0 1px #1e272c, inset 0 -1px #39454c, inset 1px 0 #1e272c, inset 0px 0 #1e272c; }
     .notebook tab.reorderable-page.bottom {
       border-color: transparent; }
       .notebook tab.reorderable-page.bottom:hover, .notebook tab.reorderable-page.bottom.prelight-page {
@@ -1537,6 +1551,10 @@ column-header .button, column-header .button:hover, column-header .button:active
         box-shadow: inset 0 -1px #39454c, inset 0 -1px #1e272c, inset 1px 0 #1e272c, inset -1px 0 #1e272c; }
         .notebook tab.reorderable-page.bottom:active:hover, .notebook tab.reorderable-page.bottom.active-page:hover {
           background-color: #39454c; }
+        .notebook tab.reorderable-page.bottom:active:first-child, .notebook tab.reorderable-page.bottom.active-page:first-child {
+          box-shadow: inset 0 1px #1e272c, inset 0 -1px #39454c, inset 0px 0 #1e272c, inset -1px 0 #1e272c; }
+        .notebook tab.reorderable-page.bottom:active:last-child, .notebook tab.reorderable-page.bottom.active-page:last-child {
+          box-shadow: inset 0 1px #1e272c, inset 0 -1px #39454c, inset 1px 0 #1e272c, inset 0px 0 #1e272c; }
     .notebook tab.reorderable-page.left {
       border-color: transparent; }
       .notebook tab.reorderable-page.left:hover, .notebook tab.reorderable-page.left.prelight-page {
