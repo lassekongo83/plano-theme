@@ -1,11 +1,11 @@
 # Plano Theme
 
-Plano is a flat theme for Gnome and XFCE.
+Plano is a flat theme for GNOME and Xfce.
 It is currently in beta state. Things may change a lot before the final release.
 
 ## Requirements
 
-* Gnome/GTK 3.18
+* GNOME/GTK 3.18
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
@@ -14,7 +14,7 @@ It is currently in beta state. Things may change a lot before the final release.
   * `gtk2-engines` (Fedora)
 
 ##### Optional recommended requirements
-* Roboto fonts (For the gnome-shell theme.)
+* Roboto fonts (For the GNOME shell theme.)
   * `fonts-roboto` (Debian, Ubuntu)
   * `google-roboto-fonts` (Fedora)
 
@@ -32,7 +32,7 @@ If your distribution isn't listed, please check the requirements yourself.
 #### Manual installation
 
 Download the theme: https://github.com/lassekongo83/plano-theme/archive/master.zip
-Make a folder in `~/.themes` called `Plano` and extract the content so it looks like this:
+Make a folder in `~/.themes` or `/usr/share/themes` called `Plano` and extract the content so it looks like this:
 
 `Plano`
   * `gnome-shell`
@@ -41,16 +41,15 @@ Make a folder in `~/.themes` called `Plano` and extract the content so it looks 
 
 etc.
 
-Apply the theme in gnome-tweak-tool or dconf-editor. XFCE users can apply it in appearance and window manager settings. If you wish to use the gnome-shell theme make sure the `User themes` extension is activated in gnome-tweak-tool.
+Apply the theme in gnome-tweak-tool or dconf-editor. Xfce users can apply it in `Settings > Appearance` and `Settings > Window manager`. If you wish to use the GNOME shell theme make sure the `User themes` extension is activated in gnome-tweak-tool.
 
 #### Other installation options
 
-There are currently no other way to install the theme. Help wanted to create a Makefile etc. I have 0 knowledge in that area.
+There are currently no other way to install the theme.
 
-## Troubleshooting
+## Troubleshooting & Bug reporting
 
-If you have a GTK/Gnome version newer or older than 3.18 the theme may not work properly. Gnome 3.20+ support will probably arrive later.
+If you find a bug, please report it at https://github.com/lassekongo83/plano-theme/issues 
+When submitting a bug it would be helpful if you could provide me with a screenshot of the issue. Use a trusted and good image uploader like http://imgur.com for example. Don't use bad ones like ImageShack, PhotoBucket etc. **I do not want to enable JavaScript, cookies or browser plugins to be able to view an image!** Also include information about which version of GTK you're using.
 
-## Bug reporting
-
-If you find a bug, please report it at https://github.com/lassekongo83/plano-theme/issues
+I would also like it if you could be kind and keep support questions to forums, gnome-look.org or http://lassekongo83.deviantart.com as the issue tab here on GitHub is meant for bugs and feature requests.
