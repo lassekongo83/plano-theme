@@ -42,13 +42,68 @@ style "panelbar" {
     engine "murrine" {}
 }
 
-style "panelbuttons" {
+style "theme-panel-buttons" {
 
     xthickness = 4
     ythickness = 0
 
     engine "murrine" {
         textstyle = 0
+    }
+}
+
+style "theme-panel-buttons"
+{
+    engine "pixmap" {
+        image {
+            function    = BOX
+            recolorable = TRUE
+            state       = NORMAL
+        }
+        image {
+            function    = BOX
+            recolorable = TRUE
+            state       = PRELIGHT
+            shadow      = OUT
+            file        = "assets/panel-btn-hover.png"
+            border      = { 0, 0, 0, 2 }
+            stretch     = TRUE
+        }
+        image {
+            function    = BOX
+            recolorable = TRUE
+            state       = PRELIGHT
+            shadow      = IN
+            file        = "assets/panel-btn-active-hover.png"
+            border      = { 0, 0, 0, 2 }
+            stretch     = TRUE
+        }
+        image {
+            function    = BOX
+            recolorable = TRUE
+            state       = ACTIVE
+            file        = "assets/panel-btn-active.png"
+            border      = { 0, 0, 0, 2 }
+            stretch     = TRUE
+        }
+        image {
+            function    = BOX
+            recolorable = TRUE
+            state       = SELECTED
+            file        = "assets/panel-btn-active.png"
+            border      = { 0, 0, 0, 2 }
+            stretch     = TRUE
+        }
+        image {
+            function    = BOX
+            recolorable = TRUE
+            state       = INSENSITIVE
+        }
+        image {
+            function        = ARROW
+            recolorable     = TRUE
+            arrow_direction = DOWN
+        }
     }
 }
 
@@ -119,18 +174,26 @@ style "indicator" = "theme-panel"
     ythickness = 0
 }
 
-widget       "*tasklist*"                         style "panelbuttons"
-widget_class "*Xfce*Panel*.GtkToggleButton"       style "panelbuttons"
-widget_class "*Xfce*NetkTasklist*GtkToggleButton" style "panelbuttons"
-widget_class "*PanelToplevel*Button"              style "panelbuttons"
-widget_class "*Panel*GtkToggleButton"             style "panelbuttons"
-widget_class "*Xfce*Panel*Button*"                style "panelbuttons"
-widget_class "*<XfceArrowButton>"                 style "panelbuttons"
-widget_class "*<XfceActionsPlugin>*"              style "panelbuttons"
-widget_class "*XfcePanelPlugin.GtkButton"         style "panelbuttons"
-widget       "*dict*Applet*"                      style "panelbuttons"
-widget_class "*Xfce*NetkTasklist*GtkToggleButton" style "panelbuttons"
-widget_class "*Tasklist*"                         style:highest "panelbuttons"
+# Panel buttons
+widget       "*tasklist*"                         style "theme-panel-buttons"
+widget_class "*Xfce*Panel*.GtkToggleButton"       style "theme-panel-buttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton" style "theme-panel-buttons"
+widget_class "*PanelToplevel*Button"              style "theme-panel-buttons"
+widget_class "*Panel*GtkToggleButton"             style "theme-panel-buttons"
+widget_class "*Xfce*Panel*Button*"                style "theme-panel-buttons"
+widget_class "*<XfceArrowButton>"                 style "theme-panel-buttons"
+widget_class "*<XfceActionsPlugin>*"              style "theme-panel-buttons"
+widget_class "*XfcePanelPlugin.GtkButton"         style "theme-panel-buttons"
+widget       "*dict*Applet*"                      style "theme-panel-buttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton" style "theme-panel-buttons"
+widget_class "*Tasklist*"                         style:highest "theme-panel-buttons"
+widget_class "*LauncherPlugin*"                   style:highest "theme-panel-buttons"
+widget_class "*ActionsPlugin*"                    style:highest "theme-panel-buttons"
+
+# lxpanel and fbpanel
+widget "*.tclock.*"       style "theme-panel-buttons"
+widget "*.taskbar.*"      style "theme-panel-buttons"
+widget_class "*GtkBgbox*" style "theme-panel-buttons"
 
 class "*Panel*MenuBar*"             style "panelbar"
 widget_class "*Panel*MenuBar*"      style "panelbar"
@@ -262,3 +325,28 @@ widget_class "XfceNotifyWindow.*<GtkButton>"       style:highest "notify-button"
 widget_class "XfceNotifyWindow.*.<GtkLabel>"       style "notify-text"
 widget_class "XfceNotifyWindow.*.<GtkProgress>"    style "notify-progressbar"
 widget_class "XfceNotifyWindow.*.<GtkProgressBar>" style "notify-progressbar"
+
+# The following removes the arrows from the panel
+
+style "panel-arrow-remove" {
+engine "pixmap" {
+    image {
+        function        = ARROW
+        recolorable     = TRUE
+        overlay_file    = "assets/null.png"
+        overlay_border  = {2,2,2,2}
+        overlay_stretch = FALSE
+        arrow_direction = UP
+        }
+    image {
+        function        = ARROW
+        recolorable     = TRUE
+        overlay_file    = "assets/null.png"
+        overlay_border  = {2,2,2,2}
+        overlay_stretch = FALSE
+        arrow_direction = DOWN
+        }
+    }
+}
+
+widget_class "*PanelToplevel*" style "panel-arrow-remove"

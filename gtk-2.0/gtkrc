@@ -162,7 +162,7 @@ style "resize-grip"
             function        = RESIZE_GRIP
             recolorable     = FALSE
             detail          = "statusbar"
-            overlay_file    = "widgets/Others/resize_grip.png"
+            overlay_file    = "assets/resize-grip.png"
             overlay_border  = {0,0,0,0 }
             overlay_stretch = FALSE
         }
@@ -231,27 +231,6 @@ style "entry" = "wider"
     }
 }
 
-style "button" = "wider"
-{
-    bg[NORMAL]        = shade (1.08, @bg_color)
-    bg[PRELIGHT]      = shade (1.11, @bg_color)
-    bg[ACTIVE]        = shade (0.95, @bg_color)
-    bg[SELECTED]      = shade (1.0, @selected_bg_color)
-    bg[INSENSITIVE]   = shade (1.0, @bg_color)
-
-    engine "murrine"
-    {
-        highlight_shade      = 1.0
-        lightborder_shade    = 1.5
-        gradient_shades      = {1.0,1.0,1.0,1.0}
-        reliefstyle          = 2
-        roundness            = 0
-        contrast             = 1.0
-        border_shades        = {0.85, 0.85}
-        shadow_shades        = {0.5, 0.5}
-    }
-}
-
 style "notebook-button" = "notebook-bg"
 {
     xthickness = 3 # Width of tabs and notebook borders.
@@ -312,37 +291,37 @@ style "menu"
 }
 
 
-style "menubar" = "menu"
+style "menubar" = "default"
 {
-    xthickness = 3
-    ythickness = 2
-
-    bg[NORMAL] = @bg_color
-
-    engine "murrine"
-    {
-        roundness = 0
-    }
+    ythickness   = 2
+    bg[NORMAL]   = @bg_color
+    fg[NORMAL]   = @fg_color
+    fg[PRELIGHT] = @fg_color
+    fg[SELECTED] = @fg_color
 }
 
-style "menubar-menuitem"
-{
-    ythickness = 4
-    xthickness = 2
+style "menubar-menuitem" {
+    xthickness     = 6
 
-    bg[PRELIGHT]   = @selected_bg_color
-    bg[SELECTED]   = @selected_bg_color
-    fg[NORMAL]     = @base_color
-    fg[PRELIGHT]   = @base_color
-    fg[SELECTED]   = @base_color
-    text[NORMAL]   = @base_color
-    text[PRELIGHT] = @base_color
-    text[SELECTED] = @base_color
+    bg[PRELIGHT]   = @base_color
+    bg[SELECTED]   = @base_color
+    fg[NORMAL]     = @fg_color
+    fg[PRELIGHT]   = @fg_color
+    fg[SELECTED]   = @fg_color
+    text[NORMAL]   = @fg_color
+    text[PRELIGHT] = @fg_color
+    text[SELECTED] = @fg_color
 
-    engine "murrine"
-    {
-        lightborder_shade = 0.0
-        contrast = 0.0
+    engine "pixmap" {
+        image
+        {
+            function    = BOX
+            recolorable = TRUE
+            state       = PRELIGHT
+            file        = "assets/menubar-menuitem.png"
+            border      = { 0, 0, 0, 2 }
+            stretch     = TRUE
+        }
     }
 }
 
@@ -368,23 +347,6 @@ style "treeview"
     {
         roundness       = 0
         gradient_shades = {1.0,1.0,1.0,1.0}
-    }
-}
-
-style "treeview-header" = "button"
-{
-    xthickness   = 2
-    ythickness   = 1
-
-    bg[NORMAL]   = @base_color # Color for treeview headers.
-    bg[PRELIGHT] = shade (0.98, @base_color) # Color for treeview header prelight.
-    bg[ACTIVE]   = shade (0.85, @base_color) # Color for pressed-treeview.
-
-    engine "murrine"
-    {
-        roundness       = 0 # This makes treeview progressbars square.
-        gradient_shades = {1.0,1.0,1.0,1.0}
-        contrast        = 0.4
     }
 }
 
@@ -668,7 +630,7 @@ style "xfsm-logout"
     GtkDialog::content-area-spacing = 6
     GtkDialog::action-area-spacing  = 0
 
-    bg_pixmap[NORMAL] = "widgets/Others/xfsmlogout.png"
+    bg_pixmap[NORMAL] = "assets/xfsmlogout.png"
 
     bg[NORMAL]   = @bg_color
     bg[SELECTED] = shade (1.18, @bg_color) # Border around the dialog
@@ -747,7 +709,6 @@ widget_class "*<GtkNotebook>*<GtkScrolledWindow>" style "notebook-bg"
 widget_class "*<GtkNotebook>*<GtkToolbar>"        style "notebook-bg"
 widget_class "*<GtkNotebook>*<GtkLabel>"          style "notebook-bg"
 
-widget_class "*<GtkButton>"      style "button"
 widget_class "*<GtkNotebook>"    style "notebook"
 widget_class "*<GtkStatusbar>*"  style "statusbar"
 
@@ -759,7 +720,7 @@ widget_class "*<GtkCombo>*"         style "combo"
 widget_class "*<GtkViewport>*"      style "wider"
 widget_class "*<GtkEntry>*"         style "wider"
 
-widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
+widget_class "*<GtkMenuBar>*<GtkMenuItem>*" style "menubar-menuitem"
 widget_class "*<GtkMenu>*"                  style "menu"
 widget_class "*<GtkMenuBar>*"               style "menubar"
 widget_class "*<GtkSeparatorMenuItem>*"     style "separator-menu-item"
@@ -779,13 +740,6 @@ widget_class "*<GtkProgressBar>"  style "progressbar"
 
 widget_class "*<GtkRadioButton>*" style "radiocheck"
 widget_class "*<GtkCheckButton>*" style "radiocheck"
-
-# Treeview header
-widget_class "*.<GtkTreeView>.<GtkButton>" style "treeview-header"
-widget_class "*.<GtkCTree>.<GtkButton>"    style "treeview-header"
-widget_class "*.<GtkList>.<GtkButton>"     style "treeview-header"
-widget_class "*.<GtkCList>.<GtkButton>"    style "treeview-header"
-widget_class "*GnmSimpleCanvas*"           style "treeview-header" # Gnumeric treeview-headers
 
 # Xfce specific theming
 widget_class "*ExoIconView*"                              style "iconview"
@@ -857,10 +811,9 @@ widget_class "*<GtkListItem>*"        style "fg-is-text-color-workaround"
 widget_class "*<GtkCList>"        style "fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>"    style "fg-is-text-color-workaround"
 
-# panel theming
-include "widgets/panel.rc"
-# Check and radio buttons
-include "widgets/check-radio.rc"
-# application specific theming
+# EXTERNAL FILES
+include "panel.rc"
+include "check-radio.rc"
+include "buttons.rc"
 include "chromium.rc"
 include "thunar.rc"
