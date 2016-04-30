@@ -1249,10 +1249,6 @@ GtkComboBox {
     .header-bar.default-decoration .button {
       padding: 5px; }
 
-/* Header-bar shadow */
-.header-bar {
-  box-shadow: 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.05), 0 3px rgba(0, 0, 0, 0.02), inset 0 -1px rgba(255, 255, 255, 0.2); }
-
 /************
  * Pathbars *
  ************/
@@ -1473,7 +1469,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   .notebook.header {
     background-color: #cccccc; }
     .notebook.header.top {
-      box-shadow: inset 0 -1px #c7c7c7, inset 0 1px #c7c7c7; }
+      box-shadow: inset 0 -1px #c7c7c7, inset 0 1px #c7c7c7, inset 0 2px rgba(199, 199, 199, 0.5); }
     .notebook.header.bottom {
       box-shadow: inset 0 1px #c7c7c7; }
     .notebook.header.right {
