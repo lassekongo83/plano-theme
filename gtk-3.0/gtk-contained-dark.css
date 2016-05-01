@@ -3288,18 +3288,20 @@ XfceHeading,
 
 .xfce4-panel .button:active {
   background-image: none;
-  background-color: #1a2126;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 -2px white;
   border-style: none;
   color: white;
   transition: none; }
+  .xfce4-panel .button:active:hover {
+    background-color: rgba(255, 255, 255, 0.3); }
 
-.xfce4-panel .button:hover,
-.xfce4-panel .button:active:hover {
+.xfce4-panel .button:hover {
   border-style: none;
   background-image: none;
-  background-color: #32424a;
+  background-color: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 -2px white;
   color: white;
-  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1), inset 1px 0 rgba(255, 255, 255, 0.1), inset -1px 0 rgba(255, 255, 255, 0.1), inset 0 1px rgba(255, 255, 255, 0.1);
   transition: none; }
 
 .xfce4-panel .menu {
