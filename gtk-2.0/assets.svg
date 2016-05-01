@@ -26,8 +26,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
-     inkscape:cx="20.728608"
-     inkscape:cy="175.23435"
+     inkscape:cx="19.642944"
+     inkscape:cy="178.556"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -121,44 +121,8 @@
          id="path4211" />
     </g>
     <g
-       id="panel-btn-active"
-       inkscape:label="#g4267">
-      <rect
-         y="872.36218"
-         x="9"
-         height="6"
-         width="1"
-         id="rect4217"
-         style="opacity:1;fill:#000000;fill-opacity:0.251497;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-         id="rect4219"
-         width="1"
-         height="2"
-         x="9"
-         y="876.36218" />
-    </g>
-    <g
-       id="panel-btn-active-hover"
-       inkscape:label="#g4271">
-      <rect
-         style="opacity:1;fill:#000000;fill-opacity:0.39215687;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-         id="rect4221"
-         width="1"
-         height="6"
-         x="13"
-         y="872.36218" />
-      <rect
-         y="876.36218"
-         x="13"
-         height="2"
-         width="1"
-         id="rect4223"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
-    </g>
-    <g
        id="panel-btn-hover"
-       inkscape:label="#g4257">
+       inkscape:label="#g4274">
       <rect
          style="opacity:1;fill:#ffffff;fill-opacity:0.09411765;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
          id="rect4225"
@@ -851,6 +815,42 @@
          height="2"
          x="76"
          y="612.36218" />
+    </g>
+    <g
+       id="panel-btn-active"
+       inkscape:label="#g4270">
+      <rect
+         y="872.36218"
+         x="9"
+         height="6"
+         width="1"
+         id="rect4262"
+         style="opacity:1;fill:#ffffff;fill-opacity:0.1254902;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
+         id="rect4264"
+         width="1"
+         height="2"
+         x="9"
+         y="876.36218" />
+    </g>
+    <g
+       id="panel-btn-active-hover"
+       inkscape:label="#g4288">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:0.15686275;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
+         id="rect4282"
+         width="1"
+         height="6"
+         x="13"
+         y="872.36218" />
+      <rect
+         y="876.36218"
+         x="13"
+         height="2"
+         width="1"
+         id="rect4284"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
     </g>
   </g>
 </svg>

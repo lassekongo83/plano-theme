@@ -54,6 +54,8 @@ style "theme-panel-buttons" {
 
 style "theme-panel-buttons"
 {
+    GtkButton::child-displacement-x = 0
+    GtkButton::child-displacement-y = 0
     engine "pixmap" {
         image {
             function    = BOX
@@ -239,7 +241,8 @@ widget "*PanelApplet*"              style "theme-panel-text"
 # Override general panel-style with specific plugin-styles
 widget "*indicator-applet*" style "indicator"
 widget "*indicator-button*" style "indicator"
-widget "*XfceTasklist*"     style "window-buttons"
+#widget "*XfceTasklist*"     style "window-buttons"
+widget "*XfceTasklist*"     style "theme-panel-buttons"
 
 style "xfce-panel-image-style"
 {
@@ -249,14 +252,6 @@ style "xfce-panel-image-style"
   XfcePanelImage::force-gtk-icon-sizes = true
 }
 class "XfcePanelImage" style "xfce-panel-image-style"
-
-# Whiskermenu fix.
-style "whiskerfix"
-{
-    engine "murrine" {
-    }
-}
-widget "whiskermenu-window*" style "whiskerfix"
 
 # XFCE Notify Window
 
