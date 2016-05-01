@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="78.417564"
-     inkscape:cy="148.39204"
+     inkscape:zoom="11.313708"
+     inkscape:cx="100.50371"
+     inkscape:cy="142.16474"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -847,5 +847,44 @@
        x="74"
        y="855.36218"
        inkscape:label="#rect4323" />
+    <g
+       id="toolbar"
+       inkscape:label="#g4278">
+      <rect
+         style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect4261"
+         width="1"
+         height="36"
+         x="98"
+         y="884.36218" />
+      <rect
+         y="919.36218"
+         x="98"
+         height="1"
+         width="1"
+         id="rect4263"
+         style="opacity:1;fill:#c7c7c7;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         y="884.36218"
+         x="98"
+         height="1"
+         width="1"
+         id="rect4272"
+         style="opacity:1;fill:#b4b4b4;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#c0c0c0;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect4274"
+         width="1"
+         height="1"
+         x="98"
+         y="885.36218" />
+      <rect
+         style="opacity:1;fill:#c8c8c8;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect4276"
+         width="1"
+         height="1"
+         x="98"
+         y="886.36218" />
+    </g>
   </g>
 </svg>

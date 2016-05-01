@@ -26,3 +26,4 @@ menubar-menuitem
 null
 base-color
 selected-color
+toolbar

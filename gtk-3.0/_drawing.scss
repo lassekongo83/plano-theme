@@ -311,7 +311,7 @@
 //
 // headerbar fill
 //
-// $c:  base color
+// $c:  bg color
 // $tc: top color
 // $hc: top highlight color
 // $bc: bottom highlight color
@@ -324,12 +324,28 @@
 //
 // server side decoration fill
 //
-// $c:  base color
+// $c:  bg color
 // $tc: top color
 // $hc: top highlight color
 //
   background-color: $c;
   // box-shadow: inset 0 1px $hc; // top highlight
+}
+
+@mixin toolbar_fill($c:$bg_color, $bc:$borders_color) {
+//
+// toolbar and tab header fill
+//
+// $c: bg color
+// $bc: border color
+//
+  $_ths: inset 0 -1px $bc,
+         inset 0 1px transparentize(black,0.94),
+         inset 0 2px transparentize(black,0.96),
+         inset 0 3px transparentize(black,0.98);
+         
+  background-color: darken($c,4%);
+  box-shadow: $_ths;
 }
 
 @mixin overshoot($p, $t:normal, $c:$fg_color) {

@@ -263,7 +263,6 @@ style "menu"
 {
     ythickness        = 3
     xthickness        = 0
-    GtkMenuBar :: shadow-type = GTK_SHADOW_NONE
 
     bg[SELECTED]      = @selected_bg_color
     bg[NORMAL]        = shade (1.18, @bg_color)
@@ -284,24 +283,37 @@ style "menu"
 
     engine "murrine"
     {
-        roundness = 0     # Roundness of menu items.
+        roundness         = 0 # Roundness of menu items.
         gradient_shades   = {1.0,1.0,1.0,1.0}
         lightborder_shade = 1.0
     }
 }
 
 
-style "menubar" = "default"
+style "menubar"
 {
+    GtkMenuBar :: shadow-type = GTK_SHADOW_NONE
+
     ythickness   = 2
     bg[NORMAL]   = @bg_color
     fg[NORMAL]   = @fg_color
     fg[PRELIGHT] = @fg_color
     fg[SELECTED] = @fg_color
+    
+    engine "pixmap" {
+    image 
+        {
+            function = BOX
+            state    = NORMAL
+            file     = "assets/null.png"
+            border   = { 0, 0, 4, 4 }
+            stretch  = TRUE
+        }
+    }
 }
 
 style "menubar-menuitem" {
-    xthickness     = 6
+    xthickness     = 3
 
     bg[PRELIGHT]   = @base_color
     bg[SELECTED]   = @base_color
@@ -547,14 +559,18 @@ style "radiocheck"
     }
 }
 
-style "toolbar" = "default"
+style "toolbar"
 {
-    bg[NORMAL] = shade (0.96, @bg_color)
+	bg[NORMAL]	= @bg_color	
 
-    engine "murrine"
-    {
-        contrast        = 0.0
-        gradient_shades = {0.96,0.96,0.96,0.96}
+    engine "pixmap" {
+    image 
+        {
+            function = BOX
+            file     = "assets/toolbar.png"
+            border   = { 0, 0, 4, 4 }
+            stretch  = TRUE
+        }
     }
 }
 
@@ -566,7 +582,6 @@ style "toolbar-separator" {
     GtkWidget::wide-separators      = 1
     GtkWidget::separator-width      = 7
     GtkWidget::separator-height     = 1
-
 
     engine "murrine" {
         contrast       = 1.0
