@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="200"
-   height="506"
-   viewBox="0 0 200 506"
+   height="200"
+   viewBox="0 0 200 200"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="65.58796"
-     inkscape:cy="470.70277"
+     inkscape:zoom="22.627417"
+     inkscape:cx="20.728608"
+     inkscape:cy="175.23435"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,11 +57,11 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-546.36216)">
+     transform="translate(0,-852.36216)">
     <g
        id="btn-active"
        inkscape:label="#g4269"
-       transform="translate(0,-206)">
+       transform="translate(0,100)">
       <rect
          y="756.36218"
          x="36"
@@ -92,7 +92,7 @@
     <g
        id="btn-active-hover"
        inkscape:label="#g4257"
-       transform="translate(0,-206)">
+       transform="translate(0,100)">
       <rect
          style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
          id="rect4215"
@@ -122,65 +122,62 @@
     </g>
     <g
        id="panel-btn-active"
-       inkscape:label="#g4233"
-       transform="translate(0,-206)">
+       inkscape:label="#g4267">
       <rect
-         y="772.36218"
+         y="872.36218"
          x="9"
-         height="4"
+         height="6"
          width="1"
          id="rect4217"
-         style="opacity:1;fill:#000000;fill-opacity:0.09411765;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
+         style="opacity:1;fill:#000000;fill-opacity:0.251497;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
       <rect
-         style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
          id="rect4219"
          width="1"
          height="2"
          x="9"
-         y="776.36218" />
+         y="876.36218" />
     </g>
     <g
        id="panel-btn-active-hover"
-       inkscape:label="#g4237"
-       transform="translate(0,-206)">
+       inkscape:label="#g4271">
       <rect
-         style="opacity:1;fill:#000000;fill-opacity:0.18823529;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
+         style="opacity:1;fill:#000000;fill-opacity:0.39215687;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
          id="rect4221"
          width="1"
-         height="4"
+         height="6"
          x="13"
-         y="772.36218" />
+         y="872.36218" />
       <rect
-         y="776.36218"
+         y="876.36218"
          x="13"
          height="2"
          width="1"
          id="rect4223"
-         style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
     </g>
     <g
        id="panel-btn-hover"
-       inkscape:label="#g4229"
-       transform="translate(0,-206)">
+       inkscape:label="#g4257">
       <rect
          style="opacity:1;fill:#ffffff;fill-opacity:0.09411765;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
          id="rect4225"
          width="1"
-         height="4"
+         height="6"
          x="5"
-         y="772.36218" />
+         y="872.36218" />
       <rect
-         y="776.36218"
+         y="876.36218"
          x="5"
          height="2"
          width="1"
          id="rect4227"
-         style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
     </g>
     <g
        id="btn"
        inkscape:label="#g4285"
-       transform="translate(0,-206)">
+       transform="translate(0,100)">
       <rect
          y="756.36218"
          x="4"
@@ -211,7 +208,7 @@
     <g
        id="btn-hover"
        inkscape:label="#g4291"
-       transform="translate(0,-206)">
+       transform="translate(0,100)">
       <rect
          style="opacity:1;fill:#000000;fill-opacity:0.03921569;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
          id="rect4179"
@@ -245,30 +242,30 @@
        width="1"
        height="1"
        x="73"
-       y="552.36218"
+       y="858.36218"
        inkscape:label="#rect4297" />
     <path
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-       d="m 74,553.36216 0,12 4,-4 8,8 4,-4 -8,-8 4,-4 -12,0 z"
+       d="m 74,859.36216 0,12 4,-4 8,8 4,-4 -8,-8 4,-4 -12,0 z"
        id="rect4299"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:79.62195587px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="93.204155"
-       y="548.27319"
+       y="840.92865"
        id="text4309"
        sodipodi:linespacing="125%"
        transform="scale(0.95639646,1.0455915)"><tspan
          sodipodi:role="line"
          id="tspan4311"
          x="93.204155"
-         y="548.27319"
+         y="840.92865"
          style="font-size:9.95274448px">pixels</tspan></text>
     <g
        id="resize-grip"
        inkscape:label="#g4319"
-       transform="translate(0,-236)">
+       transform="translate(0,70)">
       <rect
          y="812.36218"
          x="5"
@@ -288,31 +285,12 @@
        width="1"
        height="1"
        x="72"
-       y="551.36218"
+       y="857.36218"
        inkscape:label="#rect4323" />
-    <g
-       id="xfsmlogout"
-       inkscape:label="#g4329"
-       transform="translate(25,-39.000023)">
-      <rect
-         y="585.36218"
-         x="-25"
-         height="506"
-         width="1"
-         id="rect4325"
-         style="opacity:1;fill:#000000;fill-opacity:0.18823529;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
-      <rect
-         style="opacity:1;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-         id="rect4327"
-         width="1"
-         height="51"
-         x="-25"
-         y="585.36218" />
-    </g>
     <g
        id="menubar-menuitem"
        inkscape:label="#g4341"
-       transform="translate(0,-206)">
+       transform="translate(0,100)">
       <rect
          y="772.36218"
          x="21"
@@ -329,7 +307,7 @@
          y="776.36218" />
     </g>
     <g
-       transform="translate(-58.000005,-118.00002)"
+       transform="translate(-58.000005,187.99998)"
        id="radio-unchecked"
        inkscape:label="#g5408">
       <rect
@@ -367,7 +345,7 @@
          ry="0" />
     </g>
     <g
-       transform="translate(-58.000005,-118.00002)"
+       transform="translate(-58.000005,187.99998)"
        id="radio-checked"
        inkscape:label="#g5450">
       <rect
@@ -400,7 +378,7 @@
          style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(1.999995,-158.00002)"
+       transform="translate(1.999995,147.99998)"
        id="checkbox-unchecked"
        inkscape:label="#g5388">
       <rect
@@ -442,7 +420,7 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
-       transform="translate(1.999995,-158.00002)"
+       transform="translate(1.999995,147.99998)"
        id="checkbox-unchecked-hover"
        inkscape:label="#g5395">
       <rect
@@ -484,7 +462,7 @@
          id="path5345" />
     </g>
     <g
-       transform="translate(-58.000005,-118.00002)"
+       transform="translate(-58.000005,187.99998)"
        id="radio-unchecked-hover"
        inkscape:label="#g5414">
       <rect
@@ -522,7 +500,7 @@
          style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(-58.000005,-118.00002)"
+       transform="translate(-58.000005,187.99998)"
        id="radio-checked-insensitive"
        inkscape:label="#g5426">
       <rect
@@ -555,7 +533,7 @@
          r="3.0000005" />
     </g>
     <g
-       transform="translate(1.999995,-158.00002)"
+       transform="translate(1.999995,147.99998)"
        id="checkbox-unchecked-insensitive"
        inkscape:label="#g5402">
       <rect
@@ -592,7 +570,7 @@
          ry="0" />
     </g>
     <g
-       transform="translate(1.999995,-158.00002)"
+       transform="translate(1.999995,147.99998)"
        id="checkbox-checked"
        inkscape:label="#g5483">
       <rect
@@ -635,7 +613,7 @@
          style="fill:#3399ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(1.999995,-158.00002)"
+       transform="translate(1.999995,147.99998)"
        id="checkbox-checked-insensitive"
        inkscape:label="#g5469">
       <rect
@@ -678,7 +656,7 @@
          sodipodi:nodetypes="ccccccccccc" />
     </g>
     <g
-       transform="translate(-58.000005,-118.00002)"
+       transform="translate(-58.000005,187.99998)"
        id="radio-unchecked-insensitive"
        inkscape:label="#g5420">
       <rect
@@ -716,7 +694,7 @@
          style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(1.999995,-158.00002)"
+       transform="translate(1.999995,147.99998)"
        id="checkbox-checked-hover"
        inkscape:label="#g5476">
       <rect
@@ -759,7 +737,7 @@
          sodipodi:nodetypes="ccccccccccc" />
     </g>
     <g
-       transform="translate(-58.000005,-118.00002)"
+       transform="translate(-58.000005,187.99998)"
        id="radio-checked-hover"
        inkscape:label="#g5444">
       <rect
@@ -793,7 +771,8 @@
     </g>
     <g
        id="btn-insensitive"
-       inkscape:label="#g4264">
+       inkscape:label="#g4264"
+       transform="translate(0,306)">
       <rect
          y="564.36218"
          x="36"
@@ -818,7 +797,8 @@
     </g>
     <g
        id="column-header"
-       inkscape:label="#g4273">
+       inkscape:label="#g4273"
+       transform="translate(0,306)">
       <rect
          y="598.36218"
          x="72"
@@ -836,7 +816,8 @@
     </g>
     <g
        id="column-header-hover"
-       inkscape:label="#g4285">
+       inkscape:label="#g4285"
+       transform="translate(0,306)">
       <rect
          style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-opacity:1"
          id="rect4279"
@@ -855,7 +836,7 @@
     <g
        inkscape:label="#g4285"
        id="column-header-active"
-       transform="translate(4,0)">
+       transform="translate(4,306)">
       <rect
          y="598.36218"
          x="76"

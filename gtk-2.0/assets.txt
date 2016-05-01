@@ -25,4 +25,3 @@ panel-btn-hover
 resize-grip
 menubar-menuitem
 null
-xfsmlogout

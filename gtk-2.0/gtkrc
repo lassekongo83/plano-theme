@@ -624,42 +624,6 @@ style "xfdesktop-icon-view"
     }
 }
 
-style "xfsm-logout"
-{
-    GtkDialog::content-area-border  = 12
-    GtkDialog::content-area-spacing = 6
-    GtkDialog::action-area-spacing  = 0
-
-    bg_pixmap[NORMAL] = "assets/xfsmlogout.png"
-
-    bg[NORMAL]   = @bg_color
-    bg[SELECTED] = shade (1.18, @bg_color) # Border around the dialog
-    fg[NORMAL]   = @fg_color
-
-    engine "murrine"
-    {
-    }
-}
-
-style "xfsm-label"
-{
-    font_name = "14"
-
-    engine "murrine"
-    {
-        textstyle  = 0
-        text_shade = 0.85
-    }
-}
-
-style "xfsm-button" = "button"
-{
-    engine "murrine"
-    {
-        textstyle = 0
-    }
-}
-
 style "calendar"
 {
     fg[NORMAL]   = "#FFFFFF"
@@ -746,9 +710,6 @@ widget_class "*ExoIconView*"                              style "iconview"
 widget_class "*XfceHeading*"                              style "xfce-header"
 widget       "xfwm4-tabwin*"                              style "xfwm-tabwin"
 widget       "xfwm4-tabwin*GtkButton*"                    style "xfwm-tabwin-button"
-widget_class "*XfsmLogoutDialog*"                         style "xfsm-logout"
-widget_class "*XfsmLogoutDialog*GtkVBox.GtkVBox.GtkLabel" style "xfsm-label"
-widget_class "*XfsmLogoutDialog*GtkButton*"               style "xfsm-button"
 widget_class "*XfdesktopIconView*"                        style "xfdesktop-icon-view"
 
 widget_class "*<OsScrollbar>" style "overlay-scrollbar"
