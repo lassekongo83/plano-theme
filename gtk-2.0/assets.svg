@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.627417"
-     inkscape:cx="87.427204"
-     inkscape:cy="192.60975"
+     inkscape:zoom="16"
+     inkscape:cx="78.417564"
+     inkscape:cy="148.39204"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -761,60 +761,39 @@
     </g>
     <g
        id="column-header"
-       inkscape:label="#g4273"
-       transform="translate(0,306)">
+       inkscape:label="#g4272">
       <rect
-         y="598.36218"
+         y="904.36218"
          x="72"
          height="16"
          width="1"
          id="rect4269"
-         style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-opacity:1" />
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
       <rect
          style="opacity:1;fill:#c7c7c7;fill-opacity:1;stroke:none;stroke-opacity:1"
          id="rect4271"
          width="1"
          height="1"
          x="72"
-         y="613.36218" />
+         y="919.36218" />
     </g>
     <g
        id="column-header-hover"
-       inkscape:label="#g4285"
-       transform="translate(0,306)">
+       inkscape:label="#g4278">
       <rect
-         style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-opacity:1"
+         style="opacity:1;fill:#ffffff;fill-opacity:0;stroke:none;stroke-opacity:1"
          id="rect4279"
          width="1"
          height="16"
          x="76"
-         y="598.36218" />
+         y="904.36218" />
       <rect
-         y="612.36218"
+         y="918.36218"
          x="76"
          height="2"
          width="1"
          id="rect4281"
          style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-opacity:1" />
-    </g>
-    <g
-       inkscape:label="#g4285"
-       id="column-header-active"
-       transform="translate(4,306)">
-      <rect
-         y="598.36218"
-         x="76"
-         height="16"
-         width="1"
-         id="rect4291"
-         style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-opacity:1" />
-      <rect
-         style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="rect4293"
-         width="1"
-         height="2"
-         x="76"
-         y="612.36218" />
     </g>
     <g
        id="panel-btn-active"

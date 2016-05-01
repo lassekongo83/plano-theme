@@ -17,7 +17,6 @@ radio-unchecked-insensitive
 radio-checked-insensitive
 column-header
 column-header-hover
-column-header-active
 handle
 panel-btn-active
 panel-btn-active-hover

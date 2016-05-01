@@ -100,7 +100,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
 .view {
   color: $text_color;
   background-color: $base_color;
-  &:hover { background-color: darken($base_color, 2%); }
+  &:hover { background-color: darken($base_color, 4%); }
   &:selected {
     border-radius: 0;
     @extend %selected_items;

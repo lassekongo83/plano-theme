@@ -63,7 +63,7 @@
   color: white;
   background-color: #39454c; }
   .view:hover {
-    background-color: #354046; }
+    background-color: #303a40; }
   .view:selected, GtkCalendar:selected {
     border-radius: 0; }
   .view:backdrop {
