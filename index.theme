@@ -1,9 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=Plano
-Comment=A flat theme for Gnome and XFCE
+Comment=A flat theme for GNOME and Xfce
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Plano
-ButtonLayout=:minimize,maximize,close
+MetacityTheme=Plano
+IconTheme=gnome
+CursorTheme=DMZ-White
+ButtonLayout=menu:minimize,maximize,close

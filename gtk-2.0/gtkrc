@@ -339,14 +339,49 @@ style "separator-menu-item"
 
 style "treeview"
 {
-    GtkTreeView ::odd_row_color  = @base_color
-    GtkTreeView ::even_row_color = @base_color
-    bg[NORMAL]   = @base_color
-    bg[PRELIGHT] = shade (0.98, @base_color)
-    engine "murrine"
+    GtkTreeView::odd_row_color  = @base_color
+    GtkTreeView::even_row_color = @base_color
+    
+    bg[NORMAL]        = @base_color
+    bg[PRELIGHT]      = shade (0.98, @base_color)
+    bg[ACTIVE]        = @selected_bg_color
+    bg[SELECTED]      = @selected_bg_color
+    bg[INSENSITIVE]   = @base_color
+
+    base[NORMAL]      = @base_color
+    base[PRELIGHT]    = shade (0.98, @base_color)
+    base[ACTIVE]      = @selected_bg_color
+    base[SELECTED]    = @selected_bg_color
+    base[INSENSITIVE] = @base_color
+
+    fg[NORMAL]        = @fg_color
+    fg[PRELIGHT]      = @fg_color
+    fg[ACTIVE]        = @selected_fg_color
+    fg[SELECTED]      = @selected_fg_color
+    fg[INSENSITIVE]   = @fg_color
+
+    text[NORMAL]      = @text_color
+    text[PRELIGHT]    = @text_color
+    text[ACTIVE]      = @selected_fg_color
+    text[SELECTED]    = @selected_fg_color
+    text[INSENSITIVE] = @text_color
+
+    engine "pixmap"
     {
-        roundness       = 0
-        gradient_shades = {1.0,1.0,1.0,1.0}
+        image
+        {
+            function = FLAT_BOX
+            state    = SELECTED
+            border   = {0,0,0,0}
+            file     = "assets/selected-color.png"
+        }
+        image
+        {
+            function = FLAT_BOX
+            state    = NORMAL
+            border   = {0,0,0,0}
+            file     = "assets/base-color.png"
+        }
     }
 }
 
@@ -516,7 +551,6 @@ style "toolbar" = "default"
 {
     bg[NORMAL] = shade (0.96, @bg_color)
 
-    #GtkToolbar :: shadow-type = GTK_SHADOW_NONE
     engine "murrine"
     {
         contrast        = 0.0
@@ -660,11 +694,6 @@ class "GtkVScrollbar"  style "scrollbar"
 class "GtkHScrollbar"  style "scrollbar"
 
 # General matching following, the order is choosen so that the right styles override each other eg. progressbar needs to be more important then the menu match.
-#widget_class "*<GtkNotebook>*<GtkEventBox>"     style "notebook"
-#widget_class "*<GtkNotebook>*<GtkScrolledWindow>"     style "notebook"
-#widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "notebook"
-#widget_class "*<GtkNotebook>*<GtkLayout>"       style "notebook"
-#widget_class "*<GtkNotebook>*<GtkLabel>"    style "notebook-button"
 widget_class "*<GtkNotebook>*<GtkEventBox>"       style "notebook-bg"
 widget_class "*<GtkNotebook>*<GtkDrawingArea>"    style "notebook-bg"
 widget_class "*<GtkNotebook>*<GtkLayout>"         style "notebook-bg"
@@ -699,18 +728,18 @@ widget_class "*GtkCalendar*" style "calendar"
 widget_class "*GtkHPaned" style "paned"
 widget_class "*GtkVPaned" style "paned"
 
-widget_class "*<GtkProgress>"     style "progressbar"
-widget_class "*<GtkProgressBar>"  style "progressbar"
+widget_class "*<GtkProgress>"    style "progressbar"
+widget_class "*<GtkProgressBar>" style "progressbar"
 
 widget_class "*<GtkRadioButton>*" style "radiocheck"
 widget_class "*<GtkCheckButton>*" style "radiocheck"
 
 # Xfce specific theming
-widget_class "*ExoIconView*"                              style "iconview"
-widget_class "*XfceHeading*"                              style "xfce-header"
-widget       "xfwm4-tabwin*"                              style "xfwm-tabwin"
-widget       "xfwm4-tabwin*GtkButton*"                    style "xfwm-tabwin-button"
-widget_class "*XfdesktopIconView*"                        style "xfdesktop-icon-view"
+widget_class "*ExoIconView*"           style "iconview"
+widget_class "*XfceHeading*"           style "xfce-header"
+widget       "xfwm4-tabwin*"           style "xfwm-tabwin"
+widget       "xfwm4-tabwin*GtkButton*" style "xfwm-tabwin-button"
+widget_class "*XfdesktopIconView*"     style "xfdesktop-icon-view"
 
 widget_class "*<OsScrollbar>" style "overlay-scrollbar"
 widget_class "*<OsThumb>"     style "overlay-scrollbar"
