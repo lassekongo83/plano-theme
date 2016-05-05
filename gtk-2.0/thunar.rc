@@ -9,7 +9,12 @@ style "thunar-location" {
 style "thunar-handle" {
     GtkPaned::handle-size = 1
     engine "pixmap" {
-        image { function = HANDLE file = "assets/handle.png" stretch = TRUE border = { 0, 0, 0, 0 } }
+        image { 
+            function = HANDLE 
+            file = "assets/handle.png" 
+            stretch = TRUE 
+            border = {1,1,1,1} 
+        }
     }
 }
 
@@ -21,16 +26,22 @@ style "thunar-statusbar" {
             function        = RESIZE_GRIP
             recolorable     = FALSE
             detail          = "statusbar"
-            overlay_file    = "assets/null.png"
-            overlay_border  = {0,0,0,0 }
+            overlay_file    = "assets/resize-grip.png"
+            overlay_border  = {0,0,0,0}
             overlay_stretch = FALSE
         }
     }
 }
 
 style "thunar-sidepane" {
-    GtkTreeView::odd_row_color  = @bg_color
-    GtkTreeView::even_row_color = @bg_color
+    base[NORMAL]      = mix(0.5, @bg_color, @base_color)
+    base[INSENSITIVE] = mix(0.5, @bg_color, @base_color)
+    bg[NORMAL]        = mix(0.5, @bg_color, @base_color)
+    
+    GtkTreeView::odd_row_color  = mix(0.5, @bg_color, @base_color)
+    GtkTreeView::even_row_color = mix(0.5, @bg_color, @base_color)
+
+    engine "murrine" {}
 }
 
 style "thunar-frame" {
@@ -42,5 +53,6 @@ widget_class "*ThunarWindow*.<GtkScrolledWindow>" style "thunar-frame"
 widget_class "*ThunarLocationButtons*"            style "thunar-location"
 widget_class "*ThunarShortcutsView*"              style "thunar-sidepane"
 widget_class "*ThunarTreeView*"                   style "thunar-sidepane"
+widget_class "*ThunarSidePane*"                   style "thunar-sidepane"
 widget_class "*ThunarWindow*.<GtkHPaned>"         style "thunar-handle"
 widget_class "*ThunarStatusbar*"                  style "thunar-statusbar"
