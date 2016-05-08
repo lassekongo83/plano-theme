@@ -61,11 +61,11 @@ style "default"
     GtkScale::trough-side-details              = 1
 
     GtkScrollbar::min-slider-length            = 42
-    GtkScrollbar::slider-width                 = 13
-    #GtkScrollbar::activate-slider             = 1
+    GtkScrollbar::slider-width                 = 14
+    GtkScrollbar::activate-slider              = 1
     GtkScrollbar::trough-border                = 0
-    GtkScrollbar::has-backward-stepper         = 0
-    GtkScrollbar::has-forward-stepper          = 0
+    GtkScrollbar::has-backward-stepper         = 1
+    GtkScrollbar::has-forward-stepper          = 1
 
     GtkScrolledWindow::scrollbar-spacing       = 0
     GtkScrolledWindow::scrollbars-within-bevel = 1
@@ -447,8 +447,7 @@ style "progressbar"
 
 style "scrollbar"
 {
-    GtkScrollbar::stepper-size  = 0
-    GtkScrollbar::arrow-scaling = 0.0
+    GtkScrollbar::arrow-scaling = 0.5
 
     bg[NORMAL]      = shade (0.8, @bg_color)
     bg[ACTIVE]      = shade (0.5, @bg_color)
