@@ -1068,7 +1068,7 @@ GtkComboBox {
   -GtkWidget-window-dragging: true;
   padding: 4px;
   background-color: #222c32;
-  box-shadow: inset 0 -1px #1e272c, inset 0 1px rgba(0, 0, 0, 0.06), inset 0 2px rgba(0, 0, 0, 0.04), inset 0 3px rgba(0, 0, 0, 0.02); }
+  box-shadow: inset 0 -1px #1e272c, inset 0 1px #1e272c, inset 0 2px rgba(30, 39, 44, 0.2), inset 0 3px rgba(30, 39, 44, 0.1); }
   .osd .toolbar, .osd .inline-toolbar, .osd .search-bar, .osd .location-bar, .toolbar.osd, .osd.inline-toolbar, .osd.search-bar, .osd.location-bar {
     padding: 13px;
     border: none;
@@ -1248,6 +1248,9 @@ GtkComboBox {
     .titlebar.default-decoration .button,
     .header-bar.default-decoration .button {
       padding: 5px; }
+
+.header-bar {
+  box-shadow: inset 0 -1px #34444d, 0 1px rgba(0, 0, 0, 0.06), 0 2px rgba(0, 0, 0, 0.04), 0 3px rgba(0, 0, 0, 0.02); }
 
 /************
  * Pathbars *
@@ -1463,7 +1466,7 @@ column-header .button, column-header .button:hover, column-header .button:active
       border-left-width: 0px; }
   .notebook.header {
     background-color: #222c32;
-    box-shadow: inset 0 -1px #1e272c, inset 0 1px rgba(0, 0, 0, 0.06), inset 0 2px rgba(0, 0, 0, 0.04), inset 0 3px rgba(0, 0, 0, 0.02); }
+    box-shadow: inset 0 -1px #1e272c, inset 0 1px #1e272c, inset 0 2px rgba(30, 39, 44, 0.2), inset 0 3px rgba(30, 39, 44, 0.1); }
     .notebook.header.bottom {
       box-shadow: inset 0 1px #1e272c; }
     .notebook.header.right {
@@ -2865,7 +2868,8 @@ GtkColorSwatch {
 /* No line below the title bar */
 .ssd .titlebar {
   border-width: 0;
-  background-color: #2a373e; }
+  background-color: #2a373e;
+  box-shadow: none; }
 
 .header-bar.default-decoration .button.titlebutton,
 .titlebar.default-decoration .button.titlebutton {
