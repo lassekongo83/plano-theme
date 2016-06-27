@@ -270,7 +270,7 @@ GtkTextView {
   color: #dee2e5;
   outline-color: rgba(222, 226, 229, 0.3);
   border-color: #1e272c;
-  border-bottom-color: rgba(0, 0, 0, 0.4);
+  border-bottom-color: rgba(0, 0, 0, 0.36);
   background-color: #39454c;
   box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
   .button.flat, .sidebar-button.button {
@@ -285,7 +285,7 @@ GtkTextView {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #0059b3;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .button.default:hover {
@@ -476,7 +476,7 @@ GtkTextView {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #0059b3;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .button.suggested-action.flat, .suggested-action.sidebar-button.button {
@@ -551,7 +551,7 @@ GtkTextView {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #810e0c;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .button.destructive-action.flat, .destructive-action.sidebar-button.button {
@@ -683,7 +683,7 @@ GtkTextView {
   color: #dee2e5;
   outline-color: rgba(222, 226, 229, 0.3);
   border-color: #1e272c;
-  border-bottom-color: rgba(0, 0, 0, 0.4);
+  border-bottom-color: rgba(0, 0, 0, 0.36);
   background-color: #39454c;
   box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
   .inline-toolbar GtkToolButton > .button:hover {
@@ -973,7 +973,7 @@ GtkColorButton.button {
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: #1e272c;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .spinbutton.vertical .button:first-child:active, .spinbutton.vertical:dir(rtl) .button:first-child:active {
@@ -998,7 +998,7 @@ GtkColorButton.button {
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: #1e272c;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .spinbutton.vertical .button:last-child:active, .spinbutton.vertical:dir(rtl) .button:last-child:active {
@@ -1141,7 +1141,7 @@ GtkComboBox {
       color: #ffffff;
       outline-color: rgba(255, 255, 255, 0.3);
       border-color: #0059b3;
-      border-bottom-color: rgba(0, 0, 0, 0.4);
+      border-bottom-color: rgba(0, 0, 0, 0.36);
       background-color: #39454c;
       box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
       .titlebar.selection-mode .button.flat, .titlebar.selection-mode .sidebar-button.button,
@@ -1201,7 +1201,7 @@ GtkComboBox {
         color: #dee2e5;
         outline-color: rgba(222, 226, 229, 0.3);
         border-color: #1e272c;
-        border-bottom-color: rgba(0, 0, 0, 0.4);
+        border-bottom-color: rgba(0, 0, 0, 0.36);
         background-color: #39454c;
         box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0);
         border-color: #79bbff; }
@@ -1936,7 +1936,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: #1e272c;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0);
     border: 1px solid;
@@ -2359,7 +2359,7 @@ GtkScrolledWindow GtkViewport.frame {
   color: #dee2e5;
   outline-color: rgba(222, 226, 229, 0.3);
   border-color: #1e272c;
-  border-bottom-color: rgba(0, 0, 0, 0.4);
+  border-bottom-color: rgba(0, 0, 0, 0.36);
   background-color: #39454c;
   box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
   .list-row:selected .button.flat, .list-row:selected .sidebar-button.button {
@@ -2509,7 +2509,7 @@ GtkCalendar {
   color: #dee2e5;
   outline-color: rgba(222, 226, 229, 0.3);
   border-color: #1e272c;
-  border-bottom-color: rgba(0, 0, 0, 0.4);
+  border-bottom-color: rgba(0, 0, 0, 0.36);
   background-color: #39454c;
   box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
   .message-dialog.csd .dialog-action-area .button:hover {
@@ -2534,7 +2534,7 @@ GtkCalendar {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #0059b3;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .message-dialog.csd .dialog-action-area .button.suggested-action:hover {
@@ -2559,7 +2559,7 @@ GtkCalendar {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #810e0c;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .message-dialog.csd .dialog-action-area .button.destructive-action:hover {
@@ -2701,7 +2701,7 @@ GtkInfoBar {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #0059b3;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     .info .button:hover,
@@ -2807,7 +2807,7 @@ GtkColorSwatch {
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: #1e272c;
-    border-bottom-color: rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(0, 0, 0, 0.36);
     background-color: #39454c;
     box-shadow: 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(222, 226, 229, 0); }
     GtkColorSwatch#add-color-button:hover {

@@ -154,7 +154,7 @@
     color: $tc;
     outline-color: transparentize($tc, 0.7);
     border-color: $btn-border;
-    border-bottom-color: transparentize(black, 0.6);
+    border-bottom-color: transparentize(black, 0.64);
     background-color: if($variant == 'light', lighten($c, 6%), $base_color);
     box-shadow: $z-depth-1;
   }
@@ -162,7 +162,7 @@
   @else if $t==hover {
   // hovered button
     color: $tc;
-    background-color: if($variant == 'light', lighten($c, 8%), lighten($base_color, 4%));
+    background-color: if($variant == 'light', mix(lighten($c, 8%), transparentize($selected_bg_color, 0.9), 20%), lighten($base_color, 4%));
   }
 
   @else if $t==active {
