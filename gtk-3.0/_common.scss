@@ -1958,7 +1958,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     box-shadow: none;
 
     &:hover {
-      @include button(hover);
+      background-color: if($variant == 'light', lighten($bg_color, 10%), $base_color);
       border-radius: 50%; // needed for double marks scales
     }
     &:insensitive {

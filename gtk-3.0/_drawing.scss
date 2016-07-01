@@ -138,8 +138,8 @@
 //
 
   $z-depth-1: 0 1px transparentize(black, 0.92), inset 0 0 0 1px transparentize($top_hilight, 0.5);
-  $z-depth-2: inset 0 2px transparentize(black, 0.95), 
-              inset 0 0 0 1px transparentize(black, 0.95),
+  $z-depth-2: inset 0 2px transparentize(black, 0.98), 
+              inset 0 0 0 1px transparentize(black, 0.98),
               0 1px transparentize($top_hilight, 0.6);
 
   // Border colors
@@ -154,7 +154,7 @@
     color: $tc;
     outline-color: transparentize($tc, 0.7);
     border-color: $btn-border;
-    border-bottom-color: transparentize(black, 0.64);
+    border-bottom-color: darken($btn-border, 8%);
     background-color: if($variant == 'light', lighten($c, 6%), $base_color);
     box-shadow: $z-depth-1;
   }
@@ -170,13 +170,13 @@
     color: $tc;
     outline-color: transparentize($tc, 0.7);
     border-color: $btn-border;
-    background-color: darken($c, 8%);
+    background-color: darken($c, 4%);
     box-shadow: $z-depth-2;
   }
   @else if $t==hoveractive {
   // pushed button
     color: $tc;
-    background-color: darken($c, 12%);
+    background-color: darken($c, 6%);
   }
   @else if $t==insensitive {
   // insensitive button
