@@ -5,7 +5,7 @@ It is currently in beta state. Things may change a lot before the final release.
 
 ## Requirements
 
-* GNOME/GTK 3.18
+* GNOME/GTK 3.22
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
@@ -17,15 +17,6 @@ It is currently in beta state. Things may change a lot before the final release.
 * Roboto fonts (For the GNOME shell theme.)
   * `fonts-roboto` (Debian, Ubuntu)
   * `google-roboto-fonts` (Fedora)
-
-Main distributions that meet these requirements are
-
-* X/Ubuntu 16.04 LTS (**Older versions are not supported**)
-* Fedora 23
-
-Derivatives of these distributions should work, as well.
-
-If your distribution isn't listed, please check the requirements yourself.
 
 ## Installation
 
@@ -49,7 +40,11 @@ There are currently no other way to install the theme.
 
 ## Troubleshooting & Bug reporting
 
-If you find a bug, please report it at https://github.com/lassekongo83/plano-theme/issues 
-When submitting a bug it would be helpful if you could provide me with a screenshot of the issue. Use a trusted and good image uploader like http://imgur.com for example. Don't use bad ones like ImageShack, PhotoBucket etc. **I do not want to enable JavaScript, cookies or browser plugins to be able to view an image!** Also include information about which version of GTK you're using.
+**The issue tracker is for provable issues only:** You will have to make the case that the issue is really with the theme and not something else on your side. To make a case means to provide detailed steps so that anybody can reproduce the issue. Be sure to rule out that the issue is not caused by something specific on your side.
 
-I would also like it if you could be kind and keep support questions to forums, gnome-look.org or http://lassekongo83.deviantart.com as the issue tab here on GitHub is meant for bugs and feature requests.
+**Required information:**
+> 1. Your GTK+ version/theme version/Linux distribution.
+> 1. Does the same issue occur with other themes?
+> 1. Screenshot. (Use a host that don't require me to enable JavaScript, cookies or browser plugins to be able to view the image.)
+
+**Do not submit support questions to the issue tracker.** Contact me on [reddit](https://www.reddit.com/user/Frellwit/) or [deviantART](http://lassekongo83.deviantart.com) for that instead. (Don't always expect an answer though.) Public forums and subreddits could provide better support. Support questions in the issue tracker will be closed as invalid.
