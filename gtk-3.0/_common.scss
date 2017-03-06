@@ -1361,8 +1361,8 @@ headerbar {
     min-height: 28px;
 
     button.titlebutton {
-      min-height: 20px;
-      min-width: 20px;
+      min-height: 24px;
+      min-width: 24px;
       margin: 0;
       padding: 0;
     }
@@ -2907,6 +2907,8 @@ frame > border,
   &:backdrop { border-color: $backdrop_borders_color; }
 }
 
+frame.flat > border { border-style: none; }
+
 actionbar > revealer >  box {
   padding: 6px;
   border-top: 1px solid $borders_color;
@@ -3649,32 +3651,6 @@ decoration {
     border-width: 0; // No line below the title bar
     @include ssd_fill;
     padding: 2px 4px;
-    
-    button.titlebutton { 
-        @include button(undecorated);
-        padding: 0;
-        // FIXME: Hover effect not obeying min-width
-        min-width: 20px;
-        min-height: 20px;
-        border-width: 0;
-        box-shadow: none;
-        
-        &.close {
-            color: transparent;
-            background-color: transparent;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-width: 0;
-            box-shadow: none;
-            border-radius: 2px;
-
-            &:backdrop { 
-                background-color: transparent;
-                
-                &:hover, &:active { background-color: lighten($closebutton_color, 25%); }
-            }           
-        }
-    }
 }
 
 headerbar,
@@ -3682,14 +3658,14 @@ headerbar,
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
     padding: 0 4px;                        // already handled by the titlebar-padding
     min-width: 0;
-    min-height: 20px;
+    min-height: 24px;
     margin: 0;
   }
 
   button.titlebutton {
     padding: 0;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 24px;
+    min-height: 24px;
     margin: 2px;
 
     @include button(undecorated);
@@ -3701,16 +3677,9 @@ headerbar,
       background-repeat: no-repeat;
       border-width: 0;
       box-shadow: none;
-      border-radius: 2px;
 
       &:backdrop { opacity: 1; }
     }
-
-    &.close { background-color: $closebutton_color;}
-    &.close:backdrop { background-color: $closebutton_backdrop_color;}
-    &.close:hover, &.close:active { background-color: lighten($closebutton_color, 25%); }
-    &.maximize:hover, &.maximize:active { background-color: $selected_bg_color; }
-    &.minimize:hover, &.minimize:active { background-color: $selected_bg_color; }
     
     // Load png assets for each button
     @each $k in ('close','maximize', 'minimize') {

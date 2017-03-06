@@ -1667,8 +1667,8 @@ headerbar {
     min-height: 28px; }
     .default-decoration.titlebar:not(headerbar) button.titlebutton,
     headerbar.default-decoration button.titlebutton {
-      min-height: 20px;
-      min-width: 20px;
+      min-height: 24px;
+      min-width: 24px;
       margin: 0;
       padding: 0; }
   .titlebar:not(headerbar) separator,
@@ -3059,6 +3059,9 @@ frame > border,
   .frame:backdrop {
     border-color: #0b0e10; }
 
+frame.flat > border {
+  border-style: none; }
+
 actionbar > revealer > box {
   padding: 6px;
   border-top: 1px solid #080a0b; }
@@ -3593,42 +3596,18 @@ decoration {
   background-color: #1d2529;
   box-shadow: inset 0 1px rgba(222, 226, 229, 0);
   padding: 2px 4px; }
-  .ssd .titlebar button.titlebutton {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(222, 226, 229, 0);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-    padding: 0;
-    min-width: 20px;
-    min-height: 20px;
-    border-width: 0;
-    box-shadow: none; }
-    .ssd .titlebar button.titlebutton.close {
-      color: transparent;
-      background-color: transparent;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-width: 0;
-      box-shadow: none;
-      border-radius: 2px; }
-      .ssd .titlebar button.titlebutton.close:backdrop {
-        background-color: transparent; }
-        .ssd .titlebar button.titlebutton.close:backdrop:hover, .ssd .titlebar button.titlebutton.close:backdrop:active {
-          background-color: #ef0a1f; }
 
 headerbar.default-decoration button.titlebutton,
 .titlebar.default-decoration button.titlebutton {
   padding: 0 4px;
   min-width: 0;
-  min-height: 20px;
+  min-height: 24px;
   margin: 0; }
 headerbar button.titlebutton,
 .titlebar button.titlebutton {
   padding: 0;
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 24px;
+  min-height: 24px;
   margin: 2px;
   border-color: transparent;
   background-color: transparent;
@@ -3645,31 +3624,12 @@ headerbar button.titlebutton,
     background-position: center;
     background-repeat: no-repeat;
     border-width: 0;
-    box-shadow: none;
-    border-radius: 2px; }
+    box-shadow: none; }
     headerbar button.titlebutton.close:backdrop, headerbar button.titlebutton.maximize:backdrop, headerbar button.titlebutton.minimize:backdrop,
     .titlebar button.titlebutton.close:backdrop,
     .titlebar button.titlebutton.maximize:backdrop,
     .titlebar button.titlebutton.minimize:backdrop {
       opacity: 1; }
-  headerbar button.titlebutton.close,
-  .titlebar button.titlebutton.close {
-    background-color: #75050f; }
-  headerbar button.titlebutton.close:backdrop,
-  .titlebar button.titlebutton.close:backdrop {
-    background-color: transparent; }
-  headerbar button.titlebutton.close:hover, headerbar button.titlebutton.close:active,
-  .titlebar button.titlebutton.close:hover,
-  .titlebar button.titlebutton.close:active {
-    background-color: #ef0a1f; }
-  headerbar button.titlebutton.maximize:hover, headerbar button.titlebutton.maximize:active,
-  .titlebar button.titlebutton.maximize:hover,
-  .titlebar button.titlebutton.maximize:active {
-    background-color: #80b3ff; }
-  headerbar button.titlebutton.minimize:hover, headerbar button.titlebutton.minimize:active,
-  .titlebar button.titlebutton.minimize:hover,
-  .titlebar button.titlebutton.minimize:active {
-    background-color: #80b3ff; }
   headerbar button.titlebutton.close,
   .titlebar button.titlebutton.close {
     background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png")); }
@@ -4035,6 +3995,9 @@ XfceHeading,
   font-style: normal;
   text-shadow: none;
   -gtk-icon-shadow: none; }
+
+.xfce4-panel frame > border {
+  border-style: none; }
 
 .xfce4-panel menu {
   -gtk-icon-effect: none;
