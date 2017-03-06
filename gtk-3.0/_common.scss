@@ -578,7 +578,7 @@ button {
   @each $b_type, $b_color in (suggested-action, $selected_bg_color),
                              (destructive-action, $destructive_color) {
     &.#{$b_type} {
-      @include button(focus, $b_color, white);
+      @include button(normal, $b_color, white);
 
       &.flat {
         @include button(undecorated);
@@ -1347,12 +1347,18 @@ headerbar {
 
   // Normal titlebar buttons
   button {
-    @include button(headerbutton);
-    &:hover { @include button(headerbuttonhover); }
-    &:checked, &:active { @include button(headerbuttonactive); }
-    &:disabled { @include button(headerbuttondisabled); }
-    &.linked {
-      border-width: 1px;
+    @include button(button-header);
+    &:hover { @include button(button-header-hover); }
+    &:checked, &:active { @include button(button-header-active); }
+    &:disabled { @include button(button-header-disabled); }
+    &.linked { border-width: 1px; }
+    &.suggested-action {
+        @include button(normal);
+        border-color: $selected_borders_color;
+    }
+    &.destructive-action {
+        @include button(normal);
+        border-color: darken($destructive_color, 10%);
     }
   }
 

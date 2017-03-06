@@ -316,7 +316,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     text-shadow: none;
     -gtk-icon-shadow: none;
   }
-  @else if $t==headerbutton {
+  @else if $t==button-header {
   // headerbar button
     border-color: transparent;
     background-color: transparent;
@@ -325,7 +325,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     text-shadow: none;
     -gtk-icon-shadow: none;
   }
-  @else if $t==headerbuttondisabled {
+  @else if $t==button-header-disabled {
   // insensitive button
     border-color: transparent;
     background-color: transparent;
@@ -338,14 +338,14 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     // black with 0 alpha
     > .label { color: inherit; }
   }
-  @else if $t==headerbuttonhover {
+  @else if $t==button-header-hover {
   // hovered headerbar button
     color: $tc;
     background-color: lighten($c, 6%);
     box-shadow: $btn-focus;
     border-color: $selected_bg_color;
   }
-  @else if $t==headerbuttonactive {
+  @else if $t==button-header-active {
   // pushed headerbutton
     color: $tc;
     outline-color: transparentize($tc, 0.7);

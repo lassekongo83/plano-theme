@@ -69,7 +69,3 @@ $backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
 $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40%);
 
 $backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
-
-//other colors
-$closebutton_color: if($variant == 'light', #75050f, #75050f);
-$closebutton_backdrop_color: if($variant == 'light', rgba(0,0,0,0.2), rgba(0,0,0,0.0));

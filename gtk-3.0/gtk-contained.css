@@ -657,8 +657,9 @@ button {
       outline-color: rgba(222, 226, 229, 0.3); }
 button.suggested-action {
   color: white;
-  box-shadow: 0 0 0 2px rgba(128, 179, 255, 0.2);
-  border-color: #80b3ff; }
+  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: #1a76ff;
+  background-color: #9ac2ff; }
   button.suggested-action.flat {
     border-color: transparent;
     background-color: transparent;
@@ -747,8 +748,9 @@ button.suggested-action {
       -gtk-icon-shadow: none; }
 button.destructive-action {
   color: white;
-  box-shadow: 0 0 0 2px rgba(128, 179, 255, 0.2);
-  border-color: #80b3ff; }
+  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: #c71612;
+  background-color: #f16a67; }
   button.destructive-action.flat {
     border-color: transparent;
     background-color: transparent;
@@ -1670,6 +1672,20 @@ headerbar {
     .titlebar:not(headerbar) button.linked,
     headerbar button.linked {
       border-width: 1px; }
+    .titlebar:not(headerbar) button.suggested-action,
+    headerbar button.suggested-action {
+      color: #2c2c2c;
+      outline-color: rgba(44, 44, 44, 0.3);
+      border-color: #a3a7ac;
+      background-color: #f8f9f9;
+      border-color: #007eff; }
+    .titlebar:not(headerbar) button.destructive-action,
+    headerbar button.destructive-action {
+      color: #2c2c2c;
+      outline-color: rgba(44, 44, 44, 0.3);
+      border-color: #a3a7ac;
+      background-color: #f8f9f9;
+      border-color: #eb2521; }
   .default-decoration.titlebar:not(headerbar),
   headerbar.default-decoration {
     padding: 4px;
