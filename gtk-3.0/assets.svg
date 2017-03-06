@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="270.16794"
-     inkscape:cy="299.79719"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="213.24406"
+     inkscape:cy="278.01237"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -3142,7 +3142,7 @@
     </g>
     <g
        id="titlebutton-close-hover"
-       inkscape:label="#g5714">
+       inkscape:label="#g5723">
       <rect
          ry="1.6668508"
          y="792.36218"
@@ -3150,7 +3150,7 @@
          height="20.000006"
          width="20.000006"
          id="rect5292"
-         style="opacity:1;fill:#e04343;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#e04343;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <path
          inkscape:connector-curvature="0"
          id="path6145"
@@ -3159,7 +3159,7 @@
     </g>
     <g
        id="titlebutton-minimize-hover"
-       inkscape:label="#g6181">
+       inkscape:label="#g5705">
       <rect
          ry="1.6668508"
          y="792.36218"
@@ -3167,7 +3167,7 @@
          height="20.000006"
          width="20.000006"
          id="rect6163"
-         style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#3399ff;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
          style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect6149"
@@ -3178,9 +3178,9 @@
     </g>
     <g
        id="titlebutton-maximize-hover"
-       inkscape:label="#g6177">
+       inkscape:label="#g5699">
       <rect
-         style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#3399ff;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect6161"
          width="20.000006"
          height="20.000006"
@@ -3189,13 +3189,13 @@
          ry="1.6668508" />
       <path
          style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 175.99999,798.36208 2,2 2,0 0,2 2.00001,2 0,-6 -6.00001,0 z m -2,2 0,6 6,0 -2,-2 -2,0 0,-2 -2,-2 z"
+         d="m 175.99999,798.36208 2,2 h 2 v 2 l 2.00001,2 v -6 z m -2,2 v 6 h 6 l -2,-2 h -2 v -2 z"
          id="path6153"
          inkscape:connector-curvature="0" />
     </g>
     <g
        id="titlebutton-close-backdrop"
-       inkscape:label="#g5708">
+       inkscape:label="#g5715">
       <rect
          ry="1.6668508"
          y="760.36218"
@@ -3203,7 +3203,7 @@
          height="20.000006"
          width="20.000006"
          id="rect7134"
-         style="opacity:1;fill:#000000;fill-opacity:0.23529412;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <path
          inkscape:connector-curvature="0"
          id="path6167"
@@ -3732,9 +3732,9 @@
     </g>
     <g
        id="titlebutton-close"
-       inkscape:label="#g5704">
+       inkscape:label="#g5719">
       <rect
-         style="opacity:1;fill:#c75050;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#c75050;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect7456"
          width="20.000006"
          height="20.000006"

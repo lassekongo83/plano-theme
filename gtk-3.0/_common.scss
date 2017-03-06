@@ -3664,8 +3664,9 @@ headerbar,
 
   button.titlebutton {
     padding: 0;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 2px;
 
     @include button(undecorated);
 
@@ -3676,8 +3677,25 @@ headerbar,
       background-repeat: no-repeat;
       border-width: 0;
       box-shadow: none;
+      border-radius: 2px;
 
-      &:backdrop { opacity: 1; }
+      //&:backdrop { opacity: 1; }
+    }
+
+    &.close { background-color: $closebutton_color;}
+
+    &.close:backdrop { background-color: $closebutton_backdrop_color;}
+
+    &.close:hover, &.close:active {
+      background-color: lighten($closebutton_color, 25%);
+    }
+    
+    &.maximize:hover, &.maximize:active {
+      background-color: $selected_bg_color;
+    }
+    
+    &.minimize:hover, &.minimize:active {
+      background-color: $selected_bg_color;
     }
     
     // Load png assets for each button
