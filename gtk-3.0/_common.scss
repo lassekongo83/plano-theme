@@ -1361,8 +1361,8 @@ headerbar {
     min-height: 28px;
 
     button.titlebutton {
-      min-height: 24px;
-      min-width: 24px;
+      min-height: 20px;
+      min-width: 20px;
       margin: 0;
       padding: 0;
     }
@@ -3617,7 +3617,6 @@ decoration {
     box-shadow: 0 0 0 1px $_wm_border; //just doing borders, wm draws actual shadows
     &.maximized { border-radius: 0; }
     border: none;
-    @include ssd_fill;
   }
 
   .csd.popup & {
@@ -3646,11 +3645,36 @@ decoration {
   }
 }
 
-/* No line below the title bar */
 .ssd .titlebar {
-    border-width: 0;
+    border-width: 0; // No line below the title bar
     @include ssd_fill;
     padding: 2px 4px;
+    
+    button.titlebutton { 
+        @include button(undecorated);
+        padding: 0;
+        // FIXME: Hover effect not obeying min-width
+        min-width: 20px;
+        min-height: 20px;
+        border-width: 0;
+        box-shadow: none;
+        
+        &.close {
+            color: transparent;
+            background-color: transparent;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-width: 0;
+            box-shadow: none;
+            border-radius: 2px;
+
+            &:backdrop { 
+                background-color: transparent;
+                
+                &:hover, &:active { background-color: lighten($closebutton_color, 25%); }
+            }           
+        }
+    }
 }
 
 headerbar,
@@ -3679,24 +3703,14 @@ headerbar,
       box-shadow: none;
       border-radius: 2px;
 
-      //&:backdrop { opacity: 1; }
+      &:backdrop { opacity: 1; }
     }
 
     &.close { background-color: $closebutton_color;}
-
     &.close:backdrop { background-color: $closebutton_backdrop_color;}
-
-    &.close:hover, &.close:active {
-      background-color: lighten($closebutton_color, 25%);
-    }
-    
-    &.maximize:hover, &.maximize:active {
-      background-color: $selected_bg_color;
-    }
-    
-    &.minimize:hover, &.minimize:active {
-      background-color: $selected_bg_color;
-    }
+    &.close:hover, &.close:active { background-color: lighten($closebutton_color, 25%); }
+    &.maximize:hover, &.maximize:active { background-color: $selected_bg_color; }
+    &.minimize:hover, &.minimize:active { background-color: $selected_bg_color; }
     
     // Load png assets for each button
     @each $k in ('close','maximize', 'minimize') {
