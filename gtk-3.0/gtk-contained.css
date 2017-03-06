@@ -3183,10 +3183,6 @@ frame > border,
   .frame:backdrop {
     border-color: #c7cacd; }
 
-frame.flat > border,
-.frame.flat {
-  border-style: none; }
-
 actionbar > revealer > box {
   padding: 6px;
   border-top: 1px solid #c3c6c9; }
