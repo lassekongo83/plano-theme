@@ -452,14 +452,14 @@ button {
   button:active:hover,
   button:checked:hover {
     color: #dee2e5;
-    background-color: #12171a; }
+    background-color: #0e1214; }
   notebook > header > tabs > arrow:active, notebook > header > tabs > arrow:checked,
   button:active,
   button:checked {
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: black;
-    background-color: #1a2226;
+    background-color: #161d20;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
   notebook > header > tabs > arrow:disabled, button.sidebar-button:disabled,
   button.flat:disabled {
@@ -675,7 +675,7 @@ button.suggested-action {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #1a76ff;
-    background-color: #61a1ff;
+    background-color: #579bff;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
   button.suggested-action.flat:disabled {
     border-color: transparent;
@@ -766,7 +766,7 @@ button.destructive-action {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     border-color: #98110e;
-    background-color: #da1814;
+    background-color: #d01713;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
   button.destructive-action.flat:disabled {
     border-color: transparent;
@@ -917,7 +917,7 @@ button.needs-attention > image, stacksidebar row.needs-attention > label {
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: black;
-    background-color: #1a2226;
+    background-color: #161d20;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
   .inline-toolbar toolbutton > button:disabled {
     color: #838a8f;
@@ -946,152 +946,23 @@ button:active, .linked >
 button:checked, .linked >
 button:backdrop, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
   border-radius: 0;
-  border-right-style: none;
-  border-right-width: 0;
-  border-left-width: 0; }
-  toolbar.inline-toolbar toolbutton > button.flat:active, .linked:not(.vertical) > spinbutton:active:not(.vertical), .linked:not(.vertical) >
-  entry:active, .inline-toolbar
-  button:active, .linked >
-  button:active, .linked > combobox > box > button.combo:active:dir(ltr), .linked > combobox > box > button.combo:active:dir(rtl) {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  toolbar.inline-toolbar toolbutton > button.flat:checked, .linked:not(.vertical) > spinbutton:checked:not(.vertical), .linked:not(.vertical) >
-  entry:checked, .inline-toolbar
-  button:checked, .linked >
-  button:checked, .linked > combobox > box > button.combo:checked:dir(ltr), .linked > combobox > box > button.combo:checked:dir(rtl) {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  .linked:not(.vertical) > spinbutton:active:hover:not(.vertical), .linked:not(.vertical) >
-  entry:active:hover, .inline-toolbar
-  button:active:hover, .linked >
-  button:active:hover, .linked > combobox > box > button.combo:active:hover:dir(ltr), .linked > combobox > box > button.combo:active:hover:dir(rtl) {
-    color: #dee2e5;
-    background-color: #12171a; }
-  .linked:not(.vertical) > spinbutton:checked:hover:not(.vertical), .linked:not(.vertical) >
-  entry:checked:hover, .inline-toolbar
-  button:checked:hover, .linked >
-  button:checked:hover, .linked > combobox > box > button.combo:checked:hover:dir(ltr), .linked > combobox > box > button.combo:checked:hover:dir(rtl) {
-    color: #dee2e5;
-    background-color: #12171a; }
+  border-right-style: none; }
 
 .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) >
 entry:first-child, .inline-toolbar
 button:first-child, .linked >
 button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo {
-  border-radius: 0px;
-  border-left-width: 1px;
-  border-right-width: 0; }
-  .linked:not(.vertical) > spinbutton:first-child:active:not(.vertical), .linked:not(.vertical) >
-  entry:first-child:active, .inline-toolbar
-  button:first-child:active, .linked >
-  button:first-child:active, toolbar.inline-toolbar toolbutton:first-child > button.flat:active, combobox.linked button:active:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo:active {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  .linked:not(.vertical) > spinbutton:first-child:checked:not(.vertical), .linked:not(.vertical) >
-  entry:first-child:checked, .inline-toolbar
-  button:first-child:checked, .linked >
-  button:first-child:checked, toolbar.inline-toolbar toolbutton:first-child > button.flat:checked, combobox.linked button:checked:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo:checked {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  .linked:not(.vertical) > spinbutton:first-child:active:hover:not(.vertical), .linked:not(.vertical) >
-  entry:first-child:active:hover, .inline-toolbar
-  button:first-child:active:hover, .linked >
-  button:first-child:active:hover, toolbar.inline-toolbar toolbutton:first-child > button.flat:active:hover, combobox.linked button:active:hover:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo:active:hover {
-    color: #dee2e5;
-    background-color: #12171a; }
-  .linked:not(.vertical) > spinbutton:first-child:checked:hover:not(.vertical), .linked:not(.vertical) >
-  entry:first-child:checked:hover, .inline-toolbar
-  button:first-child:checked:hover, .linked >
-  button:first-child:checked:hover, toolbar.inline-toolbar toolbutton:first-child > button.flat:checked:hover, combobox.linked button:checked:hover:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo:checked:hover {
-    color: #dee2e5;
-    background-color: #12171a; }
+  border-right-style: none; }
 .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) >
 entry:last-child, .inline-toolbar
 button:last-child, .linked >
 button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo {
-  border-radius: 0px;
-  border-right-style: solid;
-  border-left-width: 0;
-  border-right-width: 1px; }
-  .linked:not(.vertical) > spinbutton:last-child:active:not(.vertical), .linked:not(.vertical) >
-  entry:last-child:active, .inline-toolbar
-  button:last-child:active, .linked >
-  button:last-child:active, toolbar.inline-toolbar toolbutton:last-child > button.flat:active, combobox.linked button:active:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo:active {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  .linked:not(.vertical) > spinbutton:last-child:checked:not(.vertical), .linked:not(.vertical) >
-  entry:last-child:checked, .inline-toolbar
-  button:last-child:checked, .linked >
-  button:last-child:checked, toolbar.inline-toolbar toolbutton:last-child > button.flat:checked, combobox.linked button:checked:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo:checked {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  .linked:not(.vertical) > spinbutton:last-child:active:hover:not(.vertical), .linked:not(.vertical) >
-  entry:last-child:active:hover, .inline-toolbar
-  button:last-child:active:hover, .linked >
-  button:last-child:active:hover, toolbar.inline-toolbar toolbutton:last-child > button.flat:active:hover, combobox.linked button:active:hover:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo:active:hover {
-    color: #dee2e5;
-    background-color: #12171a; }
-  .linked:not(.vertical) > spinbutton:last-child:checked:hover:not(.vertical), .linked:not(.vertical) >
-  entry:last-child:checked:hover, .inline-toolbar
-  button:last-child:checked:hover, .linked >
-  button:last-child:checked:hover, toolbar.inline-toolbar toolbutton:last-child > button.flat:checked:hover, combobox.linked button:checked:hover:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo:checked:hover {
-    color: #dee2e5;
-    background-color: #12171a; }
+  border-right-style: solid; }
 .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) >
 entry:only-child, .inline-toolbar
 button:only-child, .linked >
 button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat, .linked:not(.vertical) > combobox:only-child > box > button.combo {
-  border-radius: 0px;
-  border-style: solid;
-  border-width: 1px; }
-  .linked:not(.vertical) > spinbutton:only-child:active:not(.vertical), .linked:not(.vertical) >
-  entry:only-child:active, .inline-toolbar
-  button:only-child:active, .linked >
-  button:only-child:active, toolbar.inline-toolbar toolbutton:only-child > button.flat:active, .linked:not(.vertical) > combobox:only-child > box > button.combo:active {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  .linked:not(.vertical) > spinbutton:only-child:checked:not(.vertical), .linked:not(.vertical) >
-  entry:only-child:checked, .inline-toolbar
-  button:only-child:checked, .linked >
-  button:only-child:checked, toolbar.inline-toolbar toolbutton:only-child > button.flat:checked, .linked:not(.vertical) > combobox:only-child > box > button.combo:checked {
-    color: #dee2e5;
-    outline-color: rgba(222, 226, 229, 0.3);
-    border-color: black;
-    background-color: #1a2226;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-  .linked:not(.vertical) > spinbutton:only-child:active:hover:not(.vertical), .linked:not(.vertical) >
-  entry:only-child:active:hover, .inline-toolbar
-  button:only-child:active:hover, .linked >
-  button:only-child:active:hover, toolbar.inline-toolbar toolbutton:only-child > button.flat:active:hover, .linked:not(.vertical) > combobox:only-child > box > button.combo:active:hover {
-    color: #dee2e5;
-    background-color: #12171a; }
-  .linked:not(.vertical) > spinbutton:only-child:checked:hover:not(.vertical), .linked:not(.vertical) >
-  entry:only-child:checked:hover, .inline-toolbar
-  button:only-child:checked:hover, .linked >
-  button:only-child:checked:hover, toolbar.inline-toolbar toolbutton:only-child > button.flat:checked:hover, .linked:not(.vertical) > combobox:only-child > box > button.combo:checked:hover {
-    color: #dee2e5;
-    background-color: #12171a; }
+  border-style: solid; }
 
 .linked.vertical > spinbutton:not(.vertical), .linked.vertical >
 entry, .linked.vertical >
@@ -1425,7 +1296,6 @@ toolbar, .inline-toolbar, searchbar,
 .location-bar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: #1d2529;
   box-shadow: none; }
 
 toolbar {
@@ -1532,7 +1402,7 @@ headerbar {
         color: #ffffff;
         outline-color: rgba(255, 255, 255, 0.3);
         border-color: #1a76ff;
-        background-color: #61a1ff;
+        background-color: #579bff;
         box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
       .selection-mode.titlebar:not(headerbar) button.flat:backdrop, .selection-mode.titlebar:not(headerbar) button.flat:disabled, .selection-mode.titlebar:not(headerbar) button.flat:backdrop:disabled,
       headerbar.selection-mode button.flat:backdrop,
@@ -1585,7 +1455,7 @@ headerbar {
           color: #dee2e5;
           outline-color: rgba(222, 226, 229, 0.3);
           border-color: black;
-          background-color: #1a2226;
+          background-color: #161d20;
           box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08);
           border-color: #79bbff; }
         .selection-mode.titlebar:not(headerbar) button.suggested-action:disabled,
@@ -1626,57 +1496,6 @@ headerbar {
   headerbar, .maximized
   headerbar {
     border-radius: 0; }
-  .titlebar:not(headerbar) button,
-  headerbar button {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
-    .titlebar:not(headerbar) button:hover,
-    headerbar button:hover {
-      color: #dee2e5;
-      background-color: #34424a;
-      box-shadow: 0 0 0 2px rgba(128, 179, 255, 0.2);
-      border-color: #80b3ff; }
-    .titlebar:not(headerbar) button:checked, .titlebar:not(headerbar) button:active,
-    headerbar button:checked,
-    headerbar button:active {
-      color: #dee2e5;
-      outline-color: rgba(222, 226, 229, 0.3);
-      border-color: black;
-      background-color: #1a2226;
-      box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
-    .titlebar:not(headerbar) button:disabled,
-    headerbar button:disabled {
-      border-color: transparent;
-      background-color: transparent;
-      background-image: none;
-      color: #838a8f;
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      box-shadow: none; }
-      .titlebar:not(headerbar) button:disabled > .label,
-      headerbar button:disabled > .label {
-        color: inherit; }
-    .titlebar:not(headerbar) button.linked,
-    headerbar button.linked {
-      border-width: 1px; }
-    .titlebar:not(headerbar) button.suggested-action,
-    headerbar button.suggested-action {
-      color: #dee2e5;
-      outline-color: rgba(222, 226, 229, 0.3);
-      border-color: black;
-      background-color: #313f47;
-      border-color: #79bbff; }
-    .titlebar:not(headerbar) button.destructive-action,
-    headerbar button.destructive-action {
-      color: #dee2e5;
-      outline-color: rgba(222, 226, 229, 0.3);
-      border-color: black;
-      background-color: #313f47;
-      border-color: #c71612; }
   .default-decoration.titlebar:not(headerbar),
   headerbar.default-decoration {
     padding: 4px;
@@ -1690,6 +1509,41 @@ headerbar {
   .titlebar:not(headerbar) separator,
   headerbar separator {
     background-color: transparent; }
+
+headerbar button {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none; }
+  headerbar button:hover {
+    color: #dee2e5;
+    background-color: #34424a;
+    box-shadow: 0 0 0 2px rgba(128, 179, 255, 0.2);
+    border-color: #80b3ff; }
+  headerbar button:focus {
+    color: #dee2e5;
+    box-shadow: 0 0 0 2px rgba(128, 179, 255, 0.2);
+    border-color: #80b3ff; }
+  headerbar button:checked, headerbar button:active {
+    color: #dee2e5;
+    outline-color: rgba(222, 226, 229, 0.3);
+    border-color: black;
+    background-color: #161d20;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
+  headerbar button:disabled {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    color: #838a8f;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+    box-shadow: none; }
+    headerbar button:disabled > .label {
+      color: inherit; }
+headerbar .linked:not(entry) button:not(:last-child):not(:only-child) {
+  border-right-style: solid; }
 
 headerbar entry,
 headerbar spinbutton,
@@ -2118,8 +1972,7 @@ notebook {
       notebook > header tab:hover {
         color: #b1b6ba; }
         notebook > header tab:hover.reorderable-page {
-          border-color: rgba(8, 10, 11, 0);
-          background-color: rgba(84, 110, 122, 0.2); }
+          border-color: rgba(8, 10, 11, 0); }
       notebook > header tab:checked {
         color: #dee2e5; }
         notebook > header tab:checked.reorderable-page {
@@ -3438,7 +3291,7 @@ infobar {
         color: #ffffff;
         outline-color: rgba(255, 255, 255, 0.3);
         border-color: #1a76ff;
-        background-color: #61a1ff;
+        background-color: #579bff;
         box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
       infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled {
         color: #bcd4f5;
@@ -4156,7 +4009,7 @@ XfceHeading,
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: black;
-    background-color: #1a2226;
+    background-color: #161d20;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
   #content_frame button:disabled {
     color: #838a8f;
@@ -4193,7 +4046,7 @@ XfceHeading,
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: black;
-    background-color: #1a2226;
+    background-color: #161d20;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
   #buttonbox_frame button:disabled {
     color: #838a8f;
@@ -4228,7 +4081,7 @@ XfceHeading,
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: #690b0a;
-    background-color: #ab1310;
+    background-color: #a1120f;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
 
 #restart_button.button {
@@ -4245,7 +4098,7 @@ XfceHeading,
     color: #dee2e5;
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: #005ce6;
-    background-color: #2e82ff;
+    background-color: #247cff;
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
 
 #greeter_infobar {

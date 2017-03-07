@@ -758,51 +758,24 @@ toolbar.inline-toolbar toolbutton {
   &:only-child > button.flat { @extend %linked:only-child; }
 }
 
-// Linked shadows variables.
-$shadow-color: transparentize(black, 0.92);
-$inset-color: if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.94));
-
 %linked_middle {
   border-radius: 0;
   border-right-style: none;
-  border-right-width: 0;
-  border-left-width: 0;
-  // FIXME: Figure out how this looks on colored titlebars.
-  &:active { @include button(active); }
-  &:checked { @include button(active); }
-  &:active:hover { @include button(hoveractive); }
-  &:checked:hover { @include button(hoveractive); }
 }
 
 %linked {
   @extend %linked_middle;
+
   &:first-child {
-    border-radius: 0px;
-    border-left-width: 1px;
-    border-right-width: 0;
-    &:active { @include button(active); }
-    &:checked { @include button(active); }
-    &:active:hover { @include button(hoveractive); }
-    &:checked:hover { @include button(hoveractive); }
+    border-right-style: none;
   }
+
   &:last-child {
-    border-radius: 0px;
     border-right-style: solid;
-    border-left-width: 0;
-    border-right-width: 1px;
-    &:active { @include button(active); }
-    &:checked { @include button(active); }
-    &:active:hover { @include button(hoveractive); }
-    &:checked:hover { @include button(hoveractive); }
   }
+
   &:only-child {
-    border-radius: 0px;
     border-style: solid;
-    border-width: 1px;
-    &:active { @include button(active); }
-    &:checked { @include button(active); }
-    &:active:hover { @include button(hoveractive); }
-    &:checked:hover { @include button(hoveractive); }
   }
 }
 
@@ -1153,7 +1126,6 @@ combobox {
 %toolbar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: darken($bg_color, 5%); // Same as tab header
   box-shadow: none;
 }
 
@@ -1345,23 +1317,6 @@ headerbar {
   .tiled &,
   .maximized & { border-radius: 0; } // squared corners when the window is maximized or tiled
 
-  // Normal titlebar buttons
-  button {
-    @include button(button-header);
-    &:hover { @include button(button-header-hover); }
-    &:checked, &:active { @include button(button-header-active); }
-    &:disabled { @include button(button-header-disabled); }
-    &.linked { border-width: 1px; }
-    &.suggested-action {
-        @include button(normal);
-        border-color: $selected_borders_color;
-    }
-    &.destructive-action {
-        @include button(normal);
-        border-color: darken($destructive_color, 10%);
-    }
-  }
-
   &.default-decoration {
     padding: 4px;
     min-height: 28px;
@@ -1378,7 +1333,26 @@ headerbar {
   separator { background-color: transparent; }
 }
 
+// Headerbar widgets
+%header_widgets {
+  // Normal headerbar buttons
+  button {
+    @include button(button-header);
+    &:hover { @include button(hover); }
+    &:focus { @include button(focus); }
+    &:checked, &:active { @include button(active); }
+    &:disabled { @include button(button-header-disabled); }
+  }
+
+  // Linked headerbar buttons
+  .linked:not(entry) {
+    button:not(:last-child):not(:only-child) { border-right-style: solid; }
+  }
+}
+
 headerbar {
+  @extend %header_widgets;
+
   // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
   entry,
   spinbutton,
@@ -1976,7 +1950,6 @@ notebook {
 
         &.reorderable-page {
           border-color: transparentize($borders_color, 1.0);
-          background-color: transparentize($base_color, 0.8);
         }
       }
 
