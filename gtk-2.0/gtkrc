@@ -4,7 +4,7 @@
 # Description: As is the original theme, this theme is 100% free and open source.
 
 gtk-color-scheme   = "bg_color:#ebeced\nselected_bg_color:#3399ff\nbase_color:#ffffff" # Background, base.
-gtk-color-scheme   = "fg_color:#212121\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text.
+gtk-color-scheme   = "fg_color:#2c2c2c\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text.
 gtk-color-scheme   = "tooltip_bg_color:#000000\ntooltip_fg_color:#FFFFFF" # Tooltips.
 gtk-color-scheme   = "link_color:#2d71b8" # Hyperlinks
 gtk-color-scheme   = "panel_bg_color:#2a373e" # Panel bg color
