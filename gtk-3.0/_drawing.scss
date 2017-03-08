@@ -167,12 +167,6 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   $btn-border: if($c!=$bg_color, _border_color($c), darken($borders_color, 12%));
   $btn-focus: 0 0 0 2px transparentize($selected_bg_color, 0.8);
 
-  //$btn-focus: 
-  //  2px 0 0 0 transparentize($selected_bg_color, 0.8),
-  //  0 2px 0 0 transparentize($selected_bg_color, 0.8),
-  //  -2px 0 0 0 transparentize($selected_bg_color, 0.8),
-  //  0 -2px 0 0 transparentize($selected_bg_color, 0.8);
-
   $_hilight_color: _button_hilight_color($c);
   $_button_edge: if($edge == none, none, _widget_edge($edge));
   $_blank_edge: if($edge == none, none, _widget_edge(transparentize($edge, 1)));
@@ -184,25 +178,21 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     border-color: $btn-border;
     background-color: lighten($c, 5%);
   }
-  @if $t==normal-alt { // FIXME: What is this?
+  @if $t==normal-alt {
   // normal button alternative look
-    color: $tc;
-    outline-color: transparentize($tc, 0.7);
-    border-color: $btn-border;
-    background-color: lighten($c, 5%);
+    @include button(normal);
   }
 
   @else if $t==hover {
   // hovered button
     color: $tc;
-    background-color: lighten($c, 6%);
+    background-color: lighten($c, 8%);
     box-shadow: $btn-focus;
     border-color: $selected_bg_color;
   }
   @else if $t==hover-alt {
-  // hovered button
-    color: $tc;
-    background-color: darken($c, 6%);
+  // hovered alt button
+    @include button(hover);
   }
   
   @else if $t==focus {
@@ -310,32 +300,17 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     border-color: transparent;
     background-color: transparent;
     background-image: none;
+    box-shadow: none;
 
     @include _shadows(inset 0 1px transparentize(white, 1), $_blank_edge);
 
     text-shadow: none;
     -gtk-icon-shadow: none;
   }
-  @else if $t==button-header {
-  // headerbar button
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-  }
-  @else if $t==button-header-disabled {
-  // insensitive button
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);    
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-    box-shadow: none;
-    // white with 0 alpha to avoid an ugly transition, since no color means
-    // black with 0 alpha
+  @else if $t==undecorated-disabled {
+  // insensitive undecorated button
+    @include button(undecorated);
+    color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
     > .label { color: inherit; }
   }
 }

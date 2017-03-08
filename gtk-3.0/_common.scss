@@ -1337,11 +1337,11 @@ headerbar {
 %header_widgets {
   // Normal headerbar buttons
   button {
-    @include button(button-header);
+    @include button(undecorated);
     &:hover { @include button(hover); }
     &:focus { @include button(focus); }
     &:checked, &:active { @include button(active); }
-    &:disabled { @include button(button-header-disabled); }
+    &:disabled { @include button(undecorated-disabled); }
   }
 
   // Linked headerbar buttons
@@ -2759,13 +2759,23 @@ progressbar {
   // sizing
   &.horizontal {
     trough,
-    progress { min-height: 2px; }
+    progress { 
+      min-height: 6px;
+      border-style: none;
+      box-shadow: none;
+    }
   }
 
   &.vertical {
     trough,
-    progress { min-width: 2px; }
+    progress { 
+      min-height: 6px;
+      border-style: none;
+      box-shadow: none;
+    }
   }
+
+  trough { background-color: darken($bg_color, 12%); }
 
   &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
   &.vertical progress { margin: -1px 0; }   // this moves it over it.
@@ -2783,8 +2793,8 @@ progressbar {
   }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
-    min-width: 3px;
-    min-height: 3px;
+    min-width: 6px;
+    min-height: 6px;
     background-color: transparent;
 
     trough {
