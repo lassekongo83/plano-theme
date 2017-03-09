@@ -2218,118 +2218,87 @@ treeview ~ scrollbar.vertical {
  **********/
 
 switch {
-  font-size: 0px;
+  font-weight: bold;
+  font-size: smaller;
+  outline-offset: -4px;
 
-  min-width: 52px;
-  min-height: 24px;
+  // similar to the .scale
+  border: 1px solid $borders_color;
+  border-radius: 0;
+  color: $fg_color;
+  background-color: $dark_fill;
 
-  background-size: 52px 24px;
-  background-repeat: no-repeat;
-  background-position: center center;
+  &:checked {
+    color: $selected_fg_color;
+    border-color: $selected_borders_color;
+    background-color: $selected_bg_color;
+  }
+
+  &:disabled {
+    color: $insensitive_fg_color;
+    border-color: $borders_color;
+    background-color: $insensitive_bg_color;
+  }
 
   slider {
-    min-width: 1px;
-    min-height: 1px;
+    margin: -1px;
+    min-width: 44px;
+    min-height: 24px;
+    border: 1px solid;
+    border-radius: 0;
+
+    @include button(normal-alt, $edge: $shadow_color);
   }
 
-  &, slider {
-    outline-color: transparent;
-    color: transparent;
-    border: none;
-    box-shadow: none;
+  &:hover slider { @include button(hover-alt, $edge: $shadow_color); }
+
+  &:checked slider { border: 1px solid $selected_borders_color; }
+
+  &:disabled slider { @include button(insensitive); }
+
+  row:selected & {
+    @if $variant == 'light' {
+      box-shadow: none;
+      border-color: $selected_borders_color;
+
+      &:backdrop { border-color: $selected_borders_color; }
+
+      &.slider:dir(rtl) { border-left-color: $borders_color; }
+      &.slider:dir(ltr) { border-right-color: $borders_color; }
+
+      &.slider { &:checked, & { border-color: $selected_borders_color; } }
+    }
   }
-}
-
-@each $k,$l in ('',''),
-               (':checked','-active'),
-               (':disabled','-insensitive'),
-               (':checked:disabled','-active-insensitive') {
-
-  // load switch troughs from .png files in assets directory
-
-  switch#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}#{$asset_suffix}.png"),url("assets/switch#{$l}#{$asset_suffix}@2.png"));
-  }
-
-  row:#{selected switch}#{$k},
-  #{infobar switch}#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
-  }
-
-// FIXME: Create assets.
-//  headerbar switch#{$k},
-//  .primary-toolbar switch#{$k} {
-//    background-image: -gtk-scaled(url("assets/switch#{$l}-header.png"),url("assets/switch#{$l}-header@2.png"));
-//  }
 }
 
 /*************************
  * Check and Radio items *
  *************************/
+// draw regular check and radio items using our PNG assets
+// all assets are rendered from assets.svg. never add pngs directly
 
-@each $w,$a in ('check', 'checkbox'),
-               ('radio','radio') {
 
-  //standard checks and radios
-  @each $s,$as in ('','-unchecked'),
-                  (':hover','-unchecked-hover'),
-                  (':disabled','-unchecked-insensitive'),
-                  (':indeterminate', '-mixed'),
-                  (':indeterminate:hover', '-mixed-hover'),
-                  (':indeterminate:disabled', '-mixed-insensitive'),
-                  (':checked', '-checked'),
-                  (':checked:hover', '-checked-hover'),
-                  (':checked:disabled','-checked-insensitive') {
-    #{$w}#{$s},
-    treeview.#{$w}#{$s} {
-      -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}#{$asset_suffix}.png"),
-                                    url("assets/#{$a}#{$as}#{$asset_suffix}@2.png"));
-    }
-
-    .osd,
-    %osd_check_radio {
-      #{$w}#{$s} {
-        -gtk-icon-source: -gtk-scaled(url("assets/#{$a}#{$as}-dark.png"),
-                                      url("assets/#{$a}#{$as}-dark@2.png"));
-      }
-    }
-    @if $variant == 'light' {
-      // the borders of checks and radios are
-      // too similar in luminosity to the selected background color, hence
-      // we need special casing.
-      .view #{$w}#{$s}:selected,
-      treeview.#{$w}#{$s}:selected,
-      row:selected #{$w}#{$s},
-      infobar #{$w}#{$s} {
-        -gtk-icon-source: -gtk-scaled(url("assets/selected-#{$a}#{$as}#{$asset_suffix}.png"),
-                                      url("assets/selected-#{$a}#{$as}#{$asset_suffix}@2.png"));
-      }
-    }
-  }
-}
-
-// Selectionmode
+//selection-mode
 @each $s,$as in ('','-selectionmode'),
                   (':checked', '-checked-selectionmode') {
   .view.content-view.check#{$s}:not(list),
   .content-view .tile check#{$s}:not(list) {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}#{$asset_suffix}.png"),
-                                    url("assets/checkbox#{$as}#{$asset_suffix}@2.png"));
+    -gtk-icon-shadow: none;
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}.png"), url("assets/checkbox#{$as}@2.png"));
     background-color: transparent;
     min-width: 40px;
     min-height: 40px;
     background-image: none;
     transition: none;
     box-shadow: none;
+    border-width: 0;
   }
 }
 
-checkbutton, radiobutton {
-    // this is for a nice focus on check and radios text
-    &.text-button {
-      padding: 2px 0;
-      outline-offset: 0;
-    }
+checkbutton.text-button, radiobutton.text-button {
+  // this is for a nice focus on check and radios text
+  padding: 2px 0;
+  outline-offset: 0;
 
   label:not(:only-child) {
     &:first-child { margin-left: 4px; }
@@ -2339,13 +2308,93 @@ checkbutton, radiobutton {
 
 check,
 radio {
-  min-width: 16px;
-  min-height: 16px;
-  margin: 0 2px;
+  margin: 0 4px;
 
-  &:only-child,
-  menu menuitem & { margin: 0; }
+  &:only-child { margin: 0; }
+
+  min-height: 14px;
+  min-width: 14px;
+  border: 1px solid;
+  -gtk-icon-source: none;
+
+  @include button(normal-alt);
+
+  &:hover { @include button(hover-alt); }
+  &:active { @include button(hover-alt); }
+  &:disabled { @include button(insensitive); }
+
+  @if $variant == 'light' {
+    // the borders of the light variant versions of checks and radios are too similar in luminosity to the selected background
+    // color, hence we need special casing.
+    row:selected & { border-color: $selected_borders_color; }
+  }
+
+  .osd & {
+    @include button(osd);
+
+    &:hover { @include button(osd); }
+    &:active { @include button(osd-active); }
+    &:disabled { @include button(osd-insensitive); }
+  }
+
+  menu menuitem & {
+    margin: 0; // this is a workaround for a menu check/radio size allocation issue
+
+    &, &:hover, &:disabled { //FIXME use button reset mixin
+      min-height: 14px;
+      min-width: 14px;
+      background-image: none;
+      background-color: transparent;
+      box-shadow: none;
+      -gtk-icon-shadow: none;
+      color: inherit;
+      border-color: currentColor;
+    }
+  }
 }
+
+%check,
+check {
+  border-radius: 0px;
+
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")),
+                                      -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
+
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
+                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
+}
+
+%radio,
+radio {
+  border-radius: 100%;
+
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/bullet-symbolic.svg")),
+                                      -gtk-recolor(url("assets/bullet-symbolic.symbolic.png"))); }
+
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
+                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
+}
+
+treeview.view check,
+treeview.view radio {
+  &:selected {
+    &:focus, & {
+      color: $fg_color;
+
+      @if $variant == 'light' { border-color: $selected_borders_color; }
+    }
+
+    &:disabled {
+      color: $insensitive_fg_color;
+
+      &:backdrop { color: $backdrop_insensitive_color; }
+    }
+  }
+
+  &:backdrop { &:selected, & { color: $backdrop_fg_color; }}
+}
+
+treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a workaround
 
 /************
  * GtkScale *
