@@ -44,9 +44,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="139.53721"
-     inkscape:cy="163.53265"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="128.74129"
+     inkscape:cy="131.64142"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -102,7 +102,8 @@
        inkscape:label="#rect4138-3" />
     <g
        id="stick-active"
-       inkscape:label="#g7360">
+       inkscape:label="#g7360"
+       transform="translate(-5.9999997,-2.1217188e-5)">
       <g
          id="g7303"
          transform="matrix(0.64285714,0,0,1,160.42857,-170.99997)"
@@ -145,7 +146,8 @@
     </g>
     <g
        id="stick-pressed"
-       inkscape:label="#g7368">
+       inkscape:label="#g7368"
+       transform="translate(-5.9999997,-2.1217188e-5)">
       <g
          inkscape:label="#g7133"
          transform="matrix(0.64285714,0,0,1,183.42857,-170.99997)"
@@ -188,7 +190,8 @@
     </g>
     <g
        id="stick-inactive"
-       inkscape:label="#g7376">
+       inkscape:label="#g7376"
+       transform="translate(-5.9999997,-2.1217188e-5)">
       <g
          inkscape:label="#g7133"
          transform="matrix(0.64285714,0,0,1,206.42857,-170.99997)"
@@ -231,7 +234,8 @@
     </g>
     <g
        id="shade-active"
-       inkscape:label="#g7462">
+       inkscape:label="#g7462"
+       transform="translate(-5.9999997,-2.1217188e-5)">
       <g
          id="g7454"
          transform="matrix(0.64285714,0,0,1,160.42857,-137.99997)"
@@ -273,7 +277,8 @@
     </g>
     <g
        id="shade-pressed"
-       inkscape:label="#g7510">
+       inkscape:label="#g7510"
+       transform="translate(-5.9999997,-2.1217188e-5)">
       <g
          inkscape:label="#g7133"
          transform="matrix(0.64285714,0,0,1,183.42857,-137.99997)"
@@ -315,7 +320,8 @@
     </g>
     <g
        id="shade-inactive"
-       inkscape:label="#g7502">
+       inkscape:label="#g7502"
+       transform="translate(-5.9999997,-2.1217188e-5)">
       <g
          inkscape:label="#g7133"
          transform="matrix(0.64285714,0,0,1,206.42857,-137.99997)"
@@ -927,79 +933,75 @@
        inkscape:label="#rect7058" />
     <g
        id="top-left-active"
-       transform="matrix(0.03571429,0,0,1,6.857143,-2)"
-       inkscape:label="#g7133">
+       inkscape:label="#g4899">
       <rect
-         style="opacity:1;fill:#dedfe1;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#ebeced;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect6948-5"
-         width="28"
+         width="1.0000001"
          height="28"
-         x="-24"
-         y="728.36212" />
+         x="6"
+         y="726.36212" />
       <rect
-         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect6950-3"
-         width="28"
+         width="1.0000001"
          height="1"
-         x="-24"
-         y="728.36212" />
+         x="6"
+         y="726.36212" />
     </g>
     <g
-       inkscape:label="#g7133"
-       transform="matrix(0.03571429,0,0,1,10.857143,-2)"
-       id="top-left-inactive">
+       id="top-left-inactive"
+       inkscape:label="#g4903">
       <rect
-         y="728.36212"
-         x="-24"
+         y="726.36212"
+         x="10"
          height="28"
-         width="28"
+         width="1.0000001"
          id="rect7135"
-         style="opacity:1;fill:#dedfe1;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#ebeced;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
-         y="728.36212"
-         x="-24"
+         y="726.36212"
+         x="10"
          height="1"
-         width="28"
+         width="1.0000001"
          id="rect7137"
-         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       inkscape:label="#g7133"
-       transform="matrix(0.03571429,0,0,1,14.857143,-2)"
-       id="top-right-active">
+       id="top-right-active"
+       inkscape:label="#g4907">
       <rect
-         y="728.36212"
-         x="-24"
+         y="726.36212"
+         x="14"
          height="28"
-         width="28"
+         width="1.0000001"
          id="rect7141"
-         style="opacity:1;fill:#dedfe1;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#ebeced;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
-         y="728.36212"
-         x="-24"
+         y="726.36212"
+         x="14"
          height="1"
-         width="28"
+         width="1.0000001"
          id="rect7143"
-         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        id="top-right-inactive"
-       transform="matrix(0.03571429,0,0,1,18.857143,-2)"
-       inkscape:label="#g7133">
+       inkscape:label="#g4911">
       <rect
-         style="opacity:1;fill:#dedfe1;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#ebeced;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect7147"
-         width="28"
+         width="1.0000001"
          height="28"
-         x="-24"
-         y="728.36212" />
+         x="18"
+         y="726.36212" />
       <rect
-         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#f2f2f3;fill-opacity:1;stroke:none;stroke-width:0.18898225;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect7149"
-         width="28"
+         width="1.0000001"
          height="1"
-         x="-24"
-         y="728.36212" />
+         x="18"
+         y="726.36212" />
     </g>
     <g
        inkscape:label="#g7133"

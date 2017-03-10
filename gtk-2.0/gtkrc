@@ -11,6 +11,7 @@ gtk-color-scheme   = "panel_bg_color:#2a373e" # Panel bg color
 gtk-color-scheme   = "panel_fg_color:#FFFFFF" # Panel fg color
 gtk-color-scheme   = "fm_color:#F7F7F7" # Color used in Thunar.
 gtk-color-scheme   = "bg_color_dark:#2a373e\ntext_color_dark:#FFF"
+gtk-color-scheme   = "titlebar_color:#dedfe1"
 
 gtk-icon-sizes     = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
 gtk-button-images  = 1 # Disables icons for buttons with text
@@ -299,21 +300,10 @@ style "menubar"
     GtkMenuBar :: shadow-type = GTK_SHADOW_NONE
 
     ythickness   = 2
-    bg[NORMAL]   = @bg_color
+    bg[NORMAL]   = @titlebar_color
     fg[NORMAL]   = @fg_color
     fg[PRELIGHT] = @fg_color
     fg[SELECTED] = @fg_color
-    
-    engine "pixmap" {
-    image 
-        {
-            function = BOX
-            state    = NORMAL
-            file     = "assets/null.png"
-            border   = { 0, 0, 0, 0 }
-            stretch  = TRUE
-        }
-    }
 }
 
 style "menubar-menuitem" {
@@ -545,6 +535,8 @@ style "hscale" = "scale"
 
 style "toolbar"
 {
+        GtkToolbar :: shadow-type = GTK_SHADOW_NONE
+
 	bg[NORMAL]	= @bg_color
 }
 
