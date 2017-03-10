@@ -2401,10 +2401,10 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
  * GtkScale *
  ************/
 %scale_trough {
-  border: 1px solid $borders_color;
-  border-radius: 0px;
+  border: 1px solid $dark_fill;
+  border-radius: 0;
   background-color: $dark_fill;
-  box-shadow: inset 1px 1px transparentize(black, 0.9);
+  box-shadow: none;
 
   &:disabled {
     background-color: $insensitive_bg_color;
@@ -2430,8 +2430,8 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 }
 
 %scale_highlight {
-  border: 1px solid $selected_borders_color;
-  border-radius: 0px;
+  border: 1px solid $selected_bg_color;
+  border-radius: 0;
   background-color: $selected_bg_color;
 
   &:disabled {

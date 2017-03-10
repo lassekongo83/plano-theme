@@ -2404,10 +2404,10 @@ treeview.view radio:backdrop {
  * GtkScale *
  ************/
 scale trough, scale fill, progressbar trough {
-  border: 1px solid #c3c6c9;
-  border-radius: 0px;
+  border: 1px solid #dddfe0;
+  border-radius: 0;
   background-color: #dddfe0;
-  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1); }
+  box-shadow: none; }
   scale trough:disabled, scale fill:disabled, progressbar trough:disabled {
     background-color: #f3f4f4;
     box-shadow: none; }
@@ -2424,8 +2424,8 @@ scale trough, scale fill, progressbar trough {
       background-color: rgba(57, 68, 73, 0.5); }
 
 scale highlight, progressbar progress {
-  border: 1px solid #007eff;
-  border-radius: 0px;
+  border: 1px solid #3399ff;
+  border-radius: 0;
   background-color: #3399ff; }
   scale highlight:disabled, progressbar progress:disabled {
     background-color: transparent;

@@ -27,17 +27,20 @@
   @else { @return if($fc==$selected_bg_color, $selected_borders_color, darken($fc, 35%)); }
 }
 
-@function entry_focus_shadow($fc:$selected_bg_color) { @return inset 0 0 0 1px $fc; }
+@function entry_focus_shadow($fs:$selected_bg_color) {
+  @if $variant == 'light' { @return 0 0 0 2px transparentize($fs, 0.8), inset 0 1px transparentize(black, 0.98), inset 0 2px transparentize(black, 0.98); }
+  @else { @return 0 0 0 2px transparentize($fs, 0.6), inset 0 1px transparentize(black, 0.98), inset 0 2px transparentize(black, 0.98); }
+}
 
-$focus_outer_border: 0 0 0 2px transparentize($selected_bg_color, 0.8), inset 0 1px transparentize(black, 0.98), inset 0 2px transparentize(black, 0.98);
 $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transparentize(black, 0.98);
 
-@mixin entry($t, $fc:$selected_bg_color, $edge: none) {
+@mixin entry($t, $fc:$selected_bg_color, $fs:$selected_bg_color, $edge: none) {
 //
 // Entries drawing function
 //
 // $t: entry type
 // $fc: focus color
+// $fs: focus shadow
 // $edge: set to none to not draw the bottom edge or specify a color to not
 //        use the default one
 //
@@ -56,7 +59,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   }
   @if $t==focus {
     border-color: entry_focus_border($fc);
-    box-shadow: $focus_outer_border;
+    box-shadow: entry_focus_shadow($fs);
   }
   @if $t==insensitive {
     color: $insensitive_fg_color;
@@ -93,11 +96,6 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
 
 // buttons
 
-@function _border_color($c, $darker: false) {
-  @if $darker == true { @return darken($c, 30%); }
-  @else { @return darken($c, 20%); }
-}
-
 @function _text_shadow_color ($tc: $fg_color, $bg: $bg_color) {
 //
 // calculate the color of text shadows
@@ -110,39 +108,9 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else { @return transparentize(black, $_lbg*0.8); }
 }
 
-@function _button_hilight_color($c) {
-//
-// calculate the right top hilight color for buttons
-//
-// $c: base color;
-//
-  @if lightness($c)>95% { @return white; }
-  @else if lightness($c)>90% { @return transparentize(white, 0.2); }
-  @else if lightness($c)>80% { @return transparentize(white, 0.4); }
-  @else if lightness($c)>50% { @return transparentize(white, 0.6); }
-  @else if lightness($c)>40% { @return transparentize(white, 0.8); }
-  @else { @return transparentize(white, 0.95); }
-}
-
-@mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) {
-//
-// helper function for the text emboss effect
-//
-// $tc is the optional text color, not the shadow color
-//
-// TODO: this functions needs a way to deal with special cases
-//
-
-  $_shadow: _text_shadow_color($tc, $bg);
-
-  @if lightness($tc)<50% {
-    text-shadow: 0 1px $_shadow;
-    -gtk-icon-shadow: 0 1px $_shadow;
-  }
-  @else {
-    text-shadow: 0 -1px $_shadow;
-    -gtk-icon-shadow: 0 1px $_shadow;
-  }
+@function _border_color($c, $darker: false) {
+  @if $darker == true { @return darken($c, 30%); }
+  @else { @return darken($c, 20%); }
 }
 
 @mixin button($t, $c:$bg_color, $tc:$fg_color, $edge: $borders_edge) {
@@ -165,9 +133,8 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   $inset-shade: inset 0 0 0 2px transparentize(black, 0.92);
   // Border colors
   $btn-border: if($c!=$bg_color, _border_color($c), darken($borders_color, 12%));
-  $btn-focus: 0 0 0 2px transparentize($selected_bg_color, 0.8);
+  $btn-focus: if($variant == 'light', 0 0 0 2px transparentize($selected_bg_color, 0.8), 0 0 0 2px transparentize($selected_bg_color, 0.6));
 
-  $_hilight_color: _button_hilight_color($c);
   $_button_edge: if($edge == none, none, _widget_edge($edge));
   $_blank_edge: if($edge == none, none, _widget_edge(transparentize($edge, 1)));
 
