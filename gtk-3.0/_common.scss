@@ -2321,6 +2321,7 @@ radio {
 
   &:hover { @include button(hover-alt); }
   &:active { @include button(hover-alt); }
+  &:checked { @include button(hover-alt); }
   &:disabled { @include button(insensitive); }
 
   @if $variant == 'light' {

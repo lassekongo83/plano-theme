@@ -37,7 +37,7 @@
      bordercolor="#666666"
      borderopacity="1"
      inkscape:current-layer="layer9"
-     inkscape:cx="10.680703"
+     inkscape:cx="1.3825551"
      inkscape:cy="7.9276321"
      gridtolerance="10"
      inkscape:guide-bbox="true"
@@ -100,12 +100,12 @@
      style="display:inline"
      transform="translate(-401.00015,-359)">
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.005391;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.0627451"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.63586509;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.0627451"
        id="rect7600"
-       width="10"
-       height="4"
-       x="403.00015"
-       y="364" />
+       width="8"
+       height="2"
+       x="404.00015"
+       y="365" />
   </g>
   <g
      inkscape:groupmode="layer"

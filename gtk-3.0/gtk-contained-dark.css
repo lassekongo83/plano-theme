@@ -2267,6 +2267,12 @@ radio {
     background-color: #384750;
     box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
     border-color: #3399ff; }
+  check:checked,
+  radio:checked {
+    color: #dee2e5;
+    background-color: #384750;
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    border-color: #3399ff; }
   check:disabled,
   radio:disabled {
     color: #838a8f;
