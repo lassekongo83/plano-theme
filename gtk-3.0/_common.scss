@@ -1655,6 +1655,11 @@ menu,
 
   &:backdrop { background-color: $backdrop_menu_color; }
 
+  // Firefox workaround
+  .separator:not(label),
+  .csd & .separator:not(label) { color: darken($menu_color, 5%); }
+  // Firefox workaround end
+
   menuitem {
     min-height: 16px;
     min-width: 40px;
@@ -2340,8 +2345,10 @@ radio {
 
   menu menuitem & {
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
+    border: none;
+    box-shadow: none;
 
-    &, &:hover, &:disabled { //FIXME use button reset mixin
+    &, &:hover, &:disabled, &:checked { //FIXME use button reset mixin
       min-height: 14px;
       min-width: 14px;
       background-image: none;

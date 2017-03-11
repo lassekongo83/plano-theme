@@ -1753,6 +1753,12 @@ menu,
   .menu:backdrop,
   .context-menu:backdrop {
     background-color: #52575c; }
+  menu .separator:not(label), .csd menu .separator:not(label),
+  .menu .separator:not(label), .csd
+  .menu .separator:not(label),
+  .context-menu .separator:not(label), .csd
+  .context-menu .separator:not(label) {
+    color: #464a4f; }
   menu menuitem,
   .menu menuitem,
   .context-menu menuitem {
@@ -2325,11 +2331,14 @@ radio {
       -gtk-icon-shadow: none; }
   menu menuitem check, menu menuitem
   radio {
-    margin: 0; }
-    menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled, menu menuitem
+    margin: 0;
+    border: none;
+    box-shadow: none; }
+    menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled, menu menuitem check:checked, menu menuitem
     radio, menu menuitem
     radio:hover, menu menuitem
-    radio:disabled {
+    radio:disabled, menu menuitem
+    radio:checked {
       min-height: 14px;
       min-width: 14px;
       background-image: none;
