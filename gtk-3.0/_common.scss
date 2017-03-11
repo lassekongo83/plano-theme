@@ -1622,7 +1622,7 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  background-color: darken($bg_color, 5%);
+  background-color: darken($bg_color, 3%);
 
   > menuitem {
     min-height: 16px;
@@ -3130,7 +3130,7 @@ messagedialog { // Message Dialog styling
     background-color: $bg_color;
     border-style: none;
     border-radius: 0px;
-    @include ssd_fill;
+    @include headerbar_fill;
   }
 
   &.csd { // rounded bottom border styling for csd version
@@ -3695,7 +3695,7 @@ decoration {
 
 .ssd .titlebar {
     border-width: 0; // No line below the title bar
-    @include ssd_fill;
+    @include headerbar_fill;
     padding: 2px 4px;
 }
 

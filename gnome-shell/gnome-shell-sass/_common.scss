@@ -2038,17 +2038,56 @@ $legacy_icon_size: 24px;
 /* Dash to Panel extension styling */
 
 #panel.dashtopanelMainPanel {
-    box-shadow: inset 0 -3px transparentize(black, 0.6);
     //gradient needed for box shadow to work
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0, 0, 0, 0.0);
     background-gradient-end: rgba(0, 0, 0, 0.0);
-}
-
-#panel.dashtopanelMainPanel > #panelRight { 
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 2px;
-    margin: 6px;
+    
+    &.dashtopanelBottom {
+        box-shadow: inset 0 -3px transparentize(black, 0.6);
+        
+        .app-well-app:hover .overview-icon { 
+            box-shadow: inset 0 -3px transparentize(white, 0.4);
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(0, 0, 0, 0.0);
+            background-gradient-end: rgba(0, 0, 0, 0.0);     
+        }
+    }
+    
+    &.dashtopanelTop {
+        box-shadow: inset 0 3px transparentize(black, 0.6);
+        
+        .app-well-app:hover .overview-icon { 
+            box-shadow: inset 0 3px transparentize(white, 0.4);
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(0, 0, 0, 0.0);
+            background-gradient-end: rgba(0, 0, 0, 0.0);     
+        }
+    }
+    
+    @each $d in hover, checked, overview, focus, active {
+        .show-apps .overview-icon {
+            background-image: url("activities.svg");
+            background-position: center top;
+            background-color: transparent;
+            border: 0 solid transparent;
+            color: transparent;
+        }
+        
+        .show-apps:#{$d} .overview-icon {
+            background-image: url("activities-active.svg");
+            background-position: center top;
+            background-color: transparent;
+            border: 0 solid transparent;
+            color: transparent;
+        }
+    }
+    
+    & > #panelRight { 
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 2px;
+        margin: 6px;
+    }
 }
 
 /* Dash to dock extension styling */
@@ -2073,7 +2112,7 @@ $legacy_icon_size: 24px;
 
 // hover effect
 #dashtodockContainer {
-  $_hover_color: transparentize(white, 0.6);
+  $_hover_color: transparentize(white, 0.4);
   border-radius: 0;
   &.bottom #dash .app-well-app {
     &:hover .overview-icon,
