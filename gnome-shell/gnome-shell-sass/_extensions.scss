@@ -21,7 +21,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
     &.dashtopanelBottom {
         box-shadow: $_panel_bottom;
         
-        .app-well-app:hover .overview-icon { 
+        .app-well-app:hover .overview-icon {
             box-shadow: $_hover_effect_bottom;
             background-gradient-direction: vertical;
             background-gradient-start: transparent;
@@ -32,7 +32,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
     &.dashtopanelTop {
         box-shadow: $_panel_top;
         
-        .app-well-app:hover .overview-icon { 
+        .app-well-app:hover .overview-icon {
             box-shadow: $_hover_effect_top;
             background-gradient-direction: vertical;
             background-gradient-start: transparent;
@@ -43,19 +43,16 @@ $_panel_right: inset -3px 0 $_panel_shade;
     // panel dash icon
     @each $d in hover, checked, overview, focus, active, selected {
         .show-apps .overview-icon {
-            background-image: url("activities.svg");
+            background-image: url("d2p-activities.svg");
             background-position: center top;
             background-color: transparent;
-            border: 0 solid transparent;
+            border: none;
             color: transparent;
         }
         
         .show-apps:#{$d} .overview-icon {
-            background-image: url("activities-active.svg");
+            background-image: url("d2p-activities-active.svg");
             background-position: center top;
-            background-color: transparent;
-            border: 0 solid transparent;
-            color: transparent;
         }
     }
     

@@ -19,7 +19,7 @@
    enable-background="new 0 0 16 16"
    xml:space="preserve"
    sodipodi:version="0.32"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r"
    sodipodi:docname="close-window-hover.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"><metadata
      id="metadata2399"><rdf:RDF><cc:Work
@@ -51,9 +51,9 @@
      pagecolor="#000000"
      id="base"
      showgrid="false"
-     inkscape:zoom="8"
-     inkscape:cx="-12.251706"
-     inkscape:cy="24.08498"
+     inkscape:zoom="4"
+     inkscape:cx="15.016601"
+     inkscape:cy="16.790798"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:current-layer="Foreground"
@@ -68,8 +68,8 @@
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true" /></sodipodi:namedview><g
-     id="g7615"><rect
-       style="opacity:1;fill:#c83737;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="g826"><rect
+       style="opacity:1;fill:#e04343;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect7274"
        width="17.454544"
        height="17.454544"
@@ -77,6 +77,6 @@
        y="2.1818178"
        ry="1.4545488" /><path
        style="fill:#ffffff;fill-opacity:1;stroke:none"
-       d="m 8.7272699,7.2727301 0,1.212118 2.4242451,2.4242449 -2.4242451,2.424245 0,1.212118 1.2121183,0 2.4242448,-2.424245 2.424246,2.424245 1.212118,0 0,-1.212118 -2.424246,-2.424245 2.424246,-2.4242449 0,-1.212118 -1.212118,0 -2.424246,2.4242452 -2.4242448,-2.4242452 -1.2121183,0 z"
+       d="m 8.7272699,7.2727301 v 1.212118 l 2.4242451,2.4242449 -2.4242451,2.424245 v 1.212118 h 1.2121183 l 2.4242448,-2.424245 2.424246,2.424245 h 1.212118 V 13.333338 L 13.575751,10.909093 15.999997,8.4848481 V 7.2727301 H 14.787879 L 12.363633,9.6969753 9.9393882,7.2727301 Z"
        id="path7276"
        inkscape:connector-curvature="0" /></g></svg>
