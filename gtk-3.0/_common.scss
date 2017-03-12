@@ -1127,6 +1127,7 @@ combobox {
   -GtkWidget-window-dragging: true;
   padding: 4px;
   box-shadow: none;
+  background-color: $bg_color;
 }
 
 toolbar {
@@ -1143,11 +1144,6 @@ toolbar {
     border: none;
     border-radius: 0px;
     background-color: $osd_bg_color;
-
-    &.left,
-    &.right,
-    &.top,
-    &.bottom { border-radius: 0; } // positional classes for `attached` osd toolbars
   }
 
   // toolbar separators

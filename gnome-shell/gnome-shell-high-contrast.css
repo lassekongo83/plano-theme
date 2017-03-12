@@ -553,9 +553,9 @@ StScrollBar {
 
 .popup-separator-menu-item {
   height: 1px;
-  margin: 6px 64px;
+  margin: 6px 0px;
   background-color: transparent;
-  border-color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.3);
   border-bottom-width: 1px;
   border-bottom-style: solid; }
 
@@ -1919,119 +1919,6 @@ StScrollBar {
   border: 2px solid grey;
   border-radius: 0;
   padding: 6px; }
-
-/* Dash to Panel extension styling */
-#panel.dashtopanelMainPanel {
-  background-gradient-direction: vertical;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent; }
-  #panel.dashtopanelMainPanel.dashtopanelBottom {
-    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
-    #panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon {
-      box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6);
-      background-gradient-direction: vertical;
-      background-gradient-start: transparent;
-      background-gradient-end: transparent; }
-  #panel.dashtopanelMainPanel.dashtopanelTop {
-    box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
-    #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon {
-      box-shadow: inset 0 3px rgba(255, 255, 255, 0.6);
-      background-gradient-direction: vertical;
-      background-gradient-start: transparent;
-      background-gradient-end: transparent; }
-  #panel.dashtopanelMainPanel .show-apps .overview-icon {
-    background-image: url("activities.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps:hover .overview-icon {
-    background-image: url("activities-active.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps .overview-icon {
-    background-image: url("activities.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps:checked .overview-icon {
-    background-image: url("activities-active.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps .overview-icon {
-    background-image: url("activities.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps:overview .overview-icon {
-    background-image: url("activities-active.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps .overview-icon {
-    background-image: url("activities.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps:focus .overview-icon {
-    background-image: url("activities-active.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps .overview-icon {
-    background-image: url("activities.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel .show-apps:active .overview-icon {
-    background-image: url("activities-active.svg");
-    background-position: center top;
-    background-color: transparent;
-    border: 0 solid transparent;
-    color: transparent; }
-  #panel.dashtopanelMainPanel > #panelRight {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 2px;
-    margin: 6px; }
-
-/* Dash to dock extension styling */
-#dashtodockContainer.extended {
-  border: 0;
-  border-radius: 0; }
-  #dashtodockContainer.extended.bottom #dash {
-    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
-  #dashtodockContainer.extended.left #dash {
-    box-shadow: inset 3px 0 rgba(0, 0, 0, 0.4); }
-  #dashtodockContainer.extended.right #dash {
-    box-shadow: inset -3px 0 rgba(0, 0, 0, 0.4); }
-
-#dashtodockContainer.bottom #dash .app-well-app-running-dot {
-  width: 44px;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0; }
-
-#dashtodockContainer {
-  border-radius: 0; }
-  #dashtodockContainer.bottom #dash .app-well-app:hover .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon {
-    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6);
-    background-color: transparent; }
-  #dashtodockContainer.left #dash .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon {
-    box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6);
-    background-color: transparent; }
-  #dashtodockContainer.right #dash .app-well-app:hover .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon {
-    box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6);
-    background-color: transparent; }
 
 stage {
   -st-icon-style: symbolic; }

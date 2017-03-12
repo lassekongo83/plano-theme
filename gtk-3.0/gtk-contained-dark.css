@@ -1306,7 +1306,8 @@ toolbar, .inline-toolbar, searchbar,
 .location-bar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  box-shadow: none; }
+  box-shadow: none;
+  background-color: #32373c; }
 
 toolbar {
   padding: 4px 3px 3px 4px; }
@@ -1317,8 +1318,6 @@ toolbar {
     border: none;
     border-radius: 0px;
     background-color: rgba(39, 50, 56, 0.7); }
-    toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
-      border-radius: 0; }
   toolbar.horizontal separator {
     margin: 0 7px 1px 6px; }
   toolbar.vertical separator {
