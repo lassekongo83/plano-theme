@@ -47,60 +47,55 @@
     background-color: #3399ff;
     color: #ffffff; }
 
-.view, iconview, .nautilus-window notebook,
-.nautilus-window notebook > stack:not(:only-child) searchbar, .nemo-window notebook,
+.view, iconview, .nemo-window notebook,
 .view text,
 iconview text,
-.nautilus-window notebook text,
-.nautilus-window notebook > stack:not(:only-child) searchbar text,
 .nemo-window notebook text,
-textview text {
+textview text,
+.nautilus-window notebook,
+.nautilus-window notebook > stack:not(:only-child) searchbar {
   color: black;
   background-color: #FFFFFF; }
-  .view:hover, iconview:hover, .nautilus-window notebook:hover,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:hover, .nemo-window notebook:hover,
+  .view:hover, iconview:hover, .nemo-window notebook:hover,
   .view text:hover,
   iconview text:hover,
-  .nautilus-window notebook text:hover,
-  .nautilus-window notebook > stack:not(:only-child) searchbar text:hover,
   .nemo-window notebook text:hover,
-  textview text:hover {
+  textview text:hover,
+  .nautilus-window notebook:hover,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:hover {
     background-color: #fafafa; }
-  .view:selected, iconview:selected, .nautilus-window notebook:selected,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .nemo-window notebook:selected,
+  .view:selected, iconview:selected, .nemo-window notebook:selected,
   .view text:selected,
   iconview text:selected,
-  .nautilus-window notebook text:selected,
-  .nautilus-window notebook > stack:not(:only-child) searchbar text:selected,
   .nemo-window notebook text:selected,
-  textview text:selected {
+  textview text:selected,
+  .nautilus-window notebook:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:selected {
     border-radius: 0px; }
-  .view:backdrop, iconview:backdrop, .nautilus-window notebook:backdrop,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop, .nemo-window notebook:backdrop,
+  .view:backdrop, iconview:backdrop, .nemo-window notebook:backdrop,
   .view text:backdrop,
   iconview text:backdrop,
-  .nautilus-window notebook text:backdrop,
-  .nautilus-window notebook > stack:not(:only-child) searchbar text:backdrop,
   .nemo-window notebook text:backdrop,
-  textview text:backdrop {
+  textview text:backdrop,
+  .nautilus-window notebook:backdrop,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop {
     color: #333333;
     background-color: #FFFFFF; }
-    .view:backdrop:disabled, iconview:backdrop:disabled, .nautilus-window notebook:backdrop:disabled,
-    .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled, .nemo-window notebook:backdrop:disabled,
+    .view:backdrop:disabled, iconview:backdrop:disabled, .nemo-window notebook:backdrop:disabled,
     .view text:backdrop:disabled,
     iconview text:backdrop:disabled,
-    .nautilus-window notebook text:backdrop:disabled,
     .nemo-window notebook text:backdrop:disabled,
-    textview text:backdrop:disabled {
+    textview text:backdrop:disabled,
+    .nautilus-window notebook:backdrop:disabled,
+    .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled {
       color: #c3c6c9; }
-  .view:disabled, iconview:disabled, .nautilus-window notebook:disabled,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:disabled, .nemo-window notebook:disabled,
+  .view:disabled, iconview:disabled, .nemo-window notebook:disabled,
   .view text:disabled,
   iconview text:disabled,
-  .nautilus-window notebook text:disabled,
-  .nautilus-window notebook > stack:not(:only-child) searchbar text:disabled,
   .nemo-window notebook text:disabled,
-  textview text:disabled {
+  textview text:disabled,
+  .nautilus-window notebook:disabled,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:disabled {
     color: #8c8c8d;
     background-color: #f3f4f4; }
 
@@ -1878,8 +1873,6 @@ popover.background {
   popover.background > list,
   popover.background > .view,
   popover.background > iconview,
-  .nautilus-window popover.background > notebook,
-  .nautilus-window notebook > stack:not(:only-child) popover.background > searchbar,
   .nemo-window popover.background > notebook,
   popover.background > toolbar {
     border-style: none;
@@ -2237,8 +2230,7 @@ switch {
 /*************************
  * Check and Radio items *
  *************************/
-.view.content-view.check:not(list), iconview.content-view.check:not(list), .nautilus-window notebook.content-view.check:not(list),
-.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:not(list), .nemo-window notebook.content-view.check:not(list),
+.view.content-view.check:not(list), iconview.content-view.check:not(list), .nemo-window notebook.content-view.check:not(list),
 .content-view .tile check:not(list) {
   -gtk-icon-shadow: none;
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode.png"), url("assets/checkbox-selectionmode@2.png"));
@@ -2250,8 +2242,7 @@ switch {
   box-shadow: none;
   border-width: 0; }
 
-.view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list), .nautilus-window notebook.content-view.check:checked:not(list),
-.nautilus-window notebook > stack:not(:only-child) searchbar.content-view.check:checked:not(list), .nemo-window notebook.content-view.check:checked:not(list),
+.view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list), .nemo-window notebook.content-view.check:checked:not(list),
 .content-view .tile check:checked:not(list) {
   -gtk-icon-shadow: none;
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode.png"), url("assets/checkbox-checked-selectionmode@2.png"));
@@ -3205,6 +3196,8 @@ filechooserbutton:drop(active) {
     background-color: transparent; }
   paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
     border-style: none; }
+  .sidebar separator {
+    background-color: transparent; }
 
 stacksidebar row {
   padding: 10px 4px; }
@@ -3285,7 +3278,7 @@ paned > separator {
   -gtk-icon-source: none;
   border-style: none;
   background-color: transparent;
-  background-image: image(#c3c6c9);
+  background-image: image(#f5f6f6);
   background-size: 1px 1px; }
   paned > separator:selected {
     background-image: image(#3399ff); }
@@ -3595,42 +3588,38 @@ headerbar button.titlebutton,
   .titlebar button.titlebutton.minimize:active {
     background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover.png"), url("assets/titlebutton-minimize-hover@2.png")); }
 
-.view:selected, iconview:selected, .nautilus-window notebook:selected,
-.nautilus-window notebook > stack:not(:only-child) searchbar:selected, .nemo-window notebook:selected,
+.view:selected, iconview:selected, .nemo-window notebook:selected,
 .view text:selected,
 iconview text:selected,
-.nautilus-window notebook text:selected,
-.nautilus-window notebook > stack:not(:only-child) searchbar text:selected,
 .nemo-window notebook text:selected,
-textview text:selected, .view text selection:focus, iconview text selection:focus, .nautilus-window notebook text selection:focus, .nemo-window notebook text selection:focus, .view text selection, iconview text selection, .nautilus-window notebook text selection,
-.nautilus-window notebook > stack:not(:only-child) searchbar text selection, .nemo-window notebook text selection,
+textview text:selected,
+.nautilus-window notebook:selected,
+.nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .nemo-window notebook text selection:focus, .view text selection, iconview text selection, .nemo-window notebook text selection,
 textview text selection:focus,
 textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected, popover.background checkbutton:selected,
 popover.background radiobutton:selected,
 .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected, .nemo-window .sidebar treeview .cell:selected {
   background-color: #3399ff; }
-  .view:backdrop:selected, iconview:backdrop:selected, .nautilus-window notebook:backdrop:selected,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, .nemo-window notebook:backdrop:selected,
+  .view:backdrop:selected, iconview:backdrop:selected, .nemo-window notebook:backdrop:selected,
   .view text:backdrop:selected,
   iconview text:backdrop:selected,
-  .nautilus-window notebook text:backdrop:selected,
   .nemo-window notebook text:backdrop:selected,
-  textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, .nautilus-window notebook text selection:backdrop, .nemo-window notebook text selection:backdrop,
+  textview text:backdrop:selected,
+  .nautilus-window notebook:backdrop:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, .nemo-window notebook text selection:backdrop,
   textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
   entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
   popover.background radiobutton:backdrop:selected,
   .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:selected, .nemo-window .sidebar treeview .cell:backdrop:selected {
     background-color: rgba(51, 153, 255, 0.6); }
-  row:selected label, label:selected, .view:selected, iconview:selected, .nautilus-window notebook:selected,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .nemo-window notebook:selected,
+  row:selected label, label:selected, .view:selected, iconview:selected, .nemo-window notebook:selected,
   .view text:selected,
   iconview text:selected,
-  .nautilus-window notebook text:selected,
-  .nautilus-window notebook > stack:not(:only-child) searchbar text:selected,
   .nemo-window notebook text:selected,
-  textview text:selected, .view text selection:focus, iconview text selection:focus, .nautilus-window notebook text selection:focus, .nemo-window notebook text selection:focus, .view text selection, iconview text selection, .nautilus-window notebook text selection,
-  .nautilus-window notebook > stack:not(:only-child) searchbar text selection, .nemo-window notebook text selection,
+  textview text:selected,
+  .nautilus-window notebook:selected,
+  .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .nemo-window notebook text selection:focus, .view text selection, iconview text selection, .nemo-window notebook text selection,
   textview text selection:focus,
   textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection,
   entry selection, modelbutton.flat:selected, popover.background checkbutton:selected,
@@ -3638,37 +3627,37 @@ popover.background radiobutton:selected,
   .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected, .nemo-window .sidebar treeview .cell:selected {
     color: #ffffff;
     outline-color: rgba(255, 255, 255, 0.3); }
-    row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, .nautilus-window notebook:disabled:selected,
-    .nautilus-window notebook > stack:not(:only-child) searchbar:disabled:selected, .nemo-window notebook:disabled:selected,
+    row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, .nemo-window notebook:disabled:selected,
     .view text:disabled:selected,
     iconview text:disabled:selected,
-    .nautilus-window notebook text:disabled:selected,
     .nemo-window notebook text:disabled:selected,
-    textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled, .nautilus-window notebook text selection:disabled, .nemo-window notebook text selection:disabled,
+    textview text:disabled:selected,
+    .nautilus-window notebook:disabled:selected,
+    .nautilus-window notebook > stack:not(:only-child) searchbar:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled, .nemo-window notebook text selection:disabled,
     textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled,
     entry selection:disabled, modelbutton.flat:disabled:selected, popover.background checkbutton:disabled:selected,
     popover.background radiobutton:disabled:selected,
     .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected, .nemo-window .nemo-window-pane widget.entry:disabled:selected, .nemo-window .sidebar treeview .cell:disabled:selected {
       color: #99ccff; }
-    row:selected label:backdrop, label:backdrop:selected, .view:backdrop:selected, iconview:backdrop:selected, .nautilus-window notebook:backdrop:selected,
-    .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, .nemo-window notebook:backdrop:selected,
+    row:selected label:backdrop, label:backdrop:selected, .view:backdrop:selected, iconview:backdrop:selected, .nemo-window notebook:backdrop:selected,
     .view text:backdrop:selected,
     iconview text:backdrop:selected,
-    .nautilus-window notebook text:backdrop:selected,
     .nemo-window notebook text:backdrop:selected,
-    textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, .nautilus-window notebook text selection:backdrop, .nemo-window notebook text selection:backdrop,
+    textview text:backdrop:selected,
+    .nautilus-window notebook:backdrop:selected,
+    .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, .nemo-window notebook text selection:backdrop,
     textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
     entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
     popover.background radiobutton:backdrop:selected,
     .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:selected, .nemo-window .sidebar treeview .cell:backdrop:selected {
       color: #ffffff; }
-      row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .nautilus-window notebook:backdrop:disabled:selected,
-      .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled:selected, .nemo-window notebook:backdrop:disabled:selected,
+      row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .nemo-window notebook:backdrop:disabled:selected,
       .view text:backdrop:disabled:selected,
       iconview text:backdrop:disabled:selected,
-      .nautilus-window notebook text:backdrop:disabled:selected,
       .nemo-window notebook text:backdrop:disabled:selected,
-      textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled, .nautilus-window notebook text selection:backdrop:disabled, .nemo-window notebook text selection:backdrop:disabled,
+      textview text:backdrop:disabled:selected,
+      .nautilus-window notebook:backdrop:disabled:selected,
+      .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled, .nemo-window notebook text selection:backdrop:disabled,
       textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, label:disabled selection:backdrop, spinbutton:not(.vertical) selection:backdrop:disabled,
       entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, popover.background checkbutton:backdrop:disabled:selected,
       popover.background radiobutton:backdrop:disabled:selected,
@@ -4009,9 +3998,7 @@ XfceHeading,
     -NemoPlacesTreeView-disk-full-bg-color: #FFFFFF;
     -NemoPlacesTreeView-disk-full-fg-color: #0073e6; }
 
-.nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar .nautilus-window notebook, .nautilus-window .nemo-window .sidebar notebook,
-.nemo-window .sidebar .nautilus-window notebook > stack:not(:only-child) searchbar,
-.nautilus-window notebook > stack:not(:only-child) .nemo-window .sidebar searchbar, .nemo-window .sidebar notebook {
+.nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar notebook {
   background-color: #f5f6f6; }
 
 /* Lightdm styling */

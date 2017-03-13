@@ -129,7 +129,7 @@ XfceHeading,
 // Without this nautilus iconview grabs the bg_color
 .nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
-  @extend .view;
+  @extend %view;
 }
 
 // Nemo is very ugly and needs special fixes

@@ -3193,6 +3193,8 @@ filechooserbutton:drop(active) {
   list { background-color: transparent; }
 
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
+
+  separator { background-color: transparent; }
 }
 
 stacksidebar {
@@ -3328,7 +3330,7 @@ paned {
     border-style: none; // just to be sure
     background-color: transparent;
     // workaround, using background istead of a border since the border will get rendered twice (?)
-    background-image: image($borders_color);
+    background-image: image(mix($bg_color, $base_color, 50%));
     background-size: 1px 1px;
 
     &:selected { background-image: image($selected_bg_color); } // FIXME is this needed?
