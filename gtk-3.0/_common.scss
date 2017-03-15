@@ -2321,8 +2321,9 @@ radio {
   @include button(normal-alt);
 
   &:hover { @include button(hover-alt); }
-  &:active { @include button(hover-alt); }
-  &:checked { @include button(hover-alt); }
+  &:active { @include button(normal-alt); }
+  &:checked { @include button(normal-alt); }
+  &:checked:hover { @include button(hover-alt); }
   &:disabled { @include button(insensitive); }
 
   @if $variant == 'light' {
@@ -2534,7 +2535,7 @@ scale {
   slider {
     @include button(normal-alt, $edge: $shadow_color);
 
-    border: 1px solid darken($borders_color, 3%);
+    border: 1px solid darken($borders_color, 10%);
     border-radius: 100%;
     box-shadow: none;
 

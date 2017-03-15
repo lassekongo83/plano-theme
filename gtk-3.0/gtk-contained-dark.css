@@ -2260,11 +2260,17 @@ radio {
   check:active,
   radio:active {
     color: #dee2e5;
-    background-color: #454b52;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.4);
-    border-color: #3399ff; }
+    outline-color: rgba(222, 226, 229, 0.3);
+    border-color: black;
+    background-color: #3e444a; }
   check:checked,
   radio:checked {
+    color: #dee2e5;
+    outline-color: rgba(222, 226, 229, 0.3);
+    border-color: black;
+    background-color: #3e444a; }
+  check:checked:hover,
+  radio:checked:hover {
     color: #dee2e5;
     background-color: #454b52;
     box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.4);
@@ -2449,7 +2455,7 @@ scale {
     outline-color: rgba(222, 226, 229, 0.3);
     border-color: black;
     background-color: #3e444a;
-    border: 1px solid #08090a;
+    border: 1px solid black;
     border-radius: 100%;
     box-shadow: none; }
     scale slider:hover {
