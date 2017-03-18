@@ -1336,19 +1336,15 @@ toolbar {
 
 .inline-toolbar {
   padding: 3px;
-  border-width: 0 1px 1px;
   border-radius: 0px; }
 
 searchbar,
 .location-bar {
-  border-width: 0 0 1px;
   padding: 3px; }
 
 .inline-toolbar, searchbar,
 .location-bar {
-  border-style: solid;
-  border-color: #c3c6c9;
-  background-color: #dfe1e2; }
+  background-color: #d0d3d5; }
 
 /***************
  * Header bars *
@@ -3341,7 +3337,7 @@ infobar {
       background-color: #4da6ff; }
       infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover {
         color: #ffffff;
-        background-color: #5cadff;
+        background-color: #75baff;
         box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
         border-color: #3399ff; }
       infobar.info button:active, infobar.info button:checked, infobar.question button:active, infobar.question button:checked, infobar.warning button:active, infobar.warning button:checked, infobar.error button:active, infobar.error button:checked {
@@ -3743,10 +3739,6 @@ stackswitcher button.text-button.circular {
   /* Makes the floating-bar less annoying */
   background-color: #FFFFFF;
   font-size: smaller; }
-  .floating-bar.bottom.left {
-    border-top-right-radius: 0px; }
-  .floating-bar.bottom.right {
-    border-top-left-radius: 0px; }
 
 /* GTK NAMED COLORS
    ----------------

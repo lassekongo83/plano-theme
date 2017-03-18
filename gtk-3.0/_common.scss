@@ -1165,29 +1165,24 @@ toolbar {
 //searchbar, location-bar & inline-toolbar
 .inline-toolbar {
   @extend %toolbar;
-
   @extend %darkbar;
 
   padding: 3px;
-  border-width: 0 1px 1px;
+  //border-width: 0 1px 1px;
   border-radius: 0px;
 }
 
 searchbar,
 .location-bar {
   @extend %toolbar;
-
   @extend %darkbar;
 
-  border-width: 0 0 1px;
+  //border-width: 0 0 1px;
   padding: 3px;
 }
 
 %darkbar {
-  border-style: solid;
-  border-color: $borders_color;
-  $_bg: mix($bg_color, $borders_color, 70%);
-  background-color: $_bg;
+  background-color: darken($bg_color, 10%);
 }
 
 /***************
@@ -3407,7 +3402,7 @@ infobar {
       // FIXME: extend selection mode buttons
       @include button(normal, $selected_bg_color, $selected_fg_color, none);
 
-      &:hover { @include button(hover, $selected_bg_color, $selected_fg_color, none); }
+      &:hover { @include button(hover, lighten($selected_bg_color, 5%), $selected_fg_color, none); }
 
       &:active,
       &:checked { @include button(active, $selected_bg_color, $selected_fg_color, none); }
@@ -3835,7 +3830,5 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
 
 .floating-bar { /* Makes the floating-bar less annoying */
   background-color: $base_color;
-  &.bottom.left { border-top-right-radius: 0px; }
-  &.bottom.right { border-top-left-radius: 0px; }
   font-size: smaller;
 }
