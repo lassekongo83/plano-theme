@@ -244,7 +244,7 @@ entry {
   spinbutton:focus:not(.vertical),
   entry:focus {
     border-color: #3399ff;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
   spinbutton:disabled:not(.vertical),
   entry:disabled {
     color: #8c8c8d;
@@ -257,7 +257,7 @@ entry {
     spinbutton.error:focus:not(.vertical),
     entry.error:focus {
       border-color: #e53935;
-      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
+      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
     spinbutton.error:not(.vertical) selection,
     entry.error selection {
       background-color: #e53935; }
@@ -268,7 +268,7 @@ entry {
     spinbutton.warning:focus:not(.vertical),
     entry.warning:focus {
       border-color: #ffca28;
-      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
+      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
     spinbutton.warning:not(.vertical) selection,
     entry.warning selection {
       background-color: #ffca28; }
@@ -430,19 +430,19 @@ button {
   notebook > header > tabs > arrow.default,
   button.default {
     color: #2c2c2c;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   notebook > header > tabs > arrow:hover,
   button:hover {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff;
     -gtk-icon-effect: highlight; }
   notebook > header > tabs > arrow:focus,
   button:focus {
     color: #2c2c2c;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   notebook > header > tabs > arrow:active:hover, notebook > header > tabs > arrow:checked:hover,
   button:active:hover,
@@ -670,7 +670,7 @@ button.suggested-action {
   button.suggested-action:hover {
     color: white;
     background-color: #5cadff;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   button.suggested-action:active,
   button.suggested-action:checked {
@@ -763,7 +763,7 @@ button.destructive-action {
   button.destructive-action:hover {
     color: white;
     background-color: #f27875;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   button.destructive-action:active,
   button.destructive-action:checked {
@@ -916,7 +916,7 @@ button.needs-attention > image, stacksidebar row.needs-attention > label {
   .inline-toolbar toolbutton > button:hover {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
     color: #2c2c2c;
@@ -1408,7 +1408,7 @@ headerbar {
       headerbar.selection-mode button:hover {
         color: #ffffff;
         background-color: #5cadff;
-        box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+        box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
         border-color: #3399ff; }
       .selection-mode.titlebar:not(headerbar) button:active, .selection-mode.titlebar:not(headerbar) button:checked,
       headerbar.selection-mode button:active,
@@ -1462,7 +1462,7 @@ headerbar {
         headerbar.selection-mode button.suggested-action:hover {
           color: #2c2c2c;
           background-color: white;
-          box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
           border-color: #3399ff;
           border-color: #007eff; }
         .selection-mode.titlebar:not(headerbar) button.suggested-action:active,
@@ -1536,11 +1536,11 @@ headerbar button {
   headerbar button:hover {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   headerbar button:focus {
     color: #2c2c2c;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   headerbar button:checked, headerbar button:active {
     color: #2c2c2c;
@@ -2202,7 +2202,7 @@ switch {
   switch:hover slider {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   switch:checked slider {
     border: 1px solid #007eff; }
@@ -2280,7 +2280,7 @@ radio {
   radio:hover {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   check:active,
   radio:active {
@@ -2298,7 +2298,7 @@ radio {
   radio:checked:hover {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   check:disabled,
   radio:disabled {
@@ -2490,7 +2490,7 @@ scale {
     scale slider:hover {
       color: #2c2c2c;
       background-color: white;
-      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
       border-color: #3399ff; }
     scale slider:active {
       border-color: #007eff; }
@@ -3342,7 +3342,7 @@ infobar {
       infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover {
         color: #ffffff;
         background-color: #5cadff;
-        box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+        box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
         border-color: #3399ff; }
       infobar.info button:active, infobar.info button:checked, infobar.question button:active, infobar.question button:checked, infobar.warning button:active, infobar.warning button:checked, infobar.error button:active, infobar.error button:checked {
         color: #ffffff;
@@ -3448,7 +3448,7 @@ colorswatch#add-color-button {
     colorswatch#add-color-button overlay:hover {
       color: #2c2c2c;
       background-color: white;
-      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+      box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
       border-color: #3399ff; }
 colorswatch:disabled {
   opacity: 0.5; }
@@ -3991,7 +3991,7 @@ XfceHeading,
   border: 1px solid;
   border-radius: 3px;
   border-color: #3399ff;
-  box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
+  box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
 
 .places-treeview {
   -NemoPlacesTreeView-disk-full-bg-color: #FFFFFF;
@@ -4056,7 +4056,7 @@ XfceHeading,
   #content_frame button:hover {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   #content_frame button:active, #content_frame button:checked {
     color: #2c2c2c;
@@ -4093,7 +4093,7 @@ XfceHeading,
   #buttonbox_frame button:hover {
     color: #2c2c2c;
     background-color: white;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   #buttonbox_frame button:active, #buttonbox_frame button:checked {
     color: #2c2c2c;
@@ -4128,7 +4128,7 @@ XfceHeading,
   #shutdown_button.button:hover {
     color: #2c2c2c;
     background-color: #f7a6a4;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   #shutdown_button.button:active, #shutdown_button.button:checked {
     color: #2c2c2c;
@@ -4145,7 +4145,7 @@ XfceHeading,
   #restart_button.button:hover {
     color: #2c2c2c;
     background-color: #8fc7ff;
-    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.15);
     border-color: #3399ff; }
   #restart_button.button:active, #restart_button.button:checked {
     color: #2c2c2c;
