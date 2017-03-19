@@ -30,16 +30,15 @@ stage {
   border-width: 1px;
   padding: 4px 32px;
   color: #eeeeec;
-  background-color: #3a4144;
-  border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px #3a4144;
+  background-color: #3c4447;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black; }
   .button:hover {
     color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: #41494c;
-    box-shadow: inset 0 1px #485154;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: #454f52;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
   .button:focus {
@@ -63,26 +62,26 @@ stage {
     icon-shadow: none; }
   .button:active {
     color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: #222728;
-    box-shadow: inset 0 0 black;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-shadow: none;
     icon-shadow: none; }
 
 .modal-dialog-linked-button {
-  border-right-width: 0px;
+  border-width: 0px;
+  box-shadow: none !important;
   color: #eeeeec;
-  background-color: #3a4144;
-  border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px #3a4144;
+  background-color: #3c4447;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   padding: 12px; }
   .modal-dialog-linked-button:hover {
     color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: #41494c;
-    box-shadow: inset 0 1px #485154;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: #454f52;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
   .modal-dialog-linked-button:insensitive {
@@ -94,9 +93,9 @@ stage {
     icon-shadow: none; }
   .modal-dialog-linked-button:active {
     color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: #222728;
-    box-shadow: inset 0 0 black;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-shadow: none;
     icon-shadow: none; }
   .modal-dialog-linked-button:focus {
@@ -514,6 +513,10 @@ StScrollBar {
     padding: 1em 0em; }
   .popup-menu .popup-menu-item {
     spacing: 4px; }
+    .popup-menu .popup-menu-item:ltr {
+      padding: .4em 1.75em .4em 0em; }
+    .popup-menu .popup-menu-item:rtl {
+      padding: .4em 0em .4em 1.75em; }
     .popup-menu .popup-menu-item:checked {
       background-color: black;
       box-shadow: inset 0 1px 0px #0d0d0d;
@@ -1235,19 +1238,32 @@ StScrollBar {
 
 .app-view-control {
   padding: 4px 32px;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); }
+  color: #eeeeec;
+  background-color: #3c4447;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px black;
+  icon-shadow: 0 1px black; }
   .app-view-control:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.2); }
+    color: white;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: #454f52;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black; }
   .app-view-control:checked {
+    color: white;
     background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.3); }
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: none;
+    icon-shadow: none; }
   .app-view-control:first-child {
     border-right-width: 0;
-    border-radius: 2px 0 0 2px; }
+    border-radius: 0; }
   .app-view-control:last-child {
-    border-radius: 0 2px 2px 0; }
+    border-radius: 0; }
+    .app-view-control:last-child:checked {
+      border-left-width: 0; }
 
 .search-provider-icon:active, .search-provider-icon:checked,
 .list-search-result:active,
@@ -1543,9 +1559,9 @@ StScrollBar {
 
 .keyboard-key {
   color: #eeeeec;
-  background-color: #3a4144;
-  border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px #3a4144;
+  background-color: #3c4447;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   min-height: 2em;
@@ -1563,16 +1579,15 @@ StScrollBar {
     box-shadow: inset 0 1px #2871be; }
   .keyboard-key:hover, .keyboard-key:checked {
     color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: #41494c;
-    box-shadow: inset 0 1px #485154;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: #454f52;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
   .keyboard-key:active {
     color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: #222728;
-    box-shadow: inset 0 0 black;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-shadow: none;
     icon-shadow: none; }
   .keyboard-key:grayed {
@@ -1650,22 +1665,21 @@ StScrollBar {
     .login-dialog .modal-dialog-button:default {
       color: #eeeeec;
       background-color: rgba(33, 93, 156, 0.5);
-      border-color: rgba(0, 0, 0, 0.7);
-      box-shadow: inset 0 1px #3a4144;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      border-color: rgba(0, 0, 0, 0.1);
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black; }
       .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
         color: white;
-        border-color: rgba(0, 0, 0, 0.7);
+        border-color: rgba(0, 0, 0, 0.1);
         background-color: rgba(33, 93, 156, 0.5);
-        box-shadow: inset 0 1px #485154;
         text-shadow: 0 1px black;
         icon-shadow: 0 1px black; }
       .login-dialog .modal-dialog-button:default:active {
         color: white;
-        border-color: rgba(0, 0, 0, 0.7);
-        background-color: #1c5187;
-        box-shadow: inset 0 0 black;
+        background-color: rgba(0, 0, 0, 0.4);
+        box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         text-shadow: none;
         icon-shadow: none; }
       .login-dialog .modal-dialog-button:default:insensitive {

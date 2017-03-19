@@ -37,13 +37,12 @@
 // possible $t values:
 // normal, focus, insensitive
 //
-  $_inner_shadows: inset 0 0px 0px transparentize(black, 0.6);
   $_inner_hilight: inset 0 0 0 1px transparentize(white, 0.8);
   $_inner_hilight_hover: inset 0 0 0 1px transparentize(white, 0.7);
 
   @if $t==normal {
-    background-color: $_glass_bg_color;
-    border-color: $_glass_borders_color;
+    background-color: $_g_bg;
+    border-color: $_g_border;
     @include _shadows($_inner_hilight);
   }
   @if $t==focus {
@@ -140,12 +139,12 @@
   // normal button
   //
     $_bg: if($c!=$osd_bg_color, transparentize($c, 0.5),
-                            lighten($osd_bg_color,5%));
+                            lighten($osd_bg_color, 6%));
 
     color: $osd_fg_color;
     background-color: $_bg;
-    border-color: $osd_borders_color;
-    box-shadow: inset 0 1px lighten($osd_bg_color,5%);
+    box-shadow: inset 0 0 0 1px transparentize(white, 0.9);
+    border-color: transparentize(black, 0.9);
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
   }
@@ -155,12 +154,11 @@
   // hover osd button
   //
     $_bg: if($c!=$osd_bg_color, transparentize($c, 0.5),
-                            lighten($osd_bg_color,8%));
+                            lighten($osd_bg_color, 10%));
 
     color: white;
-    border-color: $osd_borders_color;
+    border-color: transparentize(black, 0.9);
     background-color: $_bg;
-    box-shadow: inset 0 1px lighten($osd_bg_color,11%);
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
 
@@ -170,21 +168,17 @@
   //
   // focused button
   //
-    $_bg: if($c!=$osd_bg_color, transparentize($c, 0.5),
-                          $osd_bg_color);
     background-color: $selected_bg_color;
     color: $osd_fg_color;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: inset 0 1px lighten($selected_bg_color,8%);
+    box-shadow: inset 0 1px lighten($selected_bg_color, 8%);
   }
 
   @if $t==focushover {
   //
   // focused hover button
   //
-    $_bg: if($c!=$osd_bg_color, transparentize($c, 0.5),
-                          $osd_bg_color);
     background-color: lighten($selected_bg_color, 5%);
     color: $osd_fg_color;
     text-shadow: 0 1px black;
@@ -196,15 +190,10 @@
   //
   // active osd button
   //
-    $_bg: if($c!=$bg_color, $c, $osd_borders_color);
-
     color: white;
-    border-color: $osd_borders_color;
-    background-color: darken($_bg,5%);
-    // This should be none, but it's creating some issues with borders, so to
-    // workaround it for now, use inset wich goes through a different code path.
-    // see https://bugzilla.gnome.org/show_bug.cgi?id=752934
-    box-shadow: inset 0 0 black;
+    background-color: transparentize(black, 0.6); 
+    box-shadow: inset 0 0 0 2px transparentize(black, 0.7);
+    border: 1px solid transparentize(white, 0.9);
     text-shadow: none;
     icon-shadow: none;
   }
