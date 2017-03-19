@@ -10,36 +10,36 @@ $_panel_bottom: inset 0 -3px $_panel_shade;
 $_panel_left: inset 3px 0 $_panel_shade;
 $_panel_right: inset -3px 0 $_panel_shade;
 
-/* Dash to Panel extension styling */
-
-#panel.dashtopanelMainPanel {
-  // gradient needed for box-shadow to work
+// gradient needed for box-shadow to work in panel
+%panel_bg {
   background-gradient-direction: vertical;
   background-gradient-start: transparent;
   background-gradient-end: transparent;
-    
+}
+
+/* Dash to Panel extension styling */
+
+#panel.dashtopanelMainPanel {
+  @extend %panel_bg;
+
   &.dashtopanelBottom {
     box-shadow: $_panel_bottom;
 
     .app-well-app:hover .overview-icon {
       box-shadow: $_hover_effect_bottom;
-      background-gradient-direction: vertical;
-      background-gradient-start: transparent;
-      background-gradient-end: transparent;
+      @extend %panel_bg;
     }
   }
-    
+
   &.dashtopanelTop {
     box-shadow: $_panel_top;
 
     .app-well-app:hover .overview-icon {
       box-shadow: $_hover_effect_top;
-      background-gradient-direction: vertical;
-      background-gradient-start: transparent;
-      background-gradient-end: transparent;
+      @extend %panel_bg;
     }
   }
-    
+
   // panel dash icon
   @each $d in hover, checked, overview, focus, active, selected {
     .show-apps .overview-icon {
@@ -55,10 +55,10 @@ $_panel_right: inset -3px 0 $_panel_shade;
       background-position: center top;
     }
   }
-    
+
   // clock and system menu area
   & > #panelRight {
-    background-color: rgba(0,0,0,0.6);
+    background-color: $_panel_shade;
     border-radius: 2px;
     margin: 6px;
   }
