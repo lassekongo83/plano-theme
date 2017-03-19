@@ -13,55 +13,55 @@ $_panel_right: inset -3px 0 $_panel_shade;
 /* Dash to Panel extension styling */
 
 #panel.dashtopanelMainPanel {
-    // gradient needed for box-shadow to work
-    background-gradient-direction: vertical;
-    background-gradient-start: transparent;
-    background-gradient-end: transparent;
+  // gradient needed for box-shadow to work
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
     
-    &.dashtopanelBottom {
-        box-shadow: $_panel_bottom;
-        
-        .app-well-app:hover .overview-icon {
-            box-shadow: $_hover_effect_bottom;
-            background-gradient-direction: vertical;
-            background-gradient-start: transparent;
-            background-gradient-end: transparent;
-        }
+  &.dashtopanelBottom {
+    box-shadow: $_panel_bottom;
+
+    .app-well-app:hover .overview-icon {
+      box-shadow: $_hover_effect_bottom;
+      background-gradient-direction: vertical;
+      background-gradient-start: transparent;
+      background-gradient-end: transparent;
     }
+  }
     
-    &.dashtopanelTop {
-        box-shadow: $_panel_top;
-        
-        .app-well-app:hover .overview-icon {
-            box-shadow: $_hover_effect_top;
-            background-gradient-direction: vertical;
-            background-gradient-start: transparent;
-            background-gradient-end: transparent;
-        }
+  &.dashtopanelTop {
+    box-shadow: $_panel_top;
+
+    .app-well-app:hover .overview-icon {
+      box-shadow: $_hover_effect_top;
+      background-gradient-direction: vertical;
+      background-gradient-start: transparent;
+      background-gradient-end: transparent;
     }
+  }
     
-    // panel dash icon
-    @each $d in hover, checked, overview, focus, active, selected {
-        .show-apps .overview-icon {
-            background-image: url("d2p-activities.svg");
-            background-position: center top;
-            background-color: transparent;
-            border: none;
-            color: transparent;
-        }
-        
-        .show-apps:#{$d} .overview-icon {
-            background-image: url("d2p-activities-active.svg");
-            background-position: center top;
-        }
+  // panel dash icon
+  @each $d in hover, checked, overview, focus, active, selected {
+    .show-apps .overview-icon {
+      background-image: url("d2p-activities.svg");
+      background-position: center top;
+      background-color: transparent;
+      border: none;
+      color: transparent;
     }
+ 
+    .show-apps:#{$d} .overview-icon {
+      background-image: url("d2p-activities-active.svg");
+      background-position: center top;
+    }
+  }
     
-    // clock and system menu area
-    & > #panelRight {
-        background-color: rgba(0,0,0,0.6);
-        border-radius: 2px;
-        margin: 6px;
-    }
+  // clock and system menu area
+  & > #panelRight {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 2px;
+    margin: 6px;
+  }
 }
 
 /* Dash to dock extension styling */
