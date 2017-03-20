@@ -1,10 +1,10 @@
-$_hover_color: transparentize(white, 0.4);
+$_hover_color: transparentize(white,0.4);
 $_hover_effect_top: inset 0 3px $_hover_color;
 $_hover_effect_bottom: inset 0 -3px $_hover_color;
 $_hover_effect_left: inset 3px 0 $_hover_color;
 $_hover_effect_right: inset -3px 0 $_hover_color;
 
-$_panel_shade: transparentize(black, 0.6);
+$_panel_shade: transparentize(black,0.6);
 $_panel_top: inset 0 3px $_panel_shade;
 $_panel_bottom: inset 0 -3px $_panel_shade;
 $_panel_left: inset 3px 0 $_panel_shade;
@@ -29,6 +29,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
       box-shadow: $_hover_effect_bottom;
       @extend %panel_bg;
     }
+    // .app-well-app.focused .overview-icon {} // Let the extension settings handle this one
   }
 
   &.dashtopanelTop {
@@ -40,6 +41,14 @@ $_panel_right: inset -3px 0 $_panel_shade;
     }
   }
 
+  .panel-button {
+    &:hover { background-color: transparentize(white,0.9); }
+    &:active, &:overview, &:focus, &:checked { background-color: $selected_bg_color; }
+    text-shadow: black 0 1px 1px;
+  }
+
+  .dash-item-container > * { padding: 0 4px; }
+
   // panel dash icon
   @each $d in hover, checked, overview, focus, active, selected {
     .show-apps .overview-icon {
@@ -49,7 +58,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
       border: none;
       color: transparent;
     }
- 
+
     .show-apps:#{$d} .overview-icon {
       background-image: url("d2p-activities-active.svg");
       background-position: center top;
@@ -58,10 +67,13 @@ $_panel_right: inset -3px 0 $_panel_shade;
 
   // clock and system menu area
   & > #panelRight {
-    background-color: $_panel_shade;
+    background-color: $bg_color;
     border-radius: 2px;
     margin: 6px;
+    box-shadow: 0 2px 2px $_panel_shade;
   }
+  
+  .showdesktop-button { padding-right: 8px; }
 }
 
 /* Dash to dock extension styling */
@@ -78,7 +90,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
   &.bottom #dash .app-well-app-running-dot {
     width: 44px;
     height: 2px;
-    background-color: transparentize($selected_fg_color, 0.4);
+    background-color: $_hover_color;
     margin-bottom: 0;
   }
 }

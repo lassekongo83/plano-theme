@@ -1944,6 +1944,14 @@ StScrollBar {
   box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
   #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon {
     box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
+#panel.dashtopanelMainPanel .panel-button {
+  text-shadow: black 0 1px 1px; }
+  #panel.dashtopanelMainPanel .panel-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+  #panel.dashtopanelMainPanel .panel-button:active, #panel.dashtopanelMainPanel .panel-button:overview, #panel.dashtopanelMainPanel .panel-button:focus, #panel.dashtopanelMainPanel .panel-button:checked {
+    background-color: #215d9c; }
+#panel.dashtopanelMainPanel .dash-item-container > * {
+  padding: 0 4px; }
 #panel.dashtopanelMainPanel .show-apps .overview-icon {
   background-image: url("d2p-activities.svg");
   background-position: center top;
@@ -1999,9 +2007,12 @@ StScrollBar {
   background-image: url("d2p-activities-active.svg");
   background-position: center top; }
 #panel.dashtopanelMainPanel > #panelRight {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #33393b;
   border-radius: 2px;
-  margin: 6px; }
+  margin: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); }
+#panel.dashtopanelMainPanel .showdesktop-button {
+  padding-right: 8px; }
 
 /* Dash to dock extension styling */
 #dashtodockContainer.extended {
