@@ -3782,7 +3782,7 @@ UnityDecoration {
   UnityDecoration .top {
     border: 1px solid #101112;
     border-bottom-width: 0;
-    border-radius: 3px 3px 0 0;
+    border-radius: 0;
     padding: 1px 6px 0 6px;
     background-color: #33393b;
     color: white;

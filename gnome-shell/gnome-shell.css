@@ -586,6 +586,10 @@ StScrollBar {
 .pad-osd-window {
   padding: 32px;
   background-color: rgba(0, 0, 0, 0.8); }
+  .pad-osd-window .pad-osd-title-box {
+    spacing: 12px; }
+  .pad-osd-window .pad-osd-title-menu-box {
+    spacing: 6px; }
 
 .combo-box-label {
   width: 15em; }
@@ -685,7 +689,7 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: transparent;
+  background-color: #33393b;
   font-weight: bold;
   height: 1.86em;
   box-shadow: none;
@@ -702,8 +706,6 @@ StScrollBar {
     -panel-corner-background-color: black;
     -panel-corner-border-width: 0px;
     -panel-corner-border-color: transparent; }
-    #panel .panel-corner:active, #panel .panel-corner:overview, #panel .panel-corner:focus {
-      -panel-corner-border-color: #256ab1; }
     #panel .panel-corner.lock-screen, #panel .panel-corner.login-screen, #panel .panel-corner.unlock-screen {
       -panel-corner-radius: 0;
       -panel-corner-background-color: transparent;
@@ -715,9 +717,7 @@ StScrollBar {
     color: white; }
     #panel .panel-button .app-menu-icon {
       width: 0;
-      height: 0;
-      margin-left: 0px;
-      margin-right: 0px; }
+      height: 0; }
     #panel .panel-button:hover {
       color: white;
       background-color: rgba(255, 255, 255, 0.2); }
@@ -759,6 +759,16 @@ StScrollBar {
 
 .datemenu-displays-section {
   padding-bottom: 3em; }
+
+.datemenu-displays-box {
+  spacing: 1em; }
+
+.datemenu-calendar-column {
+  border: 0 solid #3f4649; }
+  .datemenu-calendar-column:ltr {
+    border-left-width: 1px; }
+  .datemenu-calendar-column:rtl {
+    border-right-width: 1px; }
 
 .datemenu-today-button,
 .world-clocks-button,
@@ -928,7 +938,10 @@ StScrollBar {
 
 .message-secondary-bin > .event-time {
   color: #8e8e80;
-  font-size: 0.7em; }
+  font-size: 0.7em;
+  /* HACK: the label should be baseline-aligned with a 1em label,
+           fake this with some bottom padding */
+  padding-bottom: 0.13em; }
 
 .message-secondary-bin > StIcon {
   icon-size: 16px; }
@@ -941,11 +954,14 @@ StScrollBar {
   color: #bebeb6; }
 
 .message-media-control {
-  padding: 12px; }
+  padding: 12px;
+  color: #bebeb6; }
   .message-media-control:last-child:ltr {
     padding-right: 18px; }
   .message-media-control:last-child:rtl {
     padding-left: 18px; }
+  .message-media-control:hover {
+    color: #eeeeec; }
   .message-media-control:insensitive {
     color: #8e8e80; }
 

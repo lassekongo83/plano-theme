@@ -586,6 +586,10 @@ StScrollBar {
 .pad-osd-window {
   padding: 32px;
   background-color: rgba(0, 0, 0, 0.8); }
+  .pad-osd-window .pad-osd-title-box {
+    spacing: 12px; }
+  .pad-osd-window .pad-osd-title-menu-box {
+    spacing: 6px; }
 
 .combo-box-label {
   width: 15em; }
@@ -685,7 +689,7 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: transparent;
+  background-color: #000;
   font-weight: bold;
   height: 1.86em;
   box-shadow: none;
@@ -702,8 +706,6 @@ StScrollBar {
     -panel-corner-background-color: black;
     -panel-corner-border-width: 0px;
     -panel-corner-border-color: transparent; }
-    #panel .panel-corner:active, #panel .panel-corner:overview, #panel .panel-corner:focus {
-      -panel-corner-border-color: #256ab1; }
     #panel .panel-corner.lock-screen, #panel .panel-corner.login-screen, #panel .panel-corner.unlock-screen {
       -panel-corner-radius: 0;
       -panel-corner-background-color: transparent;
@@ -715,9 +717,7 @@ StScrollBar {
     color: white; }
     #panel .panel-button .app-menu-icon {
       width: 0;
-      height: 0;
-      margin-left: 0px;
-      margin-right: 0px; }
+      height: 0; }
     #panel .panel-button:hover {
       color: white;
       background-color: rgba(255, 255, 255, 0.2); }
@@ -759,6 +759,16 @@ StScrollBar {
 
 .datemenu-displays-section {
   padding-bottom: 3em; }
+
+.datemenu-displays-box {
+  spacing: 1em; }
+
+.datemenu-calendar-column {
+  border: 0 solid #0d0d0d; }
+  .datemenu-calendar-column:ltr {
+    border-left-width: 1px; }
+  .datemenu-calendar-column:rtl {
+    border-right-width: 1px; }
 
 .datemenu-today-button,
 .world-clocks-button,
@@ -928,7 +938,10 @@ StScrollBar {
 
 .message-secondary-bin > .event-time {
   color: #999999;
-  font-size: 0.7em; }
+  font-size: 0.7em;
+  /* HACK: the label should be baseline-aligned with a 1em label,
+           fake this with some bottom padding */
+  padding-bottom: 0.13em; }
 
 .message-secondary-bin > StIcon {
   icon-size: 16px; }
@@ -941,11 +954,14 @@ StScrollBar {
   color: #cccccc; }
 
 .message-media-control {
-  padding: 12px; }
+  padding: 12px;
+  color: #cccccc; }
   .message-media-control:last-child:ltr {
     padding-right: 18px; }
   .message-media-control:last-child:rtl {
     padding-left: 18px; }
+  .message-media-control:hover {
+    color: #fff; }
   .message-media-control:insensitive {
     color: #999999; }
 
@@ -1929,6 +1945,119 @@ StScrollBar {
   border: 2px solid grey;
   border-radius: 0;
   padding: 6px; }
+
+#panel.dashtopanelMainPanel, #panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent; }
+
+/* Dash to Panel extension styling */
+#panel.dashtopanelMainPanel.dashtopanelBottom {
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
+  #panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon {
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); }
+#panel.dashtopanelMainPanel.dashtopanelTop {
+  box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
+  #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon {
+    box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
+#panel.dashtopanelMainPanel .panel-button {
+  text-shadow: black 0 1px 1px; }
+  #panel.dashtopanelMainPanel .panel-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+  #panel.dashtopanelMainPanel .panel-button:active, #panel.dashtopanelMainPanel .panel-button:overview, #panel.dashtopanelMainPanel .panel-button:focus, #panel.dashtopanelMainPanel .panel-button:checked {
+    background-color: #215d9c; }
+#panel.dashtopanelMainPanel .dash-item-container > * {
+  padding: 0 4px; }
+#panel.dashtopanelMainPanel .show-apps .overview-icon {
+  background-image: url("d2p-activities.svg");
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  color: transparent; }
+#panel.dashtopanelMainPanel .show-apps:hover .overview-icon {
+  background-image: url("d2p-activities-active.svg");
+  background-position: center top; }
+#panel.dashtopanelMainPanel .show-apps .overview-icon {
+  background-image: url("d2p-activities.svg");
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  color: transparent; }
+#panel.dashtopanelMainPanel .show-apps:checked .overview-icon {
+  background-image: url("d2p-activities-active.svg");
+  background-position: center top; }
+#panel.dashtopanelMainPanel .show-apps .overview-icon {
+  background-image: url("d2p-activities.svg");
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  color: transparent; }
+#panel.dashtopanelMainPanel .show-apps:overview .overview-icon {
+  background-image: url("d2p-activities-active.svg");
+  background-position: center top; }
+#panel.dashtopanelMainPanel .show-apps .overview-icon {
+  background-image: url("d2p-activities.svg");
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  color: transparent; }
+#panel.dashtopanelMainPanel .show-apps:focus .overview-icon {
+  background-image: url("d2p-activities-active.svg");
+  background-position: center top; }
+#panel.dashtopanelMainPanel .show-apps .overview-icon {
+  background-image: url("d2p-activities.svg");
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  color: transparent; }
+#panel.dashtopanelMainPanel .show-apps:active .overview-icon {
+  background-image: url("d2p-activities-active.svg");
+  background-position: center top; }
+#panel.dashtopanelMainPanel .show-apps .overview-icon {
+  background-image: url("d2p-activities.svg");
+  background-position: center top;
+  background-color: transparent;
+  border: none;
+  color: transparent; }
+#panel.dashtopanelMainPanel .show-apps:selected .overview-icon {
+  background-image: url("d2p-activities-active.svg");
+  background-position: center top; }
+#panel.dashtopanelMainPanel > #panelRight {
+  background-color: #000;
+  border-radius: 2px;
+  margin: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); }
+#panel.dashtopanelMainPanel .showdesktop-button {
+  padding-right: 8px; }
+
+/* Dash to dock extension styling */
+#dashtodockContainer.extended {
+  border: 0;
+  border-radius: 0; }
+  #dashtodockContainer.extended.bottom #dash {
+    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
+  #dashtodockContainer.extended.left #dash {
+    box-shadow: inset 3px 0 rgba(0, 0, 0, 0.4); }
+  #dashtodockContainer.extended.right #dash {
+    box-shadow: inset -3px 0 rgba(0, 0, 0, 0.4); }
+
+#dashtodockContainer.bottom #dash .app-well-app-running-dot {
+  width: 44px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0; }
+
+#dashtodockContainer {
+  border-radius: 0; }
+  #dashtodockContainer.bottom #dash .app-well-app:hover .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon {
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6);
+    background-color: transparent; }
+  #dashtodockContainer.left #dash .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon {
+    box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6);
+    background-color: transparent; }
+  #dashtodockContainer.right #dash .app-well-app:hover .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon {
+    box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6);
+    background-color: transparent; }
 
 stage {
   -st-icon-style: symbolic; }

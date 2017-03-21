@@ -3812,7 +3812,7 @@ UnityDecoration {
   UnityDecoration .top {
     border: 1px solid #c3c6c9;
     border-bottom-width: 0;
-    border-radius: 3px 3px 0 0;
+    border-radius: 0;
     padding: 1px 6px 0 6px;
     background-color: #ebeced;
     color: black;
