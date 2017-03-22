@@ -2519,279 +2519,39 @@ scale {
   scale marks {
     color: alpha(currentColor,0.4); }
     scale marks.top {
-      margin-bottom: 6px;
-      margin-top: -12px; }
+      margin-bottom: 1px;
+      margin-top: -4px; }
     scale marks.bottom {
-      margin-top: 6px;
-      margin-bottom: -12px; }
+      margin-top: 1px;
+      margin-bottom: -4px; }
     scale marks.top {
-      margin-right: 6px;
-      margin-left: -12px; }
+      margin-right: 1px;
+      margin-left: -4px; }
     scale marks.bottom {
-      margin-left: 6px;
-      margin-right: -12px; }
+      margin-left: 1px;
+      margin-right: -4px; }
   scale.fine-tune marks.top {
-    margin-bottom: 6px;
-    margin-top: -9px; }
+    margin-bottom: 1px;
+    margin-top: -1px; }
   scale.fine-tune marks.bottom {
-    margin-top: 6px;
-    margin-bottom: -9px; }
+    margin-top: 1px;
+    margin-bottom: -1px; }
   scale.fine-tune marks.top {
-    margin-right: 6px;
-    margin-left: -9px; }
+    margin-right: 1px;
+    margin-left: -1px; }
   scale.fine-tune marks.bottom {
-    margin-left: 6px;
-    margin-right: -9px; }
+    margin-left: 1px;
+    margin-right: -1px; }
   scale.horizontal indicator {
-    min-height: 6px;
+    min-height: 3px;
     min-width: 1px; }
   scale.horizontal.fine-tune indicator {
-    min-height: 3px; }
+    min-height: 0px; }
   scale.vertical indicator {
     min-height: 1px;
-    min-width: 6px; }
-  scale.vertical.fine-tune indicator {
     min-width: 3px; }
-  scale.horizontal.marks-before:not(.marks-after) slider {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above.png"), url("assets/slider-horz-scale-has-marks-above@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-top: -14px;
-    background-position: top;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-top: -11px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:hover {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-hover.png"), url("assets/slider-horz-scale-has-marks-above-hover@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-top: -14px;
-    background-position: top;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-top: -11px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:active {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-active.png"), url("assets/slider-horz-scale-has-marks-above-active@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-top: -14px;
-    background-position: top;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-top: -11px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:disabled {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-insensitive.png"), url("assets/slider-horz-scale-has-marks-above-insensitive@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-top: -14px;
-    background-position: top;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-top: -11px; }
-  scale.horizontal.marks-after:not(.marks-before) slider {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below.png"), url("assets/slider-horz-scale-has-marks-below@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-bottom: -14px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-bottom: -11px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:hover {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-hover.png"), url("assets/slider-horz-scale-has-marks-below-hover@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-bottom: -14px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-bottom: -11px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:active {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-active.png"), url("assets/slider-horz-scale-has-marks-below-active@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-bottom: -14px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-bottom: -11px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:disabled {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-insensitive.png"), url("assets/slider-horz-scale-has-marks-below-insensitive@2.png"));
-    background-color: transparent;
-    min-height: 26px;
-    min-width: 22px;
-    margin-bottom: -14px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-bottom: -11px; }
-  scale.vertical.marks-before:not(.marks-after) slider {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above.png"), url("assets/slider-vert-scale-has-marks-above@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-left: -14px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-left: -11px; }
-  scale.vertical.marks-before:not(.marks-after) slider:hover {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-hover.png"), url("assets/slider-vert-scale-has-marks-above-hover@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-left: -14px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-left: -11px; }
-  scale.vertical.marks-before:not(.marks-after) slider:active {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-active.png"), url("assets/slider-vert-scale-has-marks-above-active@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-left: -14px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-left: -11px; }
-  scale.vertical.marks-before:not(.marks-after) slider:disabled {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-insensitive.png"), url("assets/slider-vert-scale-has-marks-above-insensitive@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-left: -14px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px;
-    margin-left: -11px; }
-  scale.vertical.marks-after:not(.marks-before) slider {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below.png"), url("assets/slider-vert-scale-has-marks-below@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-right: -14px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-right: -11px; }
-  scale.vertical.marks-after:not(.marks-before) slider:hover {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-hover.png"), url("assets/slider-vert-scale-has-marks-below-hover@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-right: -14px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-right: -11px; }
-  scale.vertical.marks-after:not(.marks-before) slider:active {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-active.png"), url("assets/slider-vert-scale-has-marks-below-active@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-right: -14px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-right: -11px; }
-  scale.vertical.marks-after:not(.marks-before) slider:disabled {
-    margin: -10px;
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-insensitive.png"), url("assets/slider-vert-scale-has-marks-below-insensitive@2.png"));
-    background-color: transparent;
-    min-height: 22px;
-    min-width: 26px;
-    margin-right: -14px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px;
-    margin-right: -11px; }
+  scale.vertical.fine-tune indicator {
+    min-width: 0px; }
   scale.color {
     min-height: 0;
     min-width: 0; }
@@ -3653,30 +3413,10 @@ cursor-handle {
   background-image: none;
   box-shadow: none;
   border-style: none; }
-  cursor-handle.top:dir(ltr), cursor-handle.bottom:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/text-select-start.png"), url("assets/text-select-start@2.png"));
-    padding-left: 10px; }
-  cursor-handle.bottom:dir(ltr), cursor-handle.top:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/text-select-end.png"), url("assets/text-select-end@2.png"));
-    padding-right: 10px; }
-  cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above.png"), url("assets/slider-horz-scale-has-marks-above@2.png")); }
-  cursor-handle.top:hover:dir(ltr), cursor-handle.bottom:hover:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/text-select-start-hover.png"), url("assets/text-select-start-hover@2.png"));
-    padding-left: 10px; }
-  cursor-handle.bottom:hover:dir(ltr), cursor-handle.top:hover:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/text-select-end-hover.png"), url("assets/text-select-end-hover@2.png"));
-    padding-right: 10px; }
-  cursor-handle.insertion-cursor:hover:dir(ltr), cursor-handle.insertion-cursor:hover:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-hover.png"), url("assets/slider-horz-scale-has-marks-above-hover@2.png")); }
-  cursor-handle.top:active:dir(ltr), cursor-handle.bottom:active:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/text-select-start-active.png"), url("assets/text-select-start-active@2.png"));
-    padding-left: 10px; }
-  cursor-handle.bottom:active:dir(ltr), cursor-handle.top:active:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/text-select-end-active.png"), url("assets/text-select-end-active@2.png"));
-    padding-right: 10px; }
-  cursor-handle.insertion-cursor:active:dir(ltr), cursor-handle.insertion-cursor:active:dir(rtl) {
-    -gtk-icon-source: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-active.png"), url("assets/slider-horz-scale-has-marks-above-active@2.png")); }
+  cursor-handle.top {
+    -gtk-icon-source: -gtk-icontheme("selection-start-symbolic"); }
+  cursor-handle.bottom {
+    -gtk-icon-source: -gtk-icontheme("selection-end-symbolic"); }
 
 .context-menu {
   font: initial; }
