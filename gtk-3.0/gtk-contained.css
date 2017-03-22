@@ -2903,9 +2903,9 @@ messagedialog.csd .dialog-action-area button {
   border-bottom-style: none; }
   messagedialog.csd .dialog-action-area button:first-child {
     border-left-style: none;
-    -gtk-outline-bottom-left-radius: 2px; }
+    -gtk-outline-bottom-left-radius: 0px; }
   messagedialog.csd .dialog-action-area button:last-child {
-    -gtk-outline-bottom-right-radius: 2px; }
+    -gtk-outline-bottom-right-radius: 0px; }
 
 filechooser .dialog-action-box {
   border-top: 1px solid #c3c6c9; }
@@ -3102,9 +3102,9 @@ infobar {
  * Tooltips *
  ************/
 tooltip {
-  padding: 4px;
+  padding: 0;
   /* not working */
-  border-radius: 0px;
+  border-radius: 0;
   box-shadow: none;
   text-shadow: 0 1px black; }
   tooltip.background {
@@ -3114,7 +3114,7 @@ tooltip {
   tooltip decoration {
     background-color: transparent; }
   tooltip * {
-    padding: 4px;
+    padding: 2px;
     background-color: transparent;
     color: white; }
 
@@ -3123,30 +3123,10 @@ tooltip {
  *****************/
 colorswatch, colorswatch:drop(active) {
   border-style: none; }
-colorswatch.top {
-  border-top-left-radius: 1.5px;
-  border-top-right-radius: 1.5px; }
-  colorswatch.top overlay {
-    border-top-left-radius: 1px;
-    border-top-right-radius: 1px; }
-colorswatch.bottom {
-  border-bottom-left-radius: 1.5px;
-  border-bottom-right-radius: 1.5px; }
-  colorswatch.bottom overlay {
-    border-bottom-left-radius: 1px;
-    border-bottom-right-radius: 1px; }
-colorswatch.left, colorswatch:first-child:not(.top) {
-  border-top-left-radius: 1.5px;
-  border-bottom-left-radius: 1.5px; }
-  colorswatch.left overlay, colorswatch:first-child:not(.top) overlay {
-    border-top-left-radius: 1px;
-    border-bottom-left-radius: 1px; }
-colorswatch.right, colorswatch:last-child:not(.bottom) {
-  border-top-right-radius: 1.5px;
-  border-bottom-right-radius: 1.5px; }
-  colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay {
-    border-top-right-radius: 1px;
-    border-bottom-right-radius: 1px; }
+colorswatch.top, colorswatch.bottom, colorswatch.right, colorswatch.left {
+  border-radius: 0; }
+  colorswatch.top overlay, colorswatch.bottom overlay, colorswatch.right overlay, colorswatch.left overlay {
+    border-radius: 0; }
 colorswatch.dark overlay {
   color: #ffffff; }
   colorswatch.dark overlay:hover {
@@ -3169,9 +3149,9 @@ colorswatch overlay {
   colorswatch overlay:hover {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
 colorswatch#add-color-button {
-  border-radius: 1px 1px 0 0; }
+  border-radius: 0; }
   colorswatch#add-color-button:only-child {
-    border-radius: 1px; }
+    border-radius: 0; }
   colorswatch#add-color-button overlay {
     color: #2c2c2c;
     outline-color: rgba(44, 44, 44, 0.3);
@@ -3190,12 +3170,12 @@ colorswatch:disabled {
 row:selected colorswatch {
   box-shadow: 0 0 0 2px #ffffff; }
 colorswatch#editor-color-sample {
-  border-radius: 1px; }
+  border-radius: 0; }
   colorswatch#editor-color-sample overlay {
-    border-radius: 4.5px; }
+    border-radius: 0; }
 
 colorchooser .popover.osd {
-  border-radius: 5px; }
+  border-radius: 0; }
 
 /********
  * Misc *

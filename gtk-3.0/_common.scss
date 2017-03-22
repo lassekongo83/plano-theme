@@ -3004,11 +3004,11 @@ messagedialog { // Message Dialog styling
 
       &:first-child{
         border-left-style: none;
-        -gtk-outline-bottom-left-radius: 2px;
+        -gtk-outline-bottom-left-radius: 0px;
       }
 
       &:last-child {
-        -gtk-outline-bottom-right-radius: 2px;
+        -gtk-outline-bottom-right-radius: 0px;
       }
     }
   }
@@ -3306,8 +3306,8 @@ tooltip {
                                               // very dark backgrounds
   }
 
-  padding: 4px; /* not working */
-  border-radius: 0px;
+  padding: 0; /* not working */
+  border-radius: 0;
   box-shadow: none; // otherwise it gets inherited by windowframe.csd
   text-shadow: 0 1px black;
 
@@ -3315,7 +3315,7 @@ tooltip {
   decoration { background-color: transparent; }
 
   * { // Yeah this is ugly
-    padding: 4px;
+    padding: 2px;
     background-color: transparent;
     color: white;
   }
@@ -3331,54 +3331,15 @@ colorswatch {
 
   &, &:drop(active) { border-style: none; } // FIXME: implement a proper drop(active) state
 
-  $_colorswatch_radius: 1px;
   $_colorswatch_overlay_shadow: if($variant == 'light', inset 0 2px 2px -3px transparentize(black, 0.3),
                                                         inset 0 3px 2px -2px transparentize(black, 0.5));
 
-  // base color corners rounding
-  // to avoid the artifacts caused by rounded corner anti-aliasing the base color
-  // sports a bigger radius.
-  // nth-child is needed by the custom color strip.
 
-  &.top {
-    border-top-left-radius: $_colorswatch_radius + 0.5px;
-    border-top-right-radius: $_colorswatch_radius + 0.5px;
+  &.top, &.bottom, &.right, &.left {
+    border-radius: 0;
 
     overlay {
-      border-top-left-radius: $_colorswatch_radius;
-      border-top-right-radius: $_colorswatch_radius;
-    }
-  }
-
-  &.bottom {
-    border-bottom-left-radius: $_colorswatch_radius + 0.5px;
-    border-bottom-right-radius: $_colorswatch_radius + 0.5px;
-
-    overlay {
-      border-bottom-left-radius: $_colorswatch_radius;
-      border-bottom-right-radius: $_colorswatch_radius;
-    }
-  }
-
-  &.left,
-  &:first-child:not(.top) {
-    border-top-left-radius: $_colorswatch_radius + 0.5px;
-    border-bottom-left-radius: $_colorswatch_radius + 0.5px;
-
-    overlay {
-      border-top-left-radius: $_colorswatch_radius;
-      border-bottom-left-radius: $_colorswatch_radius;
-    }
-  }
-
-  &.right,
-  &:last-child:not(.bottom) {
-    border-top-right-radius: $_colorswatch_radius + 0.5px;
-    border-bottom-right-radius: $_colorswatch_radius + 0.5px;
-
-    overlay {
-      border-top-right-radius: $_colorswatch_radius;
-      border-bottom-right-radius: $_colorswatch_radius;
+      border-radius: 0;
     }
   }
 
@@ -3418,9 +3379,9 @@ colorswatch {
   }
 
   &#add-color-button {
-    border-radius: $_colorswatch_radius $_colorswatch_radius 0 0;
+    border-radius: 0;
 
-    &:only-child { border-radius: $_colorswatch_radius; }
+    &:only-child { border-radius: 0; }
 
     overlay {
       @include button(normal);
@@ -3441,14 +3402,14 @@ colorswatch {
   row:selected & { box-shadow: 0 0 0 2px $selected_fg_color; }
 
   &#editor-color-sample {
-    border-radius: 1px;
+    border-radius: 0;
 
-    overlay { border-radius: 4.5px; }
+    overlay { border-radius: 0; }
   }
 }
 
 // colorscale popup
-colorchooser .popover.osd { border-radius: 5px; }
+colorchooser .popover.osd { border-radius: 0; }
 
 /********
  * Misc *
