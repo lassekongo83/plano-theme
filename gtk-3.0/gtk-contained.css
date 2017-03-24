@@ -1757,12 +1757,6 @@ menu,
   .menu:backdrop,
   .context-menu:backdrop {
     background-color: #FFFFFF; }
-  menu .separator:not(label), .csd menu .separator:not(label),
-  .menu .separator:not(label), .csd
-  .menu .separator:not(label),
-  .context-menu .separator:not(label), .csd
-  .context-menu .separator:not(label) {
-    color: #f2f2f2; }
   menu menuitem,
   .menu menuitem,
   .context-menu menuitem {
@@ -3654,7 +3648,13 @@ XfceHeading,
   -NaTrayApplet-icon-padding: 0;
   -NaTrayApplet-icon-size: 16px; }
 
-/* Caja */
+menu .separator:not(label), .csd menu .separator:not(label),
+.menu .separator:not(label), .csd
+.menu .separator:not(label),
+.context-menu .separator:not(label), .csd
+.context-menu .separator:not(label) {
+  color: #f2f2f2; }
+
 .caja-notebook {
   border-top: 1px solid #c3c6c9; }
 
@@ -3664,7 +3664,6 @@ XfceHeading,
 .caja-notebook .frame {
   border-width: 0 0 1px; }
 
-/* Nautilus and nemo */
 .nautilus-desktop.nautilus-canvas-item, .caja-desktop, .nemo-desktop.nemo-canvas-item {
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }

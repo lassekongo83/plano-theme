@@ -121,7 +121,7 @@ StScrollBar {
   }
 
   StButton#vhandle, StButton#hhandle {
-    border-radius: 2px;
+    border-radius: 0;
     background-color: mix($fg_color, $bg_color, 60%);
     //border: 3px solid transparent; //would be nice to margin or at least to transparent
     margin: 3px;
@@ -249,7 +249,7 @@ StScrollBar {
 
   .end-session-dialog-logout-icon {
     //border: 2px solid #8b8b8b;
-    border-radius: 2px;
+    border-radius: 0;
     width: 48px;
     height: 48px;
     background-size: contain;
@@ -655,7 +655,7 @@ StScrollBar {
 
   .switcher-list .item-box {
     padding: 8px;
-    border-radius: 2px;
+    border-radius: 0;
   }
 
   .switcher-list .item-box:outlined {
@@ -794,7 +794,7 @@ StScrollBar {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: white;
+    color: $fg_color;
 
     .app-menu-icon {
       width: 0;
@@ -802,8 +802,8 @@ StScrollBar {
     }
 
     &:hover {
-      color: white;
-      background-color: rgba(255,255,255, 0.2);
+      color: $fg_color;
+      background-color: transparentize(white, 0.9);
     }
 
     &:active, &:overview, &:focus, &:checked {
@@ -811,7 +811,7 @@ StScrollBar {
       // a box-shadow
       background-color: $selected_bg_color;
       box-shadow: none;
-      color: white;
+      color: $selected_fg_color;
 
       & > .system-status-icon { icon-shadow: black 0 2px 2px; }
     }
@@ -1028,7 +1028,7 @@ StScrollBar {
 
         .message {
           &:hover,&:focus { background-color: lighten($bg_color, 5%); }
-          border-radius: 2px;
+          border-radius: 0;
         }
 
           .message-icon-bin {

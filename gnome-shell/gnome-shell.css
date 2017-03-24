@@ -158,7 +158,7 @@ StScrollBar {
     border-radius: 0;
     background-color: transparent; }
   StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
-    border-radius: 2px;
+    border-radius: 0;
     background-color: #a3a6a5;
     margin: 3px; }
     StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
@@ -272,7 +272,7 @@ StScrollBar {
     text-align: right; }
 
 .end-session-dialog-logout-icon {
-  border-radius: 2px;
+  border-radius: 0;
   width: 48px;
   height: 48px;
   background-size: contain; }
@@ -604,7 +604,7 @@ StScrollBar {
 
 .switcher-list .item-box {
   padding: 8px;
-  border-radius: 2px; }
+  border-radius: 0; }
 
 .switcher-list .item-box:outlined {
   padding: 6px;
@@ -714,17 +714,17 @@ StScrollBar {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: white; }
+    color: #eeeeec; }
     #panel .panel-button .app-menu-icon {
       width: 0;
       height: 0; }
     #panel .panel-button:hover {
-      color: white;
-      background-color: rgba(255, 255, 255, 0.2); }
+      color: #eeeeec;
+      background-color: rgba(255, 255, 255, 0.1); }
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
       background-color: #215d9c;
       box-shadow: none;
-      color: white; }
+      color: #ffffff; }
       #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
         icon-shadow: black 0 2px 2px; }
     #panel .panel-button .system-status-icon {
@@ -919,7 +919,7 @@ StScrollBar {
   background-color: #8e8e80; }
 
 .message {
-  border-radius: 2px; }
+  border-radius: 0; }
   .message:hover, .message:focus {
     background-color: #3f4649; }
 
