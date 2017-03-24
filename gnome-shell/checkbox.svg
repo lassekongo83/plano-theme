@@ -14,7 +14,7 @@
    height="22"
    id="svg3199"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r"
    sodipodi:docname="checkbox.svg">
   <defs
      id="defs3201">
@@ -155,15 +155,15 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
-     inkscape:cx="10.921799"
+     inkscape:cx="0.75713902"
      inkscape:cy="11.373291"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1600"
-     inkscape:window-height="794"
+     inkscape:window-height="828"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -199,9 +199,9 @@
      id="layer1"
      transform="translate(-342.5,-521.36218)">
     <g
-       id="g4829">
+       id="g851">
       <rect
-         ry="2.9999974"
+         ry="0"
          y="523.36218"
          x="342.5"
          height="20"
@@ -215,18 +215,18 @@
          height="18"
          x="343.5"
          y="524.36218"
-         ry="1.9999974" />
+         ry="0" />
       <rect
-         ry="0.99999738"
+         ry="0"
          y="525.36218"
          x="344.5"
          height="16"
          width="16"
          id="rect5771"
-         style="opacity:1;fill:#3399ff;fill-opacity:1;stroke:none;stroke-opacity:1" />
+         style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-opacity:1" />
       <path
          style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 357.3,528.36218 -6,7.5 0,0 -3.6,-3.75002 -1.2,0 0,1.25 4.8,5.00002 0,0 7.2,-8.75 0,-1.25 z"
+         d="m 357.3,528.36218 -6,7.5 v 0 l -3.6,-3.75002 h -1.2 v 1.25 l 4.8,5.00002 v 0 l 7.2,-8.75 v -1.25 z"
          id="path5819"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccccccccccc" />

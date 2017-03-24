@@ -14,7 +14,7 @@
    viewBox="0 0 52.000009 24.000004"
    id="svg4686"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r"
    sodipodi:docname="switch-off.svg">
   <defs
      id="defs4688" />
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="3.3071656"
-     inkscape:cy="4.9175172"
+     inkscape:cx="73.967312"
+     inkscape:cy="4.5603743"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,7 +36,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1600"
-     inkscape:window-height="821"
+     inkscape:window-height="828"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
@@ -58,9 +58,9 @@
      id="layer1"
      transform="translate(-507.85714,-508.93363)">
     <g
-       id="g5225">
+       id="g4492">
       <rect
-         style="opacity:1;fill:#57636e;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#000000;fill-opacity:0.627451;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect6973"
          width="52.000008"
          height="24.000004"
@@ -76,7 +76,7 @@
       <path
          inkscape:connector-curvature="0"
          id="path7035"
-         d="m 550.85712,524.93362 -2,0 -2,-2 -2,2 -2,0 0,-2 2,-2 -2,-2 0,-2.00001 2,0 2,2.00001 2,-2.00001 2,0 0,2.00001 -2,2 2,2 z"
+         d="m 550.85712,524.93362 h -2 l -2,-2 -2,2 h -2 v -2 l 2,-2 -2,-2 v -2.00001 h 2 l 2,2.00001 2,-2.00001 h 2 v 2.00001 l -2,2 2,2 z"
          style="fill:#ffffff;fill-opacity:1;stroke:none" />
     </g>
   </g>

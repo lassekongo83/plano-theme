@@ -152,9 +152,9 @@ StScrollBar {
     height: 22px;
     background-image: url("checkbox-off.svg");
   }
-  &:focus StBin { background-image: url("checkbox-off-focused.svg"); }
+  &:focus StBin { background-image: url("checkbox-off.svg"); }
   &:checked StBin { background-image: url("checkbox.svg"); }
-  &:focus:checked StBin { background-image: url("checkbox-focused.svg"); }
+  &:focus:checked StBin { background-image: url("checkbox.svg"); }
 }
 
 /* Switches */
