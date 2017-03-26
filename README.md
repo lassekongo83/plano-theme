@@ -1,7 +1,11 @@
 # Plano Theme
 
 Plano is a flat theme for GNOME and Xfce.
-It is currently in beta state. Things may change a lot before the final release.
+It is currently in beta state.
+
+![Plano theme](plano.png?raw=true)
+
+<sub>Screenshot Details: [Wallpaper](http://memovaslg.deviantart.com/art/Alone-353235628) | [Icons](https://github.com/snwh/paper-icon-theme) | GNOME shell extension: [Dash to panel](https://github.com/jderose9/dash-to-panel)</sub>
 
 ## Requirements
 
