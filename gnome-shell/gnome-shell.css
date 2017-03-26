@@ -523,7 +523,7 @@ StScrollBar {
       font-weight: bold; }
     .popup-menu .popup-menu-item.selected {
       background-color: #215d9c;
-      color: #eeeeec; }
+      color: #ffffff; }
     .popup-menu .popup-menu-item:active {
       background-color: #215d9c;
       color: #ffffff; }

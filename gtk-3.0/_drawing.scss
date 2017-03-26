@@ -304,20 +304,17 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else { box-shadow: none; }
 }
 
-@mixin headerbar_fill($c:$bg_color, $tc:lighten($c, 4%), $bc:transparentize($top_hilight, 0.7), $hc:transparentize($top_hilight, 0.4)) {
+@mixin headerbar_fill($c:$bg_color, $hc:transparentize($top_hilight, 0.4)) {
 //
 // headerbar fill
 //
 // $c:  bg color
-// $tc: top color
 // $hc: top highlight color
-// $bc: bottom highlight color
 //
   background-color: darken($c, 3%);
   box-shadow: inset 0 1px $hc; // top highlight
 }
 
-// FIXME: Do I need this annoying shit in this theme? I don't think so, but I'll leave it for now in case removal causes any trouble.
 @mixin overshoot($p, $t:normal, $c:$fg_color) {
 //
 // overshoot
