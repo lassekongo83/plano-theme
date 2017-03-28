@@ -10,7 +10,7 @@ style "button"
             function    = BOX
             state       = NORMAL
             file        = "assets/btn.png"
-            border      = { 4, 4, 4, 4 }
+            border      = { 1, 1, 1, 1 }
             stretch     = TRUE
         }
     image
@@ -20,7 +20,7 @@ style "button"
             shadow      = OUT
             state       = PRELIGHT
             file        = "assets/btn-hover.png"
-            border      = { 4, 4, 4, 4 }
+            border      = { 1, 1, 1, 1 }
             stretch     = TRUE
         }
     image
@@ -30,7 +30,7 @@ style "button"
             shadow      = IN
             state       = PRELIGHT
             file        = "assets/btn-active-hover.png"
-            border      = { 4, 4, 4, 4 }
+            border      = { 1, 1, 1, 1 }
             stretch     = TRUE
         }
     image
@@ -40,7 +40,7 @@ style "button"
             shadow      = IN
             state       = ACTIVE
             file        = "assets/btn-active.png"
-            border      = { 4, 4, 4, 4 }
+            border      = { 1, 1, 1, 1 }
             stretch     = TRUE
         }    
     image 
@@ -48,7 +48,7 @@ style "button"
             function    = BOX
             state       = INSENSITIVE
             file        = "assets/btn-insensitive.png"
-            border      = { 4, 4, 4, 4 }
+            border      = { 1, 1, 1, 1 }
             stretch     = TRUE
         }
     }
