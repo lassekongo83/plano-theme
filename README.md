@@ -40,7 +40,7 @@ Apply the theme in gnome-tweak-tool or dconf-editor. Xfce users can apply it in 
 
 #### Other installation options
 
-There are currently no other way to install the theme.
+ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/gtk-theme-plano-git/ (Not maintained by me!)
 
 ## Troubleshooting & Bug reporting
 
