@@ -2143,8 +2143,8 @@ switch {
     background-color: #2d3234; }
   switch slider {
     margin: -1px;
-    min-width: 44px;
-    min-height: 24px;
+    min-width: 36px;
+    min-height: 20px;
     border: 1px solid;
     border-radius: 0;
     color: #eeeeec;
