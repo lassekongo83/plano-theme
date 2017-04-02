@@ -30,7 +30,7 @@ style "button"
             shadow      = IN
             state       = PRELIGHT
             file        = "assets/btn-active-hover.png"
-            border      = { 1, 1, 1, 1 }
+            border      = { 3, 3, 3, 3 }
             stretch     = TRUE
         }
     image
@@ -40,7 +40,7 @@ style "button"
             shadow      = IN
             state       = ACTIVE
             file        = "assets/btn-active.png"
-            border      = { 1, 1, 1, 1 }
+            border      = { 3, 3, 3, 3 }
             stretch     = TRUE
         }    
     image 
