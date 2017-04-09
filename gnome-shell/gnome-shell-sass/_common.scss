@@ -774,7 +774,7 @@ StScrollBar {
   .panel-button .popup-menu-arrow { color: transparent; width: 0; } // Removes the litte arrow
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such
-    spacing: 4px;
+    spacing: 0px;
   }
 
   .panel-corner {
@@ -1129,6 +1129,7 @@ StScrollBar {
   #appMenu {
     spinner-image: url("process-working.svg");
     spacing: 4px;
+    padding-right: 8px;
 
     .label-shadow { color: transparent; }
   }

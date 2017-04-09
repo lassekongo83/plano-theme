@@ -700,7 +700,7 @@ StScrollBar {
     color: transparent;
     width: 0; }
   #panel #panelLeft, #panel #panelCenter {
-    spacing: 4px; }
+    spacing: 0px; }
   #panel .panel-corner {
     -panel-corner-radius: 0px;
     -panel-corner-background-color: black;
@@ -1005,7 +1005,8 @@ StScrollBar {
 
 #appMenu {
   spinner-image: url("process-working.svg");
-  spacing: 4px; }
+  spacing: 4px;
+  padding-right: 8px; }
   #appMenu .label-shadow {
     color: transparent; }
 
