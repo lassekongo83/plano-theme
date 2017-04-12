@@ -3510,7 +3510,7 @@ UnityDecoration {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: #273238;
+  background-color: #33393b;
   color: white;
   box-shadow: none; }
 
@@ -3533,20 +3533,20 @@ UnityPanelWidget,
   .xfce4-panel button:hover, #pulseaudio-button:hover, #indicator-button:hover, .gnome-panel-menu-bar button:hover:not(#tasklist-button),
   .mate-panel-menu-bar button:hover:not(#tasklist-button) {
     color: white;
-    background-color: #2f3d44; }
+    background-color: #3c4446; }
   .budgie-panel button:active,
   .xfce4-panel button:active, #pulseaudio-button:active, #indicator-button:active, .gnome-panel-menu-bar button:active:not(#tasklist-button),
   .mate-panel-menu-bar button:active:not(#tasklist-button), .budgie-panel button:checked,
   .xfce4-panel button:checked, #pulseaudio-button:checked, #indicator-button:checked, .gnome-panel-menu-bar button:checked:not(#tasklist-button),
   .mate-panel-menu-bar button:checked:not(#tasklist-button) {
     color: white;
-    background-color: #384750; }
+    background-color: #464e51; }
     .budgie-panel button:active:hover,
     .xfce4-panel button:active:hover, #pulseaudio-button:active:hover, #indicator-button:active:hover, .gnome-panel-menu-bar button:active:hover:not(#tasklist-button),
     .mate-panel-menu-bar button:active:hover:not(#tasklist-button), .budgie-panel button:checked:hover,
     .xfce4-panel button:checked:hover, #pulseaudio-button:checked:hover, #indicator-button:checked:hover, .gnome-panel-menu-bar button:checked:hover:not(#tasklist-button),
     .mate-panel-menu-bar button:checked:hover:not(#tasklist-button) {
-      background-color: #3a4a53; }
+      background-color: #485154; }
 
 /*
   XFCE GTK3 Styling
@@ -3567,7 +3567,7 @@ XfceHeading,
 
 .budgie-panel,
 .xfce4-panel {
-  background-color: #273238;
+  background-color: #33393b;
   color: white;
   font-style: normal;
   text-shadow: none;
@@ -3586,7 +3586,7 @@ XfceHeading,
 .gnome-panel-menu-bar, .gnome-panel-menu-bar menubar,
 .mate-panel-menu-bar,
 .mate-panel-menu-bar menubar {
-  background-color: #273238; }
+  background-color: #33393b; }
 .gnome-panel-menu-bar menubar,
 .gnome-panel-menu-bar #PanelApplet label,
 .gnome-panel-menu-bar #PanelApplet image,
@@ -3605,10 +3605,10 @@ XfceHeading,
 .gnome-panel-menu-bar .wnck-pager,
 .mate-panel-menu-bar .wnck-pager {
   color: gray;
-  background-color: #12171a; }
+  background-color: #1b1f20; }
   .gnome-panel-menu-bar .wnck-pager:hover,
   .mate-panel-menu-bar .wnck-pager:hover {
-    background-color: #313f47; }
+    background-color: #3f4649; }
   .gnome-panel-menu-bar .wnck-pager:selected,
   .mate-panel-menu-bar .wnck-pager:selected {
     color: #4a90d9;
@@ -3667,7 +3667,7 @@ menu .separator:not(label), .csd menu .separator:not(label),
 
 /* Lightdm styling */
 #panel_window {
-  background-color: #273238;
+  background-color: #33393b;
   color: white;
   box-shadow: none;
   border-style: none; }
