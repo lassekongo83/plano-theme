@@ -784,7 +784,7 @@ toolbar.inline-toolbar toolbutton {
   border-radius: 0;
 }
 
-%linked_vertical{
+%linked_vertical {
   @extend %linked_vertical_middle;
   &:first-child {
     border-radius: 0px;

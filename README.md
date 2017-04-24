@@ -1,7 +1,6 @@
 # Plano Theme
 
 Plano is a flat theme for GNOME and Xfce.
-It is currently in beta state.
 
 ![Plano theme](plano.png?raw=true)
 
