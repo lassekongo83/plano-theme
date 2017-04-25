@@ -67,10 +67,10 @@ $_panel_right: inset -3px 0 $_panel_shade;
 
   // clock and system menu area
   & > #panelRight {
-    background-color: $bg_color;
+    background-color: transparentize(black, 0.3);
     border-radius: 2px;
     margin: 6px;
-    box-shadow: 0 2px 2px $_panel_shade;
+    //box-shadow: 0 2px 2px $_panel_shade;
   }
   
   .showdesktop-button { padding-right: 8px; }

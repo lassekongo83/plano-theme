@@ -2024,10 +2024,9 @@ StScrollBar {
   background-image: url("d2p-activities-active.svg");
   background-position: center top; }
 #panel.dashtopanelMainPanel > #panelRight {
-  background-color: #33393b;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 2px;
-  margin: 6px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); }
+  margin: 6px; }
 #panel.dashtopanelMainPanel .showdesktop-button {
   padding-right: 8px; }
 
