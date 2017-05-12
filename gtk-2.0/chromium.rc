@@ -4,24 +4,24 @@
 
 style "chromium_toolbar_button" {
     engine "murrine" {
-        roundness = 3
+        roundness = 0
         textstyle = 0
     }
 }
 
 style "chrome-gtk-frame"
 {
-    ChromeGtkFrame::frame-color = @bg_color
-    ChromeGtkFrame::inactive-frame-color = @bg_color
+    ChromeGtkFrame::frame-color = @titlebar_color
+    ChromeGtkFrame::inactive-frame-color = @titlebar_color
 
     ChromeGtkFrame::frame-gradient-size = 16
-    ChromeGtkFrame::frame-gradient-color = @bg_color
+    ChromeGtkFrame::frame-gradient-color = @titlebar_color
 
-    ChromeGtkFrame::incognito-frame-color = @bg_color
-    ChromeGtkFrame::incognito-inactive-frame-color = @bg_color
+    ChromeGtkFrame::incognito-frame-color = @titlebar_color
+    ChromeGtkFrame::incognito-inactive-frame-color = @titlebar_color
 
     ChromeGtkFrame::incognito-frame-gradient-size = 16
-    ChromeGtkFrame::incognito-frame-gradient-color = @bg_color
+    ChromeGtkFrame::incognito-frame-gradient-color = @titlebar_color
 
     ChromeGtkFrame::scrollbar-trough-color = shade (0.912, @bg_color)
     ChromeGtkFrame::scrollbar-slider-prelight-color = shade (1.04, @bg_color)
