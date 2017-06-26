@@ -626,11 +626,11 @@ treeview.view header button:active { color: #2c2c2c; transition: none; }
 
 treeview.view button.dnd:active, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd, treeview.view header.button.dnd:active, treeview.view header.button.dnd:selected, treeview.view header.button.dnd:hover, treeview.view header.button.dnd { padding: 0 6px; transition: none; background-image: none; background-color: #4a90d9; color: #FFFFFF; border-radius: 0; border-style: none; box-shadow: inset 0 0 0 1px #FFFFFF; text-shadow: none; }
 
-treeview.view header button, treeview.view header button:hover, treeview.view header button:active { padding: 0 6px; border-radius: 0; background-image: none; text-shadow: none; border-style: none solid solid none; border-color: #ebeced; }
+treeview.view header button, treeview.view header button:hover, treeview.view header button:active, .table-header { padding: 0 6px; border-radius: 0; background-image: none; text-shadow: none; border-style: none solid solid none; border-color: #ebeced; }
 
-treeview.view header button:disabled { border-color: #ebeced; background-image: none; }
+treeview.view header button:disabled, .table-header:disabled { border-color: #ebeced; background-image: none; }
 
-treeview.view header button:last-child:backdrop, treeview.view header button:last-child { border-right-style: none; }
+treeview.view header button:last-child:backdrop, .table-header:last-child:backdrop, treeview.view header button:last-child, .table-header:last-child { border-right-style: none; }
 
 /********* Menus * */
 menubar, .menubar { -GtkWidget-window-dragging: true; padding: 0px; background-color: #e3e4e6; }
@@ -1628,6 +1628,10 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 .nautilus-window searchbar { border-top: 1px solid #c3c6c9; }
 
 .nautilus-window .searchbar-container { margin-top: -1px; }
+
+.table-header { padding: 4px; min-height: 24px; }
+
+.switcher-visible * > .frame { border-width: 0; }
 
 .nemo-window .nemo-places-sidebar.frame { border-width: 0; }
 
