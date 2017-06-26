@@ -1471,8 +1471,11 @@ stackswitcher button.text-button { min-width: 100px; }
 
 stackswitcher button.circular, stackswitcher button.text-button.circular { min-width: 32px; min-height: 32px; padding: 0; }
 
-/* Various fixes */
-.floating-bar { /* Makes the floating-bar less annoying */ background-color: #232729; font-size: smaller; }
+.floating-bar { background-color: #33393b; font-size: smaller; }
+
+.floating-bar.bottom.left { border-top: 1px solid #101112; border-right: 1px solid #101112; }
+
+.floating-bar.bottom.right { border-top: 1px solid #101112; border-left: 1px solid #101112; }
 
 /* GTK NAMED COLORS ---------------- use responsibly! */
 /*
