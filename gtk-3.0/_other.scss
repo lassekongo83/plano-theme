@@ -134,15 +134,6 @@ menu,
   .searchbar-container { margin-top: -1px; }
 }
 
-// Evolution - https://github.com/lassekongo83/zuki-themes/issues/119
-.table-header {
-  @extend %column_header_button;
-  padding: 4px;
-  min-height: 24px;
-}
-
-.switcher-visible *> .frame { border-width: 0; }
-
 // Without this nautilus iconview grabs the bg_color
 .nautilus-window notebook,
 .nautilus-window notebook > stack:not(:only-child) searchbar {
@@ -188,3 +179,12 @@ menu,
 .nemo-window .sidebar treeview .cell:selected {
   @extend %selected_items;
 }
+
+// Evolution - https://github.com/lassekongo83/zuki-themes/issues/119
+.table-header {
+  @extend %column_header_button;
+  padding: 4px;
+  min-height: 24px;
+}
+
+.switcher-visible *> .frame { border-width: 0; }

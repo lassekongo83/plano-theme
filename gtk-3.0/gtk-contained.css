@@ -1629,10 +1629,6 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .nautilus-window .searchbar-container { margin-top: -1px; }
 
-.table-header { padding: 4px; min-height: 24px; }
-
-.switcher-visible * > .frame { border-width: 0; }
-
 .nemo-window .nemo-places-sidebar.frame { border-width: 0; }
 
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
@@ -1642,3 +1638,7 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 .places-treeview:selected { -NemoPlacesTreeView-disk-full-bg-color: #FFFFFF; -NemoPlacesTreeView-disk-full-fg-color: #256ab1; }
 
 .nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar notebook { background-color: #f5f6f6; }
+
+.table-header { padding: 4px; min-height: 24px; }
+
+.switcher-visible * > .frame { border-width: 0; }
