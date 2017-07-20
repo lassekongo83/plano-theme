@@ -186,3 +186,12 @@ menu,
   padding: 4px 0 4px 0;
   min-height: 24px;
 }
+
+// Chromium - https://github.com/lassekongo83/plano-theme/issues/15 and 16
+window.background.chromium {
+  background-color: $bg_color;
+  
+  button { // tab borders
+    border-color: $borders_color;
+  }
+}

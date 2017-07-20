@@ -1623,3 +1623,7 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 .nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar notebook { background-color: #2b3032; }
 
 .table-header { padding: 4px 0 4px 0; min-height: 24px; }
+
+window.background.chromium { background-color: #33393b; }
+
+window.background.chromium button { border-color: #101112; }
