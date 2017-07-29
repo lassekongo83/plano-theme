@@ -1612,6 +1612,14 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .nautilus-window .searchbar-container { margin-top: -1px; }
 
+.disk-space-display { border-style: solid; border-width: 2px; }
+
+.disk-space-display.unknown { background-color: #040404; border-color: black; }
+
+.disk-space-display.used { background-color: #215d9c; border-color: #0f2b48; }
+
+.disk-space-display.free { background-color: #33393b; border-color: #040404; }
+
 .nemo-window .nemo-places-sidebar.frame { border-width: 0; }
 
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #79bbff; box-shadow: 0 0 0 2px rgba(33, 93, 156, 0), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }

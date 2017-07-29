@@ -1632,6 +1632,14 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .nautilus-window .searchbar-container { margin-top: -1px; }
 
+.disk-space-display { border-style: solid; border-width: 2px; }
+
+.disk-space-display.unknown { background-color: #b5b9bd; border-color: #9aa0a5; }
+
+.disk-space-display.used { background-color: #4a90d9; border-color: #215d9c; }
+
+.disk-space-display.free { background-color: #ebeced; border-color: #b5b9bd; }
+
 .nemo-window .nemo-places-sidebar.frame { border-width: 0; }
 
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15), inset 0 1px rgba(0, 0, 0, 0.02), inset 0 2px rgba(0, 0, 0, 0.02); }
