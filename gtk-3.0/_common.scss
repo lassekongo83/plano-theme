@@ -2319,7 +2319,7 @@ radio {
 
   menu menuitem & {
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
-    border: none;
+    border: 1px solid;
     box-shadow: none;
 
     &, &:hover, &:disabled, &:checked { //FIXME use button reset mixin
@@ -2330,7 +2330,7 @@ radio {
       box-shadow: none;
       -gtk-icon-shadow: none;
       color: inherit;
-      border-color: currentColor;
+      border-color: $borders_color; // FIXME: Make this look better.
     }
   }
 }
