@@ -8,7 +8,12 @@ Plano is a flat theme for GNOME and Xfce.
 
 ## Requirements
 
-* GNOME/GTK 3.24 (Earliest branch is for 3.22. That one should work with 3.20 as well.)
+* GNOME/GTK 3.26 (GTK 3.20 was considered to be the stable GTK3 release. The theme should work with any version of GNOME 3.20+. But to be safe use the same version of the theme as your version of GTK3.)
+
+[3.24 branch.](https://github.com/lassekongo83/plano-theme/tree/3.24)
+
+[3.22 branch.](https://github.com/lassekongo83/plano-theme/tree/3.22) (Debian Stable version. Bug fixes only.)
+
 * The murrine engine. This has different names depending on your distro.
   * `gtk2-engines-murrine` (Debian, Ubuntu)
   * `gtk-murrine-engine` (Fedora)
