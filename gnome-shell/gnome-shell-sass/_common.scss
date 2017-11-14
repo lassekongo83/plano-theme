@@ -718,7 +718,7 @@ StScrollBar {
 }
 
   .tile-preview-left.on-primary {
-    border-radius: $panel-corner-radius $panel-corner-radius 0 0;
+    border-radius: $panel-corner-radius 0 0 0;
   }
 
   .tile-preview-right.on-primary {
@@ -1152,6 +1152,8 @@ StScrollBar {
   background-size: 32px;
   height: 32px;
   width: 32px;
+  -shell-close-overlap: 16px;
+
   &:hover { background-image: url("close-window-hover.svg"); }
   &:active { background-image: url("close-window-hover.svg"); }
 }
@@ -1464,6 +1466,12 @@ StScrollBar {
     spacing: 11px;
     padding: 8px;
     border-radius: 0;
+
+    .placeholder {
+      background-image: url("dash-placeholder.svg");
+      background-size: contain;
+      height: 24px;
+    }
   }
   .workspace-thumbnail-indicator {
     border: 2px solid $selected_bg_color;
