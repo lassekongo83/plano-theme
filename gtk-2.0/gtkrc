@@ -297,37 +297,29 @@ style "menu"
 
 style "menubar"
 {
+    ythickness   = 4
     GtkMenuBar :: shadow-type = GTK_SHADOW_NONE
 
-    ythickness   = 4
     bg[NORMAL]   = @titlebar_color
     fg[NORMAL]   = @fg_color
-    fg[PRELIGHT] = @fg_color
-    fg[SELECTED] = @fg_color
+    fg[PRELIGHT] = @selected_fg_color
+    fg[SELECTED] = @selected_fg_color
 }
 
 style "menubar-menuitem" {
     xthickness     = 3
 
-    bg[PRELIGHT]   = @base_color
-    bg[SELECTED]   = @base_color
+    bg[PRELIGHT]   = @selected_bg_color
+    bg[SELECTED]   = @selected_bg_color
     fg[NORMAL]     = @fg_color
-    fg[PRELIGHT]   = @fg_color
-    fg[SELECTED]   = @fg_color
+    fg[PRELIGHT]   = @selected_fg_color
+    fg[SELECTED]   = @selected_fg_color
     text[NORMAL]   = @fg_color
-    text[PRELIGHT] = @fg_color
-    text[SELECTED] = @fg_color
+    text[PRELIGHT] = @selected_fg_color
+    text[SELECTED] = @selected_fg_color
 
-    engine "pixmap" {
-        image
-        {
-            function    = BOX
-            recolorable = TRUE
-            state       = PRELIGHT
-            file        = "assets/menubar-menuitem.png"
-            border      = { 0, 0, 0, 3 }
-            stretch     = TRUE
-        }
+	engine "murrine" {
+		  lightborder_shade = 1.0
     }
 }
 

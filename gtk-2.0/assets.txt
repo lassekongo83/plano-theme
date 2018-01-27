@@ -22,7 +22,6 @@ panel-btn-active
 panel-btn-active-hover
 panel-btn-hover
 resize-grip
-menubar-menuitem
 null
 base-color
 selected-color

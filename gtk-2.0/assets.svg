@@ -14,7 +14,7 @@
    viewBox="0 0 200 200"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.1 r"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="assets.svg">
   <defs
      id="defs4" />
@@ -32,10 +32,10 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1600"
-     inkscape:window-height="828"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1869"
+     inkscape:window-height="926"
+     inkscape:window-x="51"
+     inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -125,24 +125,6 @@
        x="72"
        y="857.36218"
        inkscape:label="#rect4323" />
-    <g
-       id="menubar-menuitem"
-       inkscape:label="#g4771">
-      <rect
-         y="872.36218"
-         x="21"
-         height="4"
-         width="1"
-         id="rect4335"
-         style="opacity:1;fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038" />
-      <rect
-         style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:1.22474492;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5098038"
-         id="rect4337"
-         width="1"
-         height="3"
-         x="21"
-         y="875.36218" />
-    </g>
     <g
        id="column-header"
        inkscape:label="#g4777">
