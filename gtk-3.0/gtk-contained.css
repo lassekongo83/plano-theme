@@ -1638,6 +1638,20 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 
 .xfce4-panel menu { -gtk-icon-effect: none; text-shadow: none; }
 
+.xfce4-panel menu button { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #a3a7ac; background-color: #f8f9f9; }
+
+.xfce4-panel menu button:hover { color: #2c2c2c; background-color: white; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); border-color: #4a90d9; }
+
+.xfce4-panel menu button:active, .xfce4-panel menu button:checked { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #a3a7ac; background-color: #d6d8da; box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); }
+
+.xfce4-panel menu button:active:hover, .xfce4-panel menu button:checked:hover { color: #2c2c2c; background-color: #cbcdd0; }
+
+.xfce4-panel menu button.default { color: #2c2c2c; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); border-color: #4a90d9; }
+
+.xfce4-panel menu button:disabled { color: #8c8c8d; border-color: #a3a7ac; background-color: #f3f4f4; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; }
+
+.xfce4-panel menu button:disabled > .label { color: inherit; }
+
 /* Mate/Gnome Flashback Panel */
 .gnome-panel-menu-bar, .gnome-panel-menu-bar menubar, .mate-panel-menu-bar, .mate-panel-menu-bar menubar { background-color: #33393b; }
 
