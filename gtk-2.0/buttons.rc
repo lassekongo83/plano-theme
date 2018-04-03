@@ -59,33 +59,10 @@ style "treeview-header"
     xthickness = 2
     ythickness = 0
 
-    bg[NORMAL] = shade (1.0, @base_color) # Color for treeview headers.
+    bg[NORMAL] = @base_color
 
-    engine "pixmap" {
-    image 
-        {
-            function = BOX
-            state    = NORMAL
-            file     = "assets/column-header.png"
-            border   = { 0, 0, 0, 1 }
-            stretch  = TRUE
-        }
-    image 
-        {
-            function = BOX
-            state    = PRELIGHT
-            file     = "assets/column-header-hover.png"
-            border   = { 0, 0, 0, 2 }
-            stretch  = TRUE
-        }
-    image 
-        {
-            function = BOX
-            state    = ACTIVE
-            file     = "assets/column-header-hover.png"
-            border   = { 0, 0, 0, 2 }
-            stretch  = TRUE
-        }
+    engine "murrine" {
+        listviewheaderstyle = 1
     }
 }
 
