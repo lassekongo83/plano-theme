@@ -795,22 +795,6 @@ toolbar.inline-toolbar toolbutton {
   border-right-style: none;
 }
 
-%linked {
-  @extend %linked_middle;
-
-  &:first-child {
-    border-right-style: none;
-  }
-
-  &:last-child {
-    border-right-style: solid;
-  }
-
-  &:only-child {
-    border-style: solid;
-  }
-}
-
 %linked_left {
   border-right-style: none;
 }
