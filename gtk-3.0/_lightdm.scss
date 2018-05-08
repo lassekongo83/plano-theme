@@ -3,6 +3,7 @@
 // the panel widget at the top
 #panel_window {
   background-color: $panel_bg;
+  background-image: none;
   color: $panel_fg;
   box-shadow: none;
   border-style: none;
@@ -11,6 +12,7 @@
   menubar,
   menubar > menuitem {
     color: $panel_fg;
+    background-color: $panel_bg;
     box-shadow: none;
     border-style: none;
     &:active, &:checked, &:hover { 
@@ -41,8 +43,6 @@
 #content_frame {
   padding-bottom: 14px;
   background-color: $bg_color;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
   border: solid transparentize(black, 0.9);
   border-width: 1px 1px 0 1px;
 }
@@ -61,8 +61,6 @@
   padding-bottom: 0px;
   border-style: none;
   background-color: darken($bg_color,5%);
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
   border: solid transparentize(black, 0.9);
   border-width: 1px;
 }
@@ -83,7 +81,6 @@
 // the user's avatar box
 #user_image {
   padding: 3px;
-  border-radius: 2px;
 }
 
 // the shutdown button
@@ -106,3 +103,4 @@
 #greeter_infobar {
   border-bottom-width: 0;
 }
+

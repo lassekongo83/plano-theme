@@ -1626,9 +1626,9 @@ UnityPanelWidget, .unity-panel { background-color: #33393b; color: white; box-sh
 .unity-panel.menubar.menuitem:hover, .unity-panel.menubar .menuitem *:hover { border-radius: 0; color: #ffffff; background-color: #4a90d9; border-bottom: none; }
 
 /* Lightdm styling */
-#panel_window { background-color: #33393b; color: white; box-shadow: none; border-style: none; }
+#panel_window { background-color: #33393b; background-image: none; color: white; box-shadow: none; border-style: none; }
 
-#panel_window menubar, #panel_window menubar > menuitem { color: white; box-shadow: none; border-style: none; }
+#panel_window menubar, #panel_window menubar > menuitem { color: white; background-color: #33393b; box-shadow: none; border-style: none; }
 
 #panel_window menubar:active, #panel_window menubar:checked, #panel_window menubar:hover, #panel_window menubar > menuitem:active, #panel_window menubar > menuitem:checked, #panel_window menubar > menuitem:hover { border-style: none; background-color: rgba(255, 255, 255, 0.2); }
 
@@ -1640,7 +1640,7 @@ UnityPanelWidget, .unity-panel { background-color: #33393b; color: white; box-sh
 
 #login_window, #shutdown_dialog, #restart_dialog { font-style: normal; border-style: none; background-color: #ebeced; color: #2c2c2c; }
 
-#content_frame { padding-bottom: 14px; background-color: #ebeced; border-top-left-radius: 3px; border-top-right-radius: 3px; border: solid rgba(0, 0, 0, 0.1); border-width: 1px 1px 0 1px; }
+#content_frame { padding-bottom: 14px; background-color: #ebeced; border: solid rgba(0, 0, 0, 0.1); border-width: 1px 1px 0 1px; }
 
 #content_frame button { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #a3a7ac; background-color: #f8f9f9; }
 
@@ -1652,7 +1652,7 @@ UnityPanelWidget, .unity-panel { background-color: #33393b; color: white; box-sh
 
 #content_frame button:disabled > .label { color: inherit; }
 
-#buttonbox_frame { padding-top: 20px; padding-bottom: 0px; border-style: none; background-color: #dedfe1; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; border: solid rgba(0, 0, 0, 0.1); border-width: 1px; }
+#buttonbox_frame { padding-top: 20px; padding-bottom: 0px; border-style: none; background-color: #dedfe1; border: solid rgba(0, 0, 0, 0.1); border-width: 1px; }
 
 #buttonbox_frame button { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #a3a7ac; background-color: #f8f9f9; }
 
@@ -1668,7 +1668,7 @@ UnityPanelWidget, .unity-panel { background-color: #33393b; color: white; box-sh
 
 #login_window #user_combobox menu { font-style: normal; }
 
-#user_image { padding: 3px; border-radius: 2px; }
+#user_image { padding: 3px; }
 
 #shutdown_button.button { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #c71612; background-color: #f16a67; }
 
