@@ -131,7 +131,7 @@ menu,
 .caja-side-pane .frame { border-width: 1px 0 0; }
 .caja-notebook .frame { border-width: 0 0 1px; }
 
-// Nautilus and nemo
+// Desktop icons FIXME: Remove legacy nautilus stuff after Ubuntu 18.04 LTS ends support
 .nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
   color: white;
   text-shadow: 1px 1px 2px transparentize(black, 0.2);
@@ -139,18 +139,14 @@ menu,
 
 .nautilus-window {
   // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
-
   searchbar { border-top: 1px solid $borders_color; }
   .searchbar-container { margin-top: -1px; }
+
+  // Without this nautilus iconview grabs the bg_color
+  .nautilus-window notebook,
+  .nautilus-window notebook > stack:not(:only-child) searchbar { @extend %view; }
 }
 
-// Without this nautilus iconview grabs the bg_color
-.nautilus-window notebook,
-.nautilus-window notebook > stack:not(:only-child) searchbar {
-  @extend %view;
-}
-
-// Shouldn't be needed
 .disk-space-display {
   border-style: solid;
   border-width: 2px;
@@ -179,10 +175,7 @@ menu,
 // Chromium - https://github.com/lassekongo83/plano-theme/issues/15 and 16
 window.background.chromium {
   background-color: $bg_color;
-  
-  button { // tab borders
-    border-color: $borders_color;
-  }
+  button { border-color: $borders_color; } // tab borders
 }
 
 // Thunar
