@@ -189,3 +189,16 @@ window.background.chromium {
     }
   }
 }
+
+// Nemo
+.nemo-window {
+  // Rename entry
+  .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 0;
+
+    @include entry(focus);
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+  }
+}
