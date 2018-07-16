@@ -15,12 +15,7 @@ radio-checked
 radio-checked-hover
 radio-unchecked-insensitive
 radio-checked-insensitive
-column-header
-column-header-hover
 handle
-panel-btn-active
-panel-btn-active-hover
-panel-btn-hover
 resize-grip
 null
 base-color
