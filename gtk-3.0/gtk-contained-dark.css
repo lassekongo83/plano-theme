@@ -1629,11 +1629,9 @@ UnityPanelWidget, .unity-panel { background-color: #33393b; color: white; box-sh
 
 .budgie-panel button, .xfce4-panel button, #pulseaudio-button, #indicator-button, .gnome-panel-menu-bar button:not(#tasklist-button), .mate-panel-menu-bar button:not(#tasklist-button) { color: rgba(255, 255, 255, 0.9); border-radius: 0; border: none; background-color: transparent; box-shadow: none; }
 
-.budgie-panel button:hover, .xfce4-panel button:hover, #pulseaudio-button:hover, #indicator-button:hover, .gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button) { color: white; background-color: #3c4446; }
+.budgie-panel button:hover, .xfce4-panel button:hover, #pulseaudio-button:hover, #indicator-button:hover, .gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button) { color: white; background-color: rgba(255, 255, 255, 0.1); }
 
-.budgie-panel button:active, .xfce4-panel button:active, #pulseaudio-button:active, #indicator-button:active, .gnome-panel-menu-bar button:active:not(#tasklist-button), .mate-panel-menu-bar button:active:not(#tasklist-button), .budgie-panel button:checked, .xfce4-panel button:checked, #pulseaudio-button:checked, #indicator-button:checked, .gnome-panel-menu-bar button:checked:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button) { color: white; background-color: #464e51; }
-
-.budgie-panel button:active:hover, .xfce4-panel button:active:hover, #pulseaudio-button:active:hover, #indicator-button:active:hover, .gnome-panel-menu-bar button:active:hover:not(#tasklist-button), .mate-panel-menu-bar button:active:hover:not(#tasklist-button), .budgie-panel button:checked:hover, .xfce4-panel button:checked:hover, #pulseaudio-button:checked:hover, #indicator-button:checked:hover, .gnome-panel-menu-bar button:checked:hover:not(#tasklist-button), .mate-panel-menu-bar button:checked:hover:not(#tasklist-button) { background-color: #485154; }
+.budgie-panel button:active, .xfce4-panel button:active, #pulseaudio-button:active, #indicator-button:active, .gnome-panel-menu-bar button:active:not(#tasklist-button), .mate-panel-menu-bar button:active:not(#tasklist-button), .budgie-panel button:checked, .xfce4-panel button:checked, #pulseaudio-button:checked, #indicator-button:checked, .gnome-panel-menu-bar button:checked:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button) { color: white; background-color: #215d9c; }
 
 /* XFCE GTK3 Styling Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder. */
 CatfishWindow .pane-separator { background-color: #0c0d0d; }

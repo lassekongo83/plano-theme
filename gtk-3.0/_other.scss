@@ -8,12 +8,11 @@
 
   &:hover {
     color: $panel_fg;
-    background-color: lighten($panel_bg, 4%);
+    background-color: transparentize(white, 0.9);
   }
   &:active, &:checked {
     color: $panel_fg;
-    background-color: lighten($panel_bg, 8%);
-    &:hover { background-color: lighten($panel_bg, 9%); }
+    background-color: $selected_bg_color;
   }
 }
 
