@@ -994,16 +994,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #LookingGlassPropertyInspector { background: rgba(0, 0, 0, 0.8); border: 2px solid grey; border-radius: 0; padding: 6px; }
 
-#panel.dashtopanelMainPanel, #panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
+#panel.dashtopanelMainPanel { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
 
 /* Dash to Panel extension styling */
 #panel.dashtopanelMainPanel.dashtopanelBottom { box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); }
-
 #panel.dashtopanelMainPanel.dashtopanelTop { box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
-
-#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon { box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
 
 #panel.dashtopanelMainPanel .panel-button { text-shadow: black 0 1px 1px; }
 
@@ -1037,7 +1033,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel .show-apps:selected .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center top; }
 
-#panel.dashtopanelMainPanel > #panelRight { background-color: rgba(0, 0, 0, 0.7); border-radius: 2px; margin: 6px; }
+#panel.dashtopanelMainPanel > #panelRight { background-color: rgba(0, 0, 0, 0.7); border-radius: 2px; margin: 3px; }
 
 #panel.dashtopanelMainPanel .showdesktop-button { padding-right: 8px; }
 

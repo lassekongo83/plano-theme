@@ -22,24 +22,8 @@ $_panel_right: inset -3px 0 $_panel_shade;
 #panel.dashtopanelMainPanel {
   @extend %panel_bg;
 
-  &.dashtopanelBottom {
-    box-shadow: $_panel_bottom;
-
-    .app-well-app:hover .overview-icon {
-      box-shadow: $_hover_effect_bottom;
-      @extend %panel_bg;
-    }
-    // .app-well-app.focused .overview-icon {} // Let the extension settings handle this one
-  }
-
-  &.dashtopanelTop {
-    box-shadow: $_panel_top;
-
-    .app-well-app:hover .overview-icon {
-      box-shadow: $_hover_effect_top;
-      @extend %panel_bg;
-    }
-  }
+  &.dashtopanelBottom { box-shadow: $_panel_bottom; }
+  &.dashtopanelTop { box-shadow: $_panel_top; }
 
   .panel-button {
     &:hover { background-color: transparentize(white,0.9); }
@@ -69,8 +53,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
   & > #panelRight {
     background-color: transparentize(black, 0.3);
     border-radius: 2px;
-    margin: 6px;
-    //box-shadow: 0 2px 2px $_panel_shade;
+    margin: 3px;
   }
   
   .showdesktop-button { padding-right: 8px; }
