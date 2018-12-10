@@ -36,7 +36,7 @@ Make a folder in `~/.themes` or `/usr/share/themes` called `Plano` and extract t
 
 etc.
 
-Apply the theme in gnome-tweak-tool or dconf-editor. Xfce users can apply it in `Settings > Appearance` and `Settings > Window manager`. If you wish to use the GNOME shell theme make sure the `User themes` extension is activated in gnome-tweak-tool.
+Apply the theme in `gnome-tweaks` or `dconf-editor`. Xfce users can apply it in `Settings > Appearance` and `Settings > Window manager`. If you wish to use the GNOME shell theme make sure the `User themes` extension is activated in `gnome-tweaks`.
 
 #### Other installation options
 
