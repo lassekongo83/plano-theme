@@ -52,6 +52,10 @@ $drop_target_color: #4e9a06;
 //headerbar color
 $header_bg: if($dark_header == 'true', $dark_bg_color, $bg_color);
 
+// Unity and other GTK3 panels
+$panel_bg: $dark_bg_color;
+$panel_fg: $dark_fg_color;
+
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);
