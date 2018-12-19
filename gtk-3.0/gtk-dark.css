@@ -1665,13 +1665,11 @@ button.emoji-section:checked label { opacity: 1; }
 
 #greeter_infobar { border-bottom-width: 0; }
 
-.budgie-panel button, .xfce4-panel button, #pulseaudio-button, #indicator-button, .gnome-panel-menu-bar button:not(#tasklist-button), .mate-panel-menu-bar button:not(#tasklist-button) { color: rgba(238, 238, 236, 0.9); border-radius: 0; border: none; background-color: transparent; box-shadow: none; transition-duration: 100ms; }
+.budgie-panel button, .xfce4-panel button, #pulseaudio-button, #indicator-button, .gnome-panel-menu-bar button:not(#tasklist-button), .mate-panel-menu-bar button:not(#tasklist-button) { color: rgba(238, 238, 236, 0.9); border-radius: 0; border: none; background-color: transparent; box-shadow: none; }
 
-.budgie-panel button:hover, .xfce4-panel button:hover, #pulseaudio-button:hover, #indicator-button:hover, .gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button) { color: #eeeeec; background-color: transparent; box-shadow: inset 0 -2px 0px rgba(255, 255, 255, 0.6); }
+.budgie-panel button:hover, .xfce4-panel button:hover, #pulseaudio-button:hover, #indicator-button:hover, .gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button) { color: #eeeeec; background-color: rgba(255, 255, 255, 0.1); }
 
-.budgie-panel button:active, .xfce4-panel button:active, #pulseaudio-button:active, #indicator-button:active, .gnome-panel-menu-bar button:active:not(#tasklist-button), .mate-panel-menu-bar button:active:not(#tasklist-button), .budgie-panel button:checked, .xfce4-panel button:checked, #pulseaudio-button:checked, #indicator-button:checked, .gnome-panel-menu-bar button:checked:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button) { color: #eeeeec; background-color: rgba(255, 255, 255, 0.2); box-shadow: inset 0 -2px 0px #4a90d9; }
-
-.budgie-panel button:active:hover, .xfce4-panel button:active:hover, #pulseaudio-button:active:hover, #indicator-button:active:hover, .gnome-panel-menu-bar button:active:hover:not(#tasklist-button), .mate-panel-menu-bar button:active:hover:not(#tasklist-button), .budgie-panel button:checked:hover, .xfce4-panel button:checked:hover, #pulseaudio-button:checked:hover, #indicator-button:checked:hover, .gnome-panel-menu-bar button:checked:hover:not(#tasklist-button), .mate-panel-menu-bar button:checked:hover:not(#tasklist-button) { background-color: #3986d5; }
+.budgie-panel button:active, .xfce4-panel button:active, #pulseaudio-button:active, #indicator-button:active, .gnome-panel-menu-bar button:active:not(#tasklist-button), .mate-panel-menu-bar button:active:not(#tasklist-button), .budgie-panel button:checked, .xfce4-panel button:checked, #pulseaudio-button:checked, #indicator-button:checked, .gnome-panel-menu-bar button:checked:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button) { color: #eeeeec; background-color: #4a90d9; }
 
 CatfishWindow .pane-separator { background-color: #0c0d0d; }
 
