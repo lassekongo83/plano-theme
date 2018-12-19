@@ -1,0 +1,21 @@
+// sizes
+$titlebutton_size: 20px; // Titlebuttons default size
+
+// radius
+$br_b: 0px; // Default button and entry radius
+$br_w: 0px; // Rounded corners on decorations
+$circular_radius: 99px;
+
+// duration
+$shortest_duration: 100ms;
+$shorter_duration: 150ms;
+$longer_duration: 250ms;
+
+// timing function
+$deceleration_curve: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+// button shadows
+$shadow_normal: 0 1px 2px transparentize(black, 0.7), 0 1px 1px transparentize(black, 0.84);
+$shadow_hover: 0 0 0 2px transparentize($selected_bg_color, 0.85);
+$shadow_active: inset 0 0 0 2px transparentize(black, 0.92);
+$shadow_focus: $shadow_hover;

@@ -1,26 +1,28 @@
 // Global panel button styles
 %panelbutton {
-  color: transparentize($panel_fg, 0.1);
+  color: transparentize($dark_fg_color, 0.1);
   border-radius: 0;
   border: none;
   background-color: transparent;
   box-shadow: none;
+  transition-duration: $shortest_duration;
 
   &:hover {
-    color: $panel_fg;
-    background-color: transparentize(white, 0.9);
+    color: $dark_fg_color;
+    background-color: transparent;
+    box-shadow: inset 0 -2px 0px transparentize(white, 0.4);
   }
   &:active, &:checked {
-    color: $panel_fg;
-    background-color: $selected_bg_color;
+    color: $dark_fg_color;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 -2px 0px $selected_bg_color;
+    &:hover { background-color: darken($selected_bg_color, 4%); }
   }
 }
 
-/*
-  XFCE GTK3 Styling
-  Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
-*/
-
+//
+// XFCE GTK3 Styling
+//
 CatfishWindow .pane-separator {
   background-color: darken($base_color, 10%);
 }
@@ -38,8 +40,8 @@ XfceHeading,
 
 .budgie-panel,
 .xfce4-panel {
-  background-color: $panel_bg;
-  color: $panel_fg;
+  background-color: $dark_bg_color;
+  color: $dark_fg_color;
   font-style: normal;
   
   text-shadow: none;
@@ -72,17 +74,17 @@ XfceHeading,
   @extend %panelbutton;
 }
 
-/*
-  Mate/Gnome Flashback Panel
-*/
+//
+// Mate/Gnome Flashback Panel
+//
 .gnome-panel-menu-bar,
 .mate-panel-menu-bar {
 
-  &, menubar { background-color: $panel_bg; }
+  &, menubar { background-color: $dark_bg_color; }
 
   menubar,
   #PanelApplet label,
-  #PanelApplet image { color: $panel_fg; }
+  #PanelApplet image { color: $dark_fg_color; }
 
   // Panel buttons
   button:not(#tasklist-button) {
@@ -95,11 +97,11 @@ XfceHeading,
   }
 
   .wnck-pager {
-    color: mix($panel_fg, black, 50%);
-    background-color: darken($panel_bg, 10%);
+    color: mix($dark_fg_color, black, 50%);
+    background-color: darken($dark_bg_color, 10%);
 
     &:hover {
-      background-color: lighten($panel_bg, 5%);
+      background-color: lighten($dark_bg_color, 5%);
     }
 
     &:selected {
@@ -115,14 +117,6 @@ XfceHeading,
 }
 
 // Application specific fixes should be avoided as much as possible! In some cases they are unavoidable.
-
-// Firefox
-menu,
-.menu,
-.context-menu {
-  .separator:not(label),
-  .csd & .separator:not(label) { color: darken($menu_color, 5%); }
-}
 
 // Caja
 .caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
@@ -174,22 +168,28 @@ menu,
   min-height: 24px;
 }
 
-// Chromium - https://github.com/lassekongo83/plano-theme/issues/15 and 16
+// Chromium
 window.background.chromium {
   background-color: $bg_color;
+
   button { border-color: $borders_color; } // tab borders
+
+  // https://github.com/lassekongo83/amber-theme/issues/5
+  menubar { color: if($dark_header=='true', $dark_fg_color, $fg_color); }
 }
 
 // Thunar
 .thunar {
   .standard-view { border-width: 0; }
   .sidebar .view {
-    background-color: mix($bg_color, $base_color, 50%);
+    background-color: $secondary_bg_color;
     &:selected {
       background-color: $selected_bg_color;
       &:backdrop { background-color: transparentize($selected_bg_color, 0.4); }
     }
   }
+
+  toolbar { border-bottom: 1px solid $borders_color; }
 }
 
 // Nemo
@@ -197,10 +197,61 @@ window.background.chromium {
   // Rename entry
   .nemo-window-pane widget.entry {
     border: 1px solid;
-    border-radius: 0;
+    border-radius: $br_b;
 
     @include entry(focus);
 
     &:selected { &:focus, & { @extend %selected_items; }}
   }
+}
+
+// Gedit
+.gedit-search-slider {
+  button, button:hover {
+    box-shadow: none;
+    border: 1px solid $borders_color;
+    &:last-child { border-left: 0; }
+  }
+}
+
+// Firefox
+#MozillaGtkWidget.background  {
+  headerbar.titlebar {
+    //Remove the round corners until firefox fixed the white border bleed at the top edges
+    border-radius: 0;
+
+    button.titlebutton { @extend %titlebutton; }
+  }
+
+  > menu, .menu { border: none; } // Removed ugly menu borders
+  > menu > menuitem { border-radius: 0; } // Removed rounded menu corners
+  > menu, .menu, .context-menu {
+      .separator:not(label),
+      .csd & .separator:not(label) { color: darken($dark_bg_color, 5%); }    
+    }
+
+  // box-shadows doesn't work, so a border color is needed on the entries and buttons instead
+  entry, button {
+    border-color: $borders_color;
+    &:focus { border-color: $selected_bg_color; }
+  }
+}
+
+normal-button {
+  @include button(normal);
+  &:hover { @include button(hover); }
+  &:active { @include button(active) }
+  &:disabled { @include button(insensitive); }
+}
+
+// Tweak tool
+list.tweak-categories separator {
+  // hide sidebar separators
+  // make the sidebar look like a normal sidebar
+  background: transparent;
+  border-color: transparent;
+}
+
+.tweak-categories {
+  background-color: mix($bg_color, $base_color, 50%);
 }
