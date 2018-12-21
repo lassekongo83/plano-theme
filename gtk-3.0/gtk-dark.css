@@ -1757,8 +1757,6 @@ window.background.chromium menubar { color: #eeeeec; }
 
 #MozillaGtkWidget.background headerbar.titlebar { border-radius: 0; }
 
-#MozillaGtkWidget.background > menu, #MozillaGtkWidget.background .menu { border: none; }
-
 #MozillaGtkWidget.background > menu > menuitem { border-radius: 0; }
 
 #MozillaGtkWidget.background > menu .separator:not(label), .csd #MozillaGtkWidget.background > menu .separator:not(label), #MozillaGtkWidget.background .menu .separator:not(label), .csd #MozillaGtkWidget.background .menu .separator:not(label), #MozillaGtkWidget.background .context-menu .separator:not(label), .csd #MozillaGtkWidget.background .context-menu .separator:not(label) { color: #272c2d; }

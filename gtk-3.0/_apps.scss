@@ -219,7 +219,6 @@ window.background.chromium {
     button.titlebutton { @extend %titlebutton; }
   }
 
-  > menu, .menu { border: none; } // Removed ugly menu borders
   > menu > menuitem { border-radius: 0; } // Removed rounded menu corners
   > menu, .menu, .context-menu {
       .separator:not(label),
