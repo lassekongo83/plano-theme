@@ -484,6 +484,7 @@ button {
     }
 
     &:hover {
+      transition: box-shadow $shortest_duration $deceleration_curve;
       @include button(hover);
       -gtk-icon-effect: highlight;
     }
@@ -1328,30 +1329,25 @@ headerbar {
 
       &.suggested-action {
         @include button(normal);
-
         border-color: $selected_borders_color;
 
         &:hover {
           @include button(hover);
-
           border-color: $selected_borders_color;
         }
 
         &:active {
           @include button(active);
-
           border-color: $selected_borders_color;
         }
 
         &:disabled {
           @include button(insensitive);
-
           border-color: $selected_borders_color;
         }
 
         &:backdrop:disabled {
           @include button(backdrop-insensitive);
-
           border-color: $selected_borders_color;
         }
       }
@@ -1965,59 +1961,8 @@ notebook {
   padding: 0;
 
   > header {
-    padding: 0px;
-    border-color: $borders_color;
-    border-width: 0px;
-    background-color: darken($bg_color, 10%);
-    box-shadow: none;
-
-    &.top, &.bottom { padding-left: 0; padding-right: 0; }
-    &.left, &.right { padding-top: 0; padding-bottom: 0; }
-
-    tabs { margin: 0px; }
-
-    @each $_pos in (top), (right), (bottom), (left) {
-    
-      &.#{$_pos} {
-        > tabs {
-          > tab {
-            &:hover {
-              @if $_pos==top { box-shadow: inset 0 -3px $borders_color; }
-              @else if $_pos==bottom { box-shadow: inset 0 3px $borders_color; }
-              @else if $_pos==left { box-shadow: inset -3px 0 $borders_color; }
-              @else if $_pos==right { box-shadow: inset 3px 0 $borders_color; }         
-            }
-            &:checked, &:checked:hover {
-              background-color: transparent;
-              border-width: 0;
-              @if $_pos==top { box-shadow: inset 0 -3px $selected_bg_color; }
-              @else if $_pos==bottom { box-shadow: inset 0 3px $selected_bg_color; }
-              @else if $_pos==left { box-shadow: inset -3px 0 $selected_bg_color; }
-              @else if $_pos==right { box-shadow: inset 3px 0 $selected_bg_color; }
-            }
-          }
-        }
-      }
-
-      &.#{$_pos} > tabs > arrow {
-        @if $_pos==top { 
-          @extend %notebook_vert_arrows;
-          border-top-style: none;
-        }
-        @else if $_pos==bottom {
-          @extend %notebook_vert_arrows;
-          border-bottom-style: none;      
-        }
-        @else if $_pos==left {
-          @extend %notebook_horz_arrows;
-          border-left-style: none;
-        }
-        @else if $_pos==right {
-          @extend %notebook_horz_arrows;
-          border-right-style: none;
-        }
-      }
-    }
+    // Style common tabs in _drawing.scss
+    @include tabs;
 
     @at-root %notebook_vert_arrows {
       margin-left: -5px;
@@ -2026,7 +1971,6 @@ notebook {
       padding-right: 4px;
 
       &.down { -gtk-icon-source: -gtk-icontheme('pan-start-symbolic'); }
-
       &.up { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); }
     }
 
@@ -2037,13 +1981,11 @@ notebook {
       padding-bottom: 4px;
 
       &.down { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
-
       &.up { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
     }
 
     > tabs > arrow {
       @extend %button_basic;
-
       @extend %button_basic.flat;
 
       min-height: 16px;
@@ -2176,6 +2118,7 @@ notebook {
 scrollbar {
   $_slider_min_length: 40px;
   $_scrollbar_size: 14px;
+  $_overlay_size: 6px;
 
   @at-root * {
     -GtkScrollbar-has-backward-stepper: true;
@@ -2220,8 +2163,8 @@ scrollbar {
 
       slider {
         margin: 0;
-        min-width: $_scrollbar_size;
-        min-height: $_scrollbar_size;
+        min-width: $_overlay_size;
+        min-height: $_overlay_size;
         background-color: $fg_color;
         border: 0px solid if($variant == 'light', white, black);
       }
@@ -2235,7 +2178,7 @@ scrollbar {
 
       &.horizontal {
         slider {
-          margin: 0 0px;
+          margin: 0;
           min-width: $_slider_min_length;
         }
 
@@ -2247,7 +2190,7 @@ scrollbar {
 
       &.vertical {
         slider {
-          margin: 0px 0;
+          margin: 0;
           min-height: $_slider_min_length;
         }
 

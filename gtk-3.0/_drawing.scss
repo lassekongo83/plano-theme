@@ -568,81 +568,36 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
 
 // Tabs
 @mixin tabs(
-  $th: null,
-  $bh: null,
-  $ba: null,
-  $sa: transparentize(black, 0.98),
-  $sb: transparentize(black, 0.96)) {
-  //
-  // Tabs
-  //
-  // $po = position
-  // $th = tab header box shadow
-  // $bh = hovered tab box shadow
-  // $ba = active tab box shadow
-  // $sa = header large inner shadow
-  // $sb = header small inner shadow
-  //
+  $c: $bg_color,          // bg color
+  $bc: $borders_color,    // border color
+  $sc: $selected_bg_color // selected color
+  ) {
 
   padding: 0;
-  border-color: $borders_color;
+  border-color: $bc;
   border-width: 0;
-  background-color: darken($bg_color, 5%);
+  background-color: darken($c, 10%);
+
+  tabs { margin: 0px; }
 
   @each $po in (top), (right), (bottom), (left) {
-    @if $po == top {
-      padding-top: 1px;
-      $th: inset 0 -1px $borders_color,
-           inset 0 2px $sa,
-           inset 0 1px $sb;
-      $bh: inset 0 -3px $borders_color;
-      $ba: inset 0 2px $selected_bg_color,
-           inset 1px 0 $borders_color,
-           inset -1px 0 $borders_color;
-    }
-    @else if $po == left {
-      padding-left: 1px;
-      $th: inset -1px 0 $borders_color,
-           inset 2px 0 $sa,
-           inset 1px 0 $sb;
-      $bh: inset -3px 0 $borders_color;
-      $ba: inset 0 1px $borders_color,
-           inset 0 -1px $borders_color,
-           inset 2px 0 $selected_bg_color;
-    }
-    @else if $po == right {
-      padding-right: 1px;
-      $th: inset 1px 0 $borders_color,
-           inset -2px 0 $sa,
-           inset -1px 0 $sb;
-      $bh: inset 3px 0 $borders_color;
-      $ba: inset 0 1px $borders_color,
-           inset 0 -1px $borders_color,
-           inset -2px 0 $selected_bg_color;
-    }
-    @else if $po == bottom {
-      padding-bottom: 1px;
-      $th: inset 0 1px $borders_color,
-           inset 0 -2px $sa,
-           inset 0 -1px $sb;
-      $bh: inset 0 3px $borders_color;
-      $ba: inset 0 -2px $selected_bg_color,
-           inset 1px 0 $borders_color,
-           inset -1px 0 $borders_color;
-    }
 
-    &.#{$po} {
-       box-shadow: $th;
-    }
-    
     &.#{$po} {
       > tabs {
         > tab {
-          &:hover { box-shadow: $bh; }
+          &:hover {
+            @if $po==top { box-shadow: inset 0 -3px $bc; }
+            @else if $po==bottom { box-shadow: inset 0 3px $bc; }
+            @else if $po==left { box-shadow: inset -3px 0 $bc; }
+            @else if $po==right { box-shadow: inset 3px 0 $bc; }   
+          }
           &:checked, &:checked:hover {
-            background-color: $secondary_bg_color;
+            background-color: transparent;
             border-width: 0;
-            box-shadow: $ba;
+            @if $po==top { box-shadow: inset 0 -3px $sc; }
+            @else if $po==bottom { box-shadow: inset 0 3px $sc; }
+            @else if $po==left { box-shadow: inset -3px 0 $sc; }
+            @else if $po==right { box-shadow: inset 3px 0 $sc; }
           }
         }
       }

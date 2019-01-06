@@ -179,7 +179,7 @@ notebook > header > tabs > arrow, button.sidebar-button, button.flat { border-co
 
 notebook > header > tabs > arrow.default, button.default { color: #2c2c2c; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); }
 
-notebook > header > tabs > arrow:hover, button:hover { color: #2c2c2c; background-color: white; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); -gtk-icon-effect: highlight; }
+notebook > header > tabs > arrow:hover, button:hover { transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); color: #2c2c2c; background-color: white; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); -gtk-icon-effect: highlight; }
 
 notebook > header > tabs > arrow:focus, button:focus { color: #2c2c2c; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); }
 
@@ -735,11 +735,7 @@ popover.background list separator { margin: 0px; }
 
 notebook { padding: 0; }
 
-notebook > header { padding: 0px; border-color: #c3c6c9; border-width: 0px; background-color: #d0d3d5; box-shadow: none; }
-
-notebook > header.top, notebook > header.bottom { padding-left: 0; padding-right: 0; }
-
-notebook > header.left, notebook > header.right { padding-top: 0; padding-bottom: 0; }
+notebook > header { padding: 0; border-color: #c3c6c9; border-width: 0; background-color: #d0d3d5; }
 
 notebook > header tabs { margin: 0px; }
 
@@ -747,25 +743,33 @@ notebook > header.top > tabs > tab:hover { box-shadow: inset 0 -3px #c3c6c9; }
 
 notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:checked:hover { background-color: transparent; border-width: 0; box-shadow: inset 0 -3px #4a90d9; }
 
-notebook > header.top > tabs > arrow { border-top-style: none; }
+notebook > header.top > tabs > arrow { border-style: none; }
+
+notebook > header.top { padding-left: 0; padding-right: 0; }
 
 notebook > header.right > tabs > tab:hover { box-shadow: inset 3px 0 #c3c6c9; }
 
 notebook > header.right > tabs > tab:checked, notebook > header.right > tabs > tab:checked:hover { background-color: transparent; border-width: 0; box-shadow: inset 3px 0 #4a90d9; }
 
-notebook > header.right > tabs > arrow { border-right-style: none; }
+notebook > header.right > tabs > arrow { border-style: none; }
+
+notebook > header.right { padding-top: 0; padding-bottom: 0; }
 
 notebook > header.bottom > tabs > tab:hover { box-shadow: inset 0 3px #c3c6c9; }
 
 notebook > header.bottom > tabs > tab:checked, notebook > header.bottom > tabs > tab:checked:hover { background-color: transparent; border-width: 0; box-shadow: inset 0 3px #4a90d9; }
 
-notebook > header.bottom > tabs > arrow { border-bottom-style: none; }
+notebook > header.bottom > tabs > arrow { border-style: none; }
+
+notebook > header.bottom { padding-left: 0; padding-right: 0; }
 
 notebook > header.left > tabs > tab:hover { box-shadow: inset -3px 0 #c3c6c9; }
 
 notebook > header.left > tabs > tab:checked, notebook > header.left > tabs > tab:checked:hover { background-color: transparent; border-width: 0; box-shadow: inset -3px 0 #4a90d9; }
 
-notebook > header.left > tabs > arrow { border-left-style: none; }
+notebook > header.left > tabs > arrow { border-style: none; }
+
+notebook > header.left { padding-top: 0; padding-bottom: 0; }
 
 notebook > header.top > tabs > arrow, notebook > header.bottom > tabs > arrow { margin-left: -5px; margin-right: -5px; padding-left: 4px; padding-right: 4px; }
 
@@ -855,15 +859,15 @@ scrollbar.fine-tune.vertical slider { border-width: 0; }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) { border-color: transparent; opacity: 0.4; background-color: transparent; }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider { margin: 0; min-width: 14px; min-height: 14px; background-color: #2c2c2c; border: 0px solid white; }
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider { margin: 0; min-width: 6px; min-height: 6px; background-color: #2c2c2c; border: 0px solid white; }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) button { min-width: 14px; min-height: 14px; background-clip: padding-box; border: 1px solid transparent; }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider { margin: 0 0px; min-width: 40px; }
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider { margin: 0; min-width: 40px; }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button { margin: -1px; min-width: 14px; }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider { margin: 0px 0; min-height: 40px; }
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider { margin: 0; min-height: 40px; }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button { margin: -1px; min-height: 14px; }
 
