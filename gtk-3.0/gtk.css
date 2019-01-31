@@ -1471,7 +1471,7 @@ messagedialog.csd decoration { border-radius: 0px; box-shadow: 0 1px 2px rgba(0,
 
 .solid-csd decoration { border-radius: 0; margin: 4px; background-color: #ebeced; border: solid 1px #c7cacc; box-shadow: none; }
 
-.ssd .titlebar.default-decoration button.titlebutton, headerbar button.titlebutton, .titlebar button.titlebutton, #MozillaGtkWidget.background headerbar.titlebar button.titlebutton { min-width: 20px; min-height: 20px; border-radius: 1.5px; padding: 0; margin: 4px; }
+.ssd .titlebar.default-decoration button.titlebutton, headerbar button.titlebutton, .titlebar button.titlebutton, #MozillaGtkWidget.background.default-decoration button.titlebutton, #MozillaGtkWidget.background headerbar.titlebar button.titlebutton { min-width: 20px; min-height: 20px; border-radius: 1.5px; padding: 0; margin: 4px; }
 
 .ssd .titlebar { border-width: 0; background-color: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04); padding: 2px 4px; }
 
@@ -1711,6 +1711,14 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 
 .xfce4-panel menu button:disabled > .label { color: inherit; }
 
+#xfwm-tabwin { padding: 12px; background-image: none; background-color: rgba(0, 0, 0, 0.8); color: shade(#ffffff, 0.65); text-shadow: 0px 1px rgba(0, 0, 0, 0.8); border-radius: 0; -XfwmTabwinWidget-icon-size: 64px; -XfwmTabwinWidget-preview-size: 64px; }
+
+#xfwm-tabwin button { background-image: none; color: #ffffff; font-weight: bold; text-shadow: 0px 1px rgba(0, 0, 0, 0.8); border: none; border-radius: 0; box-shadow: none; }
+
+#xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover { background-color: #4a90d9; }
+
+#xfwm-tabwin button:hover { background-color: #4a90d9; transition-duration: 100ms; }
+
 .gnome-panel-menu-bar, .gnome-panel-menu-bar menubar, .mate-panel-menu-bar, .mate-panel-menu-bar menubar { background-color: #33393b; }
 
 .gnome-panel-menu-bar menubar, .gnome-panel-menu-bar #PanelApplet label, .gnome-panel-menu-bar #PanelApplet image, .mate-panel-menu-bar menubar, .mate-panel-menu-bar #PanelApplet label, .mate-panel-menu-bar #PanelApplet image { color: #eeeeec; }
@@ -1770,8 +1778,6 @@ window.background.chromium menubar { color: #2c2c2c; }
 .gedit-search-slider button, .gedit-search-slider button:hover { box-shadow: none; border: 1px solid #c3c6c9; }
 
 .gedit-search-slider button:last-child, .gedit-search-slider button:hover:last-child { border-left: 0; }
-
-#MozillaGtkWidget.background headerbar.titlebar { border-radius: 0; }
 
 #MozillaGtkWidget.background > menu > menuitem { border-radius: 0; }
 
