@@ -14,7 +14,7 @@
    viewBox="0 0 92.604162 44.979168"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="assets.svg">
   <defs
      id="defs2" />
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568542"
-     inkscape:cx="267.12667"
+     inkscape:cx="219.57374"
      inkscape:cy="134.25111"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -710,68 +710,6 @@
            id="rect7300-9"
            style="opacity:1;fill:#4a90d9;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       </g>
-    </g>
-    <g
-       id="checkbox-checked-selectionmode"
-       inkscape:label="#g5048">
-      <rect
-         ry="0"
-         y="252.54999"
-         x="80.962502"
-         height="10.583334"
-         width="10.583334"
-         id="rect6422"
-         style="opacity:1;fill:#215d9c;fill-opacity:1;stroke:none;stroke-width:0.3175;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <rect
-         ry="0"
-         y="253.60832"
-         x="82.020836"
-         height="8.4666672"
-         width="8.4666672"
-         id="rect6169"
-         style="opacity:1;fill:#68aef7;fill-opacity:1;stroke:none;stroke-width:0.3175;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <rect
-         style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:0.3175;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect6171"
-         width="7.937501"
-         height="7.937501"
-         x="82.285416"
-         y="253.87291"
-         ry="0" />
-      <path
-         sodipodi:nodetypes="ccccccc"
-         inkscape:connector-curvature="0"
-         id="path5732"
-         d="m 83.079165,258.41893 1.154541,-1.15457 1.154549,1.44323 2.886371,-4.04096 1.154542,1.15456 -4.040913,5.19544 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332" />
-    </g>
-    <g
-       id="checkbox-selectionmode"
-       inkscape:label="#g5053">
-      <rect
-         ry="0"
-         style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:0.3175;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect4496"
-         width="10.583334"
-         height="10.583334"
-         x="80.962502"
-         y="263.66248" />
-      <rect
-         style="opacity:1;fill:#215d9c;fill-opacity:1;stroke:none;stroke-width:0.3175;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect5734"
-         width="8.4666672"
-         height="8.4666672"
-         x="82.020836"
-         y="264.72083"
-         ry="0" />
-      <rect
-         ry="0"
-         y="264.98541"
-         x="82.285416"
-         height="7.937501"
-         width="7.937501"
-         id="rect5784"
-         style="opacity:1;fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:0.3175;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
        id="titlebutton-close-dark"

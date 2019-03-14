@@ -1,5 +1,3 @@
-checkbox-checked-selectionmode
-checkbox-selectionmode
 scrollarrow-up
 scrollarrow-up-insensitive
 scrollarrow-down
