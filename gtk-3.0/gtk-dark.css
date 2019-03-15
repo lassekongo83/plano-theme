@@ -1777,6 +1777,8 @@ window.background.chromium menubar { color: #eeeeec; }
 
 .thunar toolbar { border-bottom: 1px solid #101112; }
 
+.thunar .shortcuts-pane { border-top: 0; }
+
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 0px; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); }
 
 .gedit-search-slider button, .gedit-search-slider button:hover { box-shadow: none; border: 1px solid #101112; }
