@@ -1445,7 +1445,8 @@ headerbar {
     &:disabled { @include entry(insensitive-header); }
     caret-color: if($dark_header=='true', $dark_fg_color, $fg_color);
   }
-  .suggested-action {
+  button.suggested-action {
+    color: $selected_fg_color;
     &:disabled { @include button(undecorated-disabled); }
     &:backdrop:not(:disabled) { color: $selected_fg_color; }
   }
