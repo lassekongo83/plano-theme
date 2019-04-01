@@ -10,6 +10,9 @@ $_panel_bottom: inset 0 -3px $_panel_shade;
 $_panel_left: inset 3px 0 $_panel_shade;
 $_panel_right: inset -3px 0 $_panel_shade;
 
+$panel_color: transparentize(black, 0.3);
+$dock_color: transparentize(black, 0.3);
+
 // gradient needed for box-shadow to work in panel
 %panel_bg {
   background-gradient-direction: vertical;
@@ -17,7 +20,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
   background-gradient-end: transparent;
 }
 
-/* Dash to Panel extension styling */
+// Dash to Panel extension styling
 
 #panel.dashtopanelMainPanel {
   @extend %panel_bg;
@@ -34,75 +37,53 @@ $_panel_right: inset -3px 0 $_panel_shade;
   .dash-item-container > * { padding: 0 4px; }
 
   // panel dash icon
-  @each $d in hover, checked, overview, focus, active, selected {
+  @each $d in hover, checked, overview {
     .show-apps .overview-icon {
       background-image: url("d2p-activities.svg");
       background-position: center top;
       background-color: transparent;
       border: none;
       color: transparent;
+      transition-duration: 100ms;
     }
 
     .show-apps:#{$d} .overview-icon {
       background-image: url("d2p-activities-active.svg");
       background-position: center top;
     }
+
+    .dash-item-container .show-apps {
+      padding: 4px 2px 4px 0;
+      transition-duration: 100ms;
+      &:#{$d} { background-color: $panel_color; }
+    }
   }
+
+  .show-apps-icon { color: transparent; } // Makes sure that no default icon from the icon theme is showing
 
   // clock and system menu area
   & > #panelRight {
-    background-color: transparentize(black, 0.3);
-    border-radius: 2px;
-    margin: 3px;
+    background-color: $panel_color;
+    border-radius: 2px 0 0 0;
   }
   
   .showdesktop-button { padding-right: 8px; }
 }
 
-/* Dash to dock extension styling */
+// Dash to dock extension styling
 
-#dashtodockContainer.extended {
-  border: 0;
-  border-radius: 0;
-  &.bottom #dash { box-shadow: $_panel_bottom; }
-  &.left #dash { box-shadow: $_panel_left; }
-  &.right #dash { box-shadow: $_panel_right; }
-}
+@each $p in (left), (right), (bottom), (top) {
+  #dashtodockContainer #dash {
+    background-color: $dock_color;
 
-#dashtodockContainer {
-  &.bottom #dash .app-well-app-running-dot {
-    width: 44px;
-    height: 2px;
-    background-color: $_hover_color;
-    margin-bottom: 0;
+    .app-well-app-running-dot { background-color: white; }
   }
-}
 
-// hover effect
-#dashtodockContainer {
-  border-radius: 0;
-  &.bottom #dash .app-well-app {
-    &:hover .overview-icon,
-    &:focus .overview-icon,
-    &:selected .overview-icon {
-      box-shadow: $_hover_effect_bottom;
-      background-color: transparent;
-    }
-  }
-  &.left #dash .app-well-app {
-    &:hover .overview-icon,
-    &:focus .overview-icon,
-    &:selected .overview-icon {
-      box-shadow: $_hover_effect_left;
-      background-color: transparent;
-    }
-  }
-  &.right #dash .app-well-app {
-    &:hover .overview-icon,
-    &:focus .overview-icon,
-    &:selected .overview-icon {
-      box-shadow: $_hover_effect_right;
-      background-color: transparent;
-    }
+  &.#{$p}.extended {
+    @extend %panel_bg;
+    @if $p==left { box-shadow: $_panel_left; }
+    @else if $p==right { box-shadow: $_panel_right; }
+    @else if $p==bottom { box-shadow: $_panel_bottom; }
+    @else if $p==top { box-shadow: $_panel_top; }
   }
 }

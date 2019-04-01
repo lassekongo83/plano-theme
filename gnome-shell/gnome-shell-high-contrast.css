@@ -1012,9 +1012,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #LookingGlassPropertyInspector { background: rgba(0, 0, 0, 0.8); border: 2px solid grey; border-radius: 0; padding: 6px; }
 
-#panel.dashtopanelMainPanel { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
+#panel.dashtopanelMainPanel, .left.extended, .right.extended, .bottom.extended, .top.extended { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
 
-/* Dash to Panel extension styling */
 #panel.dashtopanelMainPanel.dashtopanelBottom { box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
 
 #panel.dashtopanelMainPanel.dashtopanelTop { box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
@@ -1027,52 +1026,59 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel .dash-item-container > * { padding: 0 4px; }
 
-#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; }
+#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; transition-duration: 100ms; }
 
 #panel.dashtopanelMainPanel .show-apps:hover .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center top; }
 
-#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; }
+#panel.dashtopanelMainPanel .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel .dash-item-container .show-apps:hover { background-color: rgba(0, 0, 0, 0.7); }
+
+#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; transition-duration: 100ms; }
 
 #panel.dashtopanelMainPanel .show-apps:checked .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center top; }
 
-#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; }
+#panel.dashtopanelMainPanel .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel .dash-item-container .show-apps:checked { background-color: rgba(0, 0, 0, 0.7); }
+
+#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; transition-duration: 100ms; }
 
 #panel.dashtopanelMainPanel .show-apps:overview .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center top; }
 
-#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; }
+#panel.dashtopanelMainPanel .dash-item-container .show-apps { padding: 4px 2px 4px 0; transition-duration: 100ms; }
 
-#panel.dashtopanelMainPanel .show-apps:focus .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center top; }
+#panel.dashtopanelMainPanel .dash-item-container .show-apps:overview { background-color: rgba(0, 0, 0, 0.7); }
 
-#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; }
+#panel.dashtopanelMainPanel .show-apps-icon { color: transparent; }
 
-#panel.dashtopanelMainPanel .show-apps:active .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center top; }
-
-#panel.dashtopanelMainPanel .show-apps .overview-icon { background-image: url("d2p-activities.svg"); background-position: center top; background-color: transparent; border: none; color: transparent; }
-
-#panel.dashtopanelMainPanel .show-apps:selected .overview-icon { background-image: url("d2p-activities-active.svg"); background-position: center top; }
-
-#panel.dashtopanelMainPanel > #panelRight { background-color: rgba(0, 0, 0, 0.7); border-radius: 2px; margin: 3px; }
+#panel.dashtopanelMainPanel > #panelRight { background-color: rgba(0, 0, 0, 0.7); border-radius: 2px 0 0 0; }
 
 #panel.dashtopanelMainPanel .showdesktop-button { padding-right: 8px; }
 
-/* Dash to dock extension styling */
-#dashtodockContainer.extended { border: 0; border-radius: 0; }
+#dashtodockContainer #dash { background-color: rgba(0, 0, 0, 0.7); }
 
-#dashtodockContainer.extended.bottom #dash { box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
 
-#dashtodockContainer.extended.left #dash { box-shadow: inset 3px 0 rgba(0, 0, 0, 0.4); }
+.left.extended { box-shadow: inset 3px 0 rgba(0, 0, 0, 0.4); }
 
-#dashtodockContainer.extended.right #dash { box-shadow: inset -3px 0 rgba(0, 0, 0, 0.4); }
+#dashtodockContainer #dash { background-color: rgba(0, 0, 0, 0.7); }
 
-#dashtodockContainer.bottom #dash .app-well-app-running-dot { width: 44px; height: 2px; background-color: rgba(255, 255, 255, 0.6); margin-bottom: 0; }
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
 
-#dashtodockContainer { border-radius: 0; }
+.right.extended { box-shadow: inset -3px 0 rgba(0, 0, 0, 0.4); }
 
-#dashtodockContainer.bottom #dash .app-well-app:hover .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); background-color: transparent; }
+#dashtodockContainer #dash { background-color: rgba(0, 0, 0, 0.7); }
 
-#dashtodockContainer.left #dash .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); background-color: transparent; }
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
 
-#dashtodockContainer.right #dash .app-well-app:hover .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6); background-color: transparent; }
+.bottom.extended { box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
+
+#dashtodockContainer #dash { background-color: rgba(0, 0, 0, 0.7); }
+
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
+
+.top.extended { box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
 
 stage { -st-icon-style: symbolic; }
 
