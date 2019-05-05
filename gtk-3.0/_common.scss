@@ -3736,10 +3736,10 @@ decoration {
 headerbar,
 .titlebar {
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
-    padding: 0 4px;                         // already handled by the titlebar-padding
+    padding: 0 2px;                         // already handled by the titlebar-padding
     min-width: 0;
     min-height: $titlebutton_size;
-    margin: 0;
+    margin: 0 4px;
   }
 
   button.titlebutton {
