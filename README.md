@@ -41,9 +41,9 @@ ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/gtk-theme-
 *For other users. I'm aware that manually updating the theme can be tedious. I simply don't yet understand how packaging works for different distros. Once I do have more knowledge in the area, there will probably be better installation options.*
 
 #### Removing
-Navigate to `~/.themes` and remove `plano-theme`
+`rm -r ~/.themes/plano-theme`
 
-## Changing themes
+#### Changing themes
 Use `gnome-tweaks` to change themes.
 
 Xfce users can change themes in `Settings > Appearance` and `Settings > Window manager`
@@ -58,7 +58,7 @@ gsettings set org.gnome.desktop.interface gtk-theme Stiloetto-dark
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita
 ```
 
-### Dark titlebar
+## Dark titlebar
 GNOME users can switch to a dark titlebar.
 1. Make sure you have `sassc` installed.
 2. Open `gtk-3.0/gtk.scss` and change `$dark_header: 'false';` to `$dark_header: 'true';`
