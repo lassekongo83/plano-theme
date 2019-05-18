@@ -51,8 +51,8 @@ Xfce users can change themes in `Settings > Appearance` and `Settings > Window m
 You can also change your GTK themes using a terminal.
 
 ```bash
-# Changing the theme to Stiloetto-dark, run
-gsettings set org.gnome.desktop.interface gtk-theme Stiloetto-dark
+# Changing the theme to Plano run
+gsettings set org.gnome.desktop.interface gtk-theme plano-theme
 
 # Reverting the change to the default GNOME theme
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita
