@@ -29,14 +29,36 @@ mkdir -p ~/.themes && cd ~/.themes
 git clone https://github.com/lassekongo83/plano-theme.git
 ```
 
-Or if you prefer to use your graphical user interface:
-1. Download the theme: https://github.com/lassekongo83/plano-theme/archive/master.zip
-2. Make a folder in `~/.themes` called `Plano` and extract `gnome-shell`, `gtk-3.0`, `gtk-2.0`, etc from `master.zip` to `~/.themes/Plano`
+#### Manual updating
+```bash
+cd ~/.themes/plano-theme
+git pull
+```
 
 Apply the theme in `gnome-tweaks` or `dconf-editor`. Xfce users can apply it in `Settings > Appearance` and `Settings > Window manager`. If you wish to use the GNOME shell theme, make sure the `User themes` extension is activated in `gnome-tweaks`.
 
 #### Other installation options
 ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/gtk-theme-plano-git/ (Not maintained by me!)
+
+*For other users. I'm aware that manually updating the theme can be tedious. I simply don't yet understand how packaging works for different distros. Once I do have more knowledge in the area, there will probably be better installation options.*
+
+#### Removing
+Navigate to `~/.themes` and remove `plano-theme`
+
+## Changing themes
+Use `gnome-tweaks` to change themes.
+
+Xfce users can change themes in `Settings > Appearance` and `Settings > Window manager`
+
+You can also change your GTK themes using a terminal.
+
+```bash
+# Changing the theme to Stiloetto-dark, run
+gsettings set org.gnome.desktop.interface gtk-theme Stiloetto-dark
+
+# Reverting the change to the default GNOME theme
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita
+```
 
 ### Dark titlebar
 GNOME users can switch to a dark titlebar.
