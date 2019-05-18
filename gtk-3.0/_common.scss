@@ -3227,7 +3227,7 @@ filechooserbutton:drop(active) {
 
   separator { background-color: transparent; }
 
-  treeview { background-color: $sidebar_bg_color; }
+  treeview, treeview:backdrop { background-color: $sidebar_bg_color; }
 }
 
 stacksidebar {
