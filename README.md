@@ -35,8 +35,6 @@ cd ~/.themes/plano-theme
 git pull
 ```
 
-Apply the theme in `gnome-tweaks` or `dconf-editor`. Xfce users can apply it in `Settings > Appearance` and `Settings > Window manager`. If you wish to use the GNOME shell theme, make sure the `User themes` extension is activated in `gnome-tweaks`.
-
 #### Other installation options
 ArchLinux users can get it on AUR: https://aur.archlinux.org/packages/gtk-theme-plano-git/ (Not maintained by me!)
 
