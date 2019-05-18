@@ -3226,6 +3226,8 @@ filechooserbutton:drop(active) {
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 
   separator { background-color: transparent; }
+
+  treeview { background-color: $sidebar_bg_color; }
 }
 
 stacksidebar {

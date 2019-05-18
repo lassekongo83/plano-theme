@@ -1295,6 +1295,8 @@ paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .
 
 .sidebar separator { background-color: transparent; }
 
+.sidebar treeview { background-color: #2b3032; }
+
 stacksidebar row { padding: 10px 4px; }
 
 stacksidebar row > label { padding-left: 6px; padding-right: 6px; }
