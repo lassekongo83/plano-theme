@@ -1391,21 +1391,29 @@ infobar { border-style: none; }
 
 infobar.info, infobar.question, infobar.warning, infobar.error { text-shadow: none; }
 
-infobar.info:backdrop, infobar.info, infobar.question:backdrop, infobar.question, infobar.warning:backdrop, infobar.warning, infobar.error:backdrop, infobar.error { background-color: #4b5356; border-color: #2a76c6; }
+infobar.info:backdrop, infobar.info, infobar.question:backdrop, infobar.question, infobar.warning:backdrop, infobar.warning, infobar.error:backdrop, infobar.error { background-color: #ebe0d5; border-color: #dedfe1; }
 
-infobar.info:backdrop label, infobar.info:backdrop, infobar.info label, infobar.info, infobar.question:backdrop label, infobar.question:backdrop, infobar.question label, infobar.question, infobar.warning:backdrop label, infobar.warning:backdrop, infobar.warning label, infobar.warning, infobar.error:backdrop label, infobar.error:backdrop, infobar.error label, infobar.error { color: #ffffff; }
+infobar.info:backdrop label, infobar.info:backdrop, infobar.info label, infobar.info, infobar.question:backdrop label, infobar.question:backdrop, infobar.question label, infobar.question, infobar.warning:backdrop label, infobar.warning:backdrop, infobar.warning label, infobar.warning, infobar.error:backdrop label, infobar.error:backdrop, infobar.error label, infobar.error { color: #2c2c2c; }
 
-infobar.info button, infobar.question button, infobar.warning button, infobar.error button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #626e72; border-color: #a3a7ac; }
+infobar.info:backdrop, infobar.question:backdrop, infobar.warning:backdrop, infobar.error:backdrop { text-shadow: none; }
 
-infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover { color: #ffffff; background-color: #758388; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); }
+infobar.info button, infobar.question button, infobar.warning button, infobar.error button { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); background-color: #f8f9f9; border-color: #a3a7ac; }
 
-infobar.info button:active, infobar.info button:checked, infobar.question button:active, infobar.question button:checked, infobar.warning button:active, infobar.warning button:checked, infobar.error button:active, infobar.error button:checked { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #08090a; box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); border-color: #a3a7ac; }
+infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover { color: #2c2c2c; background-color: white; border-color: #4a90d9; box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.15); }
 
-infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled { color: #aeb1b2; background-color: #5c6264; text-shadow: none; -gtk-icon-shadow: none; border-color: #a3a7ac; }
+infobar.info button:active, infobar.info button:checked, infobar.question button:active, infobar.question button:checked, infobar.warning button:active, infobar.warning button:checked, infobar.error button:active, infobar.error button:checked { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); background-color: #d6d8da; box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08); border-color: #a3a7ac; }
+
+infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled { color: #8c8c8d; background-color: #f3f4f4; text-shadow: none; -gtk-icon-shadow: none; border-color: #a3a7ac; }
 
 infobar.info button:disabled > .label, infobar.question button:disabled > .label, infobar.warning button:disabled > .label, infobar.error button:disabled > .label { color: inherit; }
 
-infobar.info selection, infobar.question selection, infobar.warning selection, infobar.error selection { background-color: #1b1f20; }
+infobar.info button:backdrop, infobar.question button:backdrop, infobar.warning button:backdrop, infobar.error button:backdrop { border-color: #b5b9bd; }
+
+infobar.info button:backdrop:disabled, infobar.question button:backdrop:disabled, infobar.warning button:backdrop:disabled, infobar.error button:backdrop:disabled { border-color: #b5b9bd; }
+
+infobar.info button:backdrop label, infobar.info button:backdrop, infobar.info button label, infobar.info button, infobar.question button:backdrop label, infobar.question button:backdrop, infobar.question button label, infobar.question button, infobar.warning button:backdrop label, infobar.warning button:backdrop, infobar.warning button label, infobar.warning button, infobar.error button:backdrop label, infobar.error button:backdrop, infobar.error button label, infobar.error button { color: #2c2c2c; }
+
+infobar.info selection, infobar.question selection, infobar.warning selection, infobar.error selection { background-color: #d0d3d5; }
 
 tooltip { padding: 0; border-radius: 0; box-shadow: none; text-shadow: 0 1px black; }
 
