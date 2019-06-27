@@ -171,7 +171,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .mount-dialog-app-list:rtl { padding-right: 49px; padding-left: 32px; }
 
-.mount-dialog-app-list-item { color: #e6e6e6; }
+.mount-dialog-app-list-item { color: #e6e5e5; }
 
 .mount-dialog-app-list-item:hover { color: #fff; }
 
@@ -205,6 +205,16 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .hidden { color: rgba(0, 0, 0, 0); }
 
 .prompt-dialog-null-label { font-size: 10pt; padding-bottom: 8px; }
+
+.prompt-dialog-null-label { font-size: 10pt; padding-bottom: 8px; }
+
+.prompt-dialog-pim-box { spacing: 1em; }
+
+.prompt-dialog-grid { spacing-rows: 15px; spacing-columns: 1em; }
+
+.prompt-dialog-keyfiles-box { spacing: 1em; }
+
+.prompt-dialog-button.button { padding: 8px; }
 
 /* Polkit Dialog */
 .polkit-dialog-user-layout { padding-left: 10px; spacing: 10px; }
@@ -522,7 +532,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .media-message-cover-icon { icon-size: 48px !important; }
 
-.media-message-cover-icon.fallback { color: #1a1a1a; background-color: #000; border: 2px solid #000; border-radius: 0; icon-size: 32px !important; padding: 6px; }
+.media-message-cover-icon.fallback { color: #1a1919; background-color: #000; border: 2px solid #000; border-radius: 0; icon-size: 32px !important; padding: 6px; }
 
 #panel #panelActivities.panel-button > * { background-image: url("activities.svg"); background-position: center top; width: 24px; height: 24px; background-color: transparent !important; background-gradient-direction: none !important; border: 0 solid transparent !important; text-shadow: 0 0 transparent !important; transition-duration: 0ms !important; box-shadow: none !important; color: transparent; }
 
@@ -560,6 +570,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .select-area-rubberband { background-color: rgba(33, 93, 156, 0.3); border: 1px solid #215d9c; }
 
+.ripple-pointer-location { width: 50px; height: 50px; border-radius: 25px 25px 25px 25px; background-color: rgba(116, 170, 226, 0.3); box-shadow: 0 0 2px 2px #4a90d9; }
+
 .popup-menu-arrow { icon-size: 1.09em; }
 
 .popup-menu-icon { icon-size: 1.09em; }
@@ -569,6 +581,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .window-close:hover { background-color: red; }
 
 .window-close:active { background-color: #e60000; }
+
+.pie-timer { width: 60px; height: 60px; -pie-border-width: 3px; -pie-border-color: #215d9c; -pie-background-color: rgba(158, 196, 235, 0.3); }
 
 /* NETWORK DIALOGS */
 .nm-dialog { max-height: 34em; min-height: 31em; min-width: 32em; }
@@ -763,7 +777,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .chat-response { margin: 5px; }
 
-.chat-log-message { color: #e6e6e6; }
+.chat-log-message { color: #e6e5e5; }
 
 .chat-new-group { padding-top: 1em; }
 
@@ -831,7 +845,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .keyboard-key.default-key { border-color: #2a76c6; }
 
-.keyboard-key.enter-key { border-color: #1a1a1a; }
+.keyboard-key.enter-key { border-color: #1a1919; }
 
 .keyboard-subkeys { color: white; padding: 5px; -arrow-border-radius: 0; -arrow-background-color: rgba(46, 52, 54, 0.7); -arrow-border-width: 1px; -arrow-border-color: rgba(238, 238, 236, 0.2); -arrow-base: 0px; -arrow-rise: 0px; -boxpointer-gap: 1px; }
 
@@ -841,7 +855,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .candidate-popup-content { padding: 0.5em; spacing: 0.3em; }
 
-.candidate-index { padding: 0 0.5em 0 0; color: #e6e6e6; }
+.candidate-index { padding: 0 0.5em 0 0; color: #e6e5e5; }
 
 .candidate-box { padding: 0.3em 0.5em 0.3em 0.5em; border-radius: 0; }
 
