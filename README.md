@@ -77,3 +77,7 @@ Note: The GTK3 menubar will be dark, but the GTK2 one will not be.
 > 3. Screenshot. (Use a host that don't require me to enable JavaScript, cookies or browser plugins to be able to view the image.)
 
 **Do not submit support questions to the issue tracker.** Contact me on [reddit](https://www.reddit.com/user/Frellwit/) or [deviantART](http://lassekongo83.deviantart.com) for that instead. (Don't always expect an answer though.) Public forums and subreddits could provide better support. Support questions in the issue tracker will be closed as invalid.
+
+## Copying or Reusing
+
+The GTK theme(s) and included scripts are free software licensed under the terms of the [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.txt).
