@@ -1641,10 +1641,10 @@ StScrollBar {
     margin: 5px;
     border-radius: 0;
     color: $_bubble_fg_color;
-    background-color: $_bubble_bg_color;
+    background-color: $osd_bg_color;
     border: 1px solid $borders_color;
-    &:hover { background-color: $_bubble_bg_color; }
-    &:focus { background-color: $_bubble_bg_color; }
+    &:hover { background-color: $osd_bg_color; }
+    &:focus { background-color: $osd_bg_color; }
 
     .notification-icon { padding: 5px; }
     .notification-content { padding: 5px; spacing: 5px; }
@@ -1656,10 +1656,10 @@ StScrollBar {
     }
     .notification-button {
       padding: 4px 4px 5px;
-      background-color: darken($_bubble_bg_color,5%);
+      background-color: darken($osd_bg_color,5%);
       &:first-child { border-radius: 0; }
       &:last-child { border-radius: 0; }
-      &:hover, &focus { background-color: darken($_bubble_bg_color,2%); }
+      &:hover, &focus { background-color: darken($osd_bg_color,3%); }
     }
   }
   .summary-source-counter {
