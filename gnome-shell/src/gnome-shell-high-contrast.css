@@ -1138,6 +1138,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel.dashtopanelTop .running4.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .running4:hover .overview-icon { border-image: url("transparent.png"); }
 
+#panel.dashtopanelMainPanel.dashtopanelTop > #panelRight { background-color: black; border-radius: 2px 0 0 0; }
+
 #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button { text-shadow: black 0 1px 1px; }
 
 #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:hover { background-color: rgba(255, 255, 255, 0.15); }
@@ -1243,6 +1245,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 #panel.dashtopanelMainPanel.dashtopanelBottom .running4.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
 
 #panel.dashtopanelMainPanel.dashtopanelBottom .running4.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelBottom .running4:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom > #panelRight { background-color: black; border-radius: 2px 0 0 0; }
 
 stage { -st-icon-style: symbolic; }
 

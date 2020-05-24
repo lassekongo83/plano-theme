@@ -74,5 +74,10 @@
         &.focused .overview-icon, &:hover .overview-icon { border-image: url("transparent.png"); } // Removes the default bg color
       }
     }
+    // clock and system menu area
+    & > #panelRight {
+      background-color: $panel_bg_color;
+      border-radius: 2px 0 0 0;
+    }
   }
 }

@@ -607,7 +607,7 @@ XfdesktopIconView.view {
       &:hover { @include button(hover, $_button_bg_color, $alt_headerbar_fg); }
       &:active, &:checked { @include button(active, $_button_bg_color, $alt_headerbar_fg); }
     }
-    .nautilus-path-bar button { // so the last button gets decorated
+    .nautilus-path-bar button {
       &:last-child, &:hover:last-child { @include button(active, darken($_button_bg_color, 4%), $alt_headerbar_fg); }
     }
   }
