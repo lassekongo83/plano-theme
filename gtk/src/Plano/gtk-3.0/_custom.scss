@@ -4,8 +4,8 @@
 // Title buttons //
 //---------------//
 %titlebutton {
-  min-width: 20px;
-  min-height: 20px;
+  min-width: $titlebutton_size;
+  min-height: $titlebutton_size;
   padding: 0;
   margin: 4px;
   border-radius: 1.5px;

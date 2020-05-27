@@ -30,7 +30,7 @@ cd plano-theme
 meson build
 sudo ninja -C build install
 ```
-The theme(s) will be installed in: `/usr/share/themes`
+The theme(s) will be installed in: `/usr/share/themes/`
 
 ### Updating the theme
 

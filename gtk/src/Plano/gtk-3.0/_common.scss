@@ -25,6 +25,7 @@ $_switch_margin: if($_sizevariant=='default', 4px, 4px); // custom theme note: S
                                                          // Alternatively use the compact sizevariant.
 
 // custom variables
+$titlebutton_size: 20px;
 // duration
 $shortest_duration: 50ms;
 $shorter_duration: 100ms;
@@ -1732,9 +1733,13 @@ headerbar {
     min-height: 28px;
     padding: 4px;
 
+    .maximized & { // No top highlight on maximized windows
+      box-shadow: none;
+    }
+
     button.titlebutton {
-      min-height: 20px;
-      min-width: 20px;
+      min-height: $titlebutton_size;
+      min-width: $titlebutton_size;
       margin: 0;
       padding: 0;
     }
@@ -4361,9 +4366,9 @@ headerbar,
   @extend %titlebuttons;
 
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
-    padding: 0 2px;                         // already handled by the titlebar-padding
+    padding: 0 6px;                         // already handled by the titlebar-padding
     min-width: 0;
-    min-height: 20px;
+    min-height: $titlebutton_size;
     margin: 0 4px;
   }
 }

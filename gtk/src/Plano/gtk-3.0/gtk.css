@@ -623,6 +623,8 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .default-decoration.titlebar:not(headerbar), headerbar.default-decoration { min-height: 28px; padding: 4px; }
 
+.maximized .default-decoration.titlebar:not(headerbar), .maximized headerbar.default-decoration { box-shadow: none; }
+
 .default-decoration.titlebar:not(headerbar) button.titlebutton, headerbar.default-decoration button.titlebutton { min-height: 20px; min-width: 20px; margin: 0; padding: 0; }
 
 .titlebar:not(headerbar) separator, .titlebar:not(headerbar) separator:backdrop, headerbar separator, headerbar separator:backdrop { background: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.5); }
@@ -1667,7 +1669,7 @@ messagedialog.csd decoration { border-radius: 0; box-shadow: 0 1px 2px rgba(0, 0
 
 .solid-csd decoration:backdrop { box-shadow: inset 0 0 0 3px #ebeced, inset 0 1px rgba(255, 255, 255, 0.5); }
 
-headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 2px; min-width: 0; min-height: 20px; margin: 0 4px; }
+headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 6px; min-width: 0; min-height: 20px; margin: 0 4px; }
 
 .selection-mode headerbar button.titlebutton, .selection-mode .titlebar button.titlebutton, headerbar.selection-mode button.titlebutton, .titlebar.selection-mode button.titlebutton { text-shadow: 0 -1px rgba(0, 0, 0, 0.543529); -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.543529); }
 
