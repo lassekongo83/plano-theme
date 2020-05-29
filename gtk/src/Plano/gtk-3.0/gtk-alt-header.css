@@ -1902,7 +1902,7 @@ headerbar button.titlebutton.minimize:active:backdrop:not(:hover), .titlebar but
 
 .maximized .titlebar, .maximized headerbar, .fullscreen .titlebar, .fullscreen headerbar { box-shadow: none; }
 
-.titlebar entry, headerbar entry, .titlebar entry:backdrop, headerbar entry:backdrop { border-color: #2a2e30; }
+.titlebar entry, headerbar entry, .titlebar entry:backdrop, headerbar entry:backdrop { border-color: #2a2e30; border-color: transparent; background-color: #727f83; color: #eeeeec; caret-color: #eeeeec; }
 
 .titlebar entry:focus, headerbar entry:focus { box-shadow: inset 0 0 0 1px #4a90d9; border-color: #4a90d9; }
 

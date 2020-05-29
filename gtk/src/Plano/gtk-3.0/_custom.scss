@@ -133,6 +133,10 @@ $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
   entry {
     &, &:backdrop {
       border-color: darken($alt_headerbar_bg, 8%);
+      border-color: transparent;
+      background-color: lighten($_button_bg_color, 15%);
+      color: $alt_headerbar_fg;
+      caret-color: $alt_headerbar_fg;
     }
     &:focus { @include entry(focus); }
   }
