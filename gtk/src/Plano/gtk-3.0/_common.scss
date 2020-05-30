@@ -3721,8 +3721,8 @@ messagedialog { // Message Dialog styling
     background-image: none;
     background-color: $bg_color;
     border-style: none;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &.csd { // rounded bottom border styling for csd version
