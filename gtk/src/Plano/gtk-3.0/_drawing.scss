@@ -491,7 +491,7 @@
   @if $ov != none { background: if($alt_header=='true', $ac $ov, $c $ov); }
   @else { background: if($alt_header=='true', $ac, $c); }
 
-  box-shadow: inset 0 1px if($alt_header == 'false', $hc, transparentize($hc, 0.44)); // top highlight
+  box-shadow: inset 0 1px $hc; // top highlight
 
   @if $alt_header == 'true' { border-color: transparent; }
 }

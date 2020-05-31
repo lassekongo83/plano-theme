@@ -557,21 +557,17 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .inline-toolbar, searchbar > revealer > box, .location-bar { border-style: solid; border-color: #c3c6c9; background-color: #dfe1e2; }
 
-.titlebar:not(headerbar), headerbar { padding: 0 4px; min-height: 38px; border-width: 0; border-radius: 0; background: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.5); }
+.titlebar:not(headerbar), headerbar { padding: 0 4px; min-height: 38px; border-width: 0; border-radius: 0; background: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
 
-.titlebar:backdrop:not(headerbar), headerbar:backdrop { background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0.5); }
+.titlebar:backdrop:not(headerbar), headerbar:backdrop { background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
 
 .titlebar:not(headerbar) .title, headerbar .title { padding-left: 12px; padding-right: 12px; font-weight: bold; }
 
 .titlebar:not(headerbar) .subtitle, headerbar .subtitle { font-size: smaller; padding-left: 12px; padding-right: 12px; }
 
-.titlebar:not(headerbar) stackswitcher button:checked, .titlebar:not(headerbar) button.toggle:checked, headerbar stackswitcher button:checked, headerbar button.toggle:checked { background: image(#bdc1c4); border-color: #bbbec2; border-top-color: #adb1b5; }
+.selection-mode .titlebar:not(headerbar), .selection-mode.titlebar:not(headerbar), .selection-mode headerbar, headerbar.selection-mode { color: #ffffff; border-color: #256ab1; text-shadow: 0 -1px rgba(0, 0, 0, 0.5); background: #4a90d9; box-shadow: inset 0 1px rgba(101, 161, 223, 0.65); }
 
-.titlebar:not(headerbar) stackswitcher button:checked:backdrop, .titlebar:not(headerbar) button.toggle:checked:backdrop, headerbar stackswitcher button:checked:backdrop, headerbar button.toggle:checked:backdrop { color: #656666; }
-
-.selection-mode .titlebar:not(headerbar), .selection-mode.titlebar:not(headerbar), .selection-mode headerbar, headerbar.selection-mode { color: #ffffff; border-color: #256ab1; text-shadow: 0 -1px rgba(0, 0, 0, 0.5); background: #4a90d9; box-shadow: inset 0 1px rgba(119, 172, 227, 0.75); }
-
-.selection-mode .titlebar:backdrop:not(headerbar), .selection-mode.titlebar:backdrop:not(headerbar), .selection-mode headerbar:backdrop, headerbar.selection-mode:backdrop { background-color: #4a90d9; background-image: none; box-shadow: inset 0 1px rgba(134, 181, 230, 0.7); }
+.selection-mode .titlebar:backdrop:not(headerbar), .selection-mode.titlebar:backdrop:not(headerbar), .selection-mode headerbar:backdrop, headerbar.selection-mode:backdrop { background-color: #4a90d9; background-image: none; box-shadow: inset 0 1px rgba(112, 167, 225, 0.58); }
 
 .selection-mode .titlebar:backdrop:not(headerbar) label, .selection-mode.titlebar:backdrop:not(headerbar) label, .selection-mode headerbar:backdrop label, headerbar.selection-mode:backdrop label { text-shadow: none; color: #ffffff; }
 
@@ -627,7 +623,7 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .default-decoration.titlebar:not(headerbar) button.titlebutton, headerbar.default-decoration button.titlebutton { min-height: 20px; min-width: 20px; margin: 0; padding: 0; }
 
-.titlebar:not(headerbar) separator, .titlebar:not(headerbar) separator:backdrop, headerbar separator, headerbar separator:backdrop { background: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.5); }
+.titlebar:not(headerbar) separator, .titlebar:not(headerbar) separator:backdrop, headerbar separator, headerbar separator:backdrop { background: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
 
 .titlebar:not(headerbar) separator.titlebutton, headerbar separator.titlebutton { opacity: 0; }
 
@@ -653,7 +649,7 @@ window.tiled headerbar, window.tiled headerbar:first-child, window.tiled headerb
 
 window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparent; background-image: none; border-style: none; border-color: transparent; box-shadow: none; }
 
-.titlebar:not(headerbar) separator { background: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.5); }
+.titlebar:not(headerbar) separator { background: #e3e4e6; box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
 
 window.devel headerbar.titlebar:not(.selection-mode) { background: #ebeced cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent)) 90% 0/256px 256px no-repeat, linear-gradient(to right, transparent 65%, rgba(74, 144, 217, 0.2)), linear-gradient(to top, #c8cbce, #d0d3d5 3px, #e0e2e3); }
 
@@ -1665,9 +1661,9 @@ tooltip.csd decoration { border-radius: 0; box-shadow: none; }
 
 messagedialog.csd decoration { border-radius: 0; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); }
 
-.solid-csd decoration { margin: 0; padding: 4px; background-color: #c3c6c9; border: solid 1px #c3c6c9; border-radius: 0; box-shadow: inset 0 0 0 3px #e3e4e6, inset 0 1px rgba(255, 255, 255, 0.5); }
+.solid-csd decoration { margin: 0; padding: 4px; background-color: #c3c6c9; border: solid 1px #c3c6c9; border-radius: 0; box-shadow: inset 0 0 0 3px #e3e4e6, inset 0 1px rgba(255, 255, 255, 0.3); }
 
-.solid-csd decoration:backdrop { box-shadow: inset 0 0 0 3px #ebeced, inset 0 1px rgba(255, 255, 255, 0.5); }
+.solid-csd decoration:backdrop { box-shadow: inset 0 0 0 3px #ebeced, inset 0 1px rgba(255, 255, 255, 0.3); }
 
 headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 6px; min-width: 0; min-height: 20px; margin: 0 4px; }
 
@@ -1675,17 +1671,17 @@ headerbar.default-decoration button.titlebutton, .titlebar.default-decoration bu
 
 .selection-mode headerbar button.titlebutton:backdrop, .selection-mode .titlebar button.titlebutton:backdrop, headerbar.selection-mode button.titlebutton:backdrop, .titlebar.selection-mode button.titlebutton:backdrop { -gtk-icon-shadow: none; }
 
-.view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected, .view text:selected:focus, iconview text:selected:focus, textview text:selected:focus, .nautilus-window notebook:selected:focus, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection, textview text selection:focus, textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, entry selection, modelbutton.flat:selected, .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected { background-color: #4a90d9; }
+.view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected, .view text:selected:focus, iconview text:selected:focus, textview text:selected:focus, .nautilus-window notebook:selected:focus, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection, textview text selection:focus, textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, entry selection, modelbutton.flat:selected, .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected { background-color: #4a90d9; }
 
-label:selected, .view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected, .view text:selected:focus, iconview text:selected:focus, textview text:selected:focus, .nautilus-window notebook:selected:focus, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection, textview text selection:focus, textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, entry selection, modelbutton.flat:selected, .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected { color: #ffffff; }
+label:selected, .view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected, .view text:selected:focus, iconview text:selected:focus, textview text:selected:focus, .nautilus-window notebook:selected:focus, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection, textview text selection:focus, textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, entry selection, modelbutton.flat:selected, .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected { color: #ffffff; }
 
-label:disabled selection, label:disabled:selected, iconview:disabled:selected:focus, .view:disabled:selected, iconview:disabled:selected, iconview text:disabled:selected:focus, textview text:disabled:selected:focus, .view text:disabled:selected, iconview text:disabled:selected, textview text:disabled:selected, .nautilus-window notebook:disabled:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled, textview text selection:disabled, flowbox flowboxchild:disabled:selected, spinbutton:not(.vertical) selection:disabled, entry selection:disabled, modelbutton.flat:disabled:selected, .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected { color: #a5c8ec; }
+label:disabled selection, label:disabled:selected, iconview:disabled:selected:focus, .view:disabled:selected, iconview:disabled:selected, iconview text:disabled:selected:focus, textview text:disabled:selected:focus, .view text:disabled:selected, iconview text:disabled:selected, textview text:disabled:selected, .nautilus-window notebook:disabled:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled, textview text selection:disabled, flowbox flowboxchild:disabled:selected, spinbutton:not(.vertical) selection:disabled, entry selection:disabled, modelbutton.flat:disabled:selected, .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected, .nemo-window .nemo-window-pane widget.entry:disabled:selected { color: #a5c8ec; }
 
-label:backdrop selection, label:backdrop:selected, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected, iconview text:backdrop:selected:focus, textview text:backdrop:selected:focus, .view text:backdrop:selected, iconview text:backdrop:selected, textview text:backdrop:selected, .nautilus-window notebook:backdrop:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop, entry selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected { color: #fcfcfc; }
+label:backdrop selection, label:backdrop:selected, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected, iconview text:backdrop:selected:focus, textview text:backdrop:selected:focus, .view text:backdrop:selected, iconview text:backdrop:selected, textview text:backdrop:selected, .nautilus-window notebook:backdrop:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop, entry selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:selected { color: #fcfcfc; }
 
-label:backdrop selection, label:backdrop selection:hover, label:backdrop:selected, label:backdrop:hover:selected, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected, iconview text:backdrop:selected:focus, textview text:backdrop:selected:focus, .view text:backdrop:selected, iconview text:backdrop:selected, textview text:backdrop:selected, .nautilus-window notebook:backdrop:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop, entry selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected, .view:backdrop:hover:selected, iconview:backdrop:hover:selected, .view text:backdrop:hover:selected, iconview text:backdrop:hover:selected, textview text:backdrop:hover:selected, .nautilus-window notebook:backdrop:hover:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:hover:selected, .view text selection:backdrop:hover, iconview text selection:backdrop:hover, textview text selection:backdrop:hover, flowbox flowboxchild:backdrop:hover:selected, spinbutton:not(.vertical) selection:backdrop:hover, entry selection:backdrop:hover, modelbutton.flat:backdrop:hover:selected, .menuitem.button.flat:backdrop:hover:selected, row:backdrop:hover:selected, calendar:backdrop:hover:selected { background-color: #4a90d9; }
+label:backdrop selection, label:backdrop selection:hover, label:backdrop:selected, label:backdrop:hover:selected, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected, iconview text:backdrop:selected:focus, textview text:backdrop:selected:focus, .view text:backdrop:selected, iconview text:backdrop:selected, textview text:backdrop:selected, .nautilus-window notebook:backdrop:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop, textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, spinbutton:not(.vertical) selection:backdrop, entry selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:selected, .view:backdrop:hover:selected, iconview:backdrop:hover:selected, .view text:backdrop:hover:selected, iconview text:backdrop:hover:selected, textview text:backdrop:hover:selected, .nautilus-window notebook:backdrop:hover:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:hover:selected, .view text selection:backdrop:hover, iconview text selection:backdrop:hover, textview text selection:backdrop:hover, flowbox flowboxchild:backdrop:hover:selected, spinbutton:not(.vertical) selection:backdrop:hover, entry selection:backdrop:hover, modelbutton.flat:backdrop:hover:selected, .menuitem.button.flat:backdrop:hover:selected, row:backdrop:hover:selected, calendar:backdrop:hover:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:hover:selected { background-color: #4a90d9; }
 
-label:backdrop selection:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .view text:backdrop:disabled:selected, iconview text:backdrop:disabled:selected, textview text:backdrop:disabled:selected, .nautilus-window notebook:backdrop:disabled:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled, textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled, entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, .menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected { color: #80b1e4; }
+label:backdrop selection:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .view text:backdrop:disabled:selected, iconview text:backdrop:disabled:selected, textview text:backdrop:disabled:selected, .nautilus-window notebook:backdrop:disabled:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled, textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled, entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, .menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:disabled:selected { color: #80b1e4; }
 
 .monospace { font-family: monospace; }
 
@@ -1760,8 +1756,8 @@ popover.emoji-completion .emoji:hover { background: #f8f9f9; }
 @define-color success_color #33d17a;
 @define-color wm_title shade(#2c2c2c, 1.8);
 @define-color wm_unfocused_title #656666;
-@define-color wm_highlight rgba(255, 255, 255, 0.5);
-@define-color wm_borders_edge rgba(255, 255, 255, 0.5);
+@define-color wm_highlight rgba(255, 255, 255, 0.3);
+@define-color wm_borders_edge rgba(255, 255, 255, 0.3);
 @define-color wm_bg_a shade(#ebeced, 1.2);
 @define-color wm_bg_b #ebeced;
 @define-color wm_shadow alpha(black, 0.35);
@@ -2035,3 +2031,5 @@ XfdesktopIconView.view .rubberband { border-radius: 0; }
 list.tweak-categories separator { background: transparent; }
 
 .table-header { padding: 4px 0 4px 0; min-height: 24px; }
+
+.nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 0; box-shadow: inset 0 0 0 1px #4a90d9; border-color: #4a90d9; }
