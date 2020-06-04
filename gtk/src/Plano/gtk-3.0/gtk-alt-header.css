@@ -1920,6 +1920,84 @@ headerbar button.titlebutton.minimize:active:backdrop:not(:hover), .titlebar but
 
 .titlebar switch slider, headerbar switch slider { background-color: rgba(255, 255, 255, 0.5); }
 
+.suggested-action.titlebar, headerbar.suggested-action { color: white; outline-color: rgba(255, 255, 255, 0.3); border-color: #2a76c6; background-color: #5f9ddd; border-color: #4a90d9; }
+
+.suggested-action.flat.titlebar, headerbar.suggested-action.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: #4a90d9; }
+
+.suggested-action.titlebar:hover, headerbar.suggested-action:hover { color: white; outline-color: rgba(255, 255, 255, 0.3); border-color: #4a90d9; box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 0 0 2px rgba(74, 144, 217, 0.2); background-color: #6ca5e0; border-color: #4a90d9; }
+
+.suggested-action.titlebar:active, headerbar.suggested-action:active, .suggested-action.titlebar:checked, headerbar.suggested-action:checked { color: white; outline-color: rgba(255, 255, 255, 0.3); border-color: #2a76c6; background-image: image(#2b7bcf); box-shadow: inset 0 1px rgba(255, 255, 255, 0), inset 0 0 0 2px rgba(0, 0, 0, 0.08); text-shadow: none; -gtk-icon-shadow: none; border-color: #256ab1; }
+
+.suggested-action.titlebar:active:hover, headerbar.suggested-action:active:hover, .suggested-action.titlebar:checked:hover, headerbar.suggested-action:checked:hover { background-image: image(#2871be); }
+
+.suggested-action.titlebar, headerbar.suggested-action, .suggested-action.titlebar:hover, headerbar.suggested-action:hover, .suggested-action.titlebar:focus:active, headerbar.suggested-action:focus:active { outline-color: #4a90d9; }
+
+.suggested-action.titlebar:backdrop, headerbar.suggested-action:backdrop, .suggested-action.flat.titlebar:backdrop, headerbar.suggested-action.flat:backdrop { color: #dbe9f7; text-shadow: none; -gtk-icon-shadow: none; }
+
+.suggested-action.titlebar:backdrop:active, headerbar.suggested-action:backdrop:active, .suggested-action.titlebar:backdrop:checked, headerbar.suggested-action:backdrop:checked, .suggested-action.flat.titlebar:backdrop:active, headerbar.suggested-action.flat:backdrop:active, .suggested-action.flat.titlebar:backdrop:checked, headerbar.suggested-action.flat:backdrop:checked { color: #d9e8f7; }
+
+.suggested-action.titlebar:backdrop:disabled, headerbar.suggested-action:backdrop:disabled, .suggested-action.flat.titlebar:backdrop:disabled, headerbar.suggested-action.flat:backdrop:disabled { color: #636566; border-color: #3e4041; background-image: image(#3e4041); text-shadow: none; -gtk-icon-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); border-color: #353c3e; }
+
+.suggested-action.titlebar:backdrop:disabled:active, headerbar.suggested-action:backdrop:disabled:active, .suggested-action.titlebar:backdrop:disabled:checked, headerbar.suggested-action:backdrop:disabled:checked, .suggested-action.flat.titlebar:backdrop:disabled:active, headerbar.suggested-action.flat:backdrop:disabled:active, .suggested-action.flat.titlebar:backdrop:disabled:checked, headerbar.suggested-action.flat:backdrop:disabled:checked { color: #85b4e6; border-color: #438cd8; background-image: image(#438cd8); box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+
+.suggested-action.flat.titlebar:backdrop, headerbar.suggested-action.flat:backdrop, .suggested-action.flat.titlebar:disabled, headerbar.suggested-action.flat:disabled, .suggested-action.flat.titlebar:backdrop:disabled, headerbar.suggested-action.flat:backdrop:disabled { border-color: transparent; background-color: transparent; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: rgba(74, 144, 217, 0.8); }
+
+.suggested-action.titlebar:disabled, headerbar.suggested-action:disabled { color: #959696; border-color: #010202; background-image: image(#3b3e3f); text-shadow: none; -gtk-icon-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); border-color: #313638; background-image: image(#41494b); }
+
+.suggested-action.titlebar:disabled:active, headerbar.suggested-action:disabled:active, .suggested-action.titlebar:disabled:checked, headerbar.suggested-action:disabled:checked { color: #b4d1ef; border-color: #2a76c6; background-image: image(#438cd8); box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+
+.osd .suggested-action.titlebar, .osd headerbar.suggested-action { color: #eeeeec; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(74, 144, 217, 0.5)); background-clip: padding-box; box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; outline-color: rgba(238, 238, 236, 0.3); }
+
+.osd .suggested-action.titlebar:hover, .osd headerbar.suggested-action:hover { color: white; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(74, 144, 217, 0.7)); background-clip: padding-box; box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; outline-color: rgba(238, 238, 236, 0.3); }
+
+.osd .suggested-action.titlebar:active:backdrop, .osd headerbar.suggested-action:active:backdrop, .osd .suggested-action.titlebar:active, .osd headerbar.suggested-action:active, .osd .suggested-action.titlebar:checked:backdrop, .osd headerbar.suggested-action:checked:backdrop, .osd .suggested-action.titlebar:checked, .osd headerbar.suggested-action:checked { color: white; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(#4a90d9); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; outline-color: rgba(238, 238, 236, 0.3); }
+
+.osd .suggested-action.titlebar:disabled:backdrop, .osd headerbar.suggested-action:disabled:backdrop, .osd .suggested-action.titlebar:disabled, .osd headerbar.suggested-action:disabled { color: #919190; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(71, 71, 71, 0.5)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; }
+
+.osd .suggested-action.titlebar:backdrop, .osd headerbar.suggested-action:backdrop { color: #eeeeec; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(74, 144, 217, 0.5)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; }
+
+.destructive-action.titlebar, headerbar.destructive-action { color: white; outline-color: rgba(255, 255, 255, 0.3); border-color: #b2161d; background-color: #e62f37; border-color: #e01b24; }
+
+.destructive-action.flat.titlebar, headerbar.destructive-action.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: #e01b24; }
+
+.destructive-action.titlebar:hover, headerbar.destructive-action:hover { color: white; outline-color: rgba(255, 255, 255, 0.3); border-color: #4a90d9; box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 0 0 2px rgba(74, 144, 217, 0.2); background-color: #e83c44; border-color: #e01b24; }
+
+.destructive-action.titlebar:active, headerbar.destructive-action:active, .destructive-action.titlebar:checked, headerbar.destructive-action:checked { color: white; outline-color: rgba(255, 255, 255, 0.3); border-color: #b2161d; background-image: image(#bc171e); box-shadow: inset 0 1px rgba(255, 255, 255, 0), inset 0 0 0 2px rgba(0, 0, 0, 0.08); text-shadow: none; -gtk-icon-shadow: none; border-color: #256ab1; }
+
+.destructive-action.titlebar:active:hover, headerbar.destructive-action:active:hover, .destructive-action.titlebar:checked:hover, headerbar.destructive-action:checked:hover { background-image: image(#a9141b); }
+
+.destructive-action.titlebar, headerbar.destructive-action, .destructive-action.titlebar:hover, headerbar.destructive-action:hover, .destructive-action.titlebar:focus:active, headerbar.destructive-action:focus:active { outline-color: #4a90d9; }
+
+.destructive-action.titlebar:backdrop, headerbar.destructive-action:backdrop, .destructive-action.flat.titlebar:backdrop, headerbar.destructive-action.flat:backdrop { color: #f9d1d3; text-shadow: none; -gtk-icon-shadow: none; }
+
+.destructive-action.titlebar:backdrop:active, headerbar.destructive-action:backdrop:active, .destructive-action.titlebar:backdrop:checked, headerbar.destructive-action:backdrop:checked, .destructive-action.flat.titlebar:backdrop:active, headerbar.destructive-action.flat:backdrop:active, .destructive-action.flat.titlebar:backdrop:checked, headerbar.destructive-action.flat:backdrop:checked { color: #f8d2d4; }
+
+.destructive-action.titlebar:backdrop:disabled, headerbar.destructive-action:backdrop:disabled, .destructive-action.flat.titlebar:backdrop:disabled, headerbar.destructive-action.flat:backdrop:disabled { color: #636566; border-color: #3e4041; background-image: image(#3e4041); text-shadow: none; -gtk-icon-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); border-color: #353c3e; }
+
+.destructive-action.titlebar:backdrop:disabled:active, headerbar.destructive-action:backdrop:disabled:active, .destructive-action.titlebar:backdrop:disabled:checked, headerbar.destructive-action:backdrop:disabled:checked, .destructive-action.flat.titlebar:backdrop:disabled:active, headerbar.destructive-action.flat:backdrop:disabled:active, .destructive-action.flat.titlebar:backdrop:disabled:checked, headerbar.destructive-action.flat:backdrop:disabled:checked { color: #e86c72; border-color: #dc1d27; background-image: image(#dc1d27); box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+
+.destructive-action.flat.titlebar:backdrop, headerbar.destructive-action.flat:backdrop, .destructive-action.flat.titlebar:disabled, headerbar.destructive-action.flat:disabled, .destructive-action.flat.titlebar:backdrop:disabled, headerbar.destructive-action.flat:backdrop:disabled { border-color: transparent; background-color: transparent; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: rgba(224, 27, 36, 0.8); }
+
+.destructive-action.titlebar:disabled, headerbar.destructive-action:disabled { color: #959696; border-color: #010202; background-image: image(#3b3e3f); text-shadow: none; -gtk-icon-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0); border-color: #313638; background-image: image(#41494b); }
+
+.destructive-action.titlebar:disabled:active, headerbar.destructive-action:disabled:active, .destructive-action.titlebar:disabled:checked, headerbar.destructive-action:disabled:checked { color: #f1a5a8; border-color: #b2161d; background-image: image(#dc1d27); box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+
+.osd .destructive-action.titlebar, .osd headerbar.destructive-action { color: #eeeeec; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(224, 27, 36, 0.5)); background-clip: padding-box; box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; outline-color: rgba(238, 238, 236, 0.3); }
+
+.osd .destructive-action.titlebar:hover, .osd headerbar.destructive-action:hover { color: white; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(224, 27, 36, 0.7)); background-clip: padding-box; box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; outline-color: rgba(238, 238, 236, 0.3); }
+
+.osd .destructive-action.titlebar:active:backdrop, .osd headerbar.destructive-action:active:backdrop, .osd .destructive-action.titlebar:active, .osd headerbar.destructive-action:active, .osd .destructive-action.titlebar:checked:backdrop, .osd headerbar.destructive-action:checked:backdrop, .osd .destructive-action.titlebar:checked, .osd headerbar.destructive-action:checked { color: white; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(#e01b24); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; outline-color: rgba(238, 238, 236, 0.3); }
+
+.osd .destructive-action.titlebar:disabled:backdrop, .osd headerbar.destructive-action:disabled:backdrop, .osd .destructive-action.titlebar:disabled, .osd headerbar.destructive-action:disabled { color: #919190; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(71, 71, 71, 0.5)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; }
+
+.osd .destructive-action.titlebar:backdrop, .osd headerbar.destructive-action:backdrop { color: #eeeeec; border-color: rgba(0, 0, 0, 0.7); background-color: transparent; background-image: image(rgba(224, 27, 36, 0.5)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; }
+
+.titlebar .selection-menu:backdrop, headerbar .selection-menu:backdrop, .titlebar .selection-menu, headerbar .selection-menu { border-color: rgba(74, 144, 217, 0); background-color: rgba(74, 144, 217, 0); background-image: none; box-shadow: none; min-height: 20px; padding: 6px 10px; }
+
+.titlebar .selection-menu:backdrop arrow, headerbar .selection-menu:backdrop arrow, .titlebar .selection-menu arrow, headerbar .selection-menu arrow { -GtkArrow-arrow-scaling: 1; }
+
+.titlebar .selection-menu:backdrop .arrow, headerbar .selection-menu:backdrop .arrow, .titlebar .selection-menu .arrow, headerbar .selection-menu .arrow { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); color: rgba(255, 255, 255, 0.5); -gtk-icon-shadow: none; }
+
 .ssd .titlebar { background: #3c4446; box-shadow: inset 0 1px rgba(255, 255, 255, 0.06); border-color: transparent; color: #eeeeec; text-shadow: none; border-width: 0; }
 
 .ssd .titlebar:backdrop { color: #a7aaaa; }

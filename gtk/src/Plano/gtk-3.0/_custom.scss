@@ -114,7 +114,7 @@ $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
   .linked > button { @extend %linked_only_child; } // to make sure decorated buttons show all the edges
 }
 
-%alt_titlebar { // TODO: selection-mode titlebar
+%alt_titlebar {
   color: $alt_headerbar_fg;
   text-shadow: none;
   &:backdrop {
@@ -182,6 +182,119 @@ $_button_border_color: darken($alt_headerbar_bg, 10%) !global;
   // TODO: Checkbuttons
   switch {
     slider { background-color: transparentize(white, 0.5); }
+  }
+
+  // Suggested and Destructive Action buttons
+  @each $b_type, $b_color in (suggested-action, $suggested_bg_color),
+                             (destructive-action, $destructive_color) {
+    &.#{$b_type} {
+      @include button(normal, $b_color, white);
+      border-color: $b_color;
+
+      &.flat {
+        @include button(undecorated);
+        color: $b_color;
+      }
+
+      &:hover {
+        @include button(hover, $b_color, white);
+        border-color: $b_color;
+      }
+
+      &:active,
+      &:checked {
+        @include button(active, $b_color, white);
+        @if $alt_header == 'true' {
+          border-color: darken($suggested_bg_color, 15%);
+        }
+      }
+
+      &, &:hover, &:focus:active { outline-color: $selected_bg_color; }
+
+      &:backdrop,
+      &.flat:backdrop {
+        @include button(backdrop, $b_color, white);
+
+        &:active,
+        &:checked {
+          @include button(backdrop-active, $b_color, white);
+        }
+
+        &:disabled {
+          @include button(backdrop-insensitive, if($variant=='light', darken($alt_headerbar_bg, 14%), $alt_headerbar_bg), $alt_headerbar_backdrop_fg);
+          border-color: darken($alt_headerbar_bg, 3%);
+
+          &:active,
+          &:checked {
+            @include button(backdrop-insensitive-active, $b_color, white);
+          }
+        }
+      }
+
+      &.flat {
+        &:backdrop,
+        &:disabled,
+        &:backdrop:disabled {
+          @include button(undecorated);
+          color: transparentize($b_color, 0.2);
+        }
+      }
+
+      &:disabled {
+        @include button(insensitive, if($variant== "light", darken($alt_headerbar_bg, 15%), $alt_headerbar_bg), $alt_headerbar_fg);
+        border-color: darken($alt_headerbar_bg, 5%);
+        background-image: image(lighten($alt_headerbar_bg, 2%));
+
+        &:active,
+        &:checked {
+          @include button(insensitive-active, $b_color, white);
+        }
+      }
+
+      .osd & {
+        @include button(osd, $b_color);
+
+        &:hover {
+          @include button(osd-hover, $b_color);
+        }
+
+        &:active,
+        &:checked {
+          &:backdrop,
+          & { @include button(osd-active, $b_color); }
+        }
+
+        &:disabled {
+          &:backdrop, & { @include button(osd-insensitive, $b_color); }
+        }
+
+        &:backdrop {
+          @include button(osd-backdrop, $b_color);
+        }
+      }
+    }
+  }
+
+  .selection-menu {
+    &:backdrop,
+    & {
+      border-color: transparentize($suggested_bg_color, 1);
+      background-color: transparentize($suggested_bg_color, 1);
+      background-image: none;
+      box-shadow: none;
+      min-height: 20px;
+      padding: $_sel_menu_pad;
+
+      arrow {
+        -GtkArrow-arrow-scaling: 1;
+      }
+
+      .arrow {
+        -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+        color: transparentize($selected_fg_color, 0.5);
+        -gtk-icon-shadow: none;
+      }
+    }
   }
 }
 
