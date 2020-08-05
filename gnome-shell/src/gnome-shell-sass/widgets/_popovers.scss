@@ -4,7 +4,7 @@ $popover_arrow_height: 12px;
 
 //.the popover itself
 .popup-menu-boxpointer {
-  -arrow-border-radius: $base_border_radius;
+  -arrow-border-radius: $base_border_radius + 2;
   -arrow-background-color: $bg_color;
   -arrow-border-width: 1px;
   -arrow-border-color: $borders_color;
@@ -76,8 +76,10 @@ $popover_arrow_height: 12px;
 
 // container for radio and check boxes
 .popup-menu-ornament {
-  text-align: right;
   width: 1.2em;
+
+  &:ltr { text-align: right };
+  &:rtl { text-align: left };
 }
 
 // separator
