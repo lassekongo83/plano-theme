@@ -56,6 +56,10 @@ button label:disabled:backdrop { color: inherit; }
 
 label.error { color: #cc0000; }
 
+label.error:disabled { color: #a3a6a5; }
+
+label.error:disabled:backdrop { color: #566164; }
+
 .dim-label, .titlebar:not(headerbar) .subtitle, headerbar .subtitle, label.separator { opacity: 0.55; text-shadow: none; }
 
 assistant .sidebar { background-color: #232729; border-top: 1px solid #2a2e30; }
