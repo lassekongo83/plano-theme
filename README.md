@@ -3,7 +3,7 @@ Plano is a flat theme for GNOME and Xfce.
 
 ![Plano theme](plano.png?raw=true)
 
-<sub>Screenshot Details: [Wallpaper](http://memovaslg.deviantart.com/art/Alone-353235628) | [Icons](https://github.com/snwh/paper-icon-theme) | GNOME shell extension: [Dash to panel](https://github.com/jderose9/dash-to-panel)</sub>
+<sub>Screenshot Details: [Wallpaper](http://memovaslg.deviantart.com/art/Alone-353235628) | [Icons](https://github.com/vinceliuice/Tela-icon-theme) | GNOME shell extension: [Dash to panel](https://github.com/jderose9/dash-to-panel)</sub>
 
 ### Requirements
 
@@ -54,6 +54,11 @@ gsettings set org.gnome.desktop.interface gtk-theme Plano
 # Reverting the change to the default GNOME theme
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita
 ```
+
+To change the gnome-shell theme you need to activate the `User themes` extension on the Extensions page in `gnome-tweaks`.
+1. If it's not installed, then look for the package `gnome-shell-extensions` or `gnome-shell-extension-user-theme` and install it.
+2. Restart `gnome-tweaks` (if it was open) and activate `User themes` on the Extensions page in `gnome-tweaks`.
+3. Go to the Appearance page in `gnome-tweaks` and change the Shell theme to Plano in the drop-down list. (If it still shows a yellow rectangle, then restart `gnome-tweaks` or relog.)
 
 Xfce users can change themes in `Settings > Appearance` and `Settings > Window manager`
 
