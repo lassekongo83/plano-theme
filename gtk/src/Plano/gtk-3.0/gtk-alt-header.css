@@ -2013,11 +2013,13 @@ headerbar button.titlebutton.minimize:active:backdrop:not(:hover), .titlebar but
 
 #MozillaGtkWidget.background menubar, #MozillaGtkWidget.background .menubar, #MozillaGtkWidget.background menubar > menuitem:hover { background-color: #3c4446; color: #eeeeec; }
 
-window.background.chromium { background-color: #3c4446; }
+window.background.chromium { background-color: #3c4446; color: #eeeeec; }
 
 window.background.chromium button { border-color: #25292b; }
 
 window.background.chromium menubar { color: #eeeeec; }
+
+window.background.chromium menu, window.background.chromium .menu, window.background.chromium .context-menu { color: #2c2c2c; }
 
 switch { margin: 4px 0; padding: 0; border-radius: 0; border-width: 0; background-color: rgba(0, 0, 0, 0.38); background-clip: padding-box; transition: all 75ms cubic-bezier(0, 0, 0.2, 1); }
 
