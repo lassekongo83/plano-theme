@@ -1159,7 +1159,7 @@ scale fill:disabled:backdrop, scale fill:disabled { border-color: transparent; b
 
 scale slider { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #9aa0a5; background-image: linear-gradient(to bottom, #f8f9f9, #f8f9f9); border: 1px solid #92989d; border-radius: 100%; transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94); transition-property: background, border, box-shadow; }
 
-scale slider:hover { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #9aa0a5; background-image: white; box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.3); border-color: #4a90d9; }
+scale slider:hover { color: #2c2c2c; outline-color: rgba(44, 44, 44, 0.3); border-color: #9aa0a5; background: white; box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.3); border-color: #4a90d9; }
 
 scale slider:active { border-color: #256ab1; }
 
