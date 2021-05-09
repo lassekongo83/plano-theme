@@ -7,12 +7,12 @@ Plano is a flat theme for GNOME and Xfce.
 
 ### Requirements
 
-- GNOME Shell 3.38 (Older versions can be found under the releases section.)
-- GTK 3.24.13+
+- GNOME Shell 40 (Older versions can be found under the releases section.)
+- GTK 3.24.13+ and GTK 4.0+
 
 <sub>I can't guarantee that the themes will look as intended on older versions.</sub>
 
-Some of these packages may already be installed by default on some distros.
+Some of these packages may already be installed by default on some distros. (You can skip the gtk2 dependencies if do not use any gtk2 applications. Then all you need to install is `git`, `meson`, `sassc`, and `ninja`)
 
 * Debian/Ubuntu/Mint - `apt install gtk2-engines-murrine gtk2-engines-pixbuf ninja-build git meson sassc`
 * Arch/Manjaro - `pacman -S gtk-engines gtk-engine-murrine ninja git meson sassc`
@@ -55,10 +55,10 @@ gsettings set org.gnome.desktop.interface gtk-theme Plano
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita
 ```
 
-To change the gnome-shell theme you need to activate the `User themes` extension on the Extensions page in `gnome-tweaks`.
-1. If it's not installed, then look for the package `gnome-shell-extensions` or `gnome-shell-extension-user-theme` and install it.
-2. Restart `gnome-tweaks` (if it was open) and activate `User themes` on the Extensions page in `gnome-tweaks`.
-3. Go to the Appearance page in `gnome-tweaks` and change the Shell theme to Plano in the drop-down list. (If it still shows a yellow rectangle, then restart `gnome-tweaks` or relog.)
+To change the gnome-shell theme you need to install and activate the `User themes` extension in the [extensions app](https://flathub.org/apps/details/org.gnome.Extensions).
+1. If the user-themes extension is not installed, then look for the package `gnome-shell-extensions` or `gnome-shell-extension-user-theme` and install it. (Or install it from https://extensions.gnome.org/extension/19/user-themes/)
+2. Open the extensions app and activate the `user themes` extension.
+3. Go to the Appearance page in `gnome-tweaks` and change the Shell theme to Plano in the drop-down list. (If it still shows a yellow triangle, then restart `gnome-tweaks` or relog.)
 
 Xfce users can change themes in `Settings > Appearance` and `Settings > Window manager`
 
@@ -66,7 +66,7 @@ Xfce users can change themes in `Settings > Appearance` and `Settings > Window m
 
 To use the theme in Flatpak applications you'll have to copy the theme(s) from /usr/share/themes to ~/.themes (Symbolic links won't work.)
 
-As long as the version of the included GTK3 for the Flatpak app is at 3.24.x the theme should be used. Some apps may require you to change the theme in the app's settings.
+The theme will be used if the included GTK version for the Flatpak app is at 3.24.x or 4.0. Some apps may require you to change the theme in the app's settings.
 
 #### Removing the theme(s)
 
