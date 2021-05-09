@@ -9,5 +9,6 @@ configure_file(input : '../index.theme.in',
                install_dir: theme_dir)
 
 subdir('gtk-3.0')
+subdir('gtk-4.0')
 # gtk-2.0 theme is symlinked as it is not modified
 meson.add_install_script('install-alt-gtk2-theme.sh', theme_dir, meson.project_name())

@@ -1,0 +1,25 @@
+// Colors used by the 3rd party theme
+
+// dark colors
+$dark_bg: #41464a;
+$dark_secondary_bg: #292c2e;
+$dark_base: #1d1f21; //#4d5358;
+$dark_border: transparentize(black, 0.6);
+$dark_header: if($variant == 'dark', #35393c, #4d5358);
+$dark_fg: #eeeeec;
+
+// light colors
+$light_bg: #e6e8e8;
+$light_secondary_bg: #ccd0d0;
+$light_base: #fff;
+$light_border: #bfc4c4;
+$light_header: #d9dcdc;
+$light_fg: #2e3436;
+
+// more colors
+$theme_red: if($variant == 'light', #ca474d, #ec5f67); // error color and close button
+$theme_yellow: if($variant == 'light', #dbac4b, #fac863); // warning color
+$theme_blue: if($variant == 'light', #4c73b2, #6699cc); // selection color
+$theme_green: if($variant == 'light', #73a56f, #99c794); // success color
+// $theme_cyan: if($variant == 'light', #529d9d, #5fb3b3);
+// $theme_magneta: if($variant == 'light', #a97aa9, #c594c5);

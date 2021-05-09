@@ -139,7 +139,7 @@
     color: $tc;
     background-color: lighten($c, 3%);
     border-color: draw_border_color($c);
-    // @include draw_shadows($button_shadow);
+    @include draw_shadows($button_shadow);
     // box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     text-shadow: 0 1px $text_shadow_color;
     icon-shadow: 0 1px $text_shadow_color;
@@ -159,7 +159,7 @@
     color: $tc;
     background-color: lighten($c, if($variant == 'light', 8%, 5%));
     border-color: if($variant == 'light', draw_border_color(lighten($c, 7%)), draw_border_color($c));
-    //@include draw_shadows($button_shadow);
+    @include draw_shadows($button_shadow);
     text-shadow: 0 1px $text_shadow_color;
     icon-shadow: 0 1px $text_shadow_color;
   }
@@ -218,7 +218,8 @@
 
   &:drop {
     .overview-icon {
-      background-color: transparentize($selected_bg_color, .15);
+      border: 2px solid $selected_bg_color; //already 2px transparent so no jumping
+      background-color: transparentize($selected_bg_color, .8);
     }
   }
 

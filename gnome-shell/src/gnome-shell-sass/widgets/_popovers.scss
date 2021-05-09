@@ -4,12 +4,12 @@ $popover_arrow_height: 12px;
 
 //.the popover itself
 .popup-menu-boxpointer {
-  -arrow-border-radius: $base_border_radius + 2;
+  -arrow-border-radius: $base_border_radius+2;
   -arrow-background-color: $bg_color;
   -arrow-border-width: 1px;
   -arrow-border-color: $borders_color;
-  -arrow-base: $popover_arrow_height;
-  -arrow-rise: 6px; //$popover_arrow_height - 6;
+  -arrow-base: $popover_arrow_height; //* 2;
+  -arrow-rise: 6px; //$popover_arrow_height;
   -arrow-box-shadow: 0 1px 3px rgba(0,0,0,0.5); // dreaming bugzilla #689995
 }
 
@@ -20,7 +20,7 @@ $popover_arrow_height: 12px;
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
-    -boxpointer-gap: 0; //$base_margin; // distance from the panel
+    -boxpointer-gap: 0; // $base_margin; // distance from the panel
     margin-bottom: 1.75em;
   }
 }

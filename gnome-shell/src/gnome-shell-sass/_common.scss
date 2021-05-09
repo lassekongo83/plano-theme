@@ -31,9 +31,9 @@ $base_margin: 4px;
 $base_spacing: 6px;
 
 // border radii
-$base_border_radius: 0;
+$base_border_radius: 2px;
 
-$modal_radius: 0;
+$modal_radius:$base_border_radius * 2;
 
 // non-standard colors
 $bubble_borders_color: lighten($borders_color, if($variant=='light', 0%, 5%));
@@ -50,7 +50,7 @@ $active_fg_color: darken($fg_color,if($variant=='light', 5%, 3%));
 $active_borders_color: darken($borders_color,if($variant=='light', 5%, 3%));
 
 // fonts
-$base_font_size: 10;
+$base_font_size: 11;
 $text_shadow_color: if($variant == 'light', rgba(255,255,255,0.3), rgba(0,0,0,0.2));
 
 // icons
@@ -76,7 +76,7 @@ stage {
 %osd_panel {
   color: $osd_fg_color;
   background-color: $osd_bg_color;
-  border: 1px solid $osd_outer_borders_color;
+  //border: 1px solid $osd_outer_borders_color;
   border-radius: $base_border_radius * 2 + 4px;
   padding: $base_padding * 2;
 }
@@ -85,16 +85,15 @@ stage {
 // for the dash and workspace switcher
 %overview_panel {
   color: $osd_fg_color;
-  background-color: transparentize($osd_bg_color, 0.2);
-  border: 1px solid $osd_outer_borders_color;
+  background-color: transparentize($osd_fg_color, 0.9);
 }
 
 // icon tiles
 %icon_tile {
-  border-radius: $base_border_radius;
+  border-radius: $base_border_radius + 4px;
   padding: $base_padding;
   border: 2px solid transparent;
-  transition-duration: 75ms;
+  transition-duration: 100ms;
   text-align: center;
 }
 
@@ -136,23 +135,23 @@ stage {
 
   // radius is 2 pixel less to fit in bubble
   &:first-child {
-    border-radius: 0;
+    border-radius: 0 0 0 $modal_radius - 2px;
   }
 
   &:last-child {
     border-right-width: 0;
-    border-radius: 0;
+    border-radius: 0 0 $modal_radius - 2px 0;
   }
   
   &:first-child:last-child {
-    border-radius: 0;
+    border-radius: 0 0 $modal_radius - 2px $modal_radius - 2px;
   }
 }
 
 
 // notification styling
 @mixin notification_bubble($flat: false) {
-  border-width: 0px;
+  border-width: 0;
   border-style: solid;
   border-radius: $base_border_radius;
   margin: $base_margin;
