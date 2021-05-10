@@ -66,18 +66,18 @@ StEntry StLabel.hint-text { margin-left: 2px; color: rgba(238, 238, 236, 0.7); }
 /* Check Boxes */
 .check-box StBoxLayout { spacing: .8em; }
 
-.check-box StBin { width: 24px; height: 22px; background-image: url("resource:///org/gnome/shell/theme/checkbox-off.svg"); }
+.check-box StBin { width: 24px; height: 22px; background-image: url("checkbox-off.svg"); }
 
-.check-box:focus StBin { background-image: url("resource:///org/gnome/shell/theme/checkbox-off-focused.svg"); }
+.check-box:focus StBin { background-image: url("checkbox-off-focused.svg"); }
 
-.check-box:checked StBin { background-image: url("resource:///org/gnome/shell/theme/checkbox.svg"); }
+.check-box:checked StBin { background-image: url("checkbox.svg"); }
 
-.check-box:focus:checked StBin { background-image: url("resource:///org/gnome/shell/theme/checkbox-focused.svg"); }
+.check-box:focus:checked StBin { background-image: url("checkbox-focused.svg"); }
 
 /* Switches */
-.toggle-switch { color: #eeeeec; height: 22px; width: 46px; background-size: contain; background-image: url("resource:///org/gnome/shell/theme/toggle-off-dark.svg"); }
+.toggle-switch { color: #eeeeec; height: 22px; width: 46px; background-size: contain; background-image: url("toggle-off-dark.svg"); }
 
-.toggle-switch:checked { background-image: url("resource:///org/gnome/shell/theme/toggle-on-dark.svg"); }
+.toggle-switch:checked { background-image: url("toggle-on-dark.svg"); }
 
 /* Slider */
 .slider { height: 15px; -barlevel-height: 3px; -barlevel-background-color: #202020; -barlevel-border-width: 1px; -barlevel-border-color: #202020; -barlevel-active-background-color: #1b6acb; -barlevel-active-border-color: #1c6fd4; -barlevel-overdrive-color: #b2161d; -barlevel-overdrive-border-color: #bc171e; -barlevel-overdrive-separator-width: 1px; -slider-handle-radius: 7.5px; -slider-handle-border-width: 1px; -slider-handle-border-color: #eeeeec; color: #eeeeec; }
@@ -235,7 +235,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .calendar .calendar-today:active:hover, .calendar .calendar-today:active:focus, .calendar .calendar-today:selected:hover, .calendar .calendar-today:selected:focus { background-color: #1d72d8; color: #fff; }
 
-.calendar .calendar-day-with-events { background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg"); }
+.calendar .calendar-day-with-events { background-image: url("calendar-today.svg"); }
 
 .calendar .calendar-day-with-events.calendar-work-day { color: white; font-weight: bold; }
 
@@ -510,7 +510,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .audio-selection-device-icon { icon-size: 4.36em; }
 
 /* Welcome dialog */
-.welcome-dialog-image { background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg"); background-size: contain; /* Reasonable maximum dimensions */ height: 300px; width: 300px; }
+.welcome-dialog-image { background-image: url("gnome-shell-start.svg"); background-size: contain; /* Reasonable maximum dimensions */ height: 300px; width: 300px; }
 
 /* Network Dialogs */
 .nm-dialog { max-height: 34em; min-height: 31em; min-width: 32em; }
@@ -641,6 +641,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 #appMenu .label-shadow { color: transparent; }
 
 #appMenu .panel-status-menu-box { padding: 0 6px; spacing: 6px; }
+
+#panel #panelActivities.panel-button > * { background-image: url("activities.svg"); background-position: center top; width: 24px; height: 24px; background-color: transparent !important; background-gradient-direction: none !important; border: 0 solid transparent !important; text-shadow: 0 0 transparent !important; transition-duration: 0ms !important; box-shadow: none !important; color: transparent; }
+
+#panel #panelActivities.panel-button:active, #panel #panelActivities.panel-button:overview, #panel #panelActivities.panel-button:focus, #panel #panelActivities.panel-button:checked { background-color: transparent; box-shadow: none; border-bottom-width: 1px; border-color: transparent; }
+
+#panel #panelActivities.panel-button:active > *, #panel #panelActivities.panel-button:overview > *, #panel #panelActivities.panel-button:focus > *, #panel #panelActivities.panel-button:checked > * { background-image: url("activities-active.svg"); }
 
 /* Activities Ripple */
 .ripple-box { background-color: rgba(188, 214, 246, 0.3); box-shadow: 0 0 2px 2px #629fea; width: 52px; height: 52px; border-radius: 0 0 52px 0; }
@@ -805,7 +811,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .workspace-thumbnails .workspace-thumbnail { border-radius: 3px; }
 
-.workspace-thumbnails .placeholder { background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg"); background-size: contain; width: 18px; }
+.workspace-thumbnails .placeholder { background-image: url("dash-placeholder.svg"); background-size: contain; width: 18px; }
 
 .workspace-thumbnail-indicator { border: 3px solid #1b6acb; border-radius: 3px; padding: 0px; }
 

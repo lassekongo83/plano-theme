@@ -15,7 +15,7 @@ $dash_border_radius: $modal_radius $modal_radius 0 0;
   padding: 0 $dash_padding;
 
   .placeholder {
-    // background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+    // background-image: url("dash-placeholder.svg");
     background-image:none;
     background-size: contain;
     height: $dash_placeholder_size;
