@@ -61,23 +61,21 @@
       }
     }
   }
+}
 
-  // unmaximize titlebutton icon
-  .maximized & {
-    button.titlebutton {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
-        &.maximize#{$l} {
-          @if($variant=='light' and $alt_header=='false') {
-            background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-unmaximize#{$m}.png'),
-                                          url('../gtk-3.0/assets/titlebutton-unmaximize#{$m}@2.png'));
-          }
-          @else {
-            background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-unmaximize-hover.png'),
-                                          url('../gtk-3.0/assets/titlebutton-unmaximize-hover@2.png'));
-            &:not(:hover) { opacity: 0.8; }
-            &:backdrop:not(:hover) { opacity: 0.5; }
-          }
-        }
+// unmaximize titlebutton icon
+.maximized windowcontrols button {
+  @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+    &.maximize#{$l} {
+      @if($variant=='light' and $alt_header=='false') {
+        background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-unmaximize#{$m}.png'),
+                                      url('../gtk-3.0/assets/titlebutton-unmaximize#{$m}@2.png'));
+      }
+      @else {
+        background-image: -gtk-scaled(url('../gtk-3.0/assets/titlebutton-unmaximize-hover.png'),
+                                      url('../gtk-3.0/assets/titlebutton-unmaximize-hover@2.png'));
+        &:not(:hover) { opacity: 0.8; }
+        &:backdrop:not(:hover) { opacity: 0.5; }
       }
     }
   }

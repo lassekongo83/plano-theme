@@ -2454,11 +2454,11 @@ check {
   border-radius: $button_radius;
   -gtk-icon-size: 14px;
 
-  &:checked { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/check-symbolic.symbolic.png")),
-                                            -gtk-recolor(url("assets/check@2-symbolic.symbolic.png"))); }
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/check-symbolic.symbolic.png")),
+                                            -gtk-recolor(url("../gtk-3.0/assets/check@2-symbolic.symbolic.png"))); }
 
-  &:indeterminate { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/dash-symbolic.symbolic.png")),
-                                                  -gtk-recolor(url("assets/dash@2-symbolic.symbolic.png"))); }
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/dash-symbolic.symbolic.png")),
+                                            -gtk-recolor(url("../gtk-3.0/assets/dash@2-symbolic.symbolic.png"))); }
 }
 
 %radio,
@@ -2466,11 +2466,11 @@ radio {
   border-radius: 100%;
   -gtk-icon-size: 14px;
 
-  &:checked { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/bullet-symbolic.symbolic.png")),
-                                            -gtk-recolor(url("assets/bullet@2-symbolic.symbolic.png"))); }
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/bullet-symbolic.symbolic.png")),
+                                      -gtk-recolor(url("../gtk-3.0/assets/bullet@2-symbolic.symbolic.png"))); }
 
-  &:indeterminate { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/dash-symbolic.symbolic.png")),
-                                                  -gtk-recolor(url("assets/dash@2-symbolic.symbolic.png"))); }
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("../gtk-3.0/assets/dash-symbolic.symbolic.png")),
+                                            -gtk-recolor(url("../gtk-3.0/assets/dash@2-symbolic.symbolic.png"))); }
 }
 
 treeview.view check,
@@ -2519,9 +2519,9 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 }
 
 %scale_highlight {
-  border: 1px solid $selected_bg_color;
+  border: 1px solid $progress_bg_color;
   border-radius: $button_radius;
-  background-color: $selected_bg_color;
+  background-color: $progress_bg_color;
 
   &:disabled {
     background-color: transparent;
@@ -2628,7 +2628,11 @@ scale {
     transition: $button_transition;
     transition-property: background, border, box-shadow;
 
-    &:hover { @include button(hover); }
+    &:hover {
+      @include button(hover);
+      box-shadow: 0 0 0 3px transparentize($selected_bg_color, 0.7);
+      border-color: $selected_bg_color;
+    }
 
     &:active { border-color: $selected_borders_color; }
 
@@ -3483,7 +3487,9 @@ separator.sidebar {
     }
 
     &:selected {
-      background-color: $selected_bg_color; //$menu_selected_color;
+      &, &:backdrop:hover {
+        background-color: $selected_bg_color; //$menu_selected_color;
+      }
       color: $selected_fg_color; //inherit;
 
       //&:hover {

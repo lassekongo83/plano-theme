@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,7 +12,7 @@
    viewBox="0 0 128 128"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
    sodipodi:docname="assets.svg">
   <defs
      id="defs2" />
@@ -26,17 +24,18 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568542"
-     inkscape:cx="52.69479"
+     inkscape:cx="25.559567"
      inkscape:cy="59.650292"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
-     inkscape:window-height="915"
+     inkscape:window-height="922"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid1588" />
@@ -108,7 +107,7 @@
          y="42.009937" />
     </g>
     <g
-       id="titlebutton-unmaximize"
+       id="titlebutton-maximize"
        inkscape:label="#g1582">
       <rect
          ry="0"
@@ -133,7 +132,7 @@
       </g>
     </g>
     <g
-       id="titlebutton-maximize"
+       id="titlebutton-unmaximize"
        inkscape:label="#g1589">
       <rect
          style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -182,7 +181,7 @@
          style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.99999994" />
     </g>
     <g
-       id="titlebutton-unmaximize-hover"
+       id="titlebutton-maximize-hover"
        inkscape:label="#g1605">
       <rect
          style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -199,7 +198,7 @@
          style="fill:#dee2e5;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       id="titlebutton-maximize-hover"
+       id="titlebutton-unmaximize-hover"
        inkscape:label="#g1611">
       <rect
          ry="0"
@@ -257,7 +256,7 @@
          y="66.009933" />
     </g>
     <g
-       id="titlebutton-unmaximize-backdrop"
+       id="titlebutton-maximize-backdrop"
        inkscape:label="#g1626">
       <rect
          ry="0"
@@ -278,7 +277,7 @@
       </g>
     </g>
     <g
-       id="titlebutton-maximize-backdrop"
+       id="titlebutton-unmaximize-backdrop"
        inkscape:label="#g1621">
       <rect
          style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
