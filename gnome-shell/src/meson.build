@@ -106,6 +106,7 @@ data_sources = [
   'toggle-on-hc.svg',
   'toggle-on.svg',
   'window-close-24-symbolic.svg',
+  'workspace-placeholder.svg',
   'transparent.png'
 ]
 

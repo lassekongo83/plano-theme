@@ -602,8 +602,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.unlock-screen .panel-corner, #panel.login-screen .panel-corner, #panel:overview .panel-corner { -panel-corner-opacity: 0; }
 
-#panel #panelLeft, #panel #panelCenter { spacing: 6px; }
-
 #panel .panel-corner { -panel-corner-radius: 0; -panel-corner-background-color: #1b1b1b; -panel-corner-border-width: 0px; -panel-corner-border-color: transparent; -panel-corner-opacity: 0; transition-duration: 250ms; }
 
 #panel .panel-button { font-weight: bold; color: #eeeeec; -natural-hpadding: 12px; -minimum-hpadding: 6px; transition-duration: 150ms; border: 0px solid transparent; border-radius: 0; }
@@ -711,7 +709,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .list-search-result .list-search-result-description { color: #a6a69b; }
 
 /* Dash */
-#dash { font-size: 9pt; margin-top: 12px; padding: 0 6px; }
+#dash { font-size: 9pt; margin-top: 18px; padding: 0 6px; }
 
 #dash .placeholder { background-image: none; background-size: contain; height: 32px; }
 
@@ -758,7 +756,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .app-well-app .overview-icon.overview-icon-with-label > StBoxLayout, .grid-search-result .overview-icon.overview-icon-with-label > StBoxLayout { spacing: 6px; }
 
 /* App Folders */
-.app-well-app.app-folder { background-color: #202020; border-radius: 6px; }
+.app-well-app.app-folder { background-color: #3b3b3b; border-radius: 6px; }
 
 .app-folder-dialog { border-radius: 6px; background-color: #3b3b3b; padding: 12px 0px 12px 0px; }
 
@@ -811,7 +809,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .workspace-thumbnails .workspace-thumbnail { border-radius: 3px; }
 
-.workspace-thumbnails .placeholder { background-image: url("dash-placeholder.svg"); background-size: contain; width: 18px; }
+.workspace-thumbnails .placeholder { background-image: url("workspace-placeholder.svg"); background-size: contain; width: 18px; }
 
 .workspace-thumbnail-indicator { border: 3px solid #1b6acb; border-radius: 3px; padding: 0px; }
 
