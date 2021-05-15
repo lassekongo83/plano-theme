@@ -7,12 +7,12 @@ Plano is a flat theme for GNOME and Xfce.
 
 ### Requirements
 
-- GNOME Shell 40 (Older versions can be found under the releases section.)
-- GTK 3.24.13+ and GTK 4.0+
+- GNOME Shell 40.1+ (Older versions can be found under the releases section.)
+- GTK 3.24.13+ and/or GTK 4.2+
 
 <sub>I can't guarantee that the themes will look as intended on older versions.</sub>
 
-Some of these packages may already be installed by default on some distros. (You can skip the gtk2 dependencies if do not use any gtk2 applications. Then all you need to install is `git`, `meson`, `sassc`, and `ninja`)
+Some of these packages may already be installed by default on some distros. (You can skip the gtk2 dependencies if you do not use any gtk2 applications. Then all you need to install is `git`, `meson`, `sassc`, and `ninja`)
 
 * Debian/Ubuntu/Mint - `apt install gtk2-engines-murrine gtk2-engines-pixbuf ninja-build git meson sassc`
 * Arch/Manjaro - `pacman -S gtk-engines gtk-engine-murrine ninja git meson sassc`
