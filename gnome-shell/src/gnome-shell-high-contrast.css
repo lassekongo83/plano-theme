@@ -1071,6 +1071,182 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #unlockDialogNotifications StButton#vhandle:active, #unlockDialogNotifications StButton#hhandle:active { background-color: rgba(33, 93, 156, 0.5); }
 
+#panel.dashtopanelMainPanel.dashtopanelTop .panel-button { text-shadow: black 0 1px 1px; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .panel-button:hover { background-color: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .panel-button:active, #panel.dashtopanelMainPanel.dashtopanelTop .panel-button:overview, #panel.dashtopanelMainPanel.dashtopanelTop .panel-button:focus { background-color: #215d9c; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .show-apps { width: 32px; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .show-apps > .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:hover { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:focus { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:active { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:checked { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .dash-item-container .show-apps:overview { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .show-apps-icon { color: transparent; border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running1 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running1:hover, #panel.dashtopanelMainPanel.dashtopanelTop .running1.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running1.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running1.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .running1:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running2 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running2:hover, #panel.dashtopanelMainPanel.dashtopanelTop .running2.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running2.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running2.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .running2:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running3 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running3:hover, #panel.dashtopanelMainPanel.dashtopanelTop .running3.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running3.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running3.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .running3:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running4 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running4:hover, #panel.dashtopanelMainPanel.dashtopanelTop .running4.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running4.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelTop .running4.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .running4:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .panel-button { text-shadow: black 0 1px 1px; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:hover { background-color: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:active, #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:overview, #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:focus { background-color: #215d9c; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps { width: 32px; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps > .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:hover { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:focus { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:active { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:checked { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps { transition-duration: 100ms; background-image: url("d2p-activities.svg"); background-position: center center; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .dash-item-container .show-apps:overview { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .show-apps-icon { color: transparent; border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running1 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running1:hover, #panel.dashtopanelMainPanel.dashtopanelBottom .running1.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running1.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running1.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelBottom .running1:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running2 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running2:hover, #panel.dashtopanelMainPanel.dashtopanelBottom .running2.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running2.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running2.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelBottom .running2:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running3 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running3:hover, #panel.dashtopanelMainPanel.dashtopanelBottom .running3.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running3.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running3.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelBottom .running3:hover .overview-icon { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app { margin: 0 2px; border-radius: 0; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover > StWidget { border-image: url("transparent.png"); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.1); background-gradient-end: rgba(255, 255, 255, 0.1); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running4 { transition-duration: 100ms; }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running4:hover, #panel.dashtopanelMainPanel.dashtopanelBottom .running4.focused { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.15); background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running4.focused:hover { background-gradient-direction: vertical; background-gradient-start: rgba(255, 255, 255, 0.2); background-gradient-end: rgba(255, 255, 255, 0.2); }
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .running4.focused .overview-icon, #panel.dashtopanelMainPanel.dashtopanelBottom .running4:hover .overview-icon { border-image: url("transparent.png"); }
+
 stage { -st-icon-style: symbolic; }
 
 .toggle-switch { width: 48px; }

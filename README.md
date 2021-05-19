@@ -14,7 +14,7 @@ Plano is a flat theme for GNOME and Xfce.
 
 Some of these packages may already be installed by default on some distros. (You can skip the gtk2 dependencies if you do not use any gtk2 applications. Then all you need to install is `git`, `meson`, `sassc`, and `ninja`)
 
-* Debian/Ubuntu/Mint - `apt install gtk2-engines-murrine gtk2-engines-pixbuf ninja-build git meson sassc`
+* Debian/Ubuntu/Mint/PopOS - `apt install gtk2-engines-murrine gtk2-engines-pixbuf ninja-build git meson sassc`
 * Arch/Manjaro - `pacman -S gtk-engines gtk-engine-murrine ninja git meson sassc`
 * Opensuse - `zypper in gtk2-engine-murrine gtk2-engines ninja git meson sassc`
 * Fedora - `dnf install gtk-murrine-engine gtk2-engines ninja-build git meson sassc`
