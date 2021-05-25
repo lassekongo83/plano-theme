@@ -23,6 +23,9 @@
       border-width: 0;
       box-shadow: none;
       transition-property: background-color;
+      > image {
+        opacity: 0;
+      }
     }
 
     &.close {
