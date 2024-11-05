@@ -1,3 +1,5 @@
+# THIS THEME IS NO LONGER MAINTAINED
+
 # Plano Theme
 Plano is a flat theme for GNOME and Xfce.
 
